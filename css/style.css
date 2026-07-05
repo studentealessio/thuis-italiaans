@@ -113,16 +113,13 @@ height:82px;
 /* ========= LOGO ========= */
 .logo{
 display:flex;
-flex-direction:column;
-line-height:1;
+align-items:center;
 }
-.logo-title{
-font-size:1.45rem;
-font-weight:700;
-}
-.logo-subtitle{
-font-size:1rem;
-color:var(--secondary);
+.logo-mark{
+width:44px;
+height:44px;
+border-radius:12px;
+display:block;
 }
 
 /* ========= MENU ========= */
