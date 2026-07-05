@@ -945,108 +945,44 @@
         </section>
 
 
+   <!-- ===================================== -->
+        <!-- CONTACT SECTION -->
         <!-- ===================================== -->
-        <!-- CONTACT -->
-        <!-- ===================================== -->
-
-        <section id="contact">
-
-            <div class="container contact-grid">
-
-                <div class="contact-info">
-
-                    <h2>Klaar om te beginnen?</h2>
-
-                    <p>
-
-                        Boek een gratis, vrijblijvende intake. Dan bespreken
-                        we jouw niveau, doelen en de beste aanpak voor jou.
-
-                    </p>
-
-                    <ul class="contact-details">
-
-                        <li>
-
-                            <span class="contact-label">E-mail</span>
-
-                            <a href="mailto:thuisitaliaans@gmail.com">thuisitaliaans@gmail.com</a>
-
-                        </li>
-
-                        <li>
-
-                            <span class="contact-label">Op locatie</span>
-
-                            <span>Ede, Wageningen, Veenendaal, Utrecht, Zeist, Houten, Amersfoort, Hilversum, Amsterdam en alles daartussen</span>
-
-                        </li>
-
-                        <li>
-
-                            <span class="contact-label">Online</span>
-
-                            <span>Overal in de wereld</span>
-
-                        </li>
-
-                    </ul>
-
+        <section id="contact" style="padding: 5rem 0;">
+            <div class="container" style="max-width: 600px; margin: 0 auto;">
+                <div class="section-heading" style="text-align: center; margin-bottom: 2rem;">
+                    <h2>Meld je aan voor een gratis intake</h2>
+                    <p>Vul het formulier in en ik neem zo snel mogelijk contact met je op.</p>
                 </div>
 
-                <form class="contact-form" id="contactForm">
-
-                    <div class="form-row">
-
+                <!-- SOSTITUISCI QUESTO URL CON QUELLO DEL TUO CLOUDFLARE WORKER -->
+                <form action="https://thuisitaliaans-form.helping-mustier5l.workers.dev" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
                         <label for="name">Naam</label>
-
-                        <input type="text" id="name" name="name" required>
-
+                        <input type="text" id="name" name="name" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <label for="email">E-mailadres</label>
+                        <input type="email" id="email" name="email" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
                     </div>
 
-                    <div class="form-row">
-
-                        <label for="email">E-mail</label>
-
-                        <input type="email" id="email" name="email" required>
-
-                    </div>
-
-                    <div class="form-row">
-
-                        <label for="location">Voorkeur</label>
-
-                        <select id="location" name="location">
-
-                            <option value="online">Online</option>
-                            <option value="ede">Op locatie · Ede</option>
-                            <option value="veenendaal">Op locatie · Veenendaal / Wageningen</option>
-                            <option value="utrecht">Op locatie · Utrecht / Zeist / Houten</option>
-                            <option value="amersfoort">Op locatie · Amersfoort / Hilversum</option>
-                            <option value="amsterdam">Op locatie · Amsterdam</option>
-                            <option value="anders">Op locatie · anders, overleggen</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="form-row">
-
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem;">
                         <label for="message">Bericht</label>
-
-                        <textarea id="message" name="message" rows="4" placeholder="Vertel me kort over je niveau en doelen..." required></textarea>
-
+                        <textarea id="message" name="message" rows="5" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
                     </div>
 
-                    <button type="submit" class="button form-submit">Verstuur aanvraag</button>
-
+                    <button type="submit" class="button" style="padding: 0.75rem 1.5rem; background-color: #31394d; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                        Verstuur bericht
+                    </button>
                 </form>
-
             </div>
-
         </section>
 
     </main>
+
+    
 
     <!-- ===================================== -->
     <!-- FOOTER -->
