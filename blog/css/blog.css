@@ -376,6 +376,24 @@ height:400px;
 border:none;
 display:block;
 }
+.embed-youtube{
+border-radius:16px;
+overflow:hidden;
+background:var(--surface);
+}
+.embed-youtube iframe{
+display:block;
+width:100%;
+aspect-ratio:16/9;
+height:auto;
+border:none;
+}
+.embed-youtube .embed-fallback{
+background:var(--surface);
+}
+.embed-youtube .embed-fallback a{
+color:var(--primary);
+}
 .embed-fallback{
 text-align:center;
 padding:12px;
@@ -466,6 +484,20 @@ margin-bottom:10px;
 .sidebar-card p{
 font-size:.92rem;
 margin-bottom:20px;
+}
+.sidebar-rating{
+margin-bottom:20px;
+}
+.sidebar-rating .stars{
+color:var(--gold);
+font-size:1.1rem;
+letter-spacing:3px;
+margin-bottom:4px;
+}
+.sidebar-rating p{
+margin-bottom:0;
+font-size:.85rem;
+color:var(--secondary);
 }
 .sidebar-card .button{
 display:inline-flex;
