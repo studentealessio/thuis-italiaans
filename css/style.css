@@ -1,0 +1,653 @@
+/* ==========================================
+   THUIS ITALIAANS
+   STYLE.CSS
+   PART 1
+========================================== */
+
+/* ========= RESET ========= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#31394d;
+line-height:1.7;
+overflow-x:hidden;
+}
+img,
+video{
+display:block;
+max-width:100%;
+}
+a{
+text-decoration:none;
+color:inherit;
+}
+ul{
+list-style:none;
+}
+button{
+border:none;
+background:none;
+font:inherit;
+cursor:pointer;
+}
+
+/* ========= VARIABLES ========= */
+:root{
+--primary:#31394d;
+--secondary:#667085;
+--background:#ffffff;
+--surface:#f7f8fb;
+--border:#e6eaf2;
+--radius:22px;
+--shadow:0 12px 35px rgba(49,57,77,.08);
+--transition:.35s ease;
+--container:1180px;
+}
+
+/* ========= CONTAINER ========= */
+.container{
+width:min(92%,var(--container));
+margin:auto;
+}
+
+/* ========= TYPOGRAPHY ========= */
+h1{
+font-size:clamp(3rem,7vw,5rem);
+line-height:1.05;
+font-weight:800;
+letter-spacing:-2px;
+}
+h2{
+font-size:clamp(2rem,5vw,3.2rem);
+margin-bottom:25px;
+}
+h3{
+font-size:1.3rem;
+}
+p{
+color:var(--secondary);
+font-size:1.08rem;
+}
+
+/* ========= BUTTON ========= */
+.button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 30px;
+border-radius:999px;
+background:var(--primary);
+color:white;
+font-weight:600;
+transition:var(--transition);
+}
+.button:hover{
+transform:translateY(-3px);
+box-shadow:var(--shadow);
+}
+
+/* ========= HEADER ========= */
+.header{
+position:sticky;
+top:0;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--border);
+z-index:100;
+}
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:82px;
+}
+
+/* ========= LOGO ========= */
+.logo{
+display:flex;
+flex-direction:column;
+line-height:1;
+}
+.logo-title{
+font-size:1.45rem;
+font-weight:700;
+}
+.logo-subtitle{
+font-size:1rem;
+color:var(--secondary);
+}
+
+/* ========= MENU ========= */
+.nav-menu{
+display:flex;
+gap:40px;
+}
+.nav-menu a{
+font-weight:500;
+transition:var(--transition);
+}
+.nav-menu a:hover{
+color:black;
+}
+
+/* ========= HERO ========= */
+.hero{
+padding:90px 0 70px;
+}
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+.hero-tag{
+display:inline-block;
+margin-bottom:22px;
+padding:10px 18px;
+background:var(--surface);
+border-radius:999px;
+font-size:.9rem;
+font-weight:600;
+}
+.hero-text{
+max-width:560px;
+margin:28px 0;
+}
+.hero-buttons{
+margin:40px 0;
+}
+.hero-rating{
+display:flex;
+align-items:center;
+gap:18px;
+margin-top:25px;
+}
+.stars{
+color:#f5b400;
+font-size:1.2rem;
+letter-spacing:3px;
+}
+.hero-rating p{
+color:var(--secondary);
+}
+
+/* ========= VIDEO ========= */
+.video-card{
+border-radius:26px;
+overflow:hidden;
+box-shadow:var(--shadow);
+background:white;
+transition:var(--transition);
+}
+.video-card:hover{
+transform:translateY(-6px);
+}
+.video-card video{
+width:100%;
+}
+
+/* ========= TRUST ========= */
+.trust{
+padding:35px 0 80px;
+}
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+.trust article{
+background:var(--surface);
+border-radius:20px;
+padding:35px;
+text-align:center;
+transition:var(--transition);
+}
+.trust article:hover{
+transform:translateY(-6px);
+box-shadow:var(--shadow);
+}
+.trust h3{
+font-size:2rem;
+margin-bottom:8px;
+}
+.trust p{
+font-size:.95rem;
+}
+
+/* ========= SECTIONS BASE ========= */
+section{
+padding:110px 0;
+}
+#about,
+#reviews{
+background:var(--surface);
+}
+
+/* ==========================================
+   PART 2 — ABOUT / LESSONS / REVIEWS / CONTACT / FOOTER
+========================================== */
+
+/* ========= SHARED SECTION HEADING ========= */
+.section-tag{
+display:inline-block;
+margin-bottom:18px;
+padding:8px 16px;
+background:var(--background);
+border:1px solid var(--border);
+border-radius:999px;
+font-size:.85rem;
+font-weight:600;
+color:var(--primary);
+}
+#about .section-tag,
+#reviews .section-tag{
+background:var(--background);
+}
+.section-heading{
+max-width:640px;
+margin:0 auto 60px;
+text-align:center;
+}
+.section-heading p{
+margin-top:10px;
+}
+
+/* ========= ABOUT ========= */
+.about-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:80px;
+align-items:start;
+}
+.about-text p{
+margin-bottom:18px;
+}
+.link-arrow{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-top:8px;
+font-weight:600;
+color:var(--primary);
+transition:var(--transition);
+}
+.link-arrow:hover{
+gap:12px;
+}
+.about-credentials{
+background:var(--background);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:36px;
+box-shadow:var(--shadow);
+}
+.credentials-title{
+font-size:1rem;
+text-transform:uppercase;
+letter-spacing:1px;
+color:var(--secondary);
+margin-bottom:18px;
+}
+.credentials-group-label{
+font-size:.78rem;
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.5px;
+color:var(--primary);
+margin:22px 0 6px;
+}
+.credentials-group-label:first-of-type{
+margin-top:0;
+}
+.credentials-list li{
+display:flex;
+flex-direction:column;
+gap:3px;
+padding:16px 0;
+border-top:1px solid var(--border);
+}
+.credentials-list li:first-child{
+border-top:none;
+padding-top:0;
+}
+.credential-degree{
+font-weight:600;
+font-size:.96rem;
+line-height:1.4;
+}
+.credential-school{
+font-size:.85rem;
+color:var(--secondary);
+}
+.credentials-list-compact .credential-degree{
+font-size:.9rem;
+font-weight:500;
+}
+.credentials-list-compact .credential-school{
+font-size:.8rem;
+}
+.credentials-list-compact li{
+padding:12px 0;
+}
+
+/* ========= LESSONS ========= */
+.lessons-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+}
+.lesson-card{
+background:var(--background);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:38px;
+transition:var(--transition);
+}
+.lesson-card:hover{
+transform:translateY(-6px);
+box-shadow:var(--shadow);
+}
+.lesson-icon{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:52px;
+height:52px;
+border-radius:16px;
+background:var(--surface);
+font-size:1.5rem;
+margin-bottom:20px;
+}
+.lesson-card h3{
+margin-bottom:10px;
+}
+.lesson-card p{
+font-size:1rem;
+}
+
+/* ========= REVIEWS / CAROUSEL ========= */
+#reviews .container{
+margin-bottom:0;
+}
+.carousel{
+position:relative;
+display:flex;
+align-items:center;
+gap:16px;
+width:min(92%,var(--container));
+margin:auto;
+}
+.carousel-track{
+display:flex;
+gap:24px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+scroll-behavior:smooth;
+padding:6px 2px 26px;
+flex:1;
+}
+.carousel-track::-webkit-scrollbar{
+height:6px;
+}
+.carousel-track::-webkit-scrollbar-thumb{
+background:var(--border);
+border-radius:999px;
+}
+.review-card{
+flex:0 0 100%;
+max-width:340px;
+scroll-snap-align:start;
+background:var(--background);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:32px;
+box-shadow:var(--shadow);
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+.review-card .stars{
+font-size:.95rem;
+letter-spacing:2px;
+}
+.review-text{
+color:var(--primary);
+font-size:.98rem;
+flex:1;
+}
+.review-author{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:600;
+}
+.review-flag{
+font-size:1.1rem;
+}
+.carousel-arrow{
+flex:0 0 auto;
+display:flex;
+align-items:center;
+justify-content:center;
+width:46px;
+height:46px;
+border-radius:50%;
+background:var(--background);
+border:1px solid var(--border);
+font-size:1.4rem;
+color:var(--primary);
+transition:var(--transition);
+}
+.carousel-arrow:hover{
+background:var(--primary);
+color:white;
+transform:translateY(-3px);
+}
+.carousel-dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:10px;
+}
+.carousel-dots button{
+width:8px;
+height:8px;
+border-radius:50%;
+background:var(--border);
+transition:var(--transition);
+}
+.carousel-dots button.active{
+background:var(--primary);
+width:22px;
+border-radius:999px;
+}
+
+/* ========= CONTACT ========= */
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1.1fr;
+gap:80px;
+align-items:start;
+}
+.contact-info p{
+margin-bottom:30px;
+}
+.contact-details li{
+display:flex;
+flex-direction:column;
+gap:3px;
+padding:16px 0;
+border-top:1px solid var(--border);
+}
+.contact-details li:first-child{
+border-top:none;
+padding-top:0;
+}
+.contact-label{
+font-size:.85rem;
+text-transform:uppercase;
+letter-spacing:.5px;
+color:var(--secondary);
+}
+.contact-details a{
+font-weight:600;
+}
+.contact-form{
+background:var(--surface);
+border-radius:var(--radius);
+padding:40px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+.form-row{
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+.form-row label{
+font-size:.9rem;
+font-weight:600;
+}
+.form-row input,
+.form-row select,
+.form-row textarea{
+font:inherit;
+padding:14px 16px;
+border:1px solid var(--border);
+border-radius:14px;
+background:var(--background);
+color:var(--primary);
+resize:vertical;
+transition:var(--transition);
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus{
+outline:2px solid var(--primary);
+outline-offset:1px;
+}
+.form-submit{
+width:100%;
+margin-top:6px;
+}
+
+/* ========= LEGAL / PRIVACY PAGE ========= */
+.legal-page{
+padding:90px 0 110px;
+}
+.legal-content{
+max-width:720px;
+}
+.legal-content h1{
+font-size:clamp(2.2rem,5vw,3rem);
+margin:16px 0 8px;
+}
+.legal-updated{
+font-size:.9rem;
+color:var(--secondary);
+margin-bottom:36px;
+}
+.legal-content h2{
+font-size:1.3rem;
+margin:36px 0 14px;
+}
+.legal-content p{
+margin-bottom:8px;
+}
+.legal-content a{
+font-weight:600;
+text-decoration:underline;
+}
+.legal-list{
+margin:8px 0 8px 20px;
+}
+.legal-list li{
+color:var(--secondary);
+font-size:1.08rem;
+list-style:disc;
+margin-bottom:6px;
+}
+
+/* ========= FOOTER ========= */
+footer{
+padding:50px 0;
+border-top:1px solid var(--border);
+}
+.footer-grid{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+.footer-copy{
+font-size:.85rem;
+color:var(--secondary);
+}
+.footer-legal{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:12px;
+margin-top:24px;
+padding-top:24px;
+border-top:1px solid var(--border);
+font-size:.8rem;
+color:var(--secondary);
+}
+.footer-legal a{
+color:var(--secondary);
+text-decoration:underline;
+transition:var(--transition);
+}
+.footer-legal a:hover{
+color:var(--primary);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width:900px){
+.hero-grid,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+gap:50px;
+}
+.trust-grid{
+grid-template-columns:repeat(2,1fr);
+}
+.lessons-grid{
+grid-template-columns:1fr;
+}
+.nav-menu{
+display:none;
+}
+.footer-grid{
+justify-content:center;
+text-align:center;
+}
+}
+
+@media (max-width:560px){
+.trust-grid{
+grid-template-columns:1fr;
+}
+.review-card{
+max-width:82vw;
+}
+.carousel-arrow{
+display:none;
+}
+section{
+padding:80px 0;
+}
+}
