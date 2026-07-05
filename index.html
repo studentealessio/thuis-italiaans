@@ -964,24 +964,24 @@
                 </div>
 
                 <!-- INSERISCI L'URL DEL TUO WORKER QUI DI SEGUITO -->
-                <form action="https://IL-TUO-WORKER.workers.dev" method="POST" class="contact-form">
+                <form action="https://IL-TUO-WORKER.workers.dev" method="POST" class="contact-form" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
                     
-                    <div class="form-group">
-                        <label for="name">Naam</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="name" style="font-weight: 500;">Naam</label>
+                        <input type="text" id="name" name="name" required style="border-radius: 12px; padding: 0.75rem; border: 1px solid #ccc; font-family: inherit;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="email">E-mailadres</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="email" style="font-weight: 500;">E-mailadres</label>
+                        <input type="email" id="email" name="email" required style="border-radius: 12px; padding: 0.75rem; border: 1px solid #ccc; font-family: inherit;">
                     </div>
 
-                    <div class="form-group">
-                        <label for="message">Bericht</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                        <label for="message" style="font-weight: 500;">Bericht</label>
+                        <textarea id="message" name="message" rows="5" required style="border-radius: 12px; padding: 0.75rem; border: 1px solid #ccc; font-family: inherit; resize: vertical;"></textarea>
                     </div>
 
-                    <button type="submit" class="button">
+                    <button type="submit" class="button" style="border-radius: 12px; cursor: pointer; border: none; font-family: inherit;">
 
                         Verstuur bericht
 
@@ -992,6 +992,8 @@
             </div>
 
         </section>
+
+    
 
     <!-- ===================================== -->
     <!-- FOOTER -->
