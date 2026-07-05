@@ -569,8 +569,11 @@ flex-wrap:wrap;
 }
 .sidebar-card img.sidebar-logo{
 margin:0;
+flex:0 0 56px;
+width:56px;
+height:56px;
 }
-.sidebar-card > *{
+.sidebar-card > *:not(img){
 flex:1 1 100%;
 }
 .sidebar-links{
