@@ -303,8 +303,16 @@ margin-bottom:34px;
 .article-cover{
 width:100%;
 border-radius:var(--radius);
-margin-bottom:34px;
 box-shadow:var(--shadow);
+}
+.article-cover-figure{
+margin:0 0 34px;
+}
+.article-cover-figure .article-cover{
+margin-bottom:0;
+}
+.article-cover-figure .img-credit{
+margin-top:8px;
 }
 
 /* ========= ARTICLE BODY TYPOGRAPHY ========= */
