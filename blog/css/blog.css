@@ -584,6 +584,11 @@ text-align:center;
 .blog-footer p{
 font-size:.85rem;
 }
+.blog-footer-license{
+margin-top:8px;
+color:var(--secondary);
+opacity:.8;
+}
 .blog-footer a{
 font-weight:600;
 text-decoration:underline;
