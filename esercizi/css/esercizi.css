@@ -197,6 +197,11 @@ transition:var(--transition);
 }
 .ex-back-link:hover{color:var(--primary);gap:10px;}
 .ex-back-wrap{text-align:center;}
+.ex-blog-link{
+display:block;text-align:center;margin-top:18px;font-size:.88rem;color:var(--secondary);
+}
+.ex-blog-link a{color:var(--primary);font-weight:600;text-decoration:underline;}
+.ex-blog-link a:hover{color:var(--gold);}
 
 /* ========= TYPE 1: CLOZE / FILL-IN-THE-BLANK ========= */
 .cloze-text{font-size:1.15rem;line-height:2.1;color:var(--primary);}

@@ -513,6 +513,11 @@ transition:var(--transition);
 color:var(--primary);
 gap:10px;
 }
+.blog-exercise-link{
+display:block;margin-top:14px;font-size:.88rem;color:var(--secondary);
+}
+.blog-exercise-link a{color:var(--primary);font-weight:600;text-decoration:underline;}
+.blog-exercise-link a:hover{color:var(--gold);}
 
 /* ========= SIDEBAR CTA (sticky, desktop) ========= */
 .article-sidebar{

@@ -415,3 +415,30 @@ la dimensione della griglia da 8 a 10-12 dove necessario. Tutti e 15 verificati 
 9 titoli inizialmente in conflitto con esercizi esistenti o duplicati interni (es. "Elettrodomestici" usato
 sia per anagramma che flashcard, "La famiglia" già esistente, "Materie scolastiche" già esistente) — tutti
 rinominati con prefissi distintivi prima della generazione.
+
+## ✅ SEO/visibilità: punti 1, 2, 3, 5 completati (blog + esercizi)
+
+**1. Bug `lang` corretto**: 106 articoli del blog scritti in inglese o olandese avevano erroneamente
+`<html lang="it">`. Rilevati con un classificatore basato su parole funzionali, con soglia di confidenza
+2x per evitare falsi positivi (trovati e corretti 2 errori di questo tipo durante la verifica, entrambi
+su articoli di modi di dire che mescolano italiano ed esempi in inglese).
+
+**2. Collegamenti incrociati blog↔esercizi**: aggiunto un link discreto (non un bottone CTA) su tutte le
+706 pagine esercizio verso la categoria del blog più pertinente, e su tutti i 220 articoli del blog verso
+l'indice degli esercizi. Il CTA principale "Prenota una lezione gratuita" resta invariato e unico per pagina.
+Nota: il blog non tratta argomenti grammaticali specifici (è centrato su metodologia, cultura, modi di dire),
+quindi l'abbinamento è per categoria tematica (Cultura Italiana, Language Hacking, ecc.) più che 1:1 per
+singolo argomento — gli unici abbinamenti diretti articolo-per-articolo sono per i modi di dire.
+
+**3. Testo esplicativo ampliato**: su tutte le 706 pagine (incluse le 41 di lettura vero/falso che non
+avevano un box esplicativo separato), aggiunto un paragrafo con: obiettivo del livello QCER, cosa allena
+l'esercizio nell'area tematica, consiglio di studio specifico per il tipo di esercizio. Media di parole
+nel box passata da ~38 a ~107 (quasi triplicata).
+
+**5. Date aggiornate onestamente**: aggiunto il campo `dateModified` (distinto da `datePublished`, che
+resta storicamente accurato) su tutti i 220 articoli, con la data odierna — giustificato dal fatto che ogni
+articolo è stato genuinamente modificato oggi con il nuovo collegamento agli esercizi (punto 2). Non è un
+semplice cambio di data senza contenuto reale, pratica che Google penalizza.
+
+### Nota
+Punto 4 (newsletter/lead magnet) escluso su richiesta esplicita — resta solo il box di contatto esistente.
