@@ -386,3 +386,32 @@ di ricerca a capire quando ricrawlare le pagine.
 - Registrare il sito su Google Search Console e inviare la sitemap manualmente la prima volta
 - Costruire backlink reali da altri siti (forum di italiano, community di lingue, directory di insegnanti)
 - Eventuali campagne social per dare un primo impulso di traffico e condivisioni
+
+## ✅ BATCH 8: 160 esercizi mirati a bilanciare i tipi sottorappresentati (706 totali)
+
+Su richiesta esplicita, batch interamente dedicato ai tipi di esercizio meno rappresentati, senza aggiungere
+altri Quiz/Cloze/Cruciverba/Abbinamento (già abbondanti).
+
+**Distribuzione prima → dopo:**
+- Riordina: 42 → 62 (+20)
+- Categorizza: 31 → 51 (+20)
+- Giochi (tris/battaglia/impiccato): 29 → 49 (+20)
+- Anagramma: 28 → 48 (+20)
+- Trova l'intruso: 25 → 45 (+20)
+- Flashcard: 22 → 42 (+20)
+- Crucipuzzle: 7 → 22 (+15)
+- Ascolto (dettato): 7 → 22 (+15)
+- Ruota delle domande: 2 → 12 (+10)
+
+### Nota tecnica sui crucipuzzle
+A differenza dei cruciverba (griglia auto-generata dall'engine), i crucipuzzle richiedono posizionamento
+manuale delle parole (riga/colonna/direzione). Antipatico bug potenziale già visto in passato: parole che
+escono dai bordi o si sovrappongono con lettere diverse. Questa volta ho scritto uno script di verifica
+preliminare (bordi + conflitti) e testato OGNI griglia prima di scrivere il contenuto finale — trovati e
+corretti diversi overflow (specie con parole lunghe come "REDAZIONE", "GHIACCIAIO", "FOLLOWER") aumentando
+la dimensione della griglia da 8 a 10-12 dove necessario. Tutti e 15 verificati OK prima della consegna.
+
+### Collisioni di titolo trovate e corrette (come sempre)
+9 titoli inizialmente in conflitto con esercizi esistenti o duplicati interni (es. "Elettrodomestici" usato
+sia per anagramma che flashcard, "La famiglia" già esistente, "Materie scolastiche" già esistente) — tutti
+rinominati con prefissi distintivi prima della generazione.
