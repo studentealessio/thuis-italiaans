@@ -65,7 +65,7 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(18,34px);"></div>
+        <div class="crossword-grid" id="cwGrid"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -126,7 +126,17 @@ const numbers = {"0,8": 1, "0,12": 2, "1,10": 3, "4,5": 4, "5,4": 5, "7,7": 6, "
 const clues = { across: [{num:2, text:"Mese dell'inizio dell'estate"}, {num:5, text:"Giorno di metà settimana"}, {num:7, text:"Mese delle piogge primaverili"}, {num:8, text:"Primo giorno della settimana lavorativa"}], down: [{num:1, text:"Mese dei fiori"}, {num:2, text:"Primo mese dell'anno"}, {num:3, text:"Secondo giorno della settimana"}, {num:4, text:"Mese più corto dell'anno"}, {num:6, text:"Mese dell'inizio della primavera"}, {num:8, text:"Mese caldo dell'estate"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
-gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
+function sizeCrosswordGrid() {
+  const wrap = gridEl.closest('.crossword-wrap');
+  const available = (wrap ? wrap.clientWidth : window.innerWidth) - 20;
+  const maxCellFromWidth = Math.floor(available / COLS) - 2;
+  const cellSize = Math.max(22, Math.min(38, maxCellFromWidth));
+  gridEl.style.setProperty('--cw-cell-size', cellSize + 'px');
+  gridEl.style.gridTemplateColumns = `repeat(${COLS}, var(--cw-cell-size))`;
+  gridEl.style.gridTemplateRows = `repeat(${ROWS}, var(--cw-cell-size))`;
+}
+sizeCrosswordGrid();
+window.addEventListener('resize', sizeCrosswordGrid);
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');

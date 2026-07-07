@@ -65,7 +65,7 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(12,34px);"></div>
+        <div class="crossword-grid" id="cwGrid"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -126,7 +126,17 @@ const numbers = {"0,8": 1, "0,9": 2, "2,7": 3, "4,5": 4, "6,3": 5, "6,10": 6, "7
 const clues = { across: [{num:1, text:"In modo negativo"}, {num:4, text:"In ogni occasione, senza eccezioni"}, {num:7, text:"Il giorno prima di oggi"}, {num:8, text:"Immediatamente"}], down: [{num:2, text:"Fino a questo momento"}, {num:3, text:"Il giorno dopo oggi"}, {num:4, text:"Con frequenza"}, {num:5, text:"Il giorno presente"}, {num:6, text:"Prima di adesso"}, {num:9, text:"In modo positivo"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
-gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
+function sizeCrosswordGrid() {
+  const wrap = gridEl.closest('.crossword-wrap');
+  const available = (wrap ? wrap.clientWidth : window.innerWidth) - 20;
+  const maxCellFromWidth = Math.floor(available / COLS) - 2;
+  const cellSize = Math.max(22, Math.min(38, maxCellFromWidth));
+  gridEl.style.setProperty('--cw-cell-size', cellSize + 'px');
+  gridEl.style.gridTemplateColumns = `repeat(${COLS}, var(--cw-cell-size))`;
+  gridEl.style.gridTemplateRows = `repeat(${ROWS}, var(--cw-cell-size))`;
+}
+sizeCrosswordGrid();
+window.addEventListener('resize', sizeCrosswordGrid);
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');

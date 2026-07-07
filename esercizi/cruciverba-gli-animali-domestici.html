@@ -65,7 +65,7 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(18,34px);"></div>
+        <div class="crossword-grid" id="cwGrid"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -126,7 +126,17 @@ const numbers = {"0,8": 1, "0,11": 2, "5,5": 3, "5,8": 4, "5,13": 5, "6,4": 6, "
 const clues = { across: [{num:1, text:"Vive in un acquario"}, {num:5, text:"Il migliore amico dell'uomo"}, {num:6, text:"Uccello che può imitare le parole"}, {num:7, text:"Piccolo roditore da compagnia"}, {num:8, text:"Animale che fa le fusa"}, {num:9, text:"Ci vivono uccelli o piccoli roditori"}], down: [{num:2, text:"Un cane o gatto molto giovane"}, {num:3, text:"Animale lento con guscio"}, {num:4, text:"Piccolo uccello canterino"}, {num:5, text:"Ha lunghe orecchie"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
-gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
+function sizeCrosswordGrid() {
+  const wrap = gridEl.closest('.crossword-wrap');
+  const available = (wrap ? wrap.clientWidth : window.innerWidth) - 20;
+  const maxCellFromWidth = Math.floor(available / COLS) - 2;
+  const cellSize = Math.max(22, Math.min(38, maxCellFromWidth));
+  gridEl.style.setProperty('--cw-cell-size', cellSize + 'px');
+  gridEl.style.gridTemplateColumns = `repeat(${COLS}, var(--cw-cell-size))`;
+  gridEl.style.gridTemplateRows = `repeat(${ROWS}, var(--cw-cell-size))`;
+}
+sizeCrosswordGrid();
+window.addEventListener('resize', sizeCrosswordGrid);
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');

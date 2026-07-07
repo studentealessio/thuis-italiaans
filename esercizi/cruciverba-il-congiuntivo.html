@@ -65,7 +65,7 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(12,34px);"></div>
+        <div class="crossword-grid" id="cwGrid"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -126,7 +126,17 @@ const numbers = {"0,8": 1, "2,8": 2, "4,4": 3, "7,1": 4, "8,0": 5, "11,5": 6, "1
 const clues = { across: [{num:2, text:"Congiuntivo di stare, lui/lei"}, {num:3, text:"Congiuntivo di venire, lui/lei"}, {num:5, text:"Congiuntivo di fare, lui/lei"}, {num:7, text:"Congiuntivo di avere, lui/lei"}, {num:8, text:"Congiuntivo di dire, lui/lei"}, {num:9, text:"Congiuntivo di essere, lui/lei"}], down: [{num:1, text:"Congiuntivo di potere, lui/lei"}, {num:3, text:"Congiuntivo di volere, lui/lei"}, {num:4, text:"Congiuntivo di sapere, lui/lei"}, {num:6, text:"Congiuntivo di andare, lui/lei"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
-gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
+function sizeCrosswordGrid() {
+  const wrap = gridEl.closest('.crossword-wrap');
+  const available = (wrap ? wrap.clientWidth : window.innerWidth) - 20;
+  const maxCellFromWidth = Math.floor(available / COLS) - 2;
+  const cellSize = Math.max(22, Math.min(38, maxCellFromWidth));
+  gridEl.style.setProperty('--cw-cell-size', cellSize + 'px');
+  gridEl.style.gridTemplateColumns = `repeat(${COLS}, var(--cw-cell-size))`;
+  gridEl.style.gridTemplateRows = `repeat(${ROWS}, var(--cw-cell-size))`;
+}
+sizeCrosswordGrid();
+window.addEventListener('resize', sizeCrosswordGrid);
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');

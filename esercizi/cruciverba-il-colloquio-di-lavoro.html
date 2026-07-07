@@ -65,7 +65,7 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(20,34px);"></div>
+        <div class="crossword-grid" id="cwGrid"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -126,7 +126,17 @@ const numbers = {"0,14": 1, "2,0": 2, "2,8": 3, "2,10": 4, "3,12": 5, "6,6": 6, 
 const clues = { across: [{num:2, text:"Processo di scelta dei candidati"}, {num:6, text:"Documento con la tua esperienza"}, {num:8, text:"Persona che seleziona i candidati"}, {num:9, text:"Somma ricevuta per il lavoro"}], down: [{num:1, text:"Incontro per valutare un candidato"}, {num:3, text:"Anni di lavoro già svolti"}, {num:4, text:"Persona che si propone per un lavoro"}, {num:5, text:"Atto di essere assunti"}, {num:6, text:"Abilità professionali"}, {num:7, text:"Documento che regola il rapporto di lavoro"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
-gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
+function sizeCrosswordGrid() {
+  const wrap = gridEl.closest('.crossword-wrap');
+  const available = (wrap ? wrap.clientWidth : window.innerWidth) - 20;
+  const maxCellFromWidth = Math.floor(available / COLS) - 2;
+  const cellSize = Math.max(22, Math.min(38, maxCellFromWidth));
+  gridEl.style.setProperty('--cw-cell-size', cellSize + 'px');
+  gridEl.style.gridTemplateColumns = `repeat(${COLS}, var(--cw-cell-size))`;
+  gridEl.style.gridTemplateRows = `repeat(${ROWS}, var(--cw-cell-size))`;
+}
+sizeCrosswordGrid();
+window.addEventListener('resize', sizeCrosswordGrid);
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');

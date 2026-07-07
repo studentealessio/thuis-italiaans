@@ -65,7 +65,7 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(11,38px);"></div>
+        <div class="crossword-grid" id="cwGrid"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -126,7 +126,17 @@ const numbers = {"0,7": 1, "1,1": 2, "1,4": 3, "1,10": 4, "2,6": 5, "3,2": 6, "4
 const clues = { across: [{num:2, text:"Il padre di tuo padre o tua madre"}, {num:5, text:"La madre"}, {num:8, text:"Un figlio degli stessi genitori, maschio"}, {num:9, text:"Il fratello di tuo padre o tua madre"}, {num:11, text:"Il bambino di un genitore"}], down: [{num:1, text:"La sorella di tuo padre o tua madre"}, {num:3, text:"Il figlio di tuo fratello, o il figlio di tuo figlio"}, {num:4, text:"Il padre"}, {num:5, text:"La sposa di un uomo"}, {num:6, text:"Lo sposo di una donna"}, {num:7, text:"Una figlia degli stessi genitori, femmina"}, {num:10, text:"La madre di tuo padre o tua madre"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
-gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
+function sizeCrosswordGrid() {
+  const wrap = gridEl.closest('.crossword-wrap');
+  const available = (wrap ? wrap.clientWidth : window.innerWidth) - 20;
+  const maxCellFromWidth = Math.floor(available / COLS) - 2;
+  const cellSize = Math.max(22, Math.min(38, maxCellFromWidth));
+  gridEl.style.setProperty('--cw-cell-size', cellSize + 'px');
+  gridEl.style.gridTemplateColumns = `repeat(${COLS}, var(--cw-cell-size))`;
+  gridEl.style.gridTemplateRows = `repeat(${ROWS}, var(--cw-cell-size))`;
+}
+sizeCrosswordGrid();
+window.addEventListener('resize', sizeCrosswordGrid);
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');

@@ -280,3 +280,52 @@ civile, città d'arte, dialetti, e molto altro tra riordina/anagramma/categorizz
 Controllo collisioni titolo/slug contro tutti i 334 esercizi precedenti PRIMA di scrivere contenuti;
 verifica engine cruciverba con placeholder prima degli indizi finali; verifica sintassi JS, escaping,
 ordine gioco-poi-spiegazione e conteggio parole cruciverba DOPO la generazione, prima di consegnare.
+
+## ✅ BATCH 6: altri 100 esercizi (534 totali)
+
+**20 nuovi cruciverba** (10+ parole verificate, tutti verificati anche con gli indizi reali finali):
+stagioni e tempo, routine quotidiana, Sicilia, pasta italiana, diritto, preposizioni di luogo, parti del
+viso, caffè italiano, campeggio, psicologia base, camera da letto, social network, lingue straniere,
+architettura italiana, pronomi personali, sport e arti marziali, pizza e varianti, giornalismo investigativo,
+punti cardinali, verbi al gerundio.
+
+**Grammatica di approfondimento (27)**: preposizioni con mesi/stagioni, condizionale per ipotesi cortesi,
+superlativi assoluti irregolari (ottimo/pessimo), presente negativo, passivo con i modali, indefiniti
+(ogni/qualche/alcuni), futuro anteriore, articoli con giorni della settimana, congiuntivo con impersonali,
+venire+preposizioni, fa/tra, buono/cattivo irregolari, connettivi consecutivi (così...che), ne con argomenti,
+possessivi con oggetti, riflessivi con accordo, sia...che/né...né, esserci, aggettivi -oso/-ale, condizionale
+di voce riportata, ci+ne insieme, pur+gerundio, preposizioni con sport, mettersi+infinito, aggettivi che
+cambiano posizione/significato, il quale con l'articolo.
+
+**Lessico di approfondimento (53)**: attrezzatura da campeggio, fasi della giornata, generi musicali,
+opposti, strumenti di scrittura, dogana, utensili da tavola, comunicazione non verbale, giardino, professioni
+sanitarie, buone maniere a tavola, agriturismi, olio d'oliva, precariato giovanile, podcast, Dolomiti,
+vacanze scolastiche, spopolamento borghi, e molto altro tra riordina/anagramma/categorizza/trova/flashcard/
+impiccato (inclusi idiomi con il corpo, termini del giornalismo investigativo, numeri e date all'ascolto).
+
+### Nota sulla qualità dei cruciverba
+Durante la verifica preliminare (prima di scrivere gli indizi finali), 6 delle 20 liste inizialmente
+proposte sono risultate sotto le 10 parole piazzate — tra cui una con parole "sporche" (parentesi/spazi
+dentro il campo parola, es. "ROSA (dei venti)"), che avrebbero rotto la griglia. Tutte corrette con parole
+aggiuntive e pulizia del formato prima di procedere alla scrittura del contenuto finale.
+
+## ✅ Bug critico corretto: cruciverba e abbinamento troppo larghi su mobile
+
+**Causa 1 (cruciverba)**: la griglia usava una larghezza in pixel fissi (`repeat(N, 34-38px)`), impostata
+sia in HTML che in JS. Con più di 10-12 colonne, la griglia superava facilmente i 375-390px di uno schermo
+mobile, e veniva tagliata a destra (il `body` ha `overflow-x:hidden`, quindi la parte in eccesso spariva
+invece di creare uno scroll). **Corretto**: ora la dimensione della cella si calcola dinamicamente via
+JavaScript in base allo spazio disponibile (minimo 22px, massimo 38px), con un listener sul resize per il
+cambio orientamento. Aggiunto anche uno scroll orizzontale di sicurezza per griglie estreme.
+Corretto sia nel generatore (per i futuri batch) sia retroattivamente su **tutte le 85 pagine cruciverba
+esistenti**.
+
+**Causa 2 (abbinamento)**: le card della griglia di abbinamento (`.match-board`) non avevano `min-width:0`,
+una proprietà che CSS Grid richiede esplicitamente per permettere a una cella di restringersi sotto la
+dimensione del suo contenuto minimo (il problema classico "grid blowout" quando il testo è lungo). Su
+schermi stretti, testi lunghi come le definizioni forzavano la griglia a essere più larga dello schermo.
+**Corretto**: aggiunto `min-width:0` e `overflow-wrap:break-word` a `.match-card`, e cambiato
+`grid-template-columns` da `1fr` a `minmax(0,1fr)` (la soluzione standard per questo problema).
+
+Entrambe le correzioni sono nel CSS condiviso (`esercizi.css`), quindi si applicano automaticamente a
+**tutte le 534 pagine** senza bisogno di rigenerarle singolarmente.
