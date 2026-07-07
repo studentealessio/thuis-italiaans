@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battaglia delle preposizioni | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Affonda le navi rispondendo a domande sulle preposizioni articolate.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/battaglia-delle-preposizioni.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "Battaglia delle preposizioni",
+ "description": "Affonda le navi rispondendo a domande sulle preposizioni articolate.",
+ "url": "https://thuisitaliaans.com/esercizi/battaglia-delle-preposizioni.html",
+ "learningResourceType": "Giochi",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/battaglia-delle-preposizioni.html</span>
+      </div>
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A2</span>
+        <span class="ex-badge ex-badge-type">🚢 Battaglia navale</span>
+        <span class="ex-badge ex-badge-type">Grammatica</span>
+      </div>
+      <h1>Battaglia delle preposizioni</h1>
+      <p>Affonda le navi rispondendo a domande sulle preposizioni articolate.</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Le preposizioni articolate</h2>
+      <p>Le preposizioni articolate si formano unendo una preposizione semplice a un articolo determinativo.</p>
+      
+    </div>
+
+    <div class="ex-panel" style="text-align:center;">
+      <div class="battleship-grid" id="bsGrid"></div>
+      <div class="bs-question-box" id="bsQuestionBox">
+        <p id="bsQuestionText" style="font-weight:700;color:var(--primary);margin-bottom:16px;"></p>
+        <div class="quiz-options" id="bsOptionsBox"></div>
+      </div>
+      <p class="bs-status" id="bsStatus">Navi da affondare: 3</p>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
+      </div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Le preposizioni articolate diventano automatiche con la pratica</h3>
+      <p>Un gioco veloce per fissarle bene, senza noia.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/battaglia-delle-preposizioni.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/battaglia-delle-preposizioni.png" download="battaglia-delle-preposizioni-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/battaglia-delle-preposizioni.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const GRID_SIZE = 5;
+const questions = [{ q: "&quot;A&quot; + &quot;il&quot; diventa...", options: ["al", "allo", "alla"], correct: 0 }, { q: "&quot;Di&quot; + &quot;lo&quot; diventa...", options: ["dello", "dela", "delo"], correct: 0 }, { q: "&quot;In&quot; + &quot;la&quot; diventa...", options: ["nella", "inla", "inella"], correct: 0 }, { q: "&quot;Su&quot; + &quot;i&quot; diventa...", options: ["sui", "sun", "sugli"], correct: 0 }, { q: "&quot;Da&quot; + &quot;gli&quot; diventa...", options: ["dagli", "dali", "dagl"], correct: 0 }, { q: "&quot;Con&quot; + &quot;il&quot; diventa spesso (forma comune)...", options: ["col", "conil", "conno"], correct: 0 }, { q: "&quot;A&quot; + &quot;le&quot; diventa...", options: ["alle", "ale", "alla"], correct: 0 }];
+let ships = [], hitCells = new Set(), sunkShips = 0, currentCell = null;
+function randomShips() {
+  const cells = [];
+  while (cells.length < 3) {
+    const r = Math.floor(Math.random()*GRID_SIZE), c = Math.floor(Math.random()*GRID_SIZE), key = `${r},${c}`;
+    if (!cells.includes(key)) cells.push(key);
+  }
+  return cells;
+}
+function init() {
+  ships = randomShips(); hitCells = new Set(); sunkShips = 0;
+  document.getElementById('bsStatus').textContent = 'Navi da affondare: 3';
+  document.getElementById('bsQuestionBox').classList.remove('show');
+  const grid = document.getElementById('bsGrid'); grid.innerHTML = ''; const cols='ABCDE';
+  for (let r=0;r<GRID_SIZE;r++) for (let c=0;c<GRID_SIZE;c++) {
+    const cell = document.createElement('div'); cell.className='bs-cell'; cell.textContent=`${cols[c]}${r+1}`;
+    cell.dataset.key = `${r},${c}`;
+    cell.addEventListener('click', () => openQuestion(cell));
+    grid.appendChild(cell);
+  }
+}
+function openQuestion(cell) {
+  if (cell.classList.contains('hit') || cell.classList.contains('miss')) return;
+  currentCell = cell;
+  const q = questions[Math.floor(Math.random()*questions.length)];
+  document.getElementById('bsQuestionText').textContent = q.q;
+  const optionsBox = document.getElementById('bsOptionsBox'); optionsBox.innerHTML = '';
+  q.options.forEach((opt, oi) => {
+    const optDiv = document.createElement('div'); optDiv.className='quiz-option';
+    optDiv.innerHTML = `<span class="quiz-option-letter">${['A','B','C'][oi]}</span><span>${opt}</span>`;
+    optDiv.addEventListener('click', () => answerQuestion(oi === q.correct));
+    optionsBox.appendChild(optDiv);
+  });
+  document.getElementById('bsQuestionBox').classList.add('show');
+}
+function answerQuestion(isCorrect) {
+  document.getElementById('bsQuestionBox').classList.remove('show');
+  const cell = currentCell; const isShip = ships.includes(cell.dataset.key);
+  if (isCorrect && isShip) {
+    cell.classList.add('hit'); cell.textContent='💥'; hitCells.add(cell.dataset.key); sunkShips++;
+    document.getElementById('bsStatus').textContent = sunkShips>=3 ? 'Complimenti, hai affondato tutte le navi! 🎉' : `Colpito! Navi da affondare: ${3-sunkShips}`;
+  } else if (isCorrect && !isShip) { cell.classList.add('miss'); cell.textContent='〰️'; }
+  else { cell.classList.add('miss'); cell.textContent='✗'; }
+}
+document.getElementById('retryBtn').addEventListener('click', init);
+init();
+</script>
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 240, revealSolutions: function(){
+  document.querySelectorAll('.bs-cell').forEach(cell => {
+    if (ships.includes(cell.dataset.key) && !cell.classList.contains('hit')) { cell.classList.add('hit','solution-revealed'); cell.textContent='💥'; }
+  });
+}});
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+
+</body>
+</html>

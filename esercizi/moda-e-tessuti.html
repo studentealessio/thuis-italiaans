@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moda e tessuti | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Un cruciverba a tema sulla moda e i tessuti.">
+<title>Cruciverba: moda e tessuti | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Un cruciverba con dieci parole sulla moda e i tessuti.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "LearningResource",
- "name": "Moda e tessuti",
- "description": "Un cruciverba a tema sulla moda e i tessuti.",
+ "name": "Cruciverba: moda e tessuti",
+ "description": "Un cruciverba con dieci parole sulla moda e i tessuti.",
  "url": "https://thuisitaliaans.com/esercizi/moda-e-tessuti.html",
  "learningResourceType": "Cruciverba",
  "inLanguage": "it",
@@ -59,8 +59,8 @@
         <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
         <span class="ex-badge ex-badge-type">Lessico</span>
       </div>
-      <h1>Moda e tessuti</h1>
-      <p>Un cruciverba a tema sulla moda e i tessuti.</p>
+      <h1>Cruciverba: moda e tessuti</h1>
+      <p>Un cruciverba con dieci parole sulla moda e i tessuti.</p>
     </div>
 
     <div class="ex-explainer">
@@ -71,9 +71,10 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(6,38px);"></div>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(15,34px);"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
+
           <ol id="acrossClues"></ol>
           <h3>Verticali</h3>
           <ol id="downClues"></ol>
@@ -120,9 +121,9 @@
 </footer>
 
 <script>
-const solution = [["C", "O", "T", "O", "N", "E"], ["A", null, null, null, null, null], ["M", null, null, null, null, null], ["I", null, null, null, null, null], ["C", null, null, null, null, null], ["I", null, null, null, null, null], ["A", null, null, null, null, null]];
-const numbers = {"0,0": 1};
-const clues = { across: [{num:1, text:"Tessuto naturale molto comune, leggero e traspirante"}], down: [{num:1, text:"Negozio dove si comprano vestiti"}] };
+const solution = [[null, null, null, null, null, null, null, null, null, null, null, "G", null, null, null], [null, null, null, null, null, null, null, null, null, null, null, "O", null, null, null], [null, null, null, null, null, null, null, null, null, null, null, "N", null, null, null], [null, null, null, null, null, null, null, null, null, null, null, "N", null, null, "S"], [null, null, null, null, null, null, null, null, null, "S", "C", "A", "R", "P", "E"], [null, null, null, null, null, "C", null, null, null, null, "A", null, null, null, "T"], [null, "S", "A", "L", "D", "I", null, null, "C", null, "M", null, null, null, "A"], [null, null, null, null, null, "N", "E", "G", "O", "Z", "I", "O", null, null, null], [null, null, null, null, null, "T", null, null, "T", null, "C", null, null, null, null], [null, null, null, null, null, "U", null, null, "O", null, "I", null, null, null, null], [null, null, null, null, null, "R", null, null, "N", null, "A", null, null, null, null], ["T", "A", "G", "L", "I", "A", null, null, "E", null, null, null, null, null, null], [null, null, null, "A", null, null, null, null, null, null, null, null, null, null, null], [null, null, null, "N", null, null, null, null, null, null, null, null, null, null, null], [null, null, null, "A", null, null, null, null, null, null, null, null, null, null, null]];
+const numbers = {"0,11": 1, "3,14": 2, "4,9": 3, "4,10": 4, "5,5": 5, "6,1": 6, "6,8": 7, "7,5": 8, "11,0": 9, "11,3": 10};
+const clues = { across: [{num:3, text:"Si indossano ai piedi"}, {num:6, text:"Periodo di sconti nei negozi"}, {num:8, text:"Ci si compra abbigliamento"}, {num:9, text:"Misura di un capo di abbigliamento"}], down: [{num:1, text:"Capo femminile che copre le gambe"}, {num:2, text:"Tessuto pregiato e lucido"}, {num:4, text:"Capo di abbigliamento per la parte superiore"}, {num:5, text:"Accessorio che si mette in vita"}, {num:7, text:"Tessuto naturale, leggero e traspirante"}, {num:10, text:"Tessuto caldo, tipico d&#x27;inverno"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
@@ -187,7 +188,7 @@ document.getElementById('retryBtn').addEventListener('click', () => {
 </script>
 <script src="js/game-mode.js"></script>
 <script>
-GameMode.init({ timerSeconds: 150, revealSolutions: function(){
+GameMode.init({ timerSeconds: 200, revealSolutions: function(){
   for (let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
     if (solution[r][c]===null) continue;
     const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);

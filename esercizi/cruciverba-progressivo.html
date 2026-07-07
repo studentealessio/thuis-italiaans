@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cruciverba progressivo | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Cruciverba con livelli di difficoltà misti, dall'A1 al B1, nella stessa griglia.">
+<meta name="description" content="Cruciverba con dieci parole a livelli di difficoltà misti, dall'A1 al B1, nella stessa griglia.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,24 +14,23 @@
 <link rel="canonical" href="https://thuisitaliaans.com/esercizi/cruciverba-progressivo.html">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "name": "Cruciverba progressivo",
-  "description": "Cruciverba con livelli di difficolt\u00e0 misti nella stessa griglia.",
-  "url": "https://thuisitaliaans.com/esercizi/cruciverba-progressivo.html",
-  "learningResourceType": "Cruciverba",
-  "educationalLevel": "A1, B1",
-  "inLanguage": "it",
-  "isAccessibleForFree": true,
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Thuis Italiaans",
-    "url": "https://thuisitaliaans.com/"
-  },
-  "provider": {
-    "@type": "Person",
-    "name": "Alessio"
-  }
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "Cruciverba progressivo",
+ "description": "Cruciverba con dieci parole a livelli di difficoltà misti, dall'A1 al B1, nella stessa griglia.",
+ "url": "https://thuisitaliaans.com/esercizi/cruciverba-progressivo.html",
+ "learningResourceType": "Cruciverba",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
 }
 </script>
 </head>
@@ -55,26 +54,27 @@
         <img src="../assets/icons/icon-512.png" alt="">
         <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/cruciverba-progressivo.html</span>
       </div>
-      
       <div class="ex-badge-row">
-        <span class="ex-badge ex-badge-level">A1–B1</span>
-        <span class="ex-badge ex-badge-type">📶 Cruciverba progressivo</span>
-        <span class="ex-badge ex-badge-type">Misto</span>
+        <span class="ex-badge ex-badge-level">A1-B1</span>
+        <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
+        <span class="ex-badge ex-badge-type">Grammatica</span>
       </div>
       <h1>Cruciverba progressivo</h1>
-      <p>Ogni definizione ha il suo livello: se sei alle prime armi concentrati sulle caselle A1, se vuoi una sfida in più prova anche quelle B1.</p>
+      <p>Cruciverba con dieci parole a livelli di difficoltà misti, dall'A1 al B1, nella stessa griglia.</p>
     </div>
 
     <div class="ex-explainer">
-      <h2>📘 Perché un cruciverba "a livelli"</h2>
-      <p>Uno stesso schema può contenere parole di difficoltà diversa: così principianti e studenti più avanzati possono lavorare fianco a fianco sullo stesso esercizio.</p>
+      <h2>📘 Perché un cruciverba 'a livelli'</h2>
+      <p>Uno stesso schema può contenere parole di difficoltà diversa: così principianti e studenti più avanzati possono lavorare fianco a fianco.</p>
+      
     </div>
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(4,38px);"></div>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(10,38px);"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
+
           <ol id="acrossClues"></ol>
           <h3>Verticali</h3>
           <ol id="downClues"></ol>
@@ -89,9 +89,10 @@
 
     <div class="ex-end-cta">
       <h3>Ogni studente ha un ritmo diverso, ed è giusto così</h3>
-      <p>Nelle lezioni private modello sempre la difficoltà sul tuo livello reale, senza fretta e senza noia.</p>
+      <p>Nelle lezioni private modello sempre la difficoltà sul tuo livello reale.</p>
       <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
     </div>
+
 
     <div class="print-qr-block">
       <img src="../assets/qr/cruciverba-progressivo.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
@@ -120,39 +121,16 @@
 </footer>
 
 <script>
-// Actual grid: CASA across (row2, cols0-3), COSÌ down (col0, rows2-5), UVA down (col3, rows0-2)
-const grid = [
-  [null, null, null, "U"],
-  [null, null, null, "V"],
-  ["C", "A", "S", "A"],
-  ["O", null, null, null],
-  ["S", null, null, null],
-  ["Ì", null, null, null],
-];
-
-const numbers = {
-  "0,3": 1, // UVA down (A1)
-  "2,0": 2, // CASA across (A1) / COSÌ down (B1)
-};
-
-const clues = {
-  across: [
-    { num: 2, text: 'Dove abiti <span class="cw-level-tag lvl-a1">A1</span>', answer: "CASA" },
-  ],
-  down: [
-    { num: 1, text: 'Frutto con cui si fa il vino <span class="cw-level-tag lvl-a1">A1</span>', answer: "UVA" },
-    { num: 2, text: 'Connettivo che introduce una conseguenza (es. "__, ho deciso di restare") <span class="cw-level-tag lvl-b1">B1</span>', answer: "COSÌ" },
-  ]
-};
-
-const ROWS = grid.length, COLS = grid[0].length;
+const solution = [[null, null, null, "Q", null, null, "C", null, null, "C"], [null, null, "T", "U", "T", "T", "A", "V", "I", "A"], [null, null, null, "I", null, null, "S", null, null, "N"], [null, "P", "A", "N", "E", null, "A", null, null, "E"], [null, null, null, "D", null, null, null, null, null, null], ["C", "O", "S", "I", null, null, null, null, null, null]];
+const numbers = {"0,3": 1, "0,6": 2, "0,9": 3, "1,2": 4, "3,1": 5, "5,0": 6};
+const clues = { across: [{num:4, text:"Introduce un&#x27;idea contraria [B1]"}, {num:5, text:"Non manca mai a tavola [A1]"}, {num:6, text:"Connettivo di conseguenza, es. &#x27;così ho deciso&#x27; [B1]"}], down: [{num:1, text:"Sinonimo di &#x27;perciò&#x27; [B1]"}, {num:2, text:"Dove abiti [A1]"}, {num:3, text:"Il migliore amico dell&#x27;uomo [A1]"}] };
+const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
-
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');
-    if (grid[r][c] === null) {
+    if (solution[r][c] === null) {
       cell.className = 'cw-cell blocked';
     } else {
       cell.className = 'cw-cell';
@@ -165,8 +143,7 @@ for (let r = 0; r < ROWS; r++) {
       }
       const input = document.createElement('input');
       input.maxLength = 1;
-      input.dataset.row = r;
-      input.dataset.col = c;
+      input.dataset.row = r; input.dataset.col = c;
       input.addEventListener('input', e => {
         e.target.value = e.target.value.toUpperCase();
         if (e.target.value) {
@@ -179,7 +156,6 @@ for (let r = 0; r < ROWS; r++) {
     gridEl.appendChild(cell);
   }
 }
-
 function renderClueList(list, elId) {
   const ol = document.getElementById(elId);
   list.forEach(c => {
@@ -190,55 +166,38 @@ function renderClueList(list, elId) {
 }
 renderClueList(clues.across, 'acrossClues');
 renderClueList(clues.down, 'downClues');
-
 document.getElementById('checkBtn').addEventListener('click', () => {
   let correct = 0, total = 0;
-  for (let r = 0; r < ROWS; r++) {
-    for (let c = 0; c < COLS; c++) {
-      if (grid[r][c] === null) continue;
-      total++;
-      const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
-      input.classList.remove('correct', 'incorrect');
-      if (input.value.toUpperCase() === grid[r][c]) {
-        input.classList.add('correct');
-        correct++;
-      } else {
-        input.classList.add('incorrect');
-      }
-    }
+  for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+    if (solution[r][c] === null) continue;
+    total++;
+    const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
+    input.classList.remove('correct','incorrect');
+    if (input.value.toUpperCase() === solution[r][c]) { input.classList.add('correct'); correct++; }
+    else input.classList.add('incorrect');
   }
   const fb = document.getElementById('feedback');
-  fb.classList.remove('good', 'bad');
-  fb.classList.add('show');
-  if (correct === total) {
-    fb.classList.add('good');
-    fb.textContent = 'Ottimo lavoro su entrambi i livelli! 🎉';
-  } else {
-    fb.classList.add('bad');
-    fb.textContent = `${correct}/${total} caselle corrette.`;
-  }
+  fb.classList.remove('good','bad'); fb.classList.add('show');
+  if (correct === total) { fb.classList.add('good'); fb.textContent = 'Cruciverba completato correttamente! 🎉'; }
+  else { fb.classList.add('bad'); fb.textContent = `${correct}/${total} caselle corrette.`; }
 });
-
 document.getElementById('retryBtn').addEventListener('click', () => {
-  gridEl.querySelectorAll('input').forEach(i => {
-    i.value = '';
-    i.classList.remove('correct', 'incorrect');
-  });
+  gridEl.querySelectorAll('input').forEach(i => { i.value=''; i.classList.remove('correct','incorrect'); });
   document.getElementById('feedback').classList.remove('show');
 });
 </script>
-
 <script src="js/game-mode.js"></script>
 <script>
-GameMode.init({ timerSeconds: 240, revealSolutions: function(){
-      for (let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
-        if (grid[r][c]===null) continue;
-        const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
-        input.value = grid[r][c];
-        input.classList.add('solution-revealed');
-      }
-    } });
+GameMode.init({ timerSeconds: 200, revealSolutions: function(){
+  for (let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
+    if (solution[r][c]===null) continue;
+    const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
+    input.value = solution[r][c];
+    input.classList.add('solution-revealed');
+  }
+}});
 </script>
+
 <script>
 document.getElementById('copyLinkBtn').addEventListener('click', function(){
   navigator.clipboard.writeText(window.location.href).then(() => {
@@ -249,5 +208,6 @@ document.getElementById('copyLinkBtn').addEventListener('click', function(){
   });
 });
 </script>
+
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'ufficio | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Un cruciverba a tema sul lessico dell'ufficio e del lavoro.">
+<title>Cruciverba: l'ufficio | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Un cruciverba con dieci parole sul lessico dell'ufficio e del lavoro.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "LearningResource",
- "name": "L'ufficio",
- "description": "Un cruciverba a tema sul lessico dell'ufficio e del lavoro.",
+ "name": "Cruciverba: l'ufficio",
+ "description": "Un cruciverba con dieci parole sul lessico dell'ufficio e del lavoro.",
  "url": "https://thuisitaliaans.com/esercizi/l-ufficio.html",
  "learningResourceType": "Cruciverba",
  "inLanguage": "it",
@@ -59,8 +59,8 @@
         <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
         <span class="ex-badge ex-badge-type">Lessico</span>
       </div>
-      <h1>L'ufficio</h1>
-      <p>Un cruciverba a tema sul lessico dell'ufficio e del lavoro.</p>
+      <h1>Cruciverba: l'ufficio</h1>
+      <p>Un cruciverba con dieci parole sul lessico dell'ufficio e del lavoro.</p>
     </div>
 
     <div class="ex-explainer">
@@ -71,9 +71,10 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(4,38px);"></div>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(18,34px);"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
+
           <ol id="acrossClues"></ol>
           <h3>Verticali</h3>
           <ol id="downClues"></ol>
@@ -120,9 +121,9 @@
 </footer>
 
 <script>
-const solution = [["C", "A", "P", "O"], ["O", null, null, null], ["L", null, null, null], ["L", null, null, null], ["E", null, null, null], ["G", null, null, null], ["A", null, null, null]];
-const numbers = {"0,0": 1};
-const clues = { across: [{num:1, text:"Il tuo superiore in azienda"}], down: [{num:1, text:"Persona con cui lavori nello stesso ufficio"}] };
+const solution = [[null, null, null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null, null], [null, null, null, null, null, null, null, null, "O", null, null, null, null, null, null, null, null, null], [null, null, null, null, "E", "M", "A", "I", "L", null, null, null, null, null, null, null, null, null], [null, null, null, null, null, null, null, null, "L", null, null, null, null, null, null, null, null, null], [null, null, null, null, null, null, null, null, "O", null, null, "R", null, null, null, null, null, null], [null, null, null, null, null, null, null, null, "Q", null, null, "I", null, null, null, null, null, null], [null, null, null, null, null, null, null, null, "U", null, null, "U", null, null, "C", "A", "P", "O"], [null, null, null, null, null, null, "S", "T", "I", "P", "E", "N", "D", "I", "O", null, null, null], [null, null, null, null, null, null, "C", null, "O", null, null, "I", null, null, "N", null, null, null], [null, null, null, null, null, null, "R", null, null, null, null, "O", null, null, "T", null, null, null], [null, null, null, "F", "E", "R", "I", "E", null, null, null, "N", null, null, "R", null, null, null], [null, null, null, null, null, null, "V", null, null, null, null, "E", null, null, "A", null, null, null], ["C", "O", "L", "L", "E", "G", "A", null, null, null, null, null, null, null, "T", null, null, null], [null, null, null, null, null, null, "N", null, null, null, null, null, null, null, "T", null, null, null], [null, null, null, null, null, null, "I", null, null, null, null, null, null, null, "O", null, null, null], [null, null, null, null, "S", "C", "A", "D", "E", "N", "Z", "A", null, null, null, null, null, null]];
+const numbers = {"0,8": 1, "2,4": 2, "4,11": 3, "6,14": 4, "7,6": 5, "10,3": 6, "12,0": 7, "15,4": 8};
+const clues = { across: [{num:2, text:"Messaggio elettronico di lavoro"}, {num:4, text:"Il tuo superiore in azienda"}, {num:5, text:"Somma di denaro ricevuta per il lavoro"}, {num:6, text:"Giorni di vacanza dal lavoro"}, {num:7, text:"Persona con cui lavori nello stesso ufficio"}, {num:8, text:"Data entro cui completare un compito"}], down: [{num:1, text:"Incontro per valutare un candidato"}, {num:3, text:"Incontro di lavoro tra colleghi"}, {num:4, text:"Documento che regola il rapporto di lavoro"}, {num:5, text:"Mobile su cui si lavora in ufficio"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

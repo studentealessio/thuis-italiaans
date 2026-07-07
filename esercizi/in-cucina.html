@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>In cucina | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Un cruciverba a tema sugli oggetti e gli ingredienti della cucina.">
+<title>Cruciverba: in cucina | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Un cruciverba con dieci oggetti e ingredienti della cucina.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "LearningResource",
- "name": "In cucina",
- "description": "Un cruciverba a tema sugli oggetti e gli ingredienti della cucina.",
+ "name": "Cruciverba: in cucina",
+ "description": "Un cruciverba con dieci oggetti e ingredienti della cucina.",
  "url": "https://thuisitaliaans.com/esercizi/in-cucina.html",
  "learningResourceType": "Cruciverba",
  "inLanguage": "it",
@@ -59,8 +59,8 @@
         <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
         <span class="ex-badge ex-badge-type">Lessico</span>
       </div>
-      <h1>In cucina</h1>
-      <p>Un cruciverba a tema sugli oggetti e gli ingredienti della cucina.</p>
+      <h1>Cruciverba: in cucina</h1>
+      <p>Un cruciverba con dieci oggetti e ingredienti della cucina.</p>
     </div>
 
     <div class="ex-explainer">
@@ -71,9 +71,10 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(4,38px);"></div>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(15,34px);"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
+
           <ol id="acrossClues"></ol>
           <h3>Verticali</h3>
           <ol id="downClues"></ol>
@@ -120,9 +121,9 @@
 </footer>
 
 <script>
-const solution = [["P", "A", "N", "E"], ["E", null, null, null], ["P", null, null, null], ["E", null, null, null]];
-const numbers = {"0,0": 1};
-const clues = { across: [{num:1, text:"Non manca mai a tavola, si affetta"}], down: [{num:1, text:"Ortaggio verde o rosso, si mette nell&#x27;insalata"}] };
+const solution = [[null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "U", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "H", null, "C", null, "B", null, "P", null, "T"], [null, null, null, null, "F", "R", "I", "G", "O", "R", "I", "F", "E", "R", "O"], ["F", "O", "R", "N", "O", null, "A", null, "L", null, "C", null, "N", null, "V"], [null, null, null, null, "R", null, "I", null, "T", null, "C", null, "T", null, "A"], [null, null, null, null, "C", null, "O", null, "E", null, "H", null, "O", null, "G"], [null, null, null, null, "H", null, null, null, "L", null, "I", null, "L", null, "L"], [null, "P", "A", "N", "E", null, null, null, "L", null, "E", null, "A", null, "I"], [null, null, null, null, "T", null, null, null, "O", null, "R", null, null, null, "A"], [null, null, null, null, "T", null, null, null, null, null, "E", null, null, null, null], [null, null, "P", "I", "A", "T", "T", "O", null, null, null, null, null, null, null]];
+const numbers = {"0,6": 1, "4,8": 2, "4,10": 3, "4,12": 4, "4,14": 5, "5,4": 6, "6,0": 7, "10,1": 8, "13,2": 9};
+const clues = { across: [{num:6, text:"Elettrodomestico che tiene freddo il cibo"}, {num:7, text:"Elettrodomestico per cuocere torte"}, {num:8, text:"Non manca mai a tavola, si affetta"}, {num:9, text:"Ci si mangia sopra"}], down: [{num:1, text:"Posata per la minestra"}, {num:2, text:"Posata tagliente"}, {num:3, text:"Ci si beve l&#x27;acqua"}, {num:4, text:"Ci si cuoce la pasta o il sugo"}, {num:5, text:"Copre il tavolo durante i pasti"}, {num:6, text:"Posata con i denti"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

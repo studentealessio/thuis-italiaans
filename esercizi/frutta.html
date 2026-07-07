@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frutta | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Un piccolo cruciverba interamente dedicato alla frutta.">
+<title>Cruciverba: la frutta | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Un cruciverba con dieci nomi di frutta, tutti a tema.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "LearningResource",
- "name": "Frutta",
- "description": "Un piccolo cruciverba interamente dedicato alla frutta.",
+ "name": "Cruciverba: la frutta",
+ "description": "Un cruciverba con dieci nomi di frutta, tutti a tema.",
  "url": "https://thuisitaliaans.com/esercizi/frutta.html",
  "learningResourceType": "Cruciverba",
  "inLanguage": "it",
@@ -59,8 +59,8 @@
         <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
         <span class="ex-badge ex-badge-type">Lessico</span>
       </div>
-      <h1>Frutta</h1>
-      <p>Un piccolo cruciverba interamente dedicato alla frutta.</p>
+      <h1>Cruciverba: la frutta</h1>
+      <p>Un cruciverba con dieci nomi di frutta, tutti a tema.</p>
     </div>
 
     <div class="ex-explainer">
@@ -71,9 +71,10 @@
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(4,38px);"></div>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(15,34px);"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
+
           <ol id="acrossClues"></ol>
           <h3>Verticali</h3>
           <ol id="downClues"></ol>
@@ -120,9 +121,9 @@
 </footer>
 
 <script>
-const solution = [["M", "E", "L", "A"], ["U", null, null, null], ["V", null, null, null], ["A", null, null, null]];
-const numbers = {"0,0": 1};
-const clues = { across: [{num:1, text:"Frutto rosso o verde, croccante"}], down: [{num:1, text:"Frutto con cui si fa il vino"}] };
+const solution = [[null, null, null, "A", "N", "A", "N", "A", "S", null, null, null, null, null, null], [null, null, null, "R", null, null, null, null, null, null, null, null, null, null, null], ["P", "E", "R", "A", null, null, null, null, null, null, "F", null, null, null, null], [null, null, null, "N", null, null, null, "M", null, null, "R", null, null, null, null], [null, null, null, "C", "I", "L", "I", "E", "G", "I", "A", null, null, null, null], ["K", "I", "W", "I", null, "I", null, "L", null, null, "G", null, null, null, null], [null, null, null, "A", null, "M", null, "A", null, null, "O", null, "U", null, null], [null, null, null, null, null, "O", null, null, null, null, "L", null, "V", null, null], [null, null, null, null, null, "N", null, null, null, "B", "A", "N", "A", "N", "A"], [null, null, null, null, null, "E", null, null, null, null, null, null, null, null, null]];
+const numbers = {"0,3": 1, "2,0": 2, "2,10": 3, "3,7": 4, "4,3": 5, "4,5": 6, "5,0": 7, "6,12": 8, "8,9": 9};
+const clues = { across: [{num:1, text:"Frutto tropicale con la corona di foglie"}, {num:2, text:"Frutto dolce a forma allungata"}, {num:5, text:"Piccolo frutto rosso e dolce, con nocciolo"}, {num:7, text:"Frutto verde con buccia pelosa"}, {num:9, text:"Frutto giallo e allungato"}], down: [{num:1, text:"Frutto arancione, ricco di vitamina C"}, {num:3, text:"Piccolo frutto rosso a forma di cuore"}, {num:4, text:"Frutto rosso o verde, croccante"}, {num:6, text:"Frutto giallo e acido"}, {num:8, text:"Frutto con cui si fa il vino"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

@@ -147,3 +147,49 @@ sparisce del tutto invece di mostrare "None". Verificato anche il batch 2 e rige
 - Lessico B2: itinerari UNESCO/dialetti, tecnologia/IA, politica/cittadinanza, psicologia/dipendenze digitali,
   eventi storici, sport/nutrizione, arte/teatro/design, emigrazione storica, consumi/pubblicità/marketing
 - Alcuni argomenti A1/A2 minori: avverbi di frequenza, pronome ci di luogo (isolato), verbi riflessivi (base)
+
+## ✅ BATCH 3: altri 100 esercizi (234 totali) + nuovo motore cruciverba
+
+### Fix strutturale importante: motore di generazione cruciverba
+I cruciverba precedenti erano quasi sempre di sole 2 parole (costruiti a mano). Costruito un vero algoritmo
+di generazione (`crossword_engine.py`, greedy con backtracking sulle intersezioni) che prende una lista di
+10-15 parole con definizioni e costruisce automaticamente una griglia connessa con incroci reali, numerazione
+e liste di definizioni orizzontali/verticali corrette. Verificato che ogni griglia piazzi almeno 10 parole
+(controllo automatico dei bordi e dei conflitti di lettere tra parole sovrapposte).
+
+**Rigenerati con il nuovo motore (10 cruciverba esistenti)**: cruciverba-base, cruciverba-colori (ora 100%
+a tema, zero intrusi), cruciverba-banca-parole, cruciverba-progressivo, frutta, in-cucina,
+tempo-libero-e-stagioni, in-vacanza, moda-e-tessuti, l-ufficio — tutti ora con 10-12 parole invece di 2.
+
+**15 nuovi cruciverba** (batch 3): famiglia, mestieri, verbi irregolari, carattere, media, mezzi di trasporto,
+elettrodomestici, cucina italiana, corpo umano, tecnologia, città, congiuntivo, ristorante, internet e social,
+emozioni — tutti con 10-14 parole piazzate.
+
+### Contenuti aggiunti (100)
+**Grammatica B2 rimasta (10)**: verbi pronominali, passivo con andare, concessivi/eccettuativi, relativi misti
+chi/quanto, discorso indiretto al passato, registro formale/informale, nominalizzazione, suffissi alterativi,
+discorso indiretto (domande dirette, B1), avverbi di frequenza (A1).
+
+**Lessico B2 rimasto (14)**: itinerari UNESCO/dialetti, tecnologia/IA, politica/cittadinanza, psicologia/
+dipendenze digitali, eventi storici, sport/nutrizione, arte/teatro/design, emigrazione storica, consumi/
+marketing, neologismi (2), musei/patrimonio, dibattito di attualità, turismo sostenibile, dipendenze digitali
+(cause/effetti).
+
+**Altri esercizi di consolidamento (61)**: molti argomenti già coperti nei batch precedenti hanno ricevuto
+ulteriori esercizi con tipologie diverse (es. verbi riflessivi sia in cloze che in quiz), più diversi
+argomenti minori del CEFR non ancora toccati (verbi in -ere/-ire, preposizioni di tempo, ci vuole/ci vogliono,
+c'è/ci sono, genere dei nomi, ne partitivo, verbo piacere, ecc.) e lessico aggiuntivo su tutte le 6 aree
+tematiche (stanze, scuola, stazione/aeroporto, modi di dire, menu, meteo esteso, mestieri/luoghi, ecc.)
+
+### Bug risolti durante questo batch
+- 3 titoli non corrispondevano esattamente tra piano e contenuto (mismatch di virgolette/parentesi) — corretti.
+- 1 duplicato interno ("Verbi riflessivi al presente" usato sia per un cloze che per un quiz) — rinominato.
+- 2 collisioni di slug con esercizi già esistenti nel batch 1 ("Mezzi di trasporto", "La famiglia" riusati
+  come titoli di nuovi esercizi, che avrebbero sovrascritto i file originali) — rinominati con prefissi distintivi.
+- 4 cruciverba nuovi inizialmente sotto le 10 parole piazzate (corpo umano: solo 7/10!) — aggiunte parole
+  extra a ciascuna lista per garantire tutti almeno 10 parole piazzate.
+
+### Rimangono da coprire
+- Grammatica B2: pochissimo rimasto, principalmente casi limite e consolidamento
+- Lessico: buona copertura ora su tutte le 6 aree; prossimi batch possono approfondire con esercizi più lunghi
+  e situazioni più complesse, specialmente ai livelli B1/B2

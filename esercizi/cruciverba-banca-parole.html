@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cruciverba con banca di parole | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Riempi lo schema del cruciverba usando solo la lista di parole disponibili, senza definizioni.">
+<meta name="description" content="Riempi lo schema con dieci parole usando solo la lista disponibile, senza definizioni.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,24 +14,23 @@
 <link rel="canonical" href="https://thuisitaliaans.com/esercizi/cruciverba-banca-parole.html">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "name": "Cruciverba con banca di parole",
-  "description": "Riempi lo schema usando solo la lista di parole, senza definizioni.",
-  "url": "https://thuisitaliaans.com/esercizi/cruciverba-banca-parole.html",
-  "learningResourceType": "Cruciverba",
-  "educationalLevel": "A1, A2",
-  "inLanguage": "it",
-  "isAccessibleForFree": true,
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Thuis Italiaans",
-    "url": "https://thuisitaliaans.com/"
-  },
-  "provider": {
-    "@type": "Person",
-    "name": "Alessio"
-  }
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "Cruciverba con banca di parole",
+ "description": "Riempi lo schema con dieci parole usando solo la lista disponibile, senza definizioni.",
+ "url": "https://thuisitaliaans.com/esercizi/cruciverba-banca-parole.html",
+ "learningResourceType": "Cruciverba",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
 }
 </script>
 </head>
@@ -55,31 +54,31 @@
         <img src="../assets/icons/icon-512.png" alt="">
         <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/cruciverba-banca-parole.html</span>
       </div>
-      
       <div class="ex-badge-row">
-        <span class="ex-badge ex-badge-level">A1–A2</span>
-        <span class="ex-badge ex-badge-type">🗒️ Cruciverba con banca di parole</span>
+        <span class="ex-badge ex-badge-level">A1</span>
+        <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
         <span class="ex-badge ex-badge-type">Lessico</span>
       </div>
       <h1>Cruciverba con banca di parole</h1>
-      <p>Niente definizioni questa volta: usa solo la lunghezza delle parole e le lettere già presenti per capire dove va ciascuna.</p>
+      <p>Riempi lo schema con dieci parole usando solo la lista disponibile, senza definizioni.</p>
     </div>
 
     <div class="ex-explainer">
       <h2>📘 Un tipo di sfida diverso</h2>
       <p>Senza definizioni, devi ragionare sulla lunghezza delle parole e sulle lettere condivise agli incroci — un ottimo allenamento di logica linguistica.</p>
+      
     </div>
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(4,38px);"></div>
-      </div>
-      <div class="cw-wordbank">
-        <span class="word-chip">CASA</span>
-        <span class="word-chip">CANE</span>
-        <span class="word-chip">UVA</span>
-        <span class="word-chip">LA</span>
-        <span class="word-chip">SOLE</span>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(13,34px);"></div>
+        <div class="cw-clues">
+          <h3>Orizzontali</h3>
+
+          <ol id="acrossClues"></ol>
+          <h3>Verticali</h3>
+          <ol id="downClues"></ol>
+        </div>
       </div>
       <div class="ex-actions">
         <button class="ex-btn ex-btn-primary" id="checkBtn">Correggi</button>
@@ -93,6 +92,7 @@
       <p>Un'abilità che si sviluppa con l'esposizione e la pratica costante alla lingua.</p>
       <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
     </div>
+
 
     <div class="print-qr-block">
       <img src="../assets/qr/cruciverba-banca-parole.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
@@ -121,19 +121,12 @@
 </footer>
 
 <script>
-const solution = [
-  [null, null, null, "U"],
-  [null, "L", null, "V"],
-  ["C", "A", "S", "A"],
-  ["A", null, "O", null],
-  ["N", null, "L", null],
-  ["E", null, "E", null],
-];
-
+const solution = [[null, null, null, null, null, null, null, null, null, null, "R", null, null], [null, null, null, null, null, null, null, null, null, null, "O", null, null], [null, null, null, null, null, null, null, null, null, null, "S", null, null], [null, null, null, null, null, null, null, null, null, "P", "A", "N", "E"], [null, null, null, null, null, null, null, null, null, "O", null, null, null], [null, null, null, null, null, null, null, "M", "A", "R", "E", null, null], [null, null, null, null, null, "S", null, null, null, "T", null, null, null], [null, null, "F", "I", "N", "E", "S", "T", "R", "A", null, null, null], [null, null, null, null, null, "D", null, "A", null, null, null, null, null], [null, null, null, null, null, "I", null, "V", "I", "N", "O", null, null], [null, null, "C", "A", "S", "A", null, "O", null, null, null, null, null], [null, null, "A", null, null, null, null, "L", null, null, null, null, null], ["L", "U", "N", "A", null, null, "S", "O", "L", "E", null, null, null], [null, null, "E", null, null, null, null, null, null, null, null, null, null]];
+const numbers = {"0,10": 1, "3,9": 2, "5,7": 3, "6,5": 4, "7,2": 5, "7,7": 6, "9,7": 7, "10,2": 8, "12,0": 9, "12,6": 10};
+const clues = { across: [{num:2, text:"Non manca mai a tavola"}, {num:3, text:"Ci fai il bagno d&#x27;estate"}, {num:5, text:"Si apre per prendere aria"}, {num:7, text:"Si beve durante i pasti"}, {num:8, text:"Dove abiti"}, {num:9, text:"Splende di notte"}, {num:10, text:"Splende di giorno"}], down: [{num:1, text:"Colore chiaro, o un fiore"}, {num:2, text:"Si apre per entrare"}, {num:4, text:"Ci si siede sopra"}, {num:6, text:"Ci si mangia sopra"}, {num:8, text:"Il migliore amico dell&#x27;uomo"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
-
 for (let r = 0; r < ROWS; r++) {
   for (let c = 0; c < COLS; c++) {
     const cell = document.createElement('div');
@@ -141,10 +134,16 @@ for (let r = 0; r < ROWS; r++) {
       cell.className = 'cw-cell blocked';
     } else {
       cell.className = 'cw-cell';
+      const num = numbers[`${r},${c}`];
+      if (num) {
+        const span = document.createElement('span');
+        span.className = 'cw-number';
+        span.textContent = num;
+        cell.appendChild(span);
+      }
       const input = document.createElement('input');
       input.maxLength = 1;
-      input.dataset.row = r;
-      input.dataset.col = c;
+      input.dataset.row = r; input.dataset.col = c;
       input.addEventListener('input', e => {
         e.target.value = e.target.value.toUpperCase();
         if (e.target.value) {
@@ -157,55 +156,48 @@ for (let r = 0; r < ROWS; r++) {
     gridEl.appendChild(cell);
   }
 }
-
+function renderClueList(list, elId) {
+  const ol = document.getElementById(elId);
+  list.forEach(c => {
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${c.num}.</strong> ${c.text}`;
+    ol.appendChild(li);
+  });
+}
+renderClueList(clues.across, 'acrossClues');
+renderClueList(clues.down, 'downClues');
 document.getElementById('checkBtn').addEventListener('click', () => {
   let correct = 0, total = 0;
-  for (let r = 0; r < ROWS; r++) {
-    for (let c = 0; c < COLS; c++) {
-      if (solution[r][c] === null) continue;
-      total++;
-      const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
-      input.classList.remove('correct', 'incorrect');
-      if (input.value.toUpperCase() === solution[r][c]) {
-        input.classList.add('correct');
-        correct++;
-      } else {
-        input.classList.add('incorrect');
-      }
-    }
+  for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+    if (solution[r][c] === null) continue;
+    total++;
+    const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
+    input.classList.remove('correct','incorrect');
+    if (input.value.toUpperCase() === solution[r][c]) { input.classList.add('correct'); correct++; }
+    else input.classList.add('incorrect');
   }
   const fb = document.getElementById('feedback');
-  fb.classList.remove('good', 'bad');
-  fb.classList.add('show');
-  if (correct === total) {
-    fb.classList.add('good');
-    fb.textContent = 'Cruciverba completato correttamente! 🎉';
-  } else {
-    fb.classList.add('bad');
-    fb.textContent = `${correct}/${total} caselle corrette. Riprova le caselle rosse.`;
-  }
+  fb.classList.remove('good','bad'); fb.classList.add('show');
+  if (correct === total) { fb.classList.add('good'); fb.textContent = 'Cruciverba completato correttamente! 🎉'; }
+  else { fb.classList.add('bad'); fb.textContent = `${correct}/${total} caselle corrette.`; }
 });
-
 document.getElementById('retryBtn').addEventListener('click', () => {
-  gridEl.querySelectorAll('input').forEach(i => {
-    i.value = '';
-    i.classList.remove('correct', 'incorrect');
-  });
+  gridEl.querySelectorAll('input').forEach(i => { i.value=''; i.classList.remove('correct','incorrect'); });
   document.getElementById('feedback').classList.remove('show');
 });
 </script>
-
 <script src="js/game-mode.js"></script>
 <script>
-GameMode.init({ timerSeconds: 240, revealSolutions: function(){
-      for (let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
-        if (solution[r][c]===null) continue;
-        const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
-        input.value = solution[r][c];
-        input.classList.add('solution-revealed');
-      }
-    } });
+GameMode.init({ timerSeconds: 200, revealSolutions: function(){
+  for (let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
+    if (solution[r][c]===null) continue;
+    const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);
+    input.value = solution[r][c];
+    input.classList.add('solution-revealed');
+  }
+}});
 </script>
+
 <script>
 document.getElementById('copyLinkBtn').addEventListener('click', function(){
   navigator.clipboard.writeText(window.location.href).then(() => {
@@ -216,5 +208,6 @@ document.getElementById('copyLinkBtn').addEventListener('click', function(){
   });
 });
 </script>
+
 </body>
 </html>
