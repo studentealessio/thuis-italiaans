@@ -63,12 +63,6 @@
       <p>Abbina ogni pronome al suo uso corretto nella frase.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Pronomi diretti vs indiretti</h2>
-      <p>I pronomi diretti (mi, ti, lo, la, ci, vi, li, le) sostituiscono il complemento oggetto. Quelli indiretti (mi, ti, gli, le, ci, vi, gli) sostituiscono il complemento di termine (a chi?).</p>
-      <p class="ex-example">Esempio: Vedo Marco → Lo vedo. Parlo a Marco → Gli parlo.</p>
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Pronomi diretti vs indiretti</h2>
+      <p>I pronomi diretti (mi, ti, lo, la, ci, vi, li, le) sostituiscono il complemento oggetto. Quelli indiretti (mi, ti, gli, le, ci, vi, gli) sostituiscono il complemento di termine (a chi?).</p>
+      <p class="ex-example">Esempio: Vedo Marco → Lo vedo. Parlo a Marco → Gli parlo.</p>
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["lo", "sostituisce un oggetto maschile singolare"], ["la", "sostituisce un oggetto femminile singolare"], ["gli", "sostituisce &#x27;a lui&#x27; (complemento di termine)"], ["le", "sostituisce &#x27;a lei&#x27; (complemento di termine)"], ["li", "sostituisce oggetti maschili plurali"], ["ci", "sostituisce &#x27;a noi&#x27; o un luogo"]];
+const pairs = [["lo", "sostituisce un oggetto maschile singolare"], ["la", "sostituisce un oggetto femminile singolare"], ["gli", "sostituisce 'a lui' (complemento di termine)"], ["le", "sostituisce 'a lei' (complemento di termine)"], ["li", "sostituisce oggetti maschili plurali"], ["ci", "sostituisce 'a noi' o un luogo"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

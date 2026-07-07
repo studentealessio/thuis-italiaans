@@ -63,12 +63,6 @@
       <p>Abbina ogni prodotto tipico italiano alla sua descrizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Il Made in Italy</h2>
-      <p>L'Italia è famosa nel mondo per prodotti tipici legati a tradizione e qualità artigianale.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Il Made in Italy</h2>
+      <p>L'Italia è famosa nel mondo per prodotti tipici legati a tradizione e qualità artigianale.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["il Parmigiano Reggiano", "formaggio stagionato tipico dell&#x27;Emilia"], ["il vetro di Murano", "lavorazione artigianale veneziana"], ["la pelletteria toscana", "borse e scarpe di alta qualità"], ["l&#x27;aceto balsamico", "condimento scuro e dolce di Modena"], ["il caffè espresso", "bevanda simbolo dell&#x27;Italia"], ["la ceramica di Deruta", "arte decorativa umbra"]];
+const pairs = [["il Parmigiano Reggiano", "formaggio stagionato tipico dell'Emilia"], ["il vetro di Murano", "lavorazione artigianale veneziana"], ["la pelletteria toscana", "borse e scarpe di alta qualità"], ["l'aceto balsamico", "condimento scuro e dolce di Modena"], ["il caffè espresso", "bevanda simbolo dell'Italia"], ["la ceramica di Deruta", "arte decorativa umbra"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

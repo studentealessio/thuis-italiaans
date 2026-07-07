@@ -819,11 +819,17 @@ background:var(--surface);border-radius:var(--radius);
 .print-footer{display:none;}
 
 @media print{
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
   .ex-topbar .button, .ex-back span, .game-mode-bar, .ex-actions,
   .ex-end-cta, .ex-back-wrap, .print-qr-block .ex-btn, .confirm-overlay,
   .ex-footer nav, .quiz-score, .solution-btn { display:none !important; }
   body{ background:white; }
-  .ex-panel{ box-shadow:none !important; border:1px solid #ddd; }
+  .ex-panel{ box-shadow:none !important; border:1px solid #ddd; break-inside:avoid; page-break-inside:avoid; }
+  .cw-cell.blocked{ background:var(--primary) !important; }
   .print-header{
     display:flex !important; align-items:center; gap:10px; margin-bottom:24px;
   }

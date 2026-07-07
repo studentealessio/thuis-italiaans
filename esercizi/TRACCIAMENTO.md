@@ -193,3 +193,34 @@ tematiche (stanze, scuola, stazione/aeroporto, modi di dire, menu, meteo esteso,
 - Grammatica B2: pochissimo rimasto, principalmente casi limite e consolidamento
 - Lessico: buona copertura ora su tutte le 6 aree; prossimi batch possono approfondire con esercizi più lunghi
   e situazioni più complesse, specialmente ai livelli B1/B2
+
+## ✅ Correzioni layout e stampa (post-batch 3)
+
+1. **Stampa: caselle nere dei cruciverba invisibili** — i browser di default non stampano gli sfondi colorati.
+   Aggiunto `print-color-adjust: exact` (e prefissi) su tutta la pagina in modalità stampa, così le caselle
+   bloccate del cruciverba restano scure anche su carta/PDF.
+
+2. **Layout: gioco spezzato a metà pagina in stampa** — l'ordine era: intestazione → spiegazione (ripasso) →
+   gioco. Così il gioco iniziava a metà pagina e spesso veniva tagliato tra due fogli in stampa. Nuovo ordine
+   per **tutte le 234 pagine + tutti i generatori futuri**: intestazione → gioco → spiegazione (ripasso) → CTA finale.
+   Aggiunto anche `page-break-inside:avoid` sul box del gioco per ridurre ulteriormente le interruzioni.
+
+3. **Bug trovato durante la correzione**: 2 generatori (`gen_anagramma`, `gen_dettato`) avevano perso la
+   spiegazione del tutto durante un tentativo di correzione automatica, e 2 altri (`gen_categorizza`,
+   `gen_ruota`) la mostravano due volte per errore di codice preesistente. Tutti e 4 corretti — ora ogni
+   pagina ha esattamente una spiegazione, nella posizione giusta.
+
+4. **Pulsante "Vai agli esercizi"** aggiunto alla pagina privacy.html, accanto ai pulsanti esistenti
+   (Torna alla homepage / Vai al blog).
+
+## ✅ Bug critico corretto: apostrofi/virgolette mostrati come codice HTML
+
+Causa: nel JavaScript generato, il testo veniva codificato con l'escape HTML (`&#x27;`, `&quot;`) invece
+dell'escape corretto per stringhe JavaScript. Il browser non decodifica mai le entità HTML dentro un tag
+`<script>`, quindi il codice appariva letteralmente invece dell'apostrofo o della virgoletta.
+
+Aggiunta una funzione `js_str()` dedicata all'escape sicuro per JavaScript (usata ora ovunque il testo finisce
+dentro il codice, non nell'HTML diretto) e **rigenerate tutte le 234 pagine da zero** con i generatori corretti.
+Verificato non solo che il bug fosse sparito, ma che tutte le pagine restassero sintatticamente valide
+(alcune frasi contenevano virgolette annidate, es. "Il "TG" è l'abbreviazione di..." — un caso limite che ha
+richiesto un vero escape a livello di stringa JS, non solo la rimozione delle entità).

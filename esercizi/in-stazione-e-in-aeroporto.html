@@ -63,12 +63,6 @@
       <p>Abbina ogni parola della stazione o dell'aeroporto alla sua definizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: stazione e aeroporto</h2>
-      <p>Conoscere il lessico di stazioni e aeroporti è essenziale per viaggiare con sicurezza.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: stazione e aeroporto</h2>
+      <p>Conoscere il lessico di stazioni e aeroporti è essenziale per viaggiare con sicurezza.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["il binario", "da qui parte il treno"], ["il gate", "da qui si sale sull&#x27;aereo"], ["il check-in", "operazione per registrarsi al volo"], ["la dogana", "controllo all&#x27;ingresso di un paese"], ["il bagaglio", "le valigie che porti con te"], ["la coincidenza", "cambio di treno o aereo durante il viaggio"]];
+const pairs = [["il binario", "da qui parte il treno"], ["il gate", "da qui si sale sull'aereo"], ["il check-in", "operazione per registrarsi al volo"], ["la dogana", "controllo all'ingresso di un paese"], ["il bagaglio", "le valigie che porti con te"], ["la coincidenza", "cambio di treno o aereo durante il viaggio"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

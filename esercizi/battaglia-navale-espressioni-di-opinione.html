@@ -63,12 +63,6 @@
       <p>Affonda le navi rispondendo a domande sulle espressioni per dare un'opinione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Esprimere un'opinione</h2>
-      <p>In italiano ci sono molti modi per introdurre un'opinione: secondo me, penso che, a mio avviso, credo che.</p>
-      
-    </div>
-
     <div class="ex-panel" style="text-align:center;">
       <div class="battleship-grid" id="bsGrid"></div>
       <div class="bs-question-box" id="bsQuestionBox">
@@ -79,6 +73,12 @@
       <div class="ex-actions">
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Esprimere un'opinione</h2>
+      <p>In italiano ci sono molti modi per introdurre un'opinione: secondo me, penso che, a mio avviso, credo che.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -116,7 +116,7 @@
 
 <script>
 const GRID_SIZE = 5;
-const questions = [{ q: "&quot;Secondo me&quot; richiede...", options: ["l&#x27;indicativo", "il congiuntivo", "l&#x27;imperativo"], correct: 0 }, { q: "&quot;Penso che&quot; richiede...", options: ["l&#x27;indicativo", "il congiuntivo", "il futuro"], correct: 1 }, { q: "&quot;A mio avviso&quot; significa...", options: ["secondo me", "non lo so", "forse"], correct: 0 }, { q: "&quot;Credo che tu abbia ragione&quot; usa...", options: ["il congiuntivo", "l&#x27;indicativo", "il condizionale"], correct: 0 }, { q: "&quot;Sono sicuro che&quot; richiede...", options: ["il congiuntivo", "l&#x27;indicativo", "l&#x27;imperativo"], correct: 1 }, { q: "&quot;Mi sembra che&quot; richiede...", options: ["l&#x27;indicativo", "il congiuntivo", "il futuro"], correct: 1 }, { q: "&quot;È ovvio che&quot; richiede di solito...", options: ["l&#x27;indicativo", "il congiuntivo", "l&#x27;imperativo"], correct: 0 }];
+const questions = [{ q: "\"Secondo me\" richiede...", options: ["l'indicativo", "il congiuntivo", "l'imperativo"], correct: 0 }, { q: "\"Penso che\" richiede...", options: ["l'indicativo", "il congiuntivo", "il futuro"], correct: 1 }, { q: "\"A mio avviso\" significa...", options: ["secondo me", "non lo so", "forse"], correct: 0 }, { q: "\"Credo che tu abbia ragione\" usa...", options: ["il congiuntivo", "l'indicativo", "il condizionale"], correct: 0 }, { q: "\"Sono sicuro che\" richiede...", options: ["il congiuntivo", "l'indicativo", "l'imperativo"], correct: 1 }, { q: "\"Mi sembra che\" richiede...", options: ["l'indicativo", "il congiuntivo", "il futuro"], correct: 1 }, { q: "\"È ovvio che\" richiede di solito...", options: ["l'indicativo", "il congiuntivo", "l'imperativo"], correct: 0 }];
 let ships = [], hitCells = new Set(), sunkShips = 0, currentCell = null;
 function randomShips() {
   const cells = [];

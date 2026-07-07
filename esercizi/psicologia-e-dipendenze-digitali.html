@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire il significato di termini legati a psicologia e dipendenze digitali.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Lessico: psicologia e tecnologia</h2>
       <p>Un tema sempre più discusso, con un lessico specifico legato al benessere mentale nell'era digitale.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Nomofobia", back:"&lt;strong&gt;Nomofobia&lt;/strong&gt;Paura irrazionale di restare senza smartphone o connessione." }, { front:"FOMO", back:"&lt;strong&gt;FOMO&lt;/strong&gt;Paura di perdersi qualcosa (Fear Of Missing Out), spesso legata ai social." }, { front:"Dipendenza da social", back:"&lt;strong&gt;Dipendenza da social&lt;/strong&gt;Uso compulsivo e difficile da controllare dei social media." }, { front:"Disintossicazione digitale", back:"&lt;strong&gt;Disintossicazione digitale&lt;/strong&gt;Periodo di pausa volontaria dai dispositivi digitali." }];
+const cards = [{ front:"Nomofobia", back:"<strong>Nomofobia<\/strong>Paura irrazionale di restare senza smartphone o connessione." }, { front:"FOMO", back:"<strong>FOMO<\/strong>Paura di perdersi qualcosa (Fear Of Missing Out), spesso legata ai social." }, { front:"Dipendenza da social", back:"<strong>Dipendenza da social<\/strong>Uso compulsivo e difficile da controllare dei social media." }, { front:"Disintossicazione digitale", back:"<strong>Disintossicazione digitale<\/strong>Periodo di pausa volontaria dai dispositivi digitali." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

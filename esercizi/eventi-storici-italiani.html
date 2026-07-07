@@ -63,12 +63,6 @@
       <p>Rispondi alle domande sugli eventi storici principali dell'Italia moderna.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: la storia italiana</h2>
-      <p>Conoscere i grandi eventi storici aiuta a capire meglio la cultura e la società italiana contemporanea.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la storia italiana</h2>
+      <p>Conoscere i grandi eventi storici aiuta a capire meglio la cultura e la società italiana contemporanea.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -113,10 +113,10 @@
 
 <script>
 const questions = [
-  { q: "Il Risorgimento portò all&#x27;unificazione dell&#x27;Italia nel...", options: ["1861", "1945", "1989"], correct: 0 },
-  { q: "Il &quot;Boom economico&quot; italiano avvenne principalmente negli anni...", options: ["Cinquanta-Sessanta", "Venti", "Novanta"], correct: 0 },
+  { q: "Il Risorgimento portò all'unificazione dell'Italia nel...", options: ["1861", "1945", "1989"], correct: 0 },
+  { q: "Il \"Boom economico\" italiano avvenne principalmente negli anni...", options: ["Cinquanta-Sessanta", "Venti", "Novanta"], correct: 0 },
   { q: "La Repubblica Italiana è nata nel...", options: ["1946", "1861", "1918"], correct: 0 },
-  { q: "Il primo Re d&#x27;Italia unita fu...", options: ["Vittorio Emanuele II", "Umberto I", "Carlo Alberto"], correct: 0 },
+  { q: "Il primo Re d'Italia unita fu...", options: ["Vittorio Emanuele II", "Umberto I", "Carlo Alberto"], correct: 0 },
   { q: "Il Boom economico è associato soprattutto a...", options: ["industrializzazione rapida", "crisi finanziaria", "guerra civile"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');

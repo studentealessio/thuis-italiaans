@@ -63,12 +63,6 @@
       <p>Ricomponi nell'ordine corretto le fasi di un dibattito strutturato.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Come si struttura un dibattito</h2>
-      <p>Un dibattito segue una struttura logica: presentazione del tema, argomentazioni a favore, argomentazioni contrarie, conclusione.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="builder-bank order-bank" id="bank"></div>
       <div class="builder-answer order-answer" id="answer"></div>
@@ -77,6 +71,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Come si struttura un dibattito</h2>
+      <p>Un dibattito segue una struttura logica: presentazione del tema, argomentazioni a favore, argomentazioni contrarie, conclusione.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -113,7 +113,7 @@
 </footer>
 
 <script>
-const items = ["Oggi discutiamo se il lavoro da remoto sia davvero vantaggioso.", "A favore, si può dire che aumenta la flessibilità e riduce lo stress da spostamenti.", "D&#x27;altra parte, può isolare i lavoratori e complicare la comunicazione in team.", "In conclusione, la soluzione ideale sembra essere un equilibrio tra remoto e presenza."];
+const items = ["Oggi discutiamo se il lavoro da remoto sia davvero vantaggioso.", "A favore, si può dire che aumenta la flessibilità e riduce lo stress da spostamenti.", "D'altra parte, può isolare i lavoratori e complicare la comunicazione in team.", "In conclusione, la soluzione ideale sembra essere un equilibrio tra remoto e presenza."];
 const bank = document.getElementById('bank');
 const answer = document.getElementById('answer');
 function shuffle(arr) { const a=[...arr]; for (let i=a.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }

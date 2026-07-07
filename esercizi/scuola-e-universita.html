@@ -63,12 +63,6 @@
       <p>Abbina ogni parola del mondo scolastico alla sua definizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: scuola e università</h2>
-      <p>Il sistema scolastico italiano ha un lessico specifico, utile se studi o hai figli che studiano in Italia.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: scuola e università</h2>
+      <p>Il sistema scolastico italiano ha un lessico specifico, utile se studi o hai figli che studiano in Italia.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["l&#x27;esame", "prova per valutare la preparazione dello studente"], ["la laurea", "titolo ottenuto alla fine dell&#x27;università"], ["la borsa di studio", "aiuto economico per studiare"], ["l&#x27;aula", "stanza dove si tengono le lezioni"], ["il voto", "valutazione numerica di una prova"], ["la tesi", "lavoro scritto finale per laurearsi"]];
+const pairs = [["l'esame", "prova per valutare la preparazione dello studente"], ["la laurea", "titolo ottenuto alla fine dell'università"], ["la borsa di studio", "aiuto economico per studiare"], ["l'aula", "stanza dove si tengono le lezioni"], ["il voto", "valutazione numerica di una prova"], ["la tesi", "lavoro scritto finale per laurearsi"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

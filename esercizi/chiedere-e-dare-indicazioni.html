@@ -63,12 +63,6 @@
       <p>Scegli la risposta corretta per chiedere e dare indicazioni stradali.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Chiedere indicazioni</h2>
-      <p>Per chiedere indicazioni si usano espressioni come 'Scusi, dov'è...' o 'Come arrivo a...'.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Chiedere indicazioni</h2>
+      <p>Per chiedere indicazioni si usano espressioni come 'Scusi, dov'è...' o 'Come arrivo a...'.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -113,11 +113,11 @@
 
 <script>
 const questions = [
-  { q: "Per chiedere dov&#x27;è la stazione dici...", options: ["Scusi, dov&#x27;è la stazione?", "Che ora è?", "Come ti chiami?"], correct: 0 },
-  { q: "&quot;Vada sempre dritto&quot; significa...", options: ["continua senza girare", "gira a destra", "torna indietro"], correct: 0 },
-  { q: "&quot;È a due passi&quot; significa che il luogo è...", options: ["molto vicino", "molto lontano", "chiuso"], correct: 0 },
-  { q: "&quot;Giri al primo semaforo&quot; indica...", options: ["una svolta", "una fermata", "un parcheggio"], correct: 0 },
-  { q: "&quot;È di fronte alla farmacia&quot; significa che si trova...", options: ["dall&#x27;altra parte della strada rispetto alla farmacia", "dentro la farmacia", "lontano dalla farmacia"], correct: 0 }
+  { q: "Per chiedere dov'è la stazione dici...", options: ["Scusi, dov'è la stazione?", "Che ora è?", "Come ti chiami?"], correct: 0 },
+  { q: "\"Vada sempre dritto\" significa...", options: ["continua senza girare", "gira a destra", "torna indietro"], correct: 0 },
+  { q: "\"È a due passi\" significa che il luogo è...", options: ["molto vicino", "molto lontano", "chiuso"], correct: 0 },
+  { q: "\"Giri al primo semaforo\" indica...", options: ["una svolta", "una fermata", "un parcheggio"], correct: 0 },
+  { q: "\"È di fronte alla farmacia\" significa che si trova...", options: ["dall'altra parte della strada rispetto alla farmacia", "dentro la farmacia", "lontano dalla farmacia"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');
 const letters = ['A','B','C','D'];

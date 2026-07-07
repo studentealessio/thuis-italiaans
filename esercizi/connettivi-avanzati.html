@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire il significato di alcuni connettivi avanzati.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Connettivi di livello avanzato</h2>
       <p>I connettivi avanzati arricchiscono il discorso e lo rendono più coeso e sofisticato.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Ciononostante", back:"&lt;strong&gt;Ciononostante&lt;/strong&gt;Nonostante ciò, comunque (introduce un contrasto)." }, { front:"Di conseguenza", back:"&lt;strong&gt;Di conseguenza&lt;/strong&gt;Come risultato, quindi." }, { front:"Al contrario", back:"&lt;strong&gt;Al contrario&lt;/strong&gt;In modo opposto a quanto detto prima." }, { front:"D&#x27;altronde", back:"&lt;strong&gt;D&#x27;altronde&lt;/strong&gt;D&#x27;altra parte, considerando un altro aspetto." }];
+const cards = [{ front:"Ciononostante", back:"<strong>Ciononostante<\/strong>Nonostante ciò, comunque (introduce un contrasto)." }, { front:"Di conseguenza", back:"<strong>Di conseguenza<\/strong>Come risultato, quindi." }, { front:"Al contrario", back:"<strong>Al contrario<\/strong>In modo opposto a quanto detto prima." }, { front:"D'altronde", back:"<strong>D'altronde<\/strong>D'altra parte, considerando un altro aspetto." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

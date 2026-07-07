@@ -63,12 +63,6 @@
       <p>Abbina ogni alimento alla sua descrizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: frutta e verdura</h2>
-      <p>Conoscere i nomi di frutta e verdura è essenziale per fare la spesa o ordinare al ristorante in Italia.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: frutta e verdura</h2>
+      <p>Conoscere i nomi di frutta e verdura è essenziale per fare la spesa o ordinare al ristorante in Italia.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["la mela", "frutto rosso o verde, croccante"], ["la carota", "verdura arancione, cresce sotto terra"], ["il pomodoro", "rosso, si usa per il sugo"], ["la banana", "frutto giallo e allungato"], ["la zucchina", "verdura verde e allungata"], ["l&#x27;arancia", "frutto arancione, ricco di vitamina C"]];
+const pairs = [["la mela", "frutto rosso o verde, croccante"], ["la carota", "verdura arancione, cresce sotto terra"], ["il pomodoro", "rosso, si usa per il sugo"], ["la banana", "frutto giallo e allungato"], ["la zucchina", "verdura verde e allungata"], ["l'arancia", "frutto arancione, ricco di vitamina C"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

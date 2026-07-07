@@ -63,12 +63,6 @@
       <p>Abbina ogni oggetto scolastico al suo utilizzo.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: la scuola</h2>
-      <p>Gli oggetti scolastici sono tra i primi vocaboli utili, specialmente per chi ha figli a scuola in Italia.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la scuola</h2>
+      <p>Gli oggetti scolastici sono tra i primi vocaboli utili, specialmente per chi ha figli a scuola in Italia.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["il quaderno", "ci si scrive a mano"], ["la penna", "serve per scrivere"], ["lo zaino", "ci si mettono i libri per andare a scuola"], ["la lavagna", "l&#x27;insegnante ci scrive le lezioni"], ["il libro di testo", "contiene le lezioni da studiare"], ["la gomma", "serve per cancellare la matita"]];
+const pairs = [["il quaderno", "ci si scrive a mano"], ["la penna", "serve per scrivere"], ["lo zaino", "ci si mettono i libri per andare a scuola"], ["la lavagna", "l'insegnante ci scrive le lezioni"], ["il libro di testo", "contiene le lezioni da studiare"], ["la gomma", "serve per cancellare la matita"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

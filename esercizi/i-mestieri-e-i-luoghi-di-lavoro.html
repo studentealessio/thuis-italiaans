@@ -63,12 +63,6 @@
       <p>Abbina ogni mestiere al luogo dove lavora tipicamente.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Mestieri e luoghi di lavoro</h2>
-      <p>Ogni mestiere è associato a un luogo di lavoro specifico — utile per ampliare il lessico professionale.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Mestieri e luoghi di lavoro</h2>
+      <p>Ogni mestiere è associato a un luogo di lavoro specifico — utile per ampliare il lessico professionale.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["il medico", "lavora in ospedale"], ["l&#x27;insegnante", "lavora a scuola"], ["il cuoco", "lavora in un ristorante"], ["il commesso", "lavora in un negozio"], ["l&#x27;avvocato", "lavora in tribunale o in studio"], ["il contadino", "lavora nei campi"]];
+const pairs = [["il medico", "lavora in ospedale"], ["l'insegnante", "lavora a scuola"], ["il cuoco", "lavora in un ristorante"], ["il commesso", "lavora in un negozio"], ["l'avvocato", "lavora in tribunale o in studio"], ["il contadino", "lavora nei campi"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

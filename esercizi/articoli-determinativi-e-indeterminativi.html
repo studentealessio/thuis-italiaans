@@ -63,12 +63,6 @@
       <p>Scegli l'articolo corretto, determinativo o indeterminativo, per ogni frase.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Articoli determinativi e indeterminativi</h2>
-      <p>L'articolo determinativo (il, lo, la, i, gli, le) indica qualcosa di specifico e già noto. Quello indeterminativo (un, uno, una) indica qualcosa di generico o non ancora menzionato.</p>
-      <p class="ex-example">Esempio: Ho visto un film ieri (generico). Il film era bellissimo (specifico, già menzionato).</p>
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Articoli determinativi e indeterminativi</h2>
+      <p>L'articolo determinativo (il, lo, la, i, gli, le) indica qualcosa di specifico e già noto. Quello indeterminativo (un, uno, una) indica qualcosa di generico o non ancora menzionato.</p>
+      <p class="ex-example">Esempio: Ho visto un film ieri (generico). Il film era bellissimo (specifico, già menzionato).</p>
     </div>
 
     <div class="ex-end-cta">
@@ -116,7 +116,7 @@ const questions = [
   { q: "___ studente arriva sempre in orario. (in generale)", options: ["Lo", "Uno", "Un"], correct: 0 },
   { q: "Ho comprato ___ libro nuovo ieri.", options: ["il", "un", "lo"], correct: 1 },
   { q: "___ specchio in camera è rotto.", options: ["Lo", "Uno", "Un"], correct: 0 },
-  { q: "Cerco ___ appartamento in centro.", options: ["l&#x27;", "un", "uno"], correct: 1 },
+  { q: "Cerco ___ appartamento in centro.", options: ["l'", "un", "uno"], correct: 1 },
   { q: "___ zaino di Marco è blu.", options: ["Lo", "Uno", "Il"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');

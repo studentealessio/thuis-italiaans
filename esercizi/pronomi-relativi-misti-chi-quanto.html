@@ -63,12 +63,6 @@
       <p>Scegli il pronome relativo misto corretto per ogni frase.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Chi e quanto come relativi</h2>
-      <p>'Chi' equivale a 'colui che/la persona che' e si usa senza antecedente esplicito. 'Quanto' equivale a 'tutto ciò che' o 'quello che'.</p>
-      <p class="ex-example">Esempio: Chi dorme non piglia pesci (colui che dorme). Ho fatto quanto potevo (tutto ciò che potevo).</p>
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Chi e quanto come relativi</h2>
+      <p>'Chi' equivale a 'colui che/la persona che' e si usa senza antecedente esplicito. 'Quanto' equivale a 'tutto ciò che' o 'quello che'.</p>
+      <p class="ex-example">Esempio: Chi dorme non piglia pesci (colui che dorme). Ho fatto quanto potevo (tutto ciò che potevo).</p>
     </div>
 
     <div class="ex-end-cta">
@@ -117,7 +117,7 @@ const questions = [
   { q: "Ho fatto ___ era in mio potere.", options: ["quanto", "che", "chi"], correct: 0 },
   { q: "___ semina vento, raccoglie tempesta.", options: ["Chi", "Quanto", "Che"], correct: 0 },
   { q: "Dimmi ___ ti serve e te lo procuro.", options: ["quanto", "chi", "cui"], correct: 0 },
-  { q: "___ ha studiato supererà l&#x27;esame senza problemi.", options: ["Chi", "Quanto", "Che"], correct: 0 }
+  { q: "___ ha studiato supererà l'esame senza problemi.", options: ["Chi", "Quanto", "Che"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');
 const letters = ['A','B','C','D'];

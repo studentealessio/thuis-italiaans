@@ -63,12 +63,6 @@
       <p>Scegli la forma corretta dei verbi pronominali per completare ogni frase.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 I verbi pronominali</h2>
-      <p>I verbi pronominali (andarsene, farcela, avercela con...) hanno pronomi fissi che ne cambiano il significato rispetto al verbo base.</p>
-      <p class="ex-example">Esempio: Me ne vado (andarsene). Ce la faccio (farcela). Ce l'ho con te (avercela con).</p>
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 I verbi pronominali</h2>
+      <p>I verbi pronominali (andarsene, farcela, avercela con...) hanno pronomi fissi che ne cambiano il significato rispetto al verbo base.</p>
+      <p class="ex-example">Esempio: Me ne vado (andarsene). Ce la faccio (farcela). Ce l'ho con te (avercela con).</p>
     </div>
 
     <div class="ex-end-cta">
@@ -115,9 +115,9 @@
 const questions = [
   { q: "Sono le nove, io ___ (andarsene).", options: ["me ne vado", "mi vado", "vado ne"], correct: 0 },
   { q: "Non ___ (farcela) più a lavorare oggi.", options: ["ce la faccio", "la faccio ce", "ci faccio la"], correct: 0 },
-  { q: "Perché ___ (avercela) con me?", options: ["ce l&#x27;hai", "l&#x27;hai ce", "hai ce la"], correct: 0 },
+  { q: "Perché ___ (avercela) con me?", options: ["ce l'hai", "l'hai ce", "hai ce la"], correct: 0 },
   { q: "I ragazzi ___ (andarsene) senza salutare.", options: ["se ne sono andati", "si sono andati ne", "ne sono andati se"], correct: 0 },
-  { q: "Alla fine ___ (farcela) a finire il progetto in tempo.", options: ["ce l&#x27;abbiamo fatta", "la abbiamo fatta ce", "abbiamo fatto cela"], correct: 0 }
+  { q: "Alla fine ___ (farcela) a finire il progetto in tempo.", options: ["ce l'abbiamo fatta", "la abbiamo fatta ce", "abbiamo fatto cela"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');
 const letters = ['A','B','C','D'];

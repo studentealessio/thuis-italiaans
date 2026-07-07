@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire il significato di alcune bevande tipiche italiane.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Lessico: le bevande</h2>
       <p>Le bevande italiane fanno parte della cultura quotidiana, dal caffè all'aperitivo.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Espresso", back:"&lt;strong&gt;Espresso&lt;/strong&gt;Caffè forte e concentrato, servito in piccole tazzine." }, { front:"Aperitivo", back:"&lt;strong&gt;Aperitivo&lt;/strong&gt;Bevanda (spesso alcolica) presa prima di cena, con stuzzichini." }, { front:"Spremuta", back:"&lt;strong&gt;Spremuta&lt;/strong&gt;Succo di frutta fresco, spremuto al momento." }, { front:"Chinotto", back:"&lt;strong&gt;Chinotto&lt;/strong&gt;Bevanda gassata italiana dal sapore amarognolo." }];
+const cards = [{ front:"Espresso", back:"<strong>Espresso<\/strong>Caffè forte e concentrato, servito in piccole tazzine." }, { front:"Aperitivo", back:"<strong>Aperitivo<\/strong>Bevanda (spesso alcolica) presa prima di cena, con stuzzichini." }, { front:"Spremuta", back:"<strong>Spremuta<\/strong>Succo di frutta fresco, spremuto al momento." }, { front:"Chinotto", back:"<strong>Chinotto<\/strong>Bevanda gassata italiana dal sapore amarognolo." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

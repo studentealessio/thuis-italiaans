@@ -63,12 +63,6 @@
       <p>Scegli il pronome relativo complesso corretto per ogni frase.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Il quale e la cui</h2>
-      <p>'Il quale/la quale' sostituisce 'che' in modo più formale e concorda in genere e numero. 'Cui' preceduto dall'articolo (il cui, la cui) indica possesso, come 'whose' in inglese.</p>
-      <p class="ex-example">Esempio: L'uomo con il quale ho parlato è mio zio. La ragazza il cui padre è medico.</p>
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Il quale e la cui</h2>
+      <p>'Il quale/la quale' sostituisce 'che' in modo più formale e concorda in genere e numero. 'Cui' preceduto dall'articolo (il cui, la cui) indica possesso, come 'whose' in inglese.</p>
+      <p class="ex-example">Esempio: L'uomo con il quale ho parlato è mio zio. La ragazza il cui padre è medico.</p>
     </div>
 
     <div class="ex-end-cta">
@@ -113,10 +113,10 @@
 
 <script>
 const questions = [
-  { q: "L&#x27;uomo con ___ ho parlato è il direttore.", options: ["il quale", "il cui", "che"], correct: 0 },
+  { q: "L'uomo con ___ ho parlato è il direttore.", options: ["il quale", "il cui", "che"], correct: 0 },
   { q: "La ragazza ___ padre è medico abita qui vicino.", options: ["il cui", "la cui", "cui"], correct: 1 },
   { q: "Il progetto ___ ho lavorato è terminato.", options: ["al quale", "il quale", "cui"], correct: 0 },
-  { q: "L&#x27;azienda ___ dipendenti sono tutti giovani è innovativa.", options: ["la cui", "il cui", "cui"], correct: 1 },
+  { q: "L'azienda ___ dipendenti sono tutti giovani è innovativa.", options: ["la cui", "il cui", "cui"], correct: 1 },
   { q: "Le persone delle ___ parlavamo sono arrivate.", options: ["quali", "cui", "che"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');

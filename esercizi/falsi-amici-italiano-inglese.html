@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire i falsi amici tra italiano e inglese.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Cosa sono i falsi amici</h2>
       <p>I falsi amici sono parole che sembrano simili in due lingue ma hanno significati diversi — una vera trappola per chi parla inglese.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Parenti", back:"&lt;strong&gt;Parenti&lt;/strong&gt; NON significa &#x27;parents&#x27; (genitori), ma &#x27;relatives&#x27; (familiari in generale)." }, { front:"Libreria", back:"&lt;strong&gt;Libreria&lt;/strong&gt; NON significa &#x27;library&#x27; (biblioteca), ma &#x27;bookshop&#x27; (negozio di libri)." }, { front:"Camera", back:"&lt;strong&gt;Camera&lt;/strong&gt; NON significa &#x27;camera&#x27; (macchina fotografica), ma &#x27;room&#x27; (stanza)." }, { front:"Attualmente", back:"&lt;strong&gt;Attualmente&lt;/strong&gt; NON significa &#x27;actually&#x27; (in realtà), ma &#x27;currently&#x27; (al momento)." }, { front:"Fattoria", back:"&lt;strong&gt;Fattoria&lt;/strong&gt; NON significa &#x27;factory&#x27; (fabbrica), ma &#x27;farm&#x27; (azienda agricola)." }];
+const cards = [{ front:"Parenti", back:"<strong>Parenti<\/strong> NON significa 'parents' (genitori), ma 'relatives' (familiari in generale)." }, { front:"Libreria", back:"<strong>Libreria<\/strong> NON significa 'library' (biblioteca), ma 'bookshop' (negozio di libri)." }, { front:"Camera", back:"<strong>Camera<\/strong> NON significa 'camera' (macchina fotografica), ma 'room' (stanza)." }, { front:"Attualmente", back:"<strong>Attualmente<\/strong> NON significa 'actually' (in realtà), ma 'currently' (al momento)." }, { front:"Fattoria", back:"<strong>Fattoria<\/strong> NON significa 'factory' (fabbrica), ma 'farm' (azienda agricola)." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

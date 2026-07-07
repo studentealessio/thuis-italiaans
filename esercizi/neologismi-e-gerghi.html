@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire il significato di alcuni neologismi dell'italiano contemporaneo.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Neologismi e gerghi</h2>
       <p>L'italiano contemporaneo si arricchisce continuamente di nuove parole, spesso influenzate dai social media e dall'inglese.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Webete", back:"&lt;strong&gt;Webete&lt;/strong&gt;Termine informale per chi si comporta in modo sciocco online (da &#x27;web&#x27; + &#x27;ebete&#x27;)." }, { front:"Sharentare", back:"&lt;strong&gt;Sharentare&lt;/strong&gt;Condividere sui social foto e informazioni sui propri figli." }, { front:"Petaloso", back:"&lt;strong&gt;Petaloso&lt;/strong&gt;Neologismo inventato da un bambino, diventato virale, per descrivere un fiore con molti petali." }, { front:"Cringe", back:"&lt;strong&gt;Cringe&lt;/strong&gt;Prestito dall&#x27;inglese: qualcosa di imbarazzante o fastidioso da vedere." }];
+const cards = [{ front:"Webete", back:"<strong>Webete<\/strong>Termine informale per chi si comporta in modo sciocco online (da 'web' + 'ebete')." }, { front:"Sharentare", back:"<strong>Sharentare<\/strong>Condividere sui social foto e informazioni sui propri figli." }, { front:"Petaloso", back:"<strong>Petaloso<\/strong>Neologismo inventato da un bambino, diventato virale, per descrivere un fiore con molti petali." }, { front:"Cringe", back:"<strong>Cringe<\/strong>Prestito dall'inglese: qualcosa di imbarazzante o fastidioso da vedere." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

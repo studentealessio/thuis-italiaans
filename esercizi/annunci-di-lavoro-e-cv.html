@@ -63,12 +63,6 @@
       <p>Abbina ogni termine del mondo del lavoro alla sua definizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: annunci e CV</h2>
-      <p>Conoscere il lessico degli annunci di lavoro e del CV è essenziale per chi cerca un impiego in Italia.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: annunci e CV</h2>
+      <p>Conoscere il lessico degli annunci di lavoro e del CV è essenziale per chi cerca un impiego in Italia.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["l&#x27;annuncio di lavoro", "offerta pubblicata da un&#x27;azienda"], ["il candidato", "persona che si propone per un lavoro"], ["le competenze", "abilità e conoscenze professionali"], ["la lettera di presentazione", "testo che accompagna il CV"], ["il tirocinio", "periodo di formazione pratica in azienda"], ["l&#x27;assunzione", "atto di essere assunti per un lavoro"]];
+const pairs = [["l'annuncio di lavoro", "offerta pubblicata da un'azienda"], ["il candidato", "persona che si propone per un lavoro"], ["le competenze", "abilità e conoscenze professionali"], ["la lettera di presentazione", "testo che accompagna il CV"], ["il tirocinio", "periodo di formazione pratica in azienda"], ["l'assunzione", "atto di essere assunti per un lavoro"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

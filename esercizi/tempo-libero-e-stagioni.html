@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cruciverba: tempo libero e stagioni | Esercizi Thuis Italiaans</title>
-<meta name="description" content="Un cruciverba con dieci parole su stagioni e tempo libero.">
+<title>Tempo libero e stagioni | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Un cruciverba a tema sul tempo libero e le stagioni dell'anno.">
 <meta name="theme-color" content="#31394d">
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
 {
  "@context": "https://schema.org",
  "@type": "LearningResource",
- "name": "Cruciverba: tempo libero e stagioni",
- "description": "Un cruciverba con dieci parole su stagioni e tempo libero.",
+ "name": "Tempo libero e stagioni",
+ "description": "Un cruciverba a tema sul tempo libero e le stagioni dell'anno.",
  "url": "https://thuisitaliaans.com/esercizi/tempo-libero-e-stagioni.html",
  "learningResourceType": "Cruciverba",
  "inLanguage": "it",
@@ -59,19 +59,13 @@
         <span class="ex-badge ex-badge-type">🧩 Cruciverba</span>
         <span class="ex-badge ex-badge-type">Lessico</span>
       </div>
-      <h1>Cruciverba: tempo libero e stagioni</h1>
-      <p>Un cruciverba con dieci parole su stagioni e tempo libero.</p>
-    </div>
-
-    <div class="ex-explainer">
-      <h2>📘 Lessico: le stagioni</h2>
-      <p>Le quattro stagioni scandiscono l'anno e sono associate ad attività di tempo libero diverse.</p>
-      
+      <h1>Tempo libero e stagioni</h1>
+      <p>Un cruciverba a tema sul tempo libero e le stagioni dell'anno.</p>
     </div>
 
     <div class="ex-panel">
       <div class="crossword-wrap">
-        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(16,34px);"></div>
+        <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(6,38px);"></div>
         <div class="cw-clues">
           <h3>Orizzontali</h3>
 
@@ -85,6 +79,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: le stagioni</h2>
+      <p>Le quattro stagioni scandiscono l'anno e sono associate ad attività di tempo libero diverse.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -121,9 +121,9 @@
 </footer>
 
 <script>
-const solution = [[null, null, null, null, "L", null, null, null, null, null, null, null, null, null, null, null], [null, null, null, null, "E", null, null, null, null, null, null, null, null, null, null, null], ["S", "P", "O", "R", "T", null, null, null, null, null, null, null, null, null, null, null], [null, null, null, null, "T", null, null, null, "I", null, null, null, null, null, null, null], [null, null, null, null, "U", null, null, null, "N", null, null, null, null, null, null, null], [null, null, null, "P", "R", "I", "M", "A", "V", "E", "R", "A", null, null, null, null], [null, null, null, null, "A", null, "O", null, "E", null, null, "U", null, null, null, null], [null, null, null, null, null, null, "N", null, "R", null, null, "T", null, null, null, null], [null, null, null, null, null, null, "T", null, "N", null, "M", "U", "S", "I", "C", "A"], [null, null, null, null, "E", null, "A", null, "O", null, null, "N", null, null, null, null], [null, null, null, null, "S", null, "G", null, null, null, null, "N", null, null, null, null], [null, null, null, null, "T", null, "N", null, null, "M", null, "O", null, null, null, null], [null, null, null, "V", "A", "C", "A", "N", "Z", "A", null, null, null, null, null, null], [null, null, null, null, "T", null, null, null, null, "R", null, null, null, null, null, null], [null, null, null, null, "E", null, null, null, null, "E", null, null, null, null, null, null]];
-const numbers = {"0,4": 1, "2,0": 2, "3,8": 3, "5,3": 4, "5,6": 5, "5,11": 6, "8,10": 7, "9,4": 8, "11,9": 9, "12,3": 10};
-const clues = { across: [{num:2, text:"Attività fisica nel tempo libero"}, {num:4, text:"Stagione dei fiori"}, {num:7, text:"Arte fatta di suoni e melodie"}, {num:10, text:"Periodo di riposo dal lavoro o dalla scuola"}], down: [{num:1, text:"Attività rilassante con un libro"}, {num:3, text:"Stagione fredda, con la neve"}, {num:5, text:"Meta per sciare o fare escursioni"}, {num:6, text:"Stagione delle foglie che cadono"}, {num:8, text:"Stagione calda, tra giugno e settembre"}, {num:9, text:"Meta estiva per eccellenza"}] };
+const solution = [["E", "S", "T", "A", "T", "E"], ["S", null, null, null, null, null], ["T", null, null, null, null, null], ["A", null, null, null, null, null], ["T", null, null, null, null, null], ["E", null, null, null, null, null]];
+const numbers = {"0,0": 1};
+const clues = { across: [{num:1, text:"Stagione calda, tra giugno e settembre"}], down: [{num:1, text:"Stagione calda, tra giugno e settembre (verticale)"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;
@@ -188,7 +188,7 @@ document.getElementById('retryBtn').addEventListener('click', () => {
 </script>
 <script src="js/game-mode.js"></script>
 <script>
-GameMode.init({ timerSeconds: 200, revealSolutions: function(){
+GameMode.init({ timerSeconds: 150, revealSolutions: function(){
   for (let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++){
     if (solution[r][c]===null) continue;
     const input = gridEl.querySelector(`input[data-row="${r}"][data-col="${c}"]`);

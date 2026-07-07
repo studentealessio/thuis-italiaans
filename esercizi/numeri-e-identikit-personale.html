@@ -63,12 +63,6 @@
       <p>Rispondi alle domande sui numeri e le informazioni personali di base.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Numeri e identikit</h2>
-      <p>Sapere i numeri e le domande di base (nome, età, provenienza) è essenziale per ogni prima conversazione.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Numeri e identikit</h2>
+      <p>Sapere i numeri e le domande di base (nome, età, provenienza) è essenziale per ogni prima conversazione.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -113,11 +113,11 @@
 
 <script>
 const questions = [
-  { q: "&quot;Quanti anni hai?&quot; si risponde con...", options: ["Ho ... anni", "Sono ... anni", "Faccio ... anni"], correct: 0 },
+  { q: "\"Quanti anni hai?\" si risponde con...", options: ["Ho ... anni", "Sono ... anni", "Faccio ... anni"], correct: 0 },
   { q: "Il numero 17 si scrive...", options: ["diciassette", "diciotto", "sedici"], correct: 0 },
-  { q: "&quot;Di dove sei?&quot; chiede...", options: ["la provenienza", "l&#x27;età", "il nome"], correct: 0 },
+  { q: "\"Di dove sei?\" chiede...", options: ["la provenienza", "l'età", "il nome"], correct: 0 },
   { q: "Il numero 100 si dice...", options: ["cento", "mille", "dieci"], correct: 0 },
-  { q: "&quot;Come ti chiami?&quot; chiede...", options: ["il nome", "l&#x27;indirizzo", "il lavoro"], correct: 0 }
+  { q: "\"Come ti chiami?\" chiede...", options: ["il nome", "l'indirizzo", "il lavoro"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');
 const letters = ['A','B','C','D'];

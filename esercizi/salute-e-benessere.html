@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire il significato di ogni espressione legata alla salute.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Lessico: la salute</h2>
       <p>Sapere descrivere come ti senti è utile in farmacia, dal medico o semplicemente con gli amici.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Avere mal di testa", back:"&lt;strong&gt;Avere mal di testa&lt;/strong&gt;Sentire dolore alla testa." }, { front:"Avere la febbre", back:"&lt;strong&gt;Avere la febbre&lt;/strong&gt;Avere la temperatura corporea più alta del normale." }, { front:"Sentirsi bene", back:"&lt;strong&gt;Sentirsi bene&lt;/strong&gt;Stare in buona salute e di buon umore." }, { front:"Essere raffreddato", back:"&lt;strong&gt;Essere raffreddato&lt;/strong&gt;Avere naso chiuso o che cola, tipico del raffreddore." }, { front:"Avere mal di stomaco", back:"&lt;strong&gt;Avere mal di stomaco&lt;/strong&gt;Sentire dolore o fastidio allo stomaco." }];
+const cards = [{ front:"Avere mal di testa", back:"<strong>Avere mal di testa<\/strong>Sentire dolore alla testa." }, { front:"Avere la febbre", back:"<strong>Avere la febbre<\/strong>Avere la temperatura corporea più alta del normale." }, { front:"Sentirsi bene", back:"<strong>Sentirsi bene<\/strong>Stare in buona salute e di buon umore." }, { front:"Essere raffreddato", back:"<strong>Essere raffreddato<\/strong>Avere naso chiuso o che cola, tipico del raffreddore." }, { front:"Avere mal di stomaco", back:"<strong>Avere mal di stomaco<\/strong>Sentire dolore o fastidio allo stomaco." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

@@ -63,12 +63,6 @@
       <p>Trova le coppie tra i mobili e le loro definizioni.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: i mobili</h2>
-      <p>Il lessico della casa è tra i primi che si imparano — utile fin dalla prima lezione per descrivere dove vivi.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: i mobili</h2>
+      <p>Il lessico della casa è tra i primi che si imparano — utile fin dalla prima lezione per descrivere dove vivi.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["il divano", "ci si siede a guardare la TV"], ["il letto", "ci si dorme la notte"], ["l&#x27;armadio", "ci si appendono i vestiti"], ["la scrivania", "ci si lavora o si studia"], ["la libreria", "ci si mettono i libri"], ["lo specchio", "ci si guarda per pettinarsi"]];
+const pairs = [["il divano", "ci si siede a guardare la TV"], ["il letto", "ci si dorme la notte"], ["l'armadio", "ci si appendono i vestiti"], ["la scrivania", "ci si lavora o si studia"], ["la libreria", "ci si mettono i libri"], ["lo specchio", "ci si guarda per pettinarsi"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

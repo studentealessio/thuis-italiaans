@@ -63,12 +63,6 @@
       <p>Abbina ogni termine di sport e nutrizione alla sua definizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: sport e benessere</h2>
-      <p>Il lessico di sport e nutrizione è sempre più presente nelle conversazioni sul benessere personale.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: sport e benessere</h2>
+      <p>Il lessico di sport e nutrizione è sempre più presente nelle conversazioni sul benessere personale.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["l&#x27;allenamento", "sessione di esercizio fisico regolare"], ["le proteine", "nutrienti essenziali per i muscoli"], ["lo stress", "tensione fisica o mentale"], ["un rimedio naturale", "cura basata su elementi non farmaceutici"], ["l&#x27;idratazione", "assunzione di liquidi necessaria al corpo"], ["il riposo", "tempo dedicato al recupero fisico"]];
+const pairs = [["l'allenamento", "sessione di esercizio fisico regolare"], ["le proteine", "nutrienti essenziali per i muscoli"], ["lo stress", "tensione fisica o mentale"], ["un rimedio naturale", "cura basata su elementi non farmaceutici"], ["l'idratazione", "assunzione di liquidi necessaria al corpo"], ["il riposo", "tempo dedicato al recupero fisico"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

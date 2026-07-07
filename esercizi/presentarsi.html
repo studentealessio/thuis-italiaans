@@ -63,12 +63,6 @@
       <p>Clicca le frasi nell'ordine giusto per ricomporre una presentazione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Come presentarsi in italiano</h2>
-      <p>Una presentazione segue di solito un ordine logico: saluto, nome, provenienza, lavoro o studio, e un saluto finale.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="builder-bank order-bank" id="bank"></div>
       <div class="builder-answer order-answer" id="answer"></div>
@@ -77,6 +71,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Come presentarsi in italiano</h2>
+      <p>Una presentazione segue di solito un ordine logico: saluto, nome, provenienza, lavoro o studio, e un saluto finale.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -113,7 +113,7 @@
 </footer>
 
 <script>
-const items = ["Ciao, piacere di conoscerti!", "Mi chiamo Anna e vengo dai Paesi Bassi.", "Studio italiano da circa un anno.", "Lavoro come grafica in un&#x27;agenzia pubblicitaria.", "Spero di vederti presto di nuovo!"];
+const items = ["Ciao, piacere di conoscerti!", "Mi chiamo Anna e vengo dai Paesi Bassi.", "Studio italiano da circa un anno.", "Lavoro come grafica in un'agenzia pubblicitaria.", "Spero di vederti presto di nuovo!"];
 const bank = document.getElementById('bank');
 const answer = document.getElementById('answer');
 function shuffle(arr) { const a=[...arr]; for (let i=a.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }

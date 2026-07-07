@@ -63,12 +63,6 @@
       <p>Un cruciverba con dieci parole utili durante un viaggio o una vacanza.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: la vacanza</h2>
-      <p>Le parole della vacanza tornano utili quando prenoti un viaggio o chiedi informazioni in agenzia.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="crossword-wrap">
         <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(15,34px);"></div>
@@ -85,6 +79,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la vacanza</h2>
+      <p>Le parole della vacanza tornano utili quando prenoti un viaggio o chiedi informazioni in agenzia.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -123,7 +123,7 @@
 <script>
 const solution = [[null, null, null, null, null, null, "B", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "I", "S", "O", "L", "A", null, null, null, null], [null, null, null, null, "V", null, "G", null, null, null, null, null, null, null, null], [null, null, null, null, "A", null, "L", null, null, null, null, null, null, null, null], [null, null, null, null, "L", null, "I", null, null, null, null, null, null, null, null], [null, null, null, null, "I", null, "E", null, null, null, null, null, null, null, null], [null, null, null, null, "G", null, "T", null, null, null, null, null, null, null, null], [null, null, null, null, "I", null, "T", null, "I", null, null, null, null, null, null], ["P", "A", "S", "S", "A", "P", "O", "R", "T", "O", null, null, null, null, null], [null, "E", null, "P", null, null, null, null, "I", null, null, null, null, null, null], [null, "R", null, "I", null, null, null, null, "N", null, null, null, null, null, null], [null, "O", null, "A", null, "H", "O", "T", "E", "L", null, null, null, null, null], [null, "P", null, "G", null, null, null, null, "R", null, null, null, null, null, null], [null, "O", null, "G", null, null, null, null, "A", null, null, null, null, null, null], [null, "R", null, "I", null, null, null, null, "R", null, null, null, null, "G", null], [null, "T", null, "A", null, null, null, null, "I", null, null, null, null, "U", null], [null, "O", null, null, null, null, null, "S", "O", "U", "V", "E", "N", "I", "R"], [null, null, null, null, null, null, null, null, null, null, null, null, null, "D", null], [null, null, null, null, null, null, null, null, null, null, null, null, null, "A", null]];
 const numbers = {"0,6": 1, "1,6": 2, "2,4": 3, "7,8": 4, "8,0": 5, "8,1": 6, "8,3": 7, "11,5": 8, "14,13": 9, "16,7": 10};
-const clues = { across: [{num:2, text:"Terra circondata dal mare"}, {num:5, text:"Documento per viaggiare all&#x27;estero"}, {num:8, text:"Ci dormi durante un viaggio"}, {num:10, text:"Ricordo che si compra durante il viaggio"}], down: [{num:1, text:"Serve per salire su treno o aereo"}, {num:3, text:"La riempi prima di partire"}, {num:4, text:"Percorso pianificato di un viaggio"}, {num:6, text:"Da qui partono e arrivano gli aerei"}, {num:7, text:"Ci si prende il sole al mare"}, {num:9, text:"Libro con informazioni turistiche"}] };
+const clues = { across: [{num:2, text:"Terra circondata dal mare"}, {num:5, text:"Documento per viaggiare all'estero"}, {num:8, text:"Ci dormi durante un viaggio"}, {num:10, text:"Ricordo che si compra durante il viaggio"}], down: [{num:1, text:"Serve per salire su treno o aereo"}, {num:3, text:"La riempi prima di partire"}, {num:4, text:"Percorso pianificato di un viaggio"}, {num:6, text:"Da qui partono e arrivano gli aerei"}, {num:7, text:"Ci si prende il sole al mare"}, {num:9, text:"Libro con informazioni turistiche"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

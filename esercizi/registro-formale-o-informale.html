@@ -63,12 +63,6 @@
       <p>Smista le espressioni tra registro formale e informale.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Il registro linguistico</h2>
-      <p>Il registro cambia lessico e struttura in base al contesto: formale per situazioni professionali o con sconosciuti, informale tra amici e familiari.</p>
-      <p class="ex-example">Esempio: 'Vorrei chiederLe...' (formale) vs 'Ti va di...' (informale).</p>
-    </div>
-
     <div class="ex-panel">
       <div class="sort-bank" id="bank"></div>
       <div class="sort-bins">
@@ -86,6 +80,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Il registro linguistico</h2>
+      <p>Il registro cambia lessico e struttura in base al contesto: formale per situazioni professionali o con sconosciuti, informale tra amici e familiari.</p>
+      <p class="ex-example">Esempio: 'Vorrei chiederLe...' (formale) vs 'Ti va di...' (informale).</p>
     </div>
 
     <div class="ex-end-cta">
@@ -122,7 +122,7 @@
 </footer>
 
 <script>
-const words = [{ word:"Gentile Signora", cat:"a" }, { word:"Ciao, come va?", cat:"b" }, { word:"La ringrazio per l&#x27;attenzione", cat:"a" }, { word:"Grazie mille!", cat:"b" }, { word:"Le chiedo cortesemente di", cat:"a" }, { word:"Fammi sapere", cat:"b" }];
+const words = [{ word:"Gentile Signora", cat:"a" }, { word:"Ciao, come va?", cat:"b" }, { word:"La ringrazio per l'attenzione", cat:"a" }, { word:"Grazie mille!", cat:"b" }, { word:"Le chiedo cortesemente di", cat:"a" }, { word:"Fammi sapere", cat:"b" }];
 let selectedChip = null;
 function shuffle(arr) { const a=[...arr]; for (let i=a.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function buildChip(w) {

@@ -63,12 +63,6 @@
       <p>Trova le parole legate ad arte, teatro e design italiano.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: arte e design</h2>
-      <p>L'Italia è patria di grandi artisti, registi teatrali e designer di fama mondiale.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="wordsearch-wrap">
         <div class="wordsearch-grid" id="grid"></div>
@@ -81,6 +75,12 @@
       <div class="ex-actions">
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Nuova griglia</button>
       </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: arte e design</h2>
+      <p>L'Italia è patria di grandi artisti, registi teatrali e designer di fama mondiale.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -118,7 +118,7 @@
 
 <script>
 const SIZE = 10;
-const placements = [{ word:"SCULTURA", row:0, col:0, dr:0, dc:1, emoji:"🗿", def:"Opera d&#x27;arte tridimensionale" }, { word:"PITTURA", row:1, col:0, dr:0, dc:1, emoji:"🎨", def:"Arte del dipingere" }, { word:"TEATRO", row:3, col:1, dr:1, dc:0, emoji:"🎭", def:"Luogo dove si recitano spettacoli" }, { word:"DESIGN", row:2, col:6, dr:1, dc:0, emoji:"🪑", def:"Progettazione estetica e funzionale di oggetti" }];
+const placements = [{ word:"SCULTURA", row:0, col:0, dr:0, dc:1, emoji:"🗿", def:"Opera d'arte tridimensionale" }, { word:"PITTURA", row:1, col:0, dr:0, dc:1, emoji:"🎨", def:"Arte del dipingere" }, { word:"TEATRO", row:3, col:1, dr:1, dc:0, emoji:"🎭", def:"Luogo dove si recitano spettacoli" }, { word:"DESIGN", row:2, col:6, dr:1, dc:0, emoji:"🪑", def:"Progettazione estetica e funzionale di oggetti" }];
 let grid = [], cellEls = [], foundWords = new Set();
 function buildGrid() {
   grid = Array.from({length:SIZE}, () => Array(SIZE).fill(''));

@@ -63,12 +63,6 @@
       <p>Trova le parole utili per dare o chiedere indicazioni stradali.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: le indicazioni stradali</h2>
-      <p>Sapere chiedere e capire indicazioni stradali è fondamentale per muoversi in una città sconosciuta.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="wordsearch-wrap">
         <div class="wordsearch-grid" id="grid"></div>
@@ -81,6 +75,12 @@
       <div class="ex-actions">
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Nuova griglia</button>
       </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: le indicazioni stradali</h2>
+      <p>Sapere chiedere e capire indicazioni stradali è fondamentale per muoversi in una città sconosciuta.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -118,7 +118,7 @@
 
 <script>
 const SIZE = 8;
-const placements = [{ word:"DESTRA", row:0, col:0, dr:0, dc:1, emoji:"➡️", def:"Gira da questa parte (opposto di sinistra)" }, { word:"SINISTRA", row:1, col:0, dr:0, dc:1, emoji:"⬅️", def:"Gira dall&#x27;altra parte" }, { word:"DRITTO", row:2, col:1, dr:1, dc:0, emoji:"⬆️", def:"Continua senza girare" }, { word:"ANGOLO", row:2, col:5, dr:1, dc:0, emoji:"📍", def:"Punto dove si incrociano due strade" }];
+const placements = [{ word:"DESTRA", row:0, col:0, dr:0, dc:1, emoji:"➡️", def:"Gira da questa parte (opposto di sinistra)" }, { word:"SINISTRA", row:1, col:0, dr:0, dc:1, emoji:"⬅️", def:"Gira dall'altra parte" }, { word:"DRITTO", row:2, col:1, dr:1, dc:0, emoji:"⬆️", def:"Continua senza girare" }, { word:"ANGOLO", row:2, col:5, dr:1, dc:0, emoji:"📍", def:"Punto dove si incrociano due strade" }];
 let grid = [], cellEls = [], foundWords = new Set();
 function buildGrid() {
   grid = Array.from({length:SIZE}, () => Array(SIZE).fill(''));

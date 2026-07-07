@@ -63,13 +63,13 @@
       <p>Ascolta le frasi e scrivile, prestando attenzione all'accento tonico delle parole.</p>
     </div>
 
+    <div class="ex-panel" id="dictationPanel"></div>
+
     <div class="ex-explainer">
       <h2>📘 L'accento tonico</h2>
       <p>L'accento tonico cade su sillabe diverse in parole simili, e a volte cambia il significato della parola (es. ancora/ancóra).</p>
       
     </div>
-
-    <div class="ex-panel" id="dictationPanel"></div>
 
     <div class="ex-end-cta">
       <h3>L'accento tonico può cambiare completamente il significato</h3>
@@ -105,7 +105,7 @@
 </footer>
 
 <script>
-const sentences = ["Papà torna a casa presto stasera.", "Ho comprato delle pesche molto dolci.", "Il capitano ha gettato l&#x27;ancora in mare.", "Non ho ancora finito il compito."];
+const sentences = ["Papà torna a casa presto stasera.", "Ho comprato delle pesche molto dolci.", "Il capitano ha gettato l'ancora in mare.", "Non ho ancora finito il compito."];
 function speak(text) {
   if (!('speechSynthesis' in window)) { alert('Il tuo browser non supporta la sintesi vocale.'); return; }
   const utter = new SpeechSynthesisUtterance(text); utter.lang='it-IT'; utter.rate=0.85;

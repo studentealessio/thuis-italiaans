@@ -63,12 +63,6 @@
       <p>Ricomponi nell'ordine corretto le trasformazioni dal discorso diretto a quello indiretto al passato.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Il discorso indiretto al passato</h2>
-      <p>Quando il verbo principale è al passato, i tempi verbali 'slittano indietro': il presente diventa imperfetto, il passato prossimo diventa trapassato, il futuro diventa condizionale composto.</p>
-      <p class="ex-example">Esempio: Marco disse: "Sono stanco" → Marco disse che era stanco.</p>
-    </div>
-
     <div class="ex-panel">
       <div class="builder-bank order-bank" id="bank"></div>
       <div class="builder-answer order-answer" id="answer"></div>
@@ -77,6 +71,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Il discorso indiretto al passato</h2>
+      <p>Quando il verbo principale è al passato, i tempi verbali 'slittano indietro': il presente diventa imperfetto, il passato prossimo diventa trapassato, il futuro diventa condizionale composto.</p>
+      <p class="ex-example">Esempio: Marco disse: "Sono stanco" → Marco disse che era stanco.</p>
     </div>
 
     <div class="ex-end-cta">
@@ -113,7 +113,7 @@
 </footer>
 
 <script>
-const items = ["Marco disse: &quot;Sono molto stanco.&quot;", "Marco disse che era molto stanco.", "Anna disse: &quot;Verrò domani.&quot;", "Anna disse che sarebbe venuta il giorno dopo."];
+const items = ["Marco disse: \"Sono molto stanco.\"", "Marco disse che era molto stanco.", "Anna disse: \"Verrò domani.\"", "Anna disse che sarebbe venuta il giorno dopo."];
 const bank = document.getElementById('bank');
 const answer = document.getElementById('answer');
 function shuffle(arr) { const a=[...arr]; for (let i=a.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }

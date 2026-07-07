@@ -63,12 +63,6 @@
       <p>Gira la ruota e rispondi a una domanda sui viaggi, a sorpresa.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 A cosa serve</h2>
-      <p>Parlare dei propri viaggi è un tema naturale e coinvolgente per esercitare il passato prossimo e il lessico dei viaggi.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="wheel-wrap">
         <div class="wheel-outer">
@@ -81,6 +75,12 @@
         <button class="ex-btn ex-btn-ghost" id="showAnswerBtn">💬 Possibile risposta</button>
         <div class="wheel-prompt" id="answerBox"></div>
       </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 A cosa serve</h2>
+      <p>Parlare dei propri viaggi è un tema naturale e coinvolgente per esercitare il passato prossimo e il lessico dei viaggi.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -117,7 +117,7 @@
 </footer>
 
 <script>
-const prompts = [{ level:"A1", q:"Qual è il tuo posto preferito dove sei stato/a?", example:"Il mio posto preferito è Roma, perché è piena di storia." }, { level:"A1", q:"Preferisci il mare o la montagna?", example:"Preferisco il mare, perché mi piace nuotare." }, { level:"A2", q:"Racconta un viaggio che hai fatto l&#x27;anno scorso.", example:"L&#x27;anno scorso sono andato/a in Sicilia con la mia famiglia." }, { level:"A2", q:"Cosa porti sempre in valigia?", example:"Porto sempre un libro e la macchina fotografica." }, { level:"B1", q:"Qual è il viaggio dei tuoi sogni?", example:"Il viaggio dei miei sogni sarebbe un giro del Giappone." }, { level:"B1", q:"Preferisci viaggiare da solo/a o in compagnia? Perché?", example:"Preferisco viaggiare in compagnia perché mi piace condividere le esperienze." }, { level:"B2", q:"Come è cambiato il modo di viaggiare negli ultimi anni?", example:"Penso che oggi si viaggi in modo più sostenibile e consapevole rispetto al passato." }, { level:"B2", q:"Quali sono i vantaggi e gli svantaggi del turismo di massa?", example:"Da un lato porta economia, dall&#x27;altro rischia di rovinare i luoghi più belli." }];
+const prompts = [{ level:"A1", q:"Qual è il tuo posto preferito dove sei stato/a?", example:"Il mio posto preferito è Roma, perché è piena di storia." }, { level:"A1", q:"Preferisci il mare o la montagna?", example:"Preferisco il mare, perché mi piace nuotare." }, { level:"A2", q:"Racconta un viaggio che hai fatto l'anno scorso.", example:"L'anno scorso sono andato/a in Sicilia con la mia famiglia." }, { level:"A2", q:"Cosa porti sempre in valigia?", example:"Porto sempre un libro e la macchina fotografica." }, { level:"B1", q:"Qual è il viaggio dei tuoi sogni?", example:"Il viaggio dei miei sogni sarebbe un giro del Giappone." }, { level:"B1", q:"Preferisci viaggiare da solo/a o in compagnia? Perché?", example:"Preferisco viaggiare in compagnia perché mi piace condividere le esperienze." }, { level:"B2", q:"Come è cambiato il modo di viaggiare negli ultimi anni?", example:"Penso che oggi si viaggi in modo più sostenibile e consapevole rispetto al passato." }, { level:"B2", q:"Quali sono i vantaggi e gli svantaggi del turismo di massa?", example:"Da un lato porta economia, dall'altro rischia di rovinare i luoghi più belli." }];
 const colors = ['#31394d', '#4a5570'];
 const wheel = document.getElementById('wheel');
 const segAngle = 360 / prompts.length;

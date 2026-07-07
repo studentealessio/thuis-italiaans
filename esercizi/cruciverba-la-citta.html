@@ -63,12 +63,6 @@
       <p>Un cruciverba con dieci luoghi tipici di una città italiana.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: la città</h2>
-      <p>Conoscere i luoghi di una città aiuta a orientarsi e chiedere indicazioni.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="crossword-wrap">
         <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(17,34px);"></div>
@@ -85,6 +79,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la città</h2>
+      <p>Conoscere i luoghi di una città aiuta a orientarsi e chiedere indicazioni.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -123,7 +123,7 @@
 <script>
 const solution = [[null, null, null, null, null, null, "O", null, null, null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "S", null, null, null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "P", "A", "R", "C", "O", null, null, null, null, null, null], [null, null, null, null, null, null, "E", null, null, null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "D", null, null, null, null, null, null, null, null, null, null], [null, null, null, null, "P", null, "A", null, null, "S", null, null, "F", null, null, null, null], [null, null, null, "B", "I", "B", "L", "I", "O", "T", "E", "C", "A", null, null, null, null], [null, null, null, null, "A", null, "E", null, null, "A", null, null, "R", null, null, null, null], [null, null, null, null, "Z", null, null, null, null, "Z", null, null, "M", "U", "S", "E", "O"], [null, null, null, null, "Z", null, null, "C", "H", "I", "E", "S", "A", null, null, null, null], ["B", "A", "N", "C", "A", null, null, null, null, "O", null, null, "C", null, null, null, null], [null, null, null, null, null, null, null, null, null, "N", null, null, "I", null, null, null, null], [null, null, null, null, null, null, null, null, "M", "E", "R", "C", "A", "T", "O", null, null]];
 const numbers = {"0,6": 1, "2,6": 2, "5,4": 3, "5,9": 4, "5,12": 5, "6,3": 6, "8,12": 7, "9,7": 8, "10,0": 9, "12,8": 10};
-const clues = { across: [{num:2, text:"Spazio verde per rilassarsi"}, {num:6, text:"Ci si trovano libri da leggere"}, {num:7, text:"Ci si ammirano opere d&#x27;arte"}, {num:8, text:"Edificio religioso per il culto"}, {num:9, text:"Ci si gestiscono i propri soldi"}, {num:10, text:"Ci si compra frutta e verdura fresca"}], down: [{num:1, text:"Ci si curano i malati"}, {num:3, text:"Spazio aperto centrale"}, {num:4, text:"Da qui partono treni o autobus"}, {num:5, text:"Ci si comprano medicine"}] };
+const clues = { across: [{num:2, text:"Spazio verde per rilassarsi"}, {num:6, text:"Ci si trovano libri da leggere"}, {num:7, text:"Ci si ammirano opere d'arte"}, {num:8, text:"Edificio religioso per il culto"}, {num:9, text:"Ci si gestiscono i propri soldi"}, {num:10, text:"Ci si compra frutta e verdura fresca"}], down: [{num:1, text:"Ci si curano i malati"}, {num:3, text:"Spazio aperto centrale"}, {num:4, text:"Da qui partono treni o autobus"}, {num:5, text:"Ci si comprano medicine"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

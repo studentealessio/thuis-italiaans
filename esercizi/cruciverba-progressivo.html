@@ -63,12 +63,6 @@
       <p>Cruciverba con dieci parole a livelli di difficoltà misti, dall'A1 al B1, nella stessa griglia.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Perché un cruciverba 'a livelli'</h2>
-      <p>Uno stesso schema può contenere parole di difficoltà diversa: così principianti e studenti più avanzati possono lavorare fianco a fianco.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="crossword-wrap">
         <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(10,38px);"></div>
@@ -85,6 +79,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Perché un cruciverba 'a livelli'</h2>
+      <p>Uno stesso schema può contenere parole di difficoltà diversa: così principianti e studenti più avanzati possono lavorare fianco a fianco.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -123,7 +123,7 @@
 <script>
 const solution = [[null, null, null, "Q", null, null, "C", null, null, "C"], [null, null, "T", "U", "T", "T", "A", "V", "I", "A"], [null, null, null, "I", null, null, "S", null, null, "N"], [null, "P", "A", "N", "E", null, "A", null, null, "E"], [null, null, null, "D", null, null, null, null, null, null], ["C", "O", "S", "I", null, null, null, null, null, null]];
 const numbers = {"0,3": 1, "0,6": 2, "0,9": 3, "1,2": 4, "3,1": 5, "5,0": 6};
-const clues = { across: [{num:4, text:"Introduce un&#x27;idea contraria [B1]"}, {num:5, text:"Non manca mai a tavola [A1]"}, {num:6, text:"Connettivo di conseguenza, es. &#x27;così ho deciso&#x27; [B1]"}], down: [{num:1, text:"Sinonimo di &#x27;perciò&#x27; [B1]"}, {num:2, text:"Dove abiti [A1]"}, {num:3, text:"Il migliore amico dell&#x27;uomo [A1]"}] };
+const clues = { across: [{num:4, text:"Introduce un'idea contraria [B1]"}, {num:5, text:"Non manca mai a tavola [A1]"}, {num:6, text:"Connettivo di conseguenza, es. 'così ho deciso' [B1]"}], down: [{num:1, text:"Sinonimo di 'perciò' [B1]"}, {num:2, text:"Dove abiti [A1]"}, {num:3, text:"Il migliore amico dell'uomo [A1]"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

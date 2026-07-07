@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire espressioni utili durante un viaggio.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Lessico: viaggiare</h2>
       <p>Alcune espressioni sono indispensabili per viaggiare con sicurezza in Italia.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Fare il check-in", back:"&lt;strong&gt;Fare il check-in&lt;/strong&gt;Registrarsi all&#x27;hotel o all&#x27;aeroporto prima del viaggio." }, { front:"Perdere la coincidenza", back:"&lt;strong&gt;Perdere la coincidenza&lt;/strong&gt;Non riuscire a prendere il mezzo successivo per cambio." }, { front:"Fare la valigia", back:"&lt;strong&gt;Fare la valigia&lt;/strong&gt;Preparare i bagagli prima di partire." }, { front:"Essere in ritardo", back:"&lt;strong&gt;Essere in ritardo&lt;/strong&gt;Arrivare dopo l&#x27;orario previsto." }];
+const cards = [{ front:"Fare il check-in", back:"<strong>Fare il check-in<\/strong>Registrarsi all'hotel o all'aeroporto prima del viaggio." }, { front:"Perdere la coincidenza", back:"<strong>Perdere la coincidenza<\/strong>Non riuscire a prendere il mezzo successivo per cambio." }, { front:"Fare la valigia", back:"<strong>Fare la valigia<\/strong>Preparare i bagagli prima di partire." }, { front:"Essere in ritardo", back:"<strong>Essere in ritardo<\/strong>Arrivare dopo l'orario previsto." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

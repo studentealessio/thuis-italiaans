@@ -63,14 +63,14 @@
       <p>Gira le carte per scoprire il significato di ogni emozione.</p>
     </div>
 
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
     <div class="ex-explainer">
       <h2>📘 Lessico: le emozioni</h2>
       <p>Esprimere le proprie emozioni è fondamentale per una conversazione autentica, non solo tecnicamente corretta.</p>
       
-    </div>
-
-    <div class="ex-panel">
-      <div class="flashcard-grid" id="flashGrid"></div>
     </div>
 
     <div class="ex-end-cta">
@@ -107,7 +107,7 @@
 </footer>
 
 <script>
-const cards = [{ front:"Felice", back:"&lt;strong&gt;Felice&lt;/strong&gt;Si prova quando qualcosa ti rende contento/a." }, { front:"Triste", back:"&lt;strong&gt;Triste&lt;/strong&gt;Si prova quando qualcosa ti dispiace o ti fa soffrire." }, { front:"Arrabbiato/a", back:"&lt;strong&gt;Arrabbiato/a&lt;/strong&gt;Si prova quando qualcosa ti fa infastidire molto." }, { front:"Sorpreso/a", back:"&lt;strong&gt;Sorpreso/a&lt;/strong&gt;Si prova quando succede qualcosa di inaspettato." }, { front:"Emozionato/a", back:"&lt;strong&gt;Emozionato/a&lt;/strong&gt;Si prova prima di un evento importante o atteso." }, { front:"Annoiato/a", back:"&lt;strong&gt;Annoiato/a&lt;/strong&gt;Si prova quando non c&#x27;è niente di interessante da fare." }];
+const cards = [{ front:"Felice", back:"<strong>Felice<\/strong>Si prova quando qualcosa ti rende contento/a." }, { front:"Triste", back:"<strong>Triste<\/strong>Si prova quando qualcosa ti dispiace o ti fa soffrire." }, { front:"Arrabbiato/a", back:"<strong>Arrabbiato/a<\/strong>Si prova quando qualcosa ti fa infastidire molto." }, { front:"Sorpreso/a", back:"<strong>Sorpreso/a<\/strong>Si prova quando succede qualcosa di inaspettato." }, { front:"Emozionato/a", back:"<strong>Emozionato/a<\/strong>Si prova prima di un evento importante o atteso." }, { front:"Annoiato/a", back:"<strong>Annoiato/a<\/strong>Si prova quando non c'è niente di interessante da fare." }];
 const grid = document.getElementById('flashGrid');
 cards.forEach(c => {
   const card = document.createElement('div'); card.className='flashcard';

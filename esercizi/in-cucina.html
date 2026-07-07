@@ -63,12 +63,6 @@
       <p>Un cruciverba con dieci oggetti e ingredienti della cucina.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: la cucina</h2>
-      <p>Gli oggetti della cucina sono utilissimi per seguire ricette o descrivere la tua casa.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="crossword-wrap">
         <div class="crossword-grid" id="cwGrid" style="grid-template-columns:repeat(15,34px);"></div>
@@ -85,6 +79,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la cucina</h2>
+      <p>Gli oggetti della cucina sono utilissimi per seguire ricette o descrivere la tua casa.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -123,7 +123,7 @@
 <script>
 const solution = [[null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "U", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "C", null, null, null, null, null, null, null, null], [null, null, null, null, null, null, "H", null, "C", null, "B", null, "P", null, "T"], [null, null, null, null, "F", "R", "I", "G", "O", "R", "I", "F", "E", "R", "O"], ["F", "O", "R", "N", "O", null, "A", null, "L", null, "C", null, "N", null, "V"], [null, null, null, null, "R", null, "I", null, "T", null, "C", null, "T", null, "A"], [null, null, null, null, "C", null, "O", null, "E", null, "H", null, "O", null, "G"], [null, null, null, null, "H", null, null, null, "L", null, "I", null, "L", null, "L"], [null, "P", "A", "N", "E", null, null, null, "L", null, "E", null, "A", null, "I"], [null, null, null, null, "T", null, null, null, "O", null, "R", null, null, null, "A"], [null, null, null, null, "T", null, null, null, null, null, "E", null, null, null, null], [null, null, "P", "I", "A", "T", "T", "O", null, null, null, null, null, null, null]];
 const numbers = {"0,6": 1, "4,8": 2, "4,10": 3, "4,12": 4, "4,14": 5, "5,4": 6, "6,0": 7, "10,1": 8, "13,2": 9};
-const clues = { across: [{num:6, text:"Elettrodomestico che tiene freddo il cibo"}, {num:7, text:"Elettrodomestico per cuocere torte"}, {num:8, text:"Non manca mai a tavola, si affetta"}, {num:9, text:"Ci si mangia sopra"}], down: [{num:1, text:"Posata per la minestra"}, {num:2, text:"Posata tagliente"}, {num:3, text:"Ci si beve l&#x27;acqua"}, {num:4, text:"Ci si cuoce la pasta o il sugo"}, {num:5, text:"Copre il tavolo durante i pasti"}, {num:6, text:"Posata con i denti"}] };
+const clues = { across: [{num:6, text:"Elettrodomestico che tiene freddo il cibo"}, {num:7, text:"Elettrodomestico per cuocere torte"}, {num:8, text:"Non manca mai a tavola, si affetta"}, {num:9, text:"Ci si mangia sopra"}], down: [{num:1, text:"Posata per la minestra"}, {num:2, text:"Posata tagliente"}, {num:3, text:"Ci si beve l'acqua"}, {num:4, text:"Ci si cuoce la pasta o il sugo"}, {num:5, text:"Copre il tavolo durante i pasti"}, {num:6, text:"Posata con i denti"}] };
 const ROWS = solution.length, COLS = solution[0].length;
 const gridEl = document.getElementById('cwGrid');
 gridEl.style.gridTemplateRows = `repeat(${ROWS}, 38px)`;

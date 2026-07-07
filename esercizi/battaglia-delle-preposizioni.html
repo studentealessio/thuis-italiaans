@@ -63,12 +63,6 @@
       <p>Affonda le navi rispondendo a domande sulle preposizioni articolate.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Le preposizioni articolate</h2>
-      <p>Le preposizioni articolate si formano unendo una preposizione semplice a un articolo determinativo.</p>
-      
-    </div>
-
     <div class="ex-panel" style="text-align:center;">
       <div class="battleship-grid" id="bsGrid"></div>
       <div class="bs-question-box" id="bsQuestionBox">
@@ -79,6 +73,12 @@
       <div class="ex-actions">
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Le preposizioni articolate</h2>
+      <p>Le preposizioni articolate si formano unendo una preposizione semplice a un articolo determinativo.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -116,7 +116,7 @@
 
 <script>
 const GRID_SIZE = 5;
-const questions = [{ q: "&quot;A&quot; + &quot;il&quot; diventa...", options: ["al", "allo", "alla"], correct: 0 }, { q: "&quot;Di&quot; + &quot;lo&quot; diventa...", options: ["dello", "dela", "delo"], correct: 0 }, { q: "&quot;In&quot; + &quot;la&quot; diventa...", options: ["nella", "inla", "inella"], correct: 0 }, { q: "&quot;Su&quot; + &quot;i&quot; diventa...", options: ["sui", "sun", "sugli"], correct: 0 }, { q: "&quot;Da&quot; + &quot;gli&quot; diventa...", options: ["dagli", "dali", "dagl"], correct: 0 }, { q: "&quot;Con&quot; + &quot;il&quot; diventa spesso (forma comune)...", options: ["col", "conil", "conno"], correct: 0 }, { q: "&quot;A&quot; + &quot;le&quot; diventa...", options: ["alle", "ale", "alla"], correct: 0 }];
+const questions = [{ q: "\"A\" + \"il\" diventa...", options: ["al", "allo", "alla"], correct: 0 }, { q: "\"Di\" + \"lo\" diventa...", options: ["dello", "dela", "delo"], correct: 0 }, { q: "\"In\" + \"la\" diventa...", options: ["nella", "inla", "inella"], correct: 0 }, { q: "\"Su\" + \"i\" diventa...", options: ["sui", "sun", "sugli"], correct: 0 }, { q: "\"Da\" + \"gli\" diventa...", options: ["dagli", "dali", "dagl"], correct: 0 }, { q: "\"Con\" + \"il\" diventa spesso (forma comune)...", options: ["col", "conil", "conno"], correct: 0 }, { q: "\"A\" + \"le\" diventa...", options: ["alle", "ale", "alla"], correct: 0 }];
 let ships = [], hitCells = new Set(), sunkShips = 0, currentCell = null;
 function randomShips() {
   const cells = [];

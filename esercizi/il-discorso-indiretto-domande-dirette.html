@@ -63,12 +63,6 @@
       <p>Scegli la forma corretta per trasformare una domanda diretta in discorso indiretto.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Domande nel discorso indiretto</h2>
-      <p>Le domande dirette con 'sì/no' si trasformano con 'se'. Le domande con parola interrogativa mantengono quella parola.</p>
-      <p class="ex-example">Esempio: "Vieni?" → Mi chiede se vengo. "Dove vai?" → Mi chiede dove vado.</p>
-    </div>
-
     <div class="ex-panel">
       <div id="quizContainer"></div>
       <div class="ex-actions">
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
       </div>
       <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Domande nel discorso indiretto</h2>
+      <p>Le domande dirette con 'sì/no' si trasformano con 'se'. Le domande con parola interrogativa mantengono quella parola.</p>
+      <p class="ex-example">Esempio: "Vieni?" → Mi chiede se vengo. "Dove vai?" → Mi chiede dove vado.</p>
     </div>
 
     <div class="ex-end-cta">
@@ -113,11 +113,11 @@
 
 <script>
 const questions = [
-  { q: "&quot;Vieni alla festa?&quot; → Mi chiede ___ vengo alla festa.", options: ["se", "che", "chi"], correct: 0 },
-  { q: "&quot;Dove abiti?&quot; → Mi chiede ___ abito.", options: ["dove", "se", "che"], correct: 0 },
-  { q: "&quot;Hai fame?&quot; → Mi chiede ___ ho fame.", options: ["se", "che", "dove"], correct: 0 },
-  { q: "&quot;Quando parti?&quot; → Mi chiede ___ parto.", options: ["quando", "se", "che"], correct: 0 },
-  { q: "&quot;Ti piace il film?&quot; → Mi chiede ___ mi piace il film.", options: ["se", "che", "chi"], correct: 0 }
+  { q: "\"Vieni alla festa?\" → Mi chiede ___ vengo alla festa.", options: ["se", "che", "chi"], correct: 0 },
+  { q: "\"Dove abiti?\" → Mi chiede ___ abito.", options: ["dove", "se", "che"], correct: 0 },
+  { q: "\"Hai fame?\" → Mi chiede ___ ho fame.", options: ["se", "che", "dove"], correct: 0 },
+  { q: "\"Quando parti?\" → Mi chiede ___ parto.", options: ["quando", "se", "che"], correct: 0 },
+  { q: "\"Ti piace il film?\" → Mi chiede ___ mi piace il film.", options: ["se", "che", "chi"], correct: 0 }
 ];
 const container = document.getElementById('quizContainer');
 const letters = ['A','B','C','D'];

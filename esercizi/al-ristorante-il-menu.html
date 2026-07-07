@@ -63,12 +63,6 @@
       <p>Abbina ogni portata del menu alla sua descrizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Il menu al ristorante</h2>
-      <p>Il menu italiano segue una struttura fissa: antipasto, primo, secondo, contorno, dolce.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Il menu al ristorante</h2>
+      <p>Il menu italiano segue una struttura fissa: antipasto, primo, secondo, contorno, dolce.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["l&#x27;antipasto", "si mangia all&#x27;inizio del pasto"], ["il primo", "piatto di pasta, riso o zuppa"], ["il secondo", "piatto di carne o pesce"], ["il contorno", "verdure che accompagnano il secondo"], ["il dolce", "si mangia alla fine del pasto"], ["il coperto", "piccola spesa fissa per il servizio"]];
+const pairs = [["l'antipasto", "si mangia all'inizio del pasto"], ["il primo", "piatto di pasta, riso o zuppa"], ["il secondo", "piatto di carne o pesce"], ["il contorno", "verdure che accompagnano il secondo"], ["il dolce", "si mangia alla fine del pasto"], ["il coperto", "piccola spesa fissa per il servizio"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');

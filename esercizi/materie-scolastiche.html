@@ -63,12 +63,6 @@
       <p>Abbina ogni materia scolastica alla sua descrizione.</p>
     </div>
 
-    <div class="ex-explainer">
-      <h2>📘 Lessico: la scuola</h2>
-      <p>Parlare del proprio percorso di studi è un tema ricorrente nelle conversazioni — utile conoscere il nome delle materie principali.</p>
-      
-    </div>
-
     <div class="ex-panel">
       <div class="match-board" id="board"></div>
       <p class="match-status" id="status">0 coppie trovate su 6</p>
@@ -76,6 +70,12 @@
         <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
       </div>
       <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la scuola</h2>
+      <p>Parlare del proprio percorso di studi è un tema ricorrente nelle conversazioni — utile conoscere il nome delle materie principali.</p>
+      
     </div>
 
     <div class="ex-end-cta">
@@ -112,7 +112,7 @@
 </footer>
 
 <script>
-const pairs = [["la matematica", "si studiano numeri e calcoli"], ["la storia", "si studiano eventi del passato"], ["la geografia", "si studiano paesi, città e territori"], ["le scienze", "si studiano natura, corpo e fenomeni naturali"], ["l&#x27;educazione fisica", "si fa sport e attività motoria"], ["l&#x27;arte", "si disegna e si studiano opere artistiche"]];
+const pairs = [["la matematica", "si studiano numeri e calcoli"], ["la storia", "si studiano eventi del passato"], ["la geografia", "si studiano paesi, città e territori"], ["le scienze", "si studiano natura, corpo e fenomeni naturali"], ["l'educazione fisica", "si fa sport e attività motoria"], ["l'arte", "si disegna e si studiano opere artistiche"]];
 let board = document.getElementById('board');
 let status = document.getElementById('status');
 let winFeedback = document.getElementById('winFeedback');
