@@ -329,3 +329,23 @@ schermi stretti, testi lunghi come le definizioni forzavano la griglia a essere 
 
 Entrambe le correzioni sono nel CSS condiviso (`esercizi.css`), quindi si applicano automaticamente a
 **tutte le 534 pagine** senza bisogno di rigenerarle singolarmente.
+
+## ✅ BATCH 7: 12 esercizi mirati sulle lacune reali (546 totali)
+
+Ricevuta un'analisi dettagliata dei "buchi" nel curriculum. Verificato attentamente contro i 534 esercizi
+già esistenti: **la maggior parte di quanto segnalato come "completamente mancante" (condizionale,
+congiuntivo, particella ne, periodo ipotetico, forma passiva, connettivi complessi) era già stata coperta
+estensivamente nei batch 1-6** — l'analisi sembrava basata sull'elenco originale di 34 esercizi, non sui 534
+attuali.
+
+Individuate però alcune lacune genuinamente reali, colmate con questo batch mirato:
+- **A1**: passato prossimo (primissime frasi con verbi regolari), pronomi diretti semplici per rispondere sì/no
+- **A2**: passato prossimo vs imperfetto (contrasto, a questo livello specifico), pronomi indiretti isolati
+  (mi/ti/gli/le/ci/vi) con piacere/dare/regalare, pronome diretto o indiretto (categorizza), relativi semplici
+  con "che", riflessivi al passato con più pratica sull'accordo
+- **B1**: il si passivante (rinforzo con nuovi esempi, il concetto base era già nel si impersonale)
+- **B2**: il participio assoluto (genuinamente assente prima), connettivi con cosicché e nonostante
+
+### Lezione per il futuro
+Prima di aggiungere contenuti su segnalazione di lacune esterne, verificare sempre contro il TRACCIAMENTO e
+grep diretto sui file esistenti — evita di duplicare centinaia di esercizi già presenti.
