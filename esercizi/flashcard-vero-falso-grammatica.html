@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frase corretta o sbagliata? | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Flashcard girevoli con frasi italiane: indovina se sono corrette o sbagliate, poi gira la carta per la spiegazione.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/flashcard-vero-falso-grammatica.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Frase corretta o sbagliata?",
+  "description": "Indovina se la frase \u00e8 corretta, poi gira la carta per la spiegazione.",
+  "url": "https://thuisitaliaans.com/esercizi/flashcard-vero-falso-grammatica.html",
+  "learningResourceType": "Flashcard",
+  "educationalLevel": "B1",
+  "inLanguage": "it",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Thuis Italiaans",
+    "url": "https://thuisitaliaans.com/"
+  },
+  "provider": {
+    "@type": "Person",
+    "name": "Alessio"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/flashcard-vero-falso-grammatica.html</span>
+      </div>
+      
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">B1</span>
+        <span class="ex-badge ex-badge-type">🃏 Flashcard vero/falso</span>
+        <span class="ex-badge ex-badge-type">Grammatica</span>
+      </div>
+      <h1>Frase corretta o sbagliata?</h1>
+      <p>Leggi la frase e decidi: è corretta o contiene un errore? Poi clicca la carta per scoprire la risposta e una spiegazione breve.</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Errori comuni</h2>
+      <p>Alcuni errori sono molto frequenti tra chi impara l'italiano — riconoscerli è il primo passo per non farli più.</p>
+    </div>
+
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Gli errori più comuni si correggono con la pratica guidata</h3>
+      <p>Nelle lezioni individuo i tuoi errori ricorrenti e lavoriamo insieme per superarli.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/flashcard-vero-falso-grammatica.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/flashcard-vero-falso-grammatica.png" download="flashcard-vero-falso-grammatica-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/flashcard-vero-falso-grammatica.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const cards = [
+  { sentence: "Ieri sono andato al cinema con i miei amici.", correct: true, explanation: "Corretta: \"andare\" usa l'ausiliare essere al passato prossimo." },
+  { sentence: "Ho andato a scuola in autobus.", correct: false, explanation: "Errata: \"andare\" vuole essere, non avere → \"sono andato\"." },
+  { sentence: "Lei è più alta di suo fratello.", correct: true, explanation: "Corretta: comparativo di maggioranza con \"di\" prima di un nome." },
+  { sentence: "Questa borsa è più bella che quella.", correct: false, explanation: "Errata: nel confronto tra due nomi si usa \"di\", non \"che\" → \"più bella di quella\"." },
+  { sentence: "Spero che tu stia bene.", correct: true, explanation: "Corretta: dopo \"sperare che\" si usa il congiuntivo (stia)." },
+  { sentence: "Penso che lui ha ragione.", correct: false, explanation: "Errata: dopo \"penso che\" serve il congiuntivo → \"abbia ragione\"." },
+];
+
+const grid = document.getElementById('flashGrid');
+cards.forEach(c => {
+  const card = document.createElement('div');
+  card.className = 'flashcard';
+  const verdictColor = c.correct ? 'var(--good)' : 'var(--bad)';
+  const verdictText = c.correct ? '✔️ Corretta' : '✖️ Sbagliata';
+  card.innerHTML = `
+    <div class="flashcard-inner">
+      <div class="flashcard-front" style="font-size:.95rem;">${c.sentence}</div>
+      <div class="flashcard-back">
+        <strong style="color:${verdictColor};">${verdictText}</strong>
+        ${c.explanation}
+      </div>
+    </div>
+  `;
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  grid.appendChild(card);
+});
+</script>
+
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 0, revealSolutions: function(){
+  document.querySelectorAll('.flashcard').forEach(c => c.classList.add('flipped'));
+}});
+document.getElementById('gmBar').querySelector('.game-mode-toggle').style.display='none';
+document.getElementById('gmTimerDisplay').style.display='none';
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+</body>
+</html>

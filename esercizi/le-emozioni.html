@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le emozioni | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Gira le carte per scoprire il significato di ogni emozione.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/le-emozioni.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "Le emozioni",
+ "description": "Gira le carte per scoprire il significato di ogni emozione.",
+ "url": "https://thuisitaliaans.com/esercizi/le-emozioni.html",
+ "learningResourceType": "Flashcard",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/le-emozioni.html</span>
+      </div>
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A2</span>
+        <span class="ex-badge ex-badge-type">🃏 Flashcard</span>
+        <span class="ex-badge ex-badge-type">Lessico</span>
+      </div>
+      <h1>Le emozioni</h1>
+      <p>Gira le carte per scoprire il significato di ogni emozione.</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: le emozioni</h2>
+      <p>Esprimere le proprie emozioni è fondamentale per una conversazione autentica, non solo tecnicamente corretta.</p>
+      
+    </div>
+
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Parlare di emozioni rende le conversazioni più vere</h3>
+      <p>Ti aiuto a esprimere quello che senti davvero, non solo frasi da manuale.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/le-emozioni.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/le-emozioni.png" download="le-emozioni-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/le-emozioni.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const cards = [{ front:"Felice", back:"&lt;strong&gt;Felice&lt;/strong&gt;Si prova quando qualcosa ti rende contento/a." }, { front:"Triste", back:"&lt;strong&gt;Triste&lt;/strong&gt;Si prova quando qualcosa ti dispiace o ti fa soffrire." }, { front:"Arrabbiato/a", back:"&lt;strong&gt;Arrabbiato/a&lt;/strong&gt;Si prova quando qualcosa ti fa infastidire molto." }, { front:"Sorpreso/a", back:"&lt;strong&gt;Sorpreso/a&lt;/strong&gt;Si prova quando succede qualcosa di inaspettato." }, { front:"Emozionato/a", back:"&lt;strong&gt;Emozionato/a&lt;/strong&gt;Si prova prima di un evento importante o atteso." }, { front:"Annoiato/a", back:"&lt;strong&gt;Annoiato/a&lt;/strong&gt;Si prova quando non c&#x27;è niente di interessante da fare." }];
+const grid = document.getElementById('flashGrid');
+cards.forEach(c => {
+  const card = document.createElement('div'); card.className='flashcard';
+  card.innerHTML = `<div class="flashcard-inner">
+      <div class="flashcard-front">${c.front}</div>
+      <div class="flashcard-back">${c.back}</div>
+    </div>`;
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  grid.appendChild(card);
+});
+</script>
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 0, revealSolutions: function(){
+  document.querySelectorAll('.flashcard').forEach(c => c.classList.add('flipped'));
+}});
+document.getElementById('gmBar').querySelector('.game-mode-toggle').style.display='none';
+document.getElementById('gmTimerDisplay').style.display='none';
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+
+</body>
+</html>

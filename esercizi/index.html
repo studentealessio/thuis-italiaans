@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esercizi di italiano | Thuis Italiaans</title>
+<meta name="description" content="Esercizi interattivi per imparare l'italiano: grammatica, lessico, giochi di abbinamento, crucipuzzle e molto altro.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/index.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Esercizi interattivi di italiano",
+  "description": "Esercizi interattivi per imparare l'italiano: grammatica, lessico, giochi di abbinamento, crucipuzzle e molto altro.",
+  "url": "https://thuisitaliaans.com/esercizi/index.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Thuis Italiaans",
+    "url": "https://thuisitaliaans.com/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="../index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Torna al sito</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="ex-hero">
+      <span class="section-tag">Esercizi</span>
+      <h1>Esercizi interattivi di italiano</h1>
+      <p>Grammatica, lessico e giochi per esercitarti tra una lezione e l'altra — un po' come la settimana enigmistica, ma per imparare l'italiano.</p>
+    </section>
+
+    <div class="shop-layout">
+
+      <aside class="shop-sidebar">
+
+        <div class="filter-block">
+          <h4>1. Livello</h4>
+          <div class="filter-pills-row" id="levelPills">
+            <button class="filter-pill active" data-level="all">Tutti</button>
+            <button class="filter-pill" data-level="A1">A1</button>
+            <button class="filter-pill" data-level="A2">A2</button>
+            <button class="filter-pill" data-level="B1">B1</button>
+            <button class="filter-pill" data-level="B2">B2</button>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <h4>2. Lessico o grammatica</h4>
+          <div class="filter-pills-row" id="lgPills">
+            <button class="filter-pill active" data-lg="all">Tutti</button>
+            <button class="filter-pill" data-lg="lessico">Lessico</button>
+            <button class="filter-pill" data-lg="grammatica">Grammatica</button>
+          </div>
+        </div>
+
+        <div class="filter-block" id="areaBlockGrammar">
+          <h4>Area grammaticale</h4>
+          <div class="filter-check-list">
+          <label class="filter-check">
+            <input type="checkbox" data-area="verbi"> Verbi
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="pronomi"> Pronomi, Particelle e Relativi
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="struttura"> Struttura della Frase, Sintassi e Registro
+          </label>
+          </div>
+        </div>
+
+        <div class="filter-block" id="areaBlockLexical">
+          <h4>Percorso tematico</h4>
+          <div class="filter-check-list">
+          <label class="filter-check">
+            <input type="checkbox" data-area="persone"> Persone e Società
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="casa"> Casa e Città
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="studio"> Studio e Lavoro
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="viaggi"> Viaggi e Cultura
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="cibo"> Cibo e Shopping
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" data-area="media"> Media e Informazione
+          </label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <h4>Tipo di esercizio</h4>
+          <div class="filter-pills-row" id="tipoPills">
+          <button class="filter-pill" data-tipo="Cloze">Cloze</button>
+          <button class="filter-pill" data-tipo="Abbinamento">Abbinamento</button>
+          <button class="filter-pill" data-tipo="Quiz">Quiz</button>
+          <button class="filter-pill" data-tipo="Cruciverba">Cruciverba</button>
+          <button class="filter-pill" data-tipo="Crucipuzzle">Crucipuzzle</button>
+          <button class="filter-pill" data-tipo="Riordina">Riordina</button>
+          <button class="filter-pill" data-tipo="Anagramma">Anagramma</button>
+          <button class="filter-pill" data-tipo="Categorizza">Categorizza</button>
+          <button class="filter-pill" data-tipo="Giochi">Giochi</button>
+          <button class="filter-pill" data-tipo="Trova">Trova</button>
+          <button class="filter-pill" data-tipo="Ascolto">Ascolto</button>
+          <button class="filter-pill" data-tipo="Flashcard">Flashcard</button>
+          <button class="filter-pill" data-tipo="Ruota">Ruota</button>
+          </div>
+        </div>
+
+        <button class="shop-clear-btn" id="clearFiltersBtn">↺ Azzera tutti i filtri</button>
+
+      </aside>
+
+      <div>
+        <p class="shop-results-count" id="resultsCount"></p>
+        <div class="ex-grid" id="exGrid"><a href="riempi-spazi-mercato.html" class="ex-card" data-level="A1 A2" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✏️</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>Una giornata al mercato</h3>
+        <p>Completa il testo con la forma corretta del presente indicativo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Presente</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cloze-senza-indizio.html" class="ex-card" data-level="A1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Completa senza indizi</h3>
+        <p>Cloze puro, senza aiuti: il verbo essere a memoria.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Essere</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cloze-menu-tendina.html" class="ex-card" data-level="A1 A2" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>Completa scegliendo dal menu</h3>
+        <p>Scegli l'aggettivo corretto da un menu a tendina.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Aggettivi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="abbina-mestieri.html" class="ex-card" data-level="A1" data-tipo="Abbinamento" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Abbina i mestieri</h3>
+        <p>Trova le coppie tra mestieri e definizioni in questo gioco di memoria.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Mestieri</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="abbina-emoji-animali.html" class="ex-card" data-level="A1" data-tipo="Abbinamento" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🐾</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Abbina parola-emoji: gli animali</h3>
+        <p>Gioco di abbinamento tra parole e emoji per il lessico degli animali.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Animali</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cruciverba-base.html" class="ex-card" data-level="A1" data-tipo="Cruciverba" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Cruciverba: parole semplici</h3>
+        <p>Un cruciverba classico con definizioni orizzontali e verticali.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Parole base</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cruciverba-colori.html" class="ex-card" data-level="A1" data-tipo="Cruciverba" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎨</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Cruciverba a tema: i colori</h3>
+        <p>Un cruciverba interamente dedicato ai colori.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Colori</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cruciverba-banca-parole.html" class="ex-card" data-level="A1 A2" data-tipo="Cruciverba" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗒️</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>Cruciverba con banca di parole</h3>
+        <p>Riempi lo schema usando solo la lista di parole, senza definizioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Logica</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cruciverba-progressivo.html" class="ex-card" data-level="A1 B1" data-tipo="Cruciverba" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📶</span>
+          <span class="ex-card-level">A1–B1</span>
+        </div>
+        <h3>Cruciverba progressivo</h3>
+        <p>Cruciverba con livelli di difficoltà misti nella stessa griglia.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Misto</span>
+          <span class="ex-card-tag">Livelli</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="crucipuzzle-cibo.html" class="ex-card" data-level="A1 A2" data-tipo="Crucipuzzle" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔎</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>Crucipuzzle: il cibo italiano</h3>
+        <p>Trova le parole nascoste nella griglia, con definizioni ed emoji.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="ricostruisci-frase-bar.html" class="ex-card" data-level="A1" data-tipo="Riordina" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Ricostruisci la frase: al bar</h3>
+        <p>Clicca le parole nell'ordine giusto per formare frasi utili al bar.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Vita quotidiana</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="metti-in-ordine-giornata.html" class="ex-card" data-level="A1" data-tipo="Riordina" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🕐</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Metti in ordine: la giornata di Marco</h3>
+        <p>Riordina cronologicamente le azioni di una routine quotidiana.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Routine</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="anagramma-meteo.html" class="ex-card" data-level="A1 A2" data-tipo="Anagramma" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔤</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>Anagrammi: il meteo</h3>
+        <p>Ricomponi le lettere mescolate per trovare le parole del tempo atmosferico.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Meteo</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="categorizza-genere.html" class="ex-card" data-level="A1" data-tipo="Categorizza" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗂️</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Maschile o femminile?</h3>
+        <p>Smista i nomi italiani nella categoria giusta.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Genere</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="impiccato-viaggio.html" class="ex-card" data-level="A1 A2" data-tipo="Giochi" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎪</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>L'impiccato: parole di viaggio</h3>
+        <p>Indovina la parola nascosta lettera dopo lettera.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="trova-intruso.html" class="ex-card" data-level="A1 A2" data-tipo="Trova" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🚫</span>
+          <span class="ex-card-level">A1–A2</span>
+        </div>
+        <h3>Trova l'intruso</h3>
+        <p>Individua la parola che non appartiene al gruppo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Categorie</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-verbo-avere.html" class="ex-card" data-level="A1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Il verbo avere</h3>
+        <p>Completa le frasi con la forma corretta del verbo avere al presente.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="verbi-regolari-in-are-parlare.html" class="ex-card" data-level="A1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Verbi regolari in -are: parlare</h3>
+        <p>Completa le frasi con la forma corretta del verbo parlare al presente, senza aiuti.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="i-mobili-di-casa.html" class="ex-card" data-level="A1" data-tipo="Abbinamento" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>I mobili di casa</h3>
+        <p>Trova le coppie tra i mobili e le loro definizioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="frutta-e-verdura.html" class="ex-card" data-level="A1" data-tipo="Abbinamento" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Frutta e verdura</h3>
+        <p>Abbina ogni alimento alla sua descrizione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="presente-essere-o-avere.html" class="ex-card" data-level="A1" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Presente: essere o avere?</h3>
+        <p>Scegli il verbo giusto, essere o avere, per completare ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="frutta.html" class="ex-card" data-level="A1" data-tipo="Cruciverba" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Frutta</h3>
+        <p>Un piccolo cruciverba interamente dedicato alla frutta.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="in-cucina.html" class="ex-card" data-level="A1" data-tipo="Cruciverba" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>In cucina</h3>
+        <p>Un cruciverba a tema sugli oggetti e gli ingredienti della cucina.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="la-famiglia.html" class="ex-card" data-level="A1" data-tipo="Crucipuzzle" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔎</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>La famiglia</h3>
+        <p>Trova le parole della famiglia nascoste nella griglia.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="presentarsi.html" class="ex-card" data-level="A1" data-tipo="Riordina" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Presentarsi</h3>
+        <p>Clicca le frasi nell'ordine giusto per ricomporre una presentazione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="la-routine-della-sera.html" class="ex-card" data-level="A1" data-tipo="Riordina" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>La routine della sera</h3>
+        <p>Metti in ordine le azioni tipiche di una routine serale.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="le-parti-del-corpo.html" class="ex-card" data-level="A1" data-tipo="Anagramma" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔤</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Le parti del corpo</h3>
+        <p>Ricomponi le lettere mescolate per trovare le parti del corpo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="plurali-irregolari.html" class="ex-card" data-level="A1" data-tipo="Categorizza" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗂️</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Plurali irregolari</h3>
+        <p>Smista i nomi in base a come formano il plurale.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="intrusi-nel-menu.html" class="ex-card" data-level="A1" data-tipo="Trova" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🚫</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Intrusi nel menu</h3>
+        <p>Individua la parola che non appartiene alla stessa categoria delle altre.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="la-colazione-italiana.html" class="ex-card" data-level="A1" data-tipo="Giochi" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎪</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>La colazione italiana</h3>
+        <p>Indovina la parola nascosta legata alla colazione italiana.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="verbi-servili-volere-potere-dovere.html" class="ex-card" data-level="A1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Verbi servili: volere, potere, dovere</h3>
+        <p>Completa le frasi con la forma corretta di volere, potere o dovere.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="articoli-determinativi-e-indeterminativi.html" class="ex-card" data-level="A1" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Articoli determinativi e indeterminativi</h3>
+        <p>Scegli l'articolo corretto, determinativo o indeterminativo, per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="i-partitivi.html" class="ex-card" data-level="A1" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>I partitivi</h3>
+        <p>Completa le frasi con il partitivo corretto scegliendo dalla banca di parole.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="imperativo-diretto-tu-noi-voi.html" class="ex-card" data-level="A1" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Imperativo diretto: tu, noi, voi</h3>
+        <p>Scegli la forma corretta dell'imperativo diretto per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="aggettivi-e-pronomi-possessivi.html" class="ex-card" data-level="A1" data-tipo="Abbinamento" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Aggettivi e pronomi possessivi</h3>
+        <p>Abbina ogni possessivo alla persona corretta.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="dimostrativi-questo-o-quello.html" class="ex-card" data-level="A1" data-tipo="Categorizza" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗂️</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Dimostrativi: questo o quello</h3>
+        <p>Smista le frasi in base al dimostrativo corretto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="saluti-e-formule-di-cortesia.html" class="ex-card" data-level="A1" data-tipo="Abbinamento" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Saluti e formule di cortesia</h3>
+        <p>Abbina ogni saluto o formula di cortesia al momento giusto in cui si usa.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="numeri-e-identikit-personale.html" class="ex-card" data-level="A1" data-tipo="Quiz" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Numeri e identikit personale</h3>
+        <p>Rispondi alle domande sui numeri e le informazioni personali di base.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="tempo-libero-e-stagioni.html" class="ex-card" data-level="A1" data-tipo="Cruciverba" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Tempo libero e stagioni</h3>
+        <p>Un cruciverba a tema sul tempo libero e le stagioni dell'anno.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="indicazioni-stradali.html" class="ex-card" data-level="A1" data-tipo="Crucipuzzle" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔎</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Indicazioni stradali</h3>
+        <p>Trova le parole utili per dare o chiedere indicazioni stradali.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="salute-e-benessere.html" class="ex-card" data-level="A1" data-tipo="Flashcard" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A1</span>
+        </div>
+        <h3>Salute e benessere</h3>
+        <p>Gira le carte per scoprire il significato di ogni espressione legata alla salute.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cloze-parentesi-futuro.html" class="ex-card" data-level="A2 B1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2–B1</span>
+        </div>
+        <h3>Completa con il verbo tra parentesi</h3>
+        <p>Coniuga il verbo indicato tra parentesi al futuro semplice.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Futuro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cloze-banca-preposizioni.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎒</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Completa con la banca di parole</h3>
+        <p>Completa il testo scegliendo le parole giuste da una banca, con distrattori.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Preposizioni</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="unisci-frasi-periodo-ipotetico.html" class="ex-card" data-level="A2 B1" data-tipo="Abbinamento" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔗</span>
+          <span class="ex-card-level">A2–B1</span>
+        </div>
+        <h3>Unisci le frasi: periodo ipotetico</h3>
+        <p>Collega inizio e fine delle frasi per formare periodi ipotetici corretti.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Periodo ipotetico</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="vero-falso-pausa-pranzo.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>La pausa pranzo in Italia</h3>
+        <p>Leggi il testo e decidi se le affermazioni sono vere o false.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lettura</span>
+          <span class="ex-card-tag">Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cruciverba-cloze-montagna.html" class="ex-card" data-level="A2" data-tipo="Cruciverba" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Cruciverba cloze: una gita in montagna</h3>
+        <p>Cloze con schema numerato stile cruciverba.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Montagna</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="riordina-dialogo-ristorante.html" class="ex-card" data-level="A2" data-tipo="Riordina" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">💬</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Riordina il dialogo: al ristorante</h3>
+        <p>Rimetti in ordine le battute di una conversazione al ristorante.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Testuale</span>
+          <span class="ex-card-tag">Ristorante</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="tris-verbi-irregolari.html" class="ex-card" data-level="A2" data-tipo="Giochi" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">⭕</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Tris linguistico: i verbi irregolari</h3>
+        <p>Gioca a tris rispondendo a domande sui verbi irregolari.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="gioco-dadi-articoli.html" class="ex-card" data-level="A2" data-tipo="Giochi" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎲</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Il gioco dei dadi: gli articoli</h3>
+        <p>Tira il dado e rispondi a domande sugli articoli determinativi.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Articoli</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="dettato-ascolta-scrivi.html" class="ex-card" data-level="A2 B1" data-tipo="Ascolto" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎧</span>
+          <span class="ex-card-level">A2–B1</span>
+        </div>
+        <h3>Dettato: ascolta e scrivi</h3>
+        <p>Ascolta le frasi lette ad alta voce e scrivile correttamente.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Ortografia</span>
+          <span class="ex-card-tag">Ascolto</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="coppie-minime-doppie.html" class="ex-card" data-level="A2 B1" data-tipo="Ascolto" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">👂</span>
+          <span class="ex-card-level">A2–B1</span>
+        </div>
+        <h3>Coppie minime: quale hai sentito?</h3>
+        <p>Distingui parole che differiscono per un solo suono, come le doppie.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Pronuncia</span>
+          <span class="ex-card-tag">Doppie</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="flashcard-carattere.html" class="ex-card" data-level="A2" data-tipo="Flashcard" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Flashcard: il carattere</h3>
+        <p>Gira le carte per scoprire la definizione degli aggettivi del carattere.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Carattere</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="imperfetto-indicativo.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Imperfetto indicativo</h3>
+        <p>Completa il racconto con la forma corretta dell'imperfetto indicativo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="preposizioni-articolate.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Preposizioni articolate</h3>
+        <p>Completa il testo scegliendo le preposizioni articolate corrette dalla banca di parole.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="materie-scolastiche.html" class="ex-card" data-level="A2" data-tipo="Abbinamento" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Materie scolastiche</h3>
+        <p>Abbina ogni materia scolastica alla sua descrizione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="passato-prossimo-ausiliare-giusto.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Passato prossimo: ausiliare giusto</h3>
+        <p>Scegli l'ausiliare corretto, essere o avere, per ogni verbo al passato prossimo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="comparativi.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Comparativi</h3>
+        <p>Scegli la forma comparativa corretta per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="le-feste-italiane.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Le feste italiane</h3>
+        <p>Leggi il testo sulle feste italiane e decidi se le affermazioni sono vere o false.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="vivere-in-affitto-in-italia.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Vivere in affitto in Italia</h3>
+        <p>Leggi il testo su come si vive in affitto in Italia e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="in-vacanza.html" class="ex-card" data-level="A2" data-tipo="Cruciverba" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>In vacanza</h3>
+        <p>Un cruciverba a tema sulle parole utili durante un viaggio o una vacanza.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="mezzi-di-trasporto.html" class="ex-card" data-level="A2" data-tipo="Crucipuzzle" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔎</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Mezzi di trasporto</h3>
+        <p>Trova i mezzi di trasporto nascosti nella griglia.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="scrivere-una-mail-formale.html" class="ex-card" data-level="A2" data-tipo="Riordina" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Scrivere una mail formale</h3>
+        <p>Ricomponi nell'ordine corretto le parti di una mail formale.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="gli-oggetti-in-cucina.html" class="ex-card" data-level="A2" data-tipo="Anagramma" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔤</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Gli oggetti in cucina</h3>
+        <p>Ricomponi le lettere mescolate per trovare gli oggetti della cucina.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="ausiliare-essere-o-avere.html" class="ex-card" data-level="A2" data-tipo="Categorizza" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗂️</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Ausiliare essere o avere</h3>
+        <p>Smista i verbi al passato prossimo in base all'ausiliare corretto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="intrusi-nel-carattere.html" class="ex-card" data-level="A2" data-tipo="Trova" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🚫</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Intrusi nel carattere</h3>
+        <p>Individua l'aggettivo che non appartiene alla stessa categoria delle altre.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="le-emozioni.html" class="ex-card" data-level="A2" data-tipo="Flashcard" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Le emozioni</h3>
+        <p>Gira le carte per scoprire il significato di ogni emozione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-mondo-del-lavoro.html" class="ex-card" data-level="A2" data-tipo="Giochi" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎪</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Il mondo del lavoro</h3>
+        <p>Indovina la parola nascosta legata al mondo del lavoro.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="tris-presente-irregolare.html" class="ex-card" data-level="A2" data-tipo="Giochi" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎲</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Tris: presente irregolare</h3>
+        <p>Gioca a tris rispondendo a domande sui verbi irregolari al presente.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="dettato-la-doppia-consonante.html" class="ex-card" data-level="A2" data-tipo="Ascolto" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎧</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Dettato: la doppia consonante</h3>
+        <p>Ascolta le frasi e scrivile, facendo attenzione alle consonanti doppie.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="parla-dei-tuoi-viaggi.html" class="ex-card" data-level="A2" data-tipo="Ruota" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎡</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Parla dei tuoi viaggi</h3>
+        <p>Gira la ruota e rispondi a una domanda sui viaggi, a sorpresa.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="suggerimento-tra-parentesi-futuro.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Suggerimento tra parentesi: futuro</h3>
+        <p>Completa le frasi coniugando il verbo tra parentesi al futuro semplice.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="pronomi-diretti-con-i-tempi-composti.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="pronomi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Pronomi diretti con i tempi composti</h3>
+        <p>Scegli la forma corretta del participio passato quando si usa un pronome diretto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Pronomi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="imperativo-negativo.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Imperativo negativo</h3>
+        <p>Scegli la forma corretta dell'imperativo negativo per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="pronomi-riflessivi-nei-tempi-composti.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Pronomi riflessivi nei tempi composti</h3>
+        <p>Completa le frasi con l'ausiliare e il pronome riflessivo corretti al passato prossimo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="i-superlativi.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>I superlativi</h3>
+        <p>Scegli la forma corretta del superlativo per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="pronomi-combinati-me-lo-te-la.html" class="ex-card" data-level="A2" data-tipo="Abbinamento" data-lg="grammatica" data-area="pronomi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Pronomi combinati: me lo, te la...</h3>
+        <p>Abbina ogni pronome combinato al suo significato.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Pronomi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="aggettivi-e-pronomi-indefiniti.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Aggettivi e pronomi indefiniti</h3>
+        <p>Scegli l'indefinito corretto per completare ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="futuro-composto-anteriore.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Futuro composto (anteriore)</h3>
+        <p>Completa le frasi con il futuro composto del verbo tra parentesi.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="congiunzioni-temporali.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Congiunzioni temporali</h3>
+        <p>Scegli la congiunzione temporale corretta per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="scuola-e-universita.html" class="ex-card" data-level="A2" data-tipo="Abbinamento" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Scuola e università</h3>
+        <p>Abbina ogni parola del mondo scolastico alla sua definizione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="raccontare-l-infanzia.html" class="ex-card" data-level="A2" data-tipo="Riordina" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Raccontare l'infanzia</h3>
+        <p>Ricomponi nell'ordine giusto il racconto di un ricordo d'infanzia.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="la-descrizione-fisica.html" class="ex-card" data-level="A2" data-tipo="Abbinamento" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>La descrizione fisica</h3>
+        <p>Abbina ogni aggettivo fisico alla sua definizione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="moda-e-tessuti.html" class="ex-card" data-level="A2" data-tipo="Cruciverba" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Moda e tessuti</h3>
+        <p>Un cruciverba a tema sulla moda e i tessuti.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="clima-e-geografia.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Clima e geografia</h3>
+        <p>Rispondi alle domande sul clima e la geografia italiana.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="proposte-e-inviti.html" class="ex-card" data-level="A2" data-tipo="Quiz" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Proposte e inviti</h3>
+        <p>Leggi il testo su come si fanno proposte e inviti in italiano e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="prodotti-tipici-e-made-in-italy.html" class="ex-card" data-level="A2" data-tipo="Abbinamento" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Prodotti tipici e Made in Italy</h3>
+        <p>Abbina ogni prodotto tipico italiano alla sua descrizione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="stati-d-animo-positivi-o-negativi.html" class="ex-card" data-level="A2" data-tipo="Categorizza" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗂️</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Stati d'animo: positivi o negativi</h3>
+        <p>Smista gli stati d'animo tra positivi e negativi.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="sogni-per-il-futuro.html" class="ex-card" data-level="A2" data-tipo="Cloze" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">A2</span>
+        </div>
+        <h3>Sogni per il futuro</h3>
+        <p>Completa le frasi sui sogni e progetti futuri con il verbo al futuro semplice.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="passato-prossimo-imperfetto.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Passato prossimo o imperfetto?</h3>
+        <p>Scegli il tempo verbale corretto in base al contesto della frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Passato</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="riordina-paragrafi.html" class="ex-card" data-level="B1" data-tipo="Riordina" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📄</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Riordina i paragrafi</h3>
+        <p>Ricomponi un racconto rimettendo i paragrafi in ordine.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Testuale</span>
+          <span class="ex-card-tag">Narrazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="gara-tempo-verbi.html" class="ex-card" data-level="B1" data-tipo="Categorizza" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">⏱️</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Gara contro il tempo: verbi regolari o irregolari?</h3>
+        <p>Classifica più verbi possibile prima che scada il tempo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="battaglia-navale-modi-di-dire.html" class="ex-card" data-level="B1" data-tipo="Giochi" data-lg="lessico" data-area="media">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🚢</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Battaglia navale linguistica</h3>
+        <p>Affonda le navi rispondendo a domande sui modi di dire italiani.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Modi di dire</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="trova-differenze-testo.html" class="ex-card" data-level="B1" data-tipo="Trova" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔍</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Trova le differenze</h3>
+        <p>Confronta due testi quasi identici e individua le parole cambiate.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lettura</span>
+          <span class="ex-card-tag">Attenzione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="flashcard-vero-falso-grammatica.html" class="ex-card" data-level="B1" data-tipo="Flashcard" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Frase corretta o sbagliata?</h3>
+        <p>Indovina se la frase è corretta, poi gira la carta per la spiegazione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Errori comuni</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="condizionale-semplice.html" class="ex-card" data-level="B1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Condizionale semplice</h3>
+        <p>Completa le frasi coniugando il verbo tra parentesi al condizionale semplice.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-si-impersonale.html" class="ex-card" data-level="B1" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Il si impersonale</h3>
+        <p>Scegli dal menu a tendina la forma corretta con il si impersonale.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="pronomi-diretti-e-indiretti.html" class="ex-card" data-level="B1" data-tipo="Abbinamento" data-lg="grammatica" data-area="pronomi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Pronomi diretti e indiretti</h3>
+        <p>Abbina ogni pronome al suo uso corretto nella frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Pronomi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="verbi-ed-espressioni-sui-social.html" class="ex-card" data-level="B1" data-tipo="Abbinamento" data-lg="lessico" data-area="media">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Verbi ed espressioni sui social</h3>
+        <p>Abbina ogni espressione sui social media al suo significato.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Media e Informazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="condizionale-composto.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Condizionale composto</h3>
+        <p>Scegli la forma corretta del condizionale composto per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="pronomi-relativi-che-cui.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="grammatica" data-area="pronomi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Pronomi relativi che/cui</h3>
+        <p>Scegli il pronome relativo corretto, che o cui, per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Pronomi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-treno-in-italia.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Il treno in Italia</h3>
+        <p>Leggi il testo sul sistema ferroviario italiano e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="l-ufficio.html" class="ex-card" data-level="B1" data-tipo="Cruciverba" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>L'ufficio</h3>
+        <p>Un cruciverba a tema sul lessico dell'ufficio e del lavoro.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="verbi-al-congiuntivo-presente.html" class="ex-card" data-level="B1" data-tipo="Crucipuzzle" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔎</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Verbi al congiuntivo presente</h3>
+        <p>Trova nella griglia le forme verbali al congiuntivo presente.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="un-weekend-a-firenze.html" class="ex-card" data-level="B1" data-tipo="Riordina" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Un weekend a Firenze</h3>
+        <p>Ricomponi il racconto di un weekend a Firenze nell'ordine giusto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="connettivi-testuali.html" class="ex-card" data-level="B1" data-tipo="Anagramma" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔤</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Connettivi testuali</h3>
+        <p>Ricomponi le lettere mescolate per trovare i connettivi testuali più comuni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="ci-o-ne.html" class="ex-card" data-level="B1" data-tipo="Categorizza" data-lg="grammatica" data-area="pronomi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🗂️</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Ci o ne</h3>
+        <p>Smista le frasi in base alla particella corretta, ci o ne.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Pronomi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="falsi-amici-italiano-inglese.html" class="ex-card" data-level="B1" data-tipo="Flashcard" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Falsi amici italiano-inglese</h3>
+        <p>Gira le carte per scoprire i falsi amici tra italiano e inglese.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="battaglia-navale-espressioni-di-opinione.html" class="ex-card" data-level="B1" data-tipo="Giochi" data-lg="lessico" data-area="media">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎲</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Battaglia navale: espressioni di opinione</h3>
+        <p>Affonda le navi rispondendo a domande sulle espressioni per dare un'opinione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Media e Informazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-trapassato-prossimo.html" class="ex-card" data-level="B1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Il trapassato prossimo</h3>
+        <p>Completa le frasi con il trapassato prossimo del verbo indicato.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-congiuntivo-passato.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Il congiuntivo passato</h3>
+        <p>Scegli la forma corretta del congiuntivo passato per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="riconoscere-il-passato-remoto.html" class="ex-card" data-level="B1" data-tipo="Trova" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🚫</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Riconoscere il passato remoto</h3>
+        <p>In ogni gruppo, individua la forma che NON è un passato remoto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="forma-passiva-con-essere-e-venire.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Forma passiva con essere e venire</h3>
+        <p>Scegli la forma passiva corretta per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="pronomi-relativi-complessi-il-quale-la-cui.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="grammatica" data-area="pronomi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Pronomi relativi complessi: il quale, la cui</h3>
+        <p>Scegli il pronome relativo complesso corretto per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Pronomi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="strutture-con-l-infinito.html" class="ex-card" data-level="B1" data-tipo="Cloze" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Strutture con l'infinito</h3>
+        <p>Completa le frasi con la preposizione corretta prima dell'infinito.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-discorso-indiretto-al-presente.html" class="ex-card" data-level="B1" data-tipo="Riordina" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🧩</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Il discorso indiretto al presente</h3>
+        <p>Ricomponi nell'ordine corretto la trasformazione da discorso diretto a indiretto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-gerundio-presente-e-passato.html" class="ex-card" data-level="B1" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Il gerundio presente e passato</h3>
+        <p>Completa le frasi con la forma corretta del gerundio.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="cinema-e-musica-italiana.html" class="ex-card" data-level="B1" data-tipo="Giochi" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎪</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Cinema e musica italiana</h3>
+        <p>Indovina la parola nascosta legata al cinema e alla musica italiana.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="disguidi-e-burocrazia.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Disguidi e burocrazia</h3>
+        <p>Leggi il testo sulla burocrazia italiana e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="annunci-di-lavoro-e-cv.html" class="ex-card" data-level="B1" data-tipo="Abbinamento" data-lg="lessico" data-area="studio">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Annunci di lavoro e CV</h3>
+        <p>Abbina ogni termine del mondo del lavoro alla sua definizione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Studio e Lavoro</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="letteratura-e-hobby.html" class="ex-card" data-level="B1" data-tipo="Anagramma" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔤</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Letteratura e hobby</h3>
+        <p>Ricomponi le lettere mescolate per trovare parole legate a letteratura e hobby.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="ecologia-e-inquinamento.html" class="ex-card" data-level="B1" data-tipo="Trova" data-lg="lessico" data-area="viaggi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🚫</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Ecologia e inquinamento</h3>
+        <p>Individua la parola che non appartiene al tema dell'ecologia.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Viaggi e Cultura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="architettura-e-citta.html" class="ex-card" data-level="B1" data-tipo="Crucipuzzle" data-lg="lessico" data-area="casa">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🔎</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Architettura e città</h3>
+        <p>Trova le parole legate all'architettura e all'urbanistica italiana.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Casa e Città</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="enogastronomia-e-slow-food.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="lessico" data-area="cibo">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Enogastronomia e Slow Food</h3>
+        <p>Leggi il testo sul movimento Slow Food e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Cibo e Shopping</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="giornali-e-fake-news.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="lessico" data-area="media">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>Giornali e fake news</h3>
+        <p>Rispondi alle domande sul lessico dei media e dell'informazione.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Media e Informazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="la-famiglia-oggi.html" class="ex-card" data-level="B1" data-tipo="Quiz" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">B1</span>
+        </div>
+        <h3>La famiglia oggi</h3>
+        <p>Leggi il testo sui cambiamenti della famiglia italiana e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Persone e Società</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="congiuntivo-presente.html" class="ex-card" data-level="B2" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Congiuntivo presente</h3>
+        <p>Completa le frasi con il congiuntivo presente del verbo indicato tra parentesi.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="periodo-ipotetico.html" class="ex-card" data-level="B2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Periodo ipotetico</h3>
+        <p>Scegli la forma corretta per completare ogni periodo ipotetico.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="i-social-network-in-italia.html" class="ex-card" data-level="B2" data-tipo="Quiz" data-lg="lessico" data-area="media">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✔️</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>I social network in Italia</h3>
+        <p>Leggi il testo sull'uso dei social network in Italia e verifica le affermazioni.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Media e Informazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-congiuntivo-imperfetto.html" class="ex-card" data-level="B2" data-tipo="Cloze" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">📝</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Il congiuntivo imperfetto</h3>
+        <p>Completa le frasi con il congiuntivo imperfetto del verbo tra parentesi.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="il-congiuntivo-trapassato.html" class="ex-card" data-level="B2" data-tipo="Quiz" data-lg="grammatica" data-area="verbi">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Il congiuntivo trapassato</h3>
+        <p>Scegli la forma corretta del congiuntivo trapassato per ogni frase.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Verbi</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="periodo-ipotetico-dell-irrealta-3-tipo.html" class="ex-card" data-level="B2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Periodo ipotetico dell'irrealtà (3° tipo)</h3>
+        <p>Scegli la forma corretta per completare ogni periodo ipotetico dell'irrealtà.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="connettivi-logici-complessi.html" class="ex-card" data-level="B2" data-tipo="Quiz" data-lg="grammatica" data-area="struttura">
+        <div class="ex-card-top">
+          <span class="ex-card-type">✅</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Connettivi logici complessi</h3>
+        <p>Scegli il connettivo logico corretto per ogni frase, prestando attenzione al modo verbale richiesto.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Grammatica</span>
+          <span class="ex-card-tag">Struttura</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="neologismi-e-gerghi.html" class="ex-card" data-level="B2" data-tipo="Flashcard" data-lg="lessico" data-area="media">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🃏</span>
+          <span class="ex-card-level">B2</span>
+        </div>
+        <h3>Neologismi e gerghi</h3>
+        <p>Gira le carte per scoprire il significato di alcuni neologismi dell'italiano contemporaneo.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Lessico</span>
+          <span class="ex-card-tag">Media e Informazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+<a href="ruota-domande.html" class="ex-card" data-level="A1 A2 B1 B2" data-tipo="Ruota" data-lg="lessico" data-area="persone">
+        <div class="ex-card-top">
+          <span class="ex-card-type">🎡</span>
+          <span class="ex-card-level">Tutti</span>
+        </div>
+        <h3>La ruota delle domande</h3>
+        <p>Gira la ruota e rispondi a una domanda di conversazione a sorpresa.</p>
+        <div class="ex-card-tags">
+          <span class="ex-card-tag">Produzione orale</span>
+          <span class="ex-card-tag">Conversazione</span>
+        </div>
+        <span class="ex-card-cta">Inizia l'esercizio →</span>
+      </a>
+      <p class="shop-empty" id="emptyState" style="display:none;">Nessun esercizio corrisponde ai filtri scelti. Prova ad azzerarli.</p>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+let activeLevel = 'all';
+let activeLG = 'all';
+let activeTipo = null;
+let activeAreas = new Set();
+
+const cards = document.querySelectorAll('.ex-grid .ex-card[data-level]');
+const areaBlockGrammar = document.getElementById('areaBlockGrammar');
+const areaBlockLexical = document.getElementById('areaBlockLexical');
+
+function updateAreaBlockVisibility() {
+  if (activeLG === 'grammatica') {
+    areaBlockGrammar.classList.remove('disabled');
+    areaBlockLexical.classList.add('disabled');
+  } else if (activeLG === 'lessico') {
+    areaBlockLexical.classList.remove('disabled');
+    areaBlockGrammar.classList.add('disabled');
+  } else {
+    areaBlockGrammar.classList.remove('disabled');
+    areaBlockLexical.classList.remove('disabled');
+  }
+}
+
+function applyFilters() {
+  let visibleCount = 0;
+  cards.forEach(card => {
+    const levels = card.dataset.level.split(' ');
+    const lg = card.dataset.lg;
+    const area = card.dataset.area;
+
+    const levelMatch = activeLevel === 'all' || levels.includes(activeLevel);
+    const lgMatch = activeLG === 'all' || lg === activeLG;
+    const tipoMatch = !activeTipo || card.dataset.tipo === activeTipo;
+    const areaMatch = activeAreas.size === 0 || activeAreas.has(area);
+
+    const show = levelMatch && lgMatch && tipoMatch && areaMatch;
+    card.style.display = show ? '' : 'none';
+    if (show) visibleCount++;
+  });
+  document.getElementById('resultsCount').textContent = `${visibleCount} esercizi trovati`;
+  document.getElementById('emptyState').style.display = visibleCount === 0 ? 'block' : 'none';
+}
+
+document.getElementById('levelPills').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-pill');
+  if (!btn) return;
+  document.querySelectorAll('#levelPills .filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeLevel = btn.dataset.level;
+  applyFilters();
+});
+
+document.getElementById('lgPills').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-pill');
+  if (!btn) return;
+  document.querySelectorAll('#lgPills .filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeLG = btn.dataset.lg;
+  activeAreas.clear();
+  document.querySelectorAll('.filter-check input').forEach(i => i.checked = false);
+  updateAreaBlockVisibility();
+  applyFilters();
+});
+
+document.getElementById('tipoPills').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-pill');
+  if (!btn) return;
+  const isActive = btn.classList.contains('active');
+  document.querySelectorAll('#tipoPills .filter-pill').forEach(b => b.classList.remove('active'));
+  if (isActive) {
+    activeTipo = null;
+  } else {
+    btn.classList.add('active');
+    activeTipo = btn.dataset.tipo;
+  }
+  applyFilters();
+});
+
+document.querySelectorAll('.filter-check input').forEach(input => {
+  input.addEventListener('change', () => {
+    if (input.checked) activeAreas.add(input.dataset.area);
+    else activeAreas.delete(input.dataset.area);
+    applyFilters();
+  });
+});
+
+document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+  activeLevel = 'all'; activeLG = 'all'; activeTipo = null; activeAreas.clear();
+  document.querySelectorAll('#levelPills .filter-pill').forEach(b => b.classList.remove('active'));
+  document.querySelector('#levelPills [data-level="all"]').classList.add('active');
+  document.querySelectorAll('#lgPills .filter-pill').forEach(b => b.classList.remove('active'));
+  document.querySelector('#lgPills [data-lg="all"]').classList.add('active');
+  document.querySelectorAll('#tipoPills .filter-pill').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-check input').forEach(i => i.checked = false);
+  updateAreaBlockVisibility();
+  applyFilters();
+});
+
+updateAreaBlockVisibility();
+applyFilters();
+</script>
+
+</body>
+</html>

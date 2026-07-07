@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcard: il carattere | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Flashcard interattive per imparare gli aggettivi del carattere in italiano.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/flashcard-carattere.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Flashcard: il carattere",
+  "description": "Gira le carte per scoprire la definizione degli aggettivi del carattere.",
+  "url": "https://thuisitaliaans.com/esercizi/flashcard-carattere.html",
+  "learningResourceType": "Flashcard",
+  "educationalLevel": "A2",
+  "inLanguage": "it",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Thuis Italiaans",
+    "url": "https://thuisitaliaans.com/"
+  },
+  "provider": {
+    "@type": "Person",
+    "name": "Alessio"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/flashcard-carattere.html</span>
+      </div>
+      
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A2</span>
+        <span class="ex-badge ex-badge-type">🃏 Flashcard con definizione</span>
+        <span class="ex-badge ex-badge-type">Lessico: il carattere</span>
+      </div>
+      <h1>Flashcard: il carattere</h1>
+      <p>Clicca ogni carta per girarla e scoprire la definizione. Prova a indovinare il significato prima di girarla!</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Aggettivi del carattere</h2>
+      <p>Descrivere il carattere di una persona è un'abilità utile fin dai primi livelli. La maggior parte di questi aggettivi ha una forma maschile in <strong>-o</strong> e femminile in <strong>-a</strong>.</p>
+    </div>
+
+    <div class="ex-panel">
+      <div class="flashcard-grid" id="flashGrid"></div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Descrivere le persone è un ottimo esercizio di conversazione</h3>
+      <p>Parliamo di te, della tua famiglia o dei tuoi amici usando questi aggettivi nelle lezioni.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/flashcard-carattere.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/flashcard-carattere.png" download="flashcard-carattere-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/flashcard-carattere.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const cards = [
+  { word: "Generoso/a", def: "Chi condivide volentieri quello che ha con gli altri." },
+  { word: "Timido/a", def: "Chi si sente a disagio a parlare con persone nuove." },
+  { word: "Curioso/a", def: "Chi vuole sempre sapere e scoprire cose nuove." },
+  { word: "Paziente", def: "Chi sa aspettare senza arrabbiarsi o innervosirsi." },
+  { word: "Orgoglioso/a", def: "Chi è molto soddisfatto di sé stesso o di qualcosa che ha fatto." },
+  { word: "Testardo/a", def: "Chi non cambia idea facilmente, anche quando ha torto." },
+];
+
+const grid = document.getElementById('flashGrid');
+cards.forEach(c => {
+  const card = document.createElement('div');
+  card.className = 'flashcard';
+  card.innerHTML = `
+    <div class="flashcard-inner">
+      <div class="flashcard-front">${c.word}</div>
+      <div class="flashcard-back"><strong>${c.word}</strong>${c.def}</div>
+    </div>
+  `;
+  card.addEventListener('click', () => card.classList.toggle('flipped'));
+  grid.appendChild(card);
+});
+</script>
+
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 0, revealSolutions: function(){
+  document.querySelectorAll('.flashcard').forEach(c => c.classList.add('flipped'));
+}});
+document.getElementById('gmBar').querySelector('.game-mode-toggle').style.display='none';
+document.getElementById('gmTimerDisplay').style.display='none';
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+</body>
+</html>

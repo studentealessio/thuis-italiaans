@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La colazione italiana | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Indovina la parola nascosta legata alla colazione italiana.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/la-colazione-italiana.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "La colazione italiana",
+ "description": "Indovina la parola nascosta legata alla colazione italiana.",
+ "url": "https://thuisitaliaans.com/esercizi/la-colazione-italiana.html",
+ "learningResourceType": "Impiccato",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/la-colazione-italiana.html</span>
+      </div>
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A1</span>
+        <span class="ex-badge ex-badge-type">🎪 Impiccato</span>
+        <span class="ex-badge ex-badge-type">Lessico</span>
+      </div>
+      <h1>La colazione italiana</h1>
+      <p>Indovina la parola nascosta legata alla colazione italiana.</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: la colazione</h2>
+      <p>La colazione italiana è spesso dolce: cappuccino, cornetto, biscotti — molto diversa da quella salata di altri paesi.</p>
+      
+    </div>
+
+    <div class="ex-panel" style="text-align:center;">
+      <div class="hangman-wrap">
+        <div class="hangman-drawing" id="hangmanDrawing">🙂</div>
+        <div>
+          <p class="hangman-hint" id="hangmanHint"></p>
+          <div class="hangman-word" id="hangmanWord"></div>
+          <div class="hangman-keyboard" id="hangmanKeyboard"></div>
+        </div>
+      </div>
+      <p class="hangman-status" id="hangmanStatus"></p>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-ghost" id="retryBtn">Nuova parola</button>
+      </div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>La colazione è un piccolo rito culturale</h3>
+      <p>Scopriamo insieme le abitudini alimentari italiane, una lezione alla volta.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/la-colazione-italiana.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/la-colazione-italiana.png" download="la-colazione-italiana-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/la-colazione-italiana.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const words = [{ word:"CORNETTO", hint:"Dolce, si mangia con il cappuccino" }, { word:"CAPPUCCINO", hint:"Caffè con schiuma di latte" }, { word:"BISCOTTO", hint:"Si intinge nel latte o nel caffè" }, { word:"MARMELLATA", hint:"Si spalma sul pane o sulle fette biscottate" }];
+const faces = ['🙂','😐','😟','😦','😧','😱','💀'];
+let currentWord, guessed, wrongCount;
+function pickWord() { return words[Math.floor(Math.random()*words.length)]; }
+function init() {
+  currentWord = pickWord(); guessed = new Set(); wrongCount = 0;
+  document.getElementById('hangmanHint').textContent = `💡 ${currentWord.hint}`;
+  document.getElementById('hangmanDrawing').textContent = faces[0];
+  document.getElementById('hangmanStatus').textContent = '';
+  renderWord(); renderKeyboard();
+}
+function renderWord() {
+  const display = currentWord.word.split('').map(l => guessed.has(l) ? l : '_').join(' ');
+  document.getElementById('hangmanWord').textContent = display;
+}
+function renderKeyboard() {
+  const kb = document.getElementById('hangmanKeyboard'); kb.innerHTML = '';
+  'ABCDEFGHILMNOPQRSTUVZ'.split('').forEach(letter => {
+    const btn = document.createElement('button'); btn.className='hangman-key'; btn.textContent=letter;
+    btn.addEventListener('click', () => guess(letter, btn));
+    kb.appendChild(btn);
+  });
+}
+function guess(letter, btn) {
+  if (btn.classList.contains('used-correct') || btn.classList.contains('used-wrong')) return;
+  if (currentWord.word.includes(letter)) {
+    guessed.add(letter); btn.classList.add('used-correct'); renderWord();
+    if (currentWord.word.split('').every(l => guessed.has(l))) {
+      document.getElementById('hangmanStatus').textContent = 'Hai indovinato! Complimenti 🎉';
+      disableKeyboard();
+    }
+  } else {
+    wrongCount++; btn.classList.add('used-wrong');
+    document.getElementById('hangmanDrawing').textContent = faces[Math.min(wrongCount, faces.length-1)];
+    if (wrongCount >= faces.length-1) {
+      document.getElementById('hangmanStatus').textContent = `Hai perso! La parola era: ${currentWord.word}`;
+      disableKeyboard();
+    }
+  }
+}
+function disableKeyboard() { document.querySelectorAll('.hangman-key').forEach(k => k.style.pointerEvents='none'); }
+document.getElementById('retryBtn').addEventListener('click', init);
+init();
+</script>
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 120, revealSolutions: function(){
+  currentWord.word.split('').forEach(l => guessed.add(l));
+  renderWord();
+  document.querySelectorAll('.hangman-key').forEach(k => { if (currentWord.word.includes(k.textContent)) k.classList.add('used-correct','solution-revealed'); });
+}});
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gara contro il tempo | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Classifica il maggior numero di verbi possibile tra regolari e irregolari prima che scada il tempo.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/gara-tempo-verbi.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Gara contro il tempo: verbi regolari o irregolari?",
+  "description": "Classifica pi\u00f9 verbi possibile prima che scada il tempo.",
+  "url": "https://thuisitaliaans.com/esercizi/gara-tempo-verbi.html",
+  "learningResourceType": "Categorizza",
+  "educationalLevel": "B1",
+  "inLanguage": "it",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Thuis Italiaans",
+    "url": "https://thuisitaliaans.com/"
+  },
+  "provider": {
+    "@type": "Person",
+    "name": "Alessio"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/gara-tempo-verbi.html</span>
+      </div>
+      
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">B1</span>
+        <span class="ex-badge ex-badge-type">⏱️ Gara contro il tempo</span>
+        <span class="ex-badge ex-badge-type">Grammatica</span>
+      </div>
+      <h1>Gara contro il tempo: verbi regolari o irregolari?</h1>
+      <p>Hai 45 secondi: smista più verbi possibile nella categoria giusta prima che scada il tempo!</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Verbi regolari e irregolari</h2>
+      <p>I verbi regolari seguono uno schema fisso di coniugazione; gli irregolari cambiano radice o desinenze in modo imprevedibile e vanno memorizzati singolarmente.</p>
+    </div>
+
+    <div class="ex-panel">
+      <div class="ex-timer" id="timer">45</div>
+      <div class="sort-bank" id="bank"></div>
+      <div class="sort-bins">
+        <div class="sort-bin" data-category="reg">
+          <h4>Regolare</h4>
+          <div class="sort-bin-words" id="binReg"></div>
+        </div>
+        <div class="sort-bin" data-category="irr">
+          <h4>Irregolare</h4>
+          <div class="sort-bin-words" id="binIrr"></div>
+        </div>
+      </div>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-primary" id="startBtn">Inizia la gara</button>
+        <button class="ex-btn ex-btn-ghost" id="retryBtn" style="display:none;">Ricomincia</button>
+      </div>
+      <div class="ex-feedback" id="feedback"></div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Riconoscere al volo un verbo irregolare è una vera abilità</h3>
+      <p>Con la pratica diventa automatico — ci alleniamo insieme con esercizi come questo.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/gara-tempo-verbi.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/gara-tempo-verbi.png" download="gara-tempo-verbi-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/gara-tempo-verbi.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const words = [
+  { word: "parlare", cat: "reg" },
+  { word: "andare", cat: "irr" },
+  { word: "dormire", cat: "reg" },
+  { word: "fare", cat: "irr" },
+  { word: "credere", cat: "reg" },
+  { word: "potere", cat: "irr" },
+  { word: "finire", cat: "reg" },
+  { word: "venire", cat: "irr" },
+  { word: "cantare", cat: "reg" },
+  { word: "sapere", cat: "irr" },
+];
+
+let selectedChip = null;
+let timeLeft = 45;
+let timerInterval = null;
+let running = false;
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildChip(w) {
+  const chip = document.createElement('span');
+  chip.className = 'sort-word';
+  chip.textContent = w.word;
+  chip.dataset.cat = w.cat;
+  chip.addEventListener('click', () => {
+    if (!running) return;
+    document.querySelectorAll('.sort-word').forEach(c => c.style.outline = 'none');
+    selectedChip = chip;
+    chip.style.outline = '2px solid var(--gold)';
+  });
+  return chip;
+}
+
+function resetBoard() {
+  const bank = document.getElementById('bank');
+  const binReg = document.getElementById('binReg');
+  const binIrr = document.getElementById('binIrr');
+  bank.innerHTML = '';
+  binReg.innerHTML = '';
+  binIrr.innerHTML = '';
+  selectedChip = null;
+  shuffle(words).forEach(w => bank.appendChild(buildChip(w)));
+
+  [binReg, binIrr].forEach(bin => {
+    bin.parentElement.onclick = () => {
+      if (selectedChip && running) {
+        bin.appendChild(selectedChip);
+        selectedChip.style.outline = 'none';
+        selectedChip = null;
+      }
+    };
+  });
+}
+
+function endRace() {
+  running = false;
+  clearInterval(timerInterval);
+  let correct = 0;
+  document.querySelectorAll('#binReg .sort-word').forEach(c => {
+    if (c.dataset.cat === 'reg') { c.classList.add('correct'); correct++; }
+    else c.classList.add('incorrect');
+  });
+  document.querySelectorAll('#binIrr .sort-word').forEach(c => {
+    if (c.dataset.cat === 'irr') { c.classList.add('correct'); correct++; }
+    else c.classList.add('incorrect');
+  });
+  const fb = document.getElementById('feedback');
+  fb.classList.add('show', correct >= words.length - 1 ? 'good' : 'bad');
+  fb.textContent = `Tempo scaduto! Hai classificato correttamente ${correct}/${words.length} verbi.`;
+  document.getElementById('startBtn').style.display = 'none';
+  document.getElementById('retryBtn').style.display = 'inline-flex';
+}
+
+document.getElementById('startBtn').addEventListener('click', () => {
+  running = true;
+  timeLeft = 45;
+  document.getElementById('timer').textContent = timeLeft;
+  document.getElementById('timer').classList.remove('urgent');
+  document.getElementById('feedback').classList.remove('show', 'good', 'bad');
+  document.getElementById('startBtn').disabled = true;
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    document.getElementById('timer').textContent = timeLeft;
+    if (timeLeft <= 10) document.getElementById('timer').classList.add('urgent');
+    if (timeLeft <= 0) endRace();
+  }, 1000);
+});
+
+document.getElementById('retryBtn').addEventListener('click', () => {
+  resetBoard();
+  document.getElementById('startBtn').style.display = 'inline-flex';
+  document.getElementById('startBtn').disabled = false;
+  document.getElementById('retryBtn').style.display = 'none';
+  document.getElementById('timer').textContent = '45';
+  document.getElementById('timer').classList.remove('urgent');
+  document.getElementById('feedback').classList.remove('show');
+});
+
+resetBoard();
+</script>
+
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 0, revealSolutions: function(){
+  words.forEach(w=>{
+    const bin = w.cat==='reg' ? document.getElementById('binReg') : document.getElementById('binIrr');
+    const chip = [...document.querySelectorAll('.sort-word')].find(c=>c.textContent===w.word);
+    if(chip){ bin.appendChild(chip); chip.classList.add('solution-revealed'); }
+  });
+}});
+document.getElementById('gmBar').querySelector('.game-mode-toggle').style.display='none';
+document.getElementById('gmTimerDisplay').style.display='none';
+</script>
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+</body>
+</html>

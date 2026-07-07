@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battaglia navale linguistica | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Affonda le navi rispondendo correttamente alle domande di lessico italiano nelle caselle giuste.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/battaglia-navale-modi-di-dire.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Battaglia navale linguistica",
+  "description": "Affonda le navi rispondendo a domande sui modi di dire italiani.",
+  "url": "https://thuisitaliaans.com/esercizi/battaglia-navale-modi-di-dire.html",
+  "learningResourceType": "Giochi",
+  "educationalLevel": "B1",
+  "inLanguage": "it",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Thuis Italiaans",
+    "url": "https://thuisitaliaans.com/"
+  },
+  "provider": {
+    "@type": "Person",
+    "name": "Alessio"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/battaglia-navale-modi-di-dire.html</span>
+      </div>
+      
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">B1</span>
+        <span class="ex-badge ex-badge-type">🚢 Battaglia navale</span>
+        <span class="ex-badge ex-badge-type">Lessico</span>
+      </div>
+      <h1>Battaglia navale linguistica</h1>
+      <p>Clicca una casella e rispondi alla domanda. Se la casella nascondeva una nave e rispondi bene: colpito! Trova e affonda tutte e 3 le navi.</p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Modi di dire italiani</h2>
+      <p>L'italiano è ricco di espressioni idiomatiche il cui significato non si capisce dalla somma delle singole parole — vanno imparate come un intero.</p>
+    </div>
+
+    <div class="ex-panel" style="text-align:center;">
+      <div class="battleship-grid" id="bsGrid"></div>
+      <div class="bs-question-box" id="bsQuestionBox">
+        <p id="bsQuestionText" style="font-weight:700;color:var(--primary);margin-bottom:16px;"></p>
+        <div class="quiz-options" id="bsOptionsBox"></div>
+      </div>
+      <p class="bs-status" id="bsStatus">Navi da affondare: 3</p>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
+      </div>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>I modi di dire ti fanno sembrare un madrelingua</h3>
+      <p>Nel mio blog trovi un'intera categoria dedicata proprio ai modi di dire italiani.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/battaglia-navale-modi-di-dire.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/battaglia-navale-modi-di-dire.png" download="battaglia-navale-modi-di-dire-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/battaglia-navale-modi-di-dire.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const GRID_SIZE = 5;
+const questions = [
+  { q: "\"In bocca al lupo\" si dice per...", options: ["augurare buona fortuna", "insultare qualcuno", "dire buonanotte"], correct: 0 },
+  { q: "\"Costare un occhio della testa\" significa...", options: ["essere economico", "essere molto costoso", "essere gratis"], correct: 1 },
+  { q: "\"Avere le mani in pasta\" significa...", options: ["cucinare bene", "essere coinvolto in qualcosa", "essere sporco"], correct: 1 },
+  { q: "\"Prendere due piccioni con una fava\" significa...", options: ["fare due cose con un'azione", "fallire due volte", "essere generosi"], correct: 0 },
+  { q: "\"Fare il gatto e la volpe\" significa...", options: ["essere ingannevoli", "essere ingenui", "essere veloci"], correct: 0 },
+  { q: "\"Essere al verde\" significa...", options: ["avere molti soldi", "non avere soldi", "essere in vacanza"], correct: 1 },
+  { q: "\"Piove sul bagnato\" si usa quando...", options: ["capitano più sfortune insieme", "piove poco", "fa bel tempo"], correct: 0 },
+];
+
+let ships = [];
+let hitCells = new Set();
+let sunkShips = 0;
+let currentCell = null;
+
+function randomShips() {
+  const cells = [];
+  while (cells.length < 3) {
+    const r = Math.floor(Math.random() * GRID_SIZE);
+    const c = Math.floor(Math.random() * GRID_SIZE);
+    const key = `${r},${c}`;
+    if (!cells.includes(key)) cells.push(key);
+  }
+  return cells;
+}
+
+function init() {
+  ships = randomShips();
+  hitCells = new Set();
+  sunkShips = 0;
+  document.getElementById('bsStatus').textContent = 'Navi da affondare: 3';
+  document.getElementById('bsQuestionBox').classList.remove('show');
+
+  const grid = document.getElementById('bsGrid');
+  grid.innerHTML = '';
+  const cols = 'ABCDE';
+  for (let r = 0; r < GRID_SIZE; r++) {
+    for (let c = 0; c < GRID_SIZE; c++) {
+      const cell = document.createElement('div');
+      cell.className = 'bs-cell';
+      cell.textContent = `${cols[c]}${r+1}`;
+      cell.dataset.key = `${r},${c}`;
+      cell.addEventListener('click', () => openQuestion(cell));
+      grid.appendChild(cell);
+    }
+  }
+}
+
+function openQuestion(cell) {
+  if (cell.classList.contains('hit') || cell.classList.contains('miss')) return;
+  currentCell = cell;
+  const q = questions[Math.floor(Math.random() * questions.length)];
+  currentCell._question = q;
+  document.getElementById('bsQuestionText').textContent = q.q;
+  const optionsBox = document.getElementById('bsOptionsBox');
+  optionsBox.innerHTML = '';
+  q.options.forEach((opt, oi) => {
+    const optDiv = document.createElement('div');
+    optDiv.className = 'quiz-option';
+    optDiv.innerHTML = `<span class="quiz-option-letter">${['A','B','C'][oi]}</span><span>${opt}</span>`;
+    optDiv.addEventListener('click', () => answerQuestion(oi === q.correct));
+    optionsBox.appendChild(optDiv);
+  });
+  document.getElementById('bsQuestionBox').classList.add('show');
+}
+
+function answerQuestion(isCorrect) {
+  document.getElementById('bsQuestionBox').classList.remove('show');
+  const cell = currentCell;
+  const isShip = ships.includes(cell.dataset.key);
+
+  if (isCorrect && isShip) {
+    cell.classList.add('hit');
+    cell.textContent = '💥';
+    hitCells.add(cell.dataset.key);
+    sunkShips++;
+    document.getElementById('bsStatus').textContent = sunkShips >= 3
+      ? 'Complimenti, hai affondato tutte le navi! 🎉'
+      : `Colpito! Navi da affondare: ${3 - sunkShips}`;
+  } else if (isCorrect && !isShip) {
+    cell.classList.add('miss');
+    cell.textContent = '〰️';
+  } else {
+    cell.classList.add('miss');
+    cell.textContent = '✗';
+  }
+}
+
+document.getElementById('retryBtn').addEventListener('click', init);
+init();
+</script>
+
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 240, revealSolutions: function(){
+      document.querySelectorAll('.bs-cell').forEach(cell=>{
+        if(ships.includes(cell.dataset.key) && !cell.classList.contains('hit')){
+          cell.classList.add('hit','solution-revealed');
+          cell.textContent='💥';
+        }
+      });
+    } });
+</script>
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+</body>
+</html>
