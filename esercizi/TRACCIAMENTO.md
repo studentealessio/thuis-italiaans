@@ -349,3 +349,40 @@ Individuate però alcune lacune genuinamente reali, colmate con questo batch mir
 ### Lezione per il futuro
 Prima di aggiungere contenuti su segnalazione di lacune esterne, verificare sempre contro il TRACCIAMENTO e
 grep diretto sui file esistenti — evita di duplicare centinaia di esercizi già presenti.
+
+## ✅ Audit e correzioni SEO (546 esercizi + sito principale)
+
+### Problema più grave trovato: nessun link interno dalla homepage
+La homepage principale (index.html del sito) non aveva **nessun link** né al blog né agli esercizi, né nel
+menu né nel footer. Per Google questo significa scoprire quelle sezioni solo tramite la sitemap, senza alcun
+"link equity" passato dalla pagina più autorevole del sito. Per gli utenti umani, significava che dalla
+homepage non c'era letteralmente modo di trovare blog o esercizi. **Corretto**: aggiunte le voci "Blog" e
+"Oefeningen" sia al menu di navigazione in alto sia al footer.
+
+### Tag Open Graph e Twitter Card: mancavano completamente
+Nessuna delle 546 pagine esercizio (né l'indice) aveva tag `og:*` o `twitter:*`. Significa che condividendo
+un link su WhatsApp, Facebook, LinkedIn o Twitter, appariva un'anteprima vuota o generica — pessimo per il
+tasso di clic quando uno studente condivide un esercizio con un amico o un insegnante lo condivide sui social.
+**Corretto**: aggiunti a tutte le 546 pagine + indice esercizi.
+
+### Breadcrumb strutturati (schema.org)
+Aggiunto un JSON-LD `BreadcrumbList` (Thuis Italiaans → Esercizi → [Nome esercizio]) su ogni pagina, utile
+per far comparire il percorso di navigazione nei risultati di ricerca Google invece del solo URL.
+
+### Sitemap: aggiunta data di ultima modifica
+Aggiunto `<lastmod>` a tutte le 547 URL della sezione esercizi, un segnale di freschezza che aiuta i motori
+di ricerca a capire quando ricrawlare le pagine.
+
+### Già presente e corretto (nessuna modifica necessaria)
+- Canonical URL su ogni pagina
+- JSON-LD `LearningResource` con titolo, descrizione, tipo, lingua
+- Meta description uniche per ogni esercizio
+- Sitemap.xml completa (764 URL)
+- robots.txt pulito, con Allow generale e distinzione tra bot di training AI (bloccati) e bot di
+  citazione/ricerca (permessi)
+- Tag H1 semantico su ogni pagina
+
+### Cosa resta fuori dal mio controllo (da fare voi)
+- Registrare il sito su Google Search Console e inviare la sitemap manualmente la prima volta
+- Costruire backlink reali da altri siti (forum di italiano, community di lingue, directory di insegnanti)
+- Eventuali campagne social per dare un primo impulso di traffico e condivisioni
