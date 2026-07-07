@@ -880,42 +880,33 @@ background:var(--surface);border-radius:var(--radius);
 .print-qr-actions{align-items:center;}
 }
 
-
-
-/* ========= SIDEBAR SHOP LAYOUT (FIX) ========= */
+/* ========= SIDEBAR SHOP LAYOUT (FIX SENZA BARRA) ========= */
 .shop-layout {
     display: grid;
     grid-template-columns: 270px 1fr;
     gap: 40px;
-    align-items: start; /* 1. Impedisce alla sidebar di allungarsi quanto tutta la pagina */
+    align-items: start;
 }
 
 .shop-sidebar {
-    position: sticky;   /* 2. Rende la sidebar fissa durante lo scroll */
-    top: 94px;          /* 3. Distanza dal top (74px della tua topbar + 20px di margine) */
+    position: sticky;
+    top: 94px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto; /* Permette lo scroll interno */
     
-    /* 👇 LE RIGHE CHIAVE PER ABILITARE LO SCROLL DELLA SIDEBAR 👇 */
-    max-height: calc(100vh - 120px); /* Evita che esca dallo schermo sotto */
-    overflow-y: auto;                /* Attiva lo scroll verticale se i filtri traboccano */
-    padding-right: 10px;             /* Un po' di respiro prima della barra di scorrimento */
+    /* 👇 NASCONDE LA BARRA SU FIREFOX 👇 */
+    scrollbar-width: none; 
 }
 
-/* Opzionale: rende la barra di scorrimento della sidebar più sottile ed elegante */
+/* 👇 NASCONDE LA BARRA SU CHROME, SAFARI E EDGE 👇 */
 .shop-sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-.shop-sidebar::-webkit-scrollbar-track {
-    background: transparent;
-}
-.shop-sidebar::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 999px;
+    display: none;
 }
 
-/* === RESPONSIVE (Consigliato per Mobile) === */
+/* === RESPONSIVE (Mobile) === */
 @media (max-width: 992px) {
     .shop-layout {
-        grid-template-columns: 1fr; /* La sidebar va sopra a schermo intero su mobile */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
     .shop-sidebar {
@@ -923,7 +914,6 @@ background:var(--surface);border-radius:var(--radius);
         top: 0;
         max-height: none;
         overflow-y: visible;
-        padding-right: 0;
     }
 }
 
