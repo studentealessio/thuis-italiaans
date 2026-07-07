@@ -880,8 +880,57 @@ background:var(--surface);border-radius:var(--radius);
 .print-qr-actions{align-items:center;}
 }
 
+
+
+/* ========= SIDEBAR SHOP LAYOUT (FIX) ========= */
+.shop-layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 40px;
+    align-items: start; /* 1. Impedisce alla sidebar di allungarsi quanto tutta la pagina */
+}
+
+.shop-sidebar {
+    position: sticky;   /* 2. Rende la sidebar fissa durante lo scroll */
+    top: 94px;          /* 3. Distanza dal top (74px della tua topbar + 20px di margine) */
+    
+    /* 👇 LE RIGHE CHIAVE PER ABILITARE LO SCROLL DELLA SIDEBAR 👇 */
+    max-height: calc(100vh - 120px); /* Evita che esca dallo schermo sotto */
+    overflow-y: auto;                /* Attiva lo scroll verticale se i filtri traboccano */
+    padding-right: 10px;             /* Un po' di respiro prima della barra di scorrimento */
+}
+
+/* Opzionale: rende la barra di scorrimento della sidebar più sottile ed elegante */
+.shop-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.shop-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.shop-sidebar::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+}
+
+/* === RESPONSIVE (Consigliato per Mobile) === */
+@media (max-width: 992px) {
+    .shop-layout {
+        grid-template-columns: 1fr; /* La sidebar va sopra a schermo intero su mobile */
+        gap: 30px;
+    }
+    .shop-sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+}
+
+
 /* ========= FOOTER ========= */
 .ex-footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;}
 .ex-footer p{font-size:.85rem;}
 .ex-footer-license{font-size:.78rem !important;margin-top:8px;color:var(--secondary);}
 .ex-footer a{font-weight:600;text-decoration:underline;}
+
