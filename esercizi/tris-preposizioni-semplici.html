@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tris: preposizioni semplici | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Gioca a tris rispondendo a domande sulle preposizioni semplici.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/tris-preposizioni-semplici.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "Tris: preposizioni semplici",
+ "description": "Gioca a tris rispondendo a domande sulle preposizioni semplici.",
+ "url": "https://thuisitaliaans.com/esercizi/tris-preposizioni-semplici.html",
+ "learningResourceType": "Giochi",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/tris-preposizioni-semplici.html</span>
+      </div>
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A2</span>
+        <span class="ex-badge ex-badge-type">⭕ Tris linguistico</span>
+        <span class="ex-badge ex-badge-type">Grammatica</span>
+      </div>
+      <h1>Tris: preposizioni semplici</h1>
+      <p>Gioca a tris rispondendo a domande sulle preposizioni semplici.</p>
+    </div>
+
+    <div class="ex-panel" style="text-align:center;">
+      <div class="ttt-grid" id="tttGrid"></div>
+      <div class="ttt-question-box" id="questionBox">
+        <p id="questionText" style="font-weight:700;color:var(--primary);margin-bottom:16px;"></p>
+        <div class="quiz-options" id="optionsBox"></div>
+      </div>
+      <p class="match-status" id="tttStatus" style="margin-top:20px;">Conquista 3 caselle in fila!</p>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
+      </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Le preposizioni semplici</h2>
+      <p>Le preposizioni semplici (di, a, da, in, con, su, per, tra, fra) collegano le parole nella frase.</p>
+      
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Le preposizioni si imparano meglio giocando</h3>
+      <p>Uso spesso giochi come questo per rendere la grammatica meno pesante.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/tris-preposizioni-semplici.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/tris-preposizioni-semplici.png" download="tris-preposizioni-semplici-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/tris-preposizioni-semplici.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const questions = [{ q: "Vado ___ scuola. (moto a luogo)", options: ["a", "di", "con"], correct: 0 }, { q: "Vengo ___ Roma.", options: ["da", "di", "su"], correct: 0 }, { q: "Il libro è ___ Marco.", options: ["di", "a", "in"], correct: 0 }, { q: "Vivo ___ Milano.", options: ["a", "di", "per"], correct: 0 }, { q: "Parto ___ un'ora.", options: ["tra", "su", "con"], correct: 0 }, { q: "Studio ___ Anna.", options: ["con", "su", "tra"], correct: 0 }, { q: "Il gatto è ___ il tavolo.", options: ["sotto", "su", "tra"], correct: 0 }, { q: "Lavoro ___ un'azienda italiana.", options: ["per", "su", "tra"], correct: 0 }, { q: "Il libro è ___ il tavolo. (sopra la superficie)", options: ["su", "in", "tra"], correct: 0 }];
+let claimed = [], gridEl, questionBox, questionText, optionsBox, status, currentCell = null;
+const winLines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+function init() {
+  claimed = Array(9).fill(null);
+  gridEl = document.getElementById('tttGrid'); questionBox = document.getElementById('questionBox');
+  questionText = document.getElementById('questionText'); optionsBox = document.getElementById('optionsBox');
+  status = document.getElementById('tttStatus'); status.textContent='Conquista 3 caselle in fila!';
+  questionBox.classList.remove('show'); gridEl.innerHTML = '';
+  for (let i=0;i<9;i++) {
+    const cell = document.createElement('div'); cell.className='ttt-cell'; cell.dataset.index=i;
+    cell.addEventListener('click', () => openQuestion(i, cell));
+    gridEl.appendChild(cell);
+  }
+}
+function openQuestion(index, cell) {
+  if (claimed[index]) return;
+  currentCell = { index, cell };
+  const q = questions[index % questions.length];
+  questionText.textContent = q.q; optionsBox.innerHTML = '';
+  q.options.forEach((opt, oi) => {
+    const optDiv = document.createElement('div'); optDiv.className='quiz-option';
+    optDiv.innerHTML = `<span class="quiz-option-letter">${['A','B','C'][oi]}</span><span>${opt}</span>`;
+    optDiv.addEventListener('click', () => answer(oi === q.correct));
+    optionsBox.appendChild(optDiv);
+  });
+  questionBox.classList.add('show');
+}
+function answer(isCorrect) {
+  questionBox.classList.remove('show');
+  const { index, cell } = currentCell;
+  if (isCorrect) { claimed[index]='win'; cell.classList.add('claimed'); cell.textContent='✓'; checkWin(); }
+  else { claimed[index]='blocked'; cell.classList.add('blocked'); cell.textContent='✗'; }
+}
+function checkWin() {
+  for (const line of winLines) if (line.every(i => claimed[i]==='win')) { status.textContent='Tris completato! Hai vinto! 🎉'; return; }
+  if (claimed.every(c => c!==null)) status.textContent='Griglia completa! Ricomincia per riprovare il tris.';
+}
+document.getElementById('retryBtn').addEventListener('click', init);
+init();
+</script>
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 200, revealSolutions: function(){
+  document.querySelectorAll('.ttt-cell').forEach((cell,i) => {
+    if (!claimed[i]) {
+      const q = questions[i % questions.length];
+      cell.textContent = q.options[q.correct]; cell.classList.add('solution-revealed'); cell.style.fontSize='.7rem';
+    }
+  });
+}});
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+
+</body>
+</html>

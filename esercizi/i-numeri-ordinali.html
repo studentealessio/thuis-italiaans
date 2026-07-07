@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I numeri ordinali | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Rispondi alle domande sui numeri ordinali italiani.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/i-numeri-ordinali.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "I numeri ordinali",
+ "description": "Rispondi alle domande sui numeri ordinali italiani.",
+ "url": "https://thuisitaliaans.com/esercizi/i-numeri-ordinali.html",
+ "learningResourceType": "Quiz",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/i-numeri-ordinali.html</span>
+      </div>
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A1</span>
+        <span class="ex-badge ex-badge-type">✅ Scelta multipla</span>
+        <span class="ex-badge ex-badge-type">Grammatica</span>
+      </div>
+      <h1>I numeri ordinali</h1>
+      <p>Rispondi alle domande sui numeri ordinali italiani.</p>
+    </div>
+
+    <div class="ex-panel">
+      <div id="quizContainer"></div>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-primary" id="checkBtn">Correggi tutto</button>
+        <button class="ex-btn ex-btn-ghost" id="retryBtn">Ricomincia</button>
+      </div>
+      <p class="quiz-score" id="score" style="display:none;"></p>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 I numeri ordinali</h2>
+      <p>I numerali ordinali indicano una posizione: primo, secondo, terzo... e concordano in genere e numero.</p>
+      
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Gli ordinali sono utili per date, piani e classifiche</h3>
+      <p>Pratichiamo insieme con esempi concreti della tua vita.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/i-numeri-ordinali.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/i-numeri-ordinali.png" download="i-numeri-ordinali-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/i-numeri-ordinali.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const questions = [
+  { q: "Il numero ordinale corrispondente a 1 è...", options: ["primo", "uno", "unesimo"], correct: 0 },
+  { q: "Il numero ordinale corrispondente a 3 è...", options: ["terzo", "tre", "treesimo"], correct: 0 },
+  { q: "\"Abito al quinto piano\" si riferisce al piano numero...", options: ["5", "4", "6"], correct: 0 },
+  { q: "Il numero ordinale corrispondente a 10 è...", options: ["decimo", "dieci", "diecesimo"], correct: 0 },
+  { q: "\"È la mia prima volta qui\" significa che...", options: ["non ci sono mai stato prima", "ci sono stato spesso", "non tornerò mai"], correct: 0 }
+];
+const container = document.getElementById('quizContainer');
+const letters = ['A','B','C','D'];
+const selections = {};
+function render() {
+  container.innerHTML = '';
+  questions.forEach((item, qi) => {
+    const qDiv = document.createElement('div');
+    qDiv.className = 'quiz-question';
+    qDiv.dataset.index = qi;
+    const qText = document.createElement('div');
+    qText.className = 'quiz-question-text';
+    qText.textContent = `${qi+1}. ${item.q}`;
+    qDiv.appendChild(qText);
+    const optsDiv = document.createElement('div');
+    optsDiv.className = 'quiz-options';
+    item.options.forEach((opt, oi) => {
+      const optDiv = document.createElement('div');
+      optDiv.className = 'quiz-option';
+      optDiv.dataset.optIndex = oi;
+      optDiv.innerHTML = `<span class="quiz-option-letter">${letters[oi]}</span><span>${opt}</span>`;
+      optDiv.addEventListener('click', () => selectOption(qi, oi));
+      optsDiv.appendChild(optDiv);
+    });
+    qDiv.appendChild(optsDiv);
+    container.appendChild(qDiv);
+  });
+}
+function selectOption(qi, oi) {
+  selections[qi] = oi;
+  const qDiv = container.querySelector(`[data-index="${qi}"]`);
+  qDiv.querySelectorAll('.quiz-option').forEach(el => {
+    el.classList.remove('selected','correct','incorrect');
+    if (parseInt(el.dataset.optIndex) === oi) el.classList.add('selected');
+  });
+}
+document.getElementById('checkBtn').addEventListener('click', () => {
+  let score = 0;
+  questions.forEach((item, qi) => {
+    const qDiv = container.querySelector(`[data-index="${qi}"]`);
+    const chosen = selections[qi];
+    qDiv.querySelectorAll('.quiz-option').forEach(el => {
+      const oi = parseInt(el.dataset.optIndex);
+      el.classList.remove('selected');
+      if (oi === item.correct) el.classList.add('correct');
+      else if (oi === chosen) el.classList.add('incorrect');
+    });
+    if (chosen === item.correct) score++;
+  });
+  const scoreEl = document.getElementById('score');
+  scoreEl.style.display = 'block';
+  scoreEl.textContent = `Punteggio: ${score} / ${questions.length}`;
+});
+document.getElementById('retryBtn').addEventListener('click', () => {
+  for (const k in selections) delete selections[k];
+  document.getElementById('score').style.display = 'none';
+  render();
+});
+render();
+</script>
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 120, revealSolutions: function(){
+  questions.forEach((item,qi)=>{
+    const qDiv = container.querySelector(`[data-index="${qi}"]`);
+    qDiv.querySelectorAll('.quiz-option').forEach((el,oi)=>{ if(oi===item.correct) el.classList.add('solution-revealed'); });
+  });
+}});
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+
+</body>
+</html>

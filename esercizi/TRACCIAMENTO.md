@@ -224,3 +224,59 @@ dentro il codice, non nell'HTML diretto) e **rigenerate tutte le 234 pagine da z
 Verificato non solo che il bug fosse sparito, ma che tutte le pagine restassero sintatticamente valide
 (alcune frasi contenevano virgolette annidate, es. "Il "TG" è l'abbreviazione di..." — un caso limite che ha
 richiesto un vero escape a livello di stringa JS, non solo la rimozione delle entità).
+
+## ✅ BATCH 4: altri 100 esercizi (334 totali)
+
+**20 nuovi cruciverba** (10+ parole ciascuno, verificati): verdure, aggettivi, materie scolastiche, mobili,
+Italia geografica, colazione, cinema, relazioni, vacanza al mare, condominio, tempi verbali, economia,
+colori e forme, montagna, televisione, espressioni idiomatiche (parole chiave di modi di dire), animali
+domestici, dolci italiani, aeroporto, ambiente.
+
+**Grammatica di consolidamento e approfondimento (27)**: fare/stare presente, articoli con nomi propri,
+imperativo con pronomi, comparativi irregolari (migliore/peggiore), congiuntivo dopo superlativo relativo,
+connettivi di aggiunta/contrasto, andare+a/in, doppio negativo, il cui/la cui, congiuntivo con verbi di
+opinione negati, molto/troppo come aggettivi, verbi con preposizione fissa, futuro di probabilità, gerundio
+causale, aggettivi in -bile, bello/buono davanti al nome, sapere/conoscere, ci vuole al passato, fare
+causativo, pronomi diretti, condizionale nei consigli, da quanto tempo, anche se/sebbene, possessivi con
+la famiglia, lasciare+infinito, prima di/dopo+infinito, pronomi relativi con preposizione.
+
+**Lessico di approfondimento (53)**: albergo, utensili da cucina, fasi della vita, contrari, tecnologia base,
+attrezzatura da mare, pasti della giornata, generi cinematografici, fasi di una relazione, materie
+universitarie, abitudini italiane, università, storia della pizza, turismo, riscaldamento, TV pubblica,
+vacanze estive, sistema sanitario, e molto altro tra riordina/anagramma/categorizza/trova/flashcard/impiccato.
+
+### Bug corretto durante questo batch
+Il `grid_size` di default nel motore cruciverba (21) era a volte insufficiente per liste di 10-12 parole
+lunghe, facendo scendere una griglia sotto le 10 parole piazzate (9/10). Aumentato il default a 25 — fix
+applicato retroattivamente a tutti i batch precedenti tramite generators2.py condiviso.
+
+### Metodologia consolidata (per i prossimi batch)
+Prima di scrivere qualsiasi contenuto: (1) controllo collisioni di slug/titolo contro TUTTI i batch precedenti,
+(2) verifico ogni lista di cruciverba con l'engine prima di scrivere le definizioni finali, (3) controllo
+sintassi JS e assenza di entità HTML su tutti i file generati, (4) verifico l'ordine gioco-poi-spiegazione.
+
+## ✅ BATCH 5: altri 100 esercizi (434 totali)
+
+**20 nuovi cruciverba** (10+ parole verificate): nazionalità, avverbi, colloquio di lavoro, supermercato,
+proverbi (parole chiave), stazione, numeri 1-10, monumenti di Roma, famiglia allargata, pubblicità,
+giorni/mesi, vino italiano, pulizie di casa, registri linguistici, aula scolastica, linguaggio del corpo,
+gelato, moda italiana, strumenti musicali, connettivi testuali.
+
+**Grammatica di approfondimento (27)**: dovere/potere/volere insieme, dimostrativi plurali, passato prossimo
+dei modali, preposizioni di luogo, periodo ipotetico misto 2°-3° tipo, piacere al passato, ne con quantità,
+presente progressivo, numerali ordinali, congiuntivo trapassato, concordanza aggettivi, verbi con doppio
+ausiliare (cambiare/salire), esclamazioni con che, connettivi di scopo, pronomi combinati+congiuntivo,
+giorni della settimana, trapassato prossimo nei racconti, stare per+infinito, dovere obbligo/probabilità,
+possessivi senza nome, gerundio progressivo passato, avverbi in -mente, passivo impersonale, condizionale
+per rimpianto, essere/stare con aggettivi, pronomi relativi doppi (quello che/ciò che).
+
+**Lessico di approfondimento (53)**: classe e insegnanti, noleggio auto, giornalismo online, espressioni del
+viso, dieta e alimentazione, trekking, oggetti del bagno, mondo accademico, verbi+preposizioni, tappe della
+crescita, gelato artigianale, superstizioni, laghi italiani, cinema neorealista, patente di guida, servizio
+civile, città d'arte, dialetti, e molto altro tra riordina/anagramma/categorizza/trova/flashcard/impiccato
+(inclusi numeri 1-20, latinismi, termini enologici, espressioni social aggiuntive).
+
+### Metodologia (invariata, applicata rigorosamente)
+Controllo collisioni titolo/slug contro tutti i 334 esercizi precedenti PRIMA di scrivere contenuti;
+verifica engine cruciverba con placeholder prima degli indizi finali; verifica sintassi JS, escaping,
+ordine gioco-poi-spiegazione e conteggio parole cruciverba DOPO la generazione, prima di consegnare.

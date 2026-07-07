@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il mondo accademico | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Abbina ogni termine accademico alla sua definizione.">
+<meta name="theme-color" content="#31394d">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/il-mondo-accademico.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "Il mondo accademico",
+ "description": "Abbina ogni termine accademico alla sua definizione.",
+ "url": "https://thuisitaliaans.com/esercizi/il-mondo-accademico.html",
+ "learningResourceType": "Abbinamento",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ }
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/il-mondo-accademico.html</span>
+      </div>
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">B2</span>
+        <span class="ex-badge ex-badge-type">🃏 Abbinamento</span>
+        <span class="ex-badge ex-badge-type">Lessico</span>
+      </div>
+      <h1>Il mondo accademico</h1>
+      <p>Abbina ogni termine accademico alla sua definizione.</p>
+    </div>
+
+    <div class="ex-panel">
+      <div class="match-board" id="board"></div>
+      <p class="match-status" id="status">0 coppie trovate su 6</p>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-ghost" id="resetBtn">Rimescola</button>
+      </div>
+      <div class="ex-feedback good" id="winFeedback">Hai trovato tutte le coppie! Complimenti 🎉</div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico: il mondo accademico</h2>
+      <p>Il lessico accademico è utile per chi studia o lavora in ambito universitario e di ricerca.</p>
+      
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Il mondo accademico ha un lessico molto specifico</h3>
+      <p>Parliamo del tuo percorso di studi, presente o passato.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    </div>
+
+
+    <div class="print-qr-block">
+      <img src="../assets/qr/il-mondo-accademico.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/il-mondo-accademico.png" download="il-mondo-accademico-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/il-mondo-accademico.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const pairs = [["la tesi", "lavoro scritto finale per laurearsi"], ["il relatore", "professore che segue la tesi"], ["la borsa di studio", "aiuto economico per studiare"], ["il dottorato", "titolo di studio più alto"], ["la pubblicazione", "articolo scientifico pubblicato"], ["il convegno", "incontro di studiosi su un tema"]];
+let board = document.getElementById('board');
+let status = document.getElementById('status');
+let winFeedback = document.getElementById('winFeedback');
+let selected = [];
+let matchedCount = 0;
+let lock = false;
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function buildBoard() {
+  board.innerHTML = ''; selected = []; matchedCount = 0; lock = false;
+  winFeedback.classList.remove('show');
+  status.textContent = `0 coppie trovate su ${pairs.length}`;
+  let cards = [];
+  pairs.forEach((p, i) => { cards.push({text:p[0],pairId:i}); cards.push({text:p[1],pairId:i}); });
+  cards = shuffle(cards);
+  cards.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'match-card';
+    div.textContent = c.text;
+    div.dataset.pairId = c.pairId;
+    div.addEventListener('click', () => onCardClick(div));
+    board.appendChild(div);
+  });
+}
+function onCardClick(card) {
+  if (lock) return;
+  if (card.classList.contains('matched') || card.classList.contains('selected')) return;
+  card.classList.add('selected');
+  selected.push(card);
+  if (selected.length === 2) {
+    lock = true;
+    const [a, b] = selected;
+    if (a.dataset.pairId === b.dataset.pairId) {
+      setTimeout(() => {
+        a.classList.remove('selected'); b.classList.remove('selected');
+        a.classList.add('matched'); b.classList.add('matched');
+        matchedCount++;
+        status.textContent = `${matchedCount} coppie trovate su ${pairs.length}`;
+        selected = []; lock = false;
+        if (matchedCount === pairs.length) winFeedback.classList.add('show');
+      }, 350);
+    } else {
+      a.classList.add('wrong'); b.classList.add('wrong');
+      setTimeout(() => {
+        a.classList.remove('selected','wrong'); b.classList.remove('selected','wrong');
+        selected = []; lock = false;
+      }, 700);
+    }
+  }
+}
+document.getElementById('resetBtn').addEventListener('click', buildBoard);
+buildBoard();
+</script>
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 120, revealSolutions: function(){
+  document.querySelectorAll('.match-card').forEach(el=>el.classList.add('solution-revealed'));
+}});
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+
+</body>
+</html>
