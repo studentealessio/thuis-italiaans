@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#31394d">
+  <title>Privacy — ti App | Thuis Italiaans</title>
+  <link rel="canonical" href="https://thuisitaliaans.com/app-privacy.html">
+  <meta name="description" content="Privacyverklaring van de ti app.">
+  <link rel="icon" href="https://thuisitaliaans.com/assets/icons/icon-512.png">
+  <style>
+    :root{
+      --primary:#31394d;
+      --primary-soft:#3d4763;
+      --text:#1a1f2e;
+      --muted:#5b6479;
+      --bg:#ffffff;
+      --bg-soft:#f6f7fb;
+      --border:#e5e7eb;
+      --accent:#c9a24a;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
+      color:var(--text);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    header.site{background:var(--primary);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+    header.site .wrap{max-width:1100px;margin:0 auto;padding:.9rem 1.25rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+    header.site .brand{display:flex;align-items:center;gap:.6rem;color:#fff}
+    header.site .brand img{width:34px;height:34px;border-radius:8px;display:block}
+    header.site .brand span{font-weight:600;letter-spacing:.2px}
+    header.site nav{margin-left:auto;display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
+    header.site nav a{color:#e9ecf5;font-size:.95rem}
+    header.site nav a:hover{color:#fff;text-decoration:none}
+    header.site .cta{background:#fff;color:var(--primary);padding:.5rem .9rem;border-radius:8px;font-weight:600;font-size:.9rem}
+    header.site .cta:hover{text-decoration:none;background:#f0f2fa}
+
+    main{max-width:780px;margin:0 auto;padding:2.5rem 1.25rem 3rem}
+
+    .lang{
+      display:flex;gap:.4rem;padding:.35rem;background:var(--bg-soft);
+      border:1px solid var(--border);border-radius:12px;width:fit-content;margin:0 0 1.75rem;
+    }
+    .lang button{
+      appearance:none;background:transparent;border:0;padding:.45rem .95rem;border-radius:8px;
+      font:inherit;color:var(--muted);cursor:pointer;font-weight:600;font-size:.85rem;letter-spacing:.4px;
+    }
+    .lang button.active{background:#fff;color:var(--primary);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .lang button:hover:not(.active){color:var(--text)}
+
+    h1{font-size:2.15rem;line-height:1.2;margin:0 0 .5rem;color:var(--primary);letter-spacing:-.01em}
+    .updated{color:var(--muted);font-size:.9rem;margin-bottom:2rem}
+    h2{font-size:1.2rem;margin:2rem 0 .6rem;color:var(--primary)}
+    p{margin:0 0 1rem;color:#2a3244}
+
+    .placeholder-note{
+      background:#fff8e1;border:1px solid #f0d878;color:#6b5100;
+      padding:.85rem 1rem;border-radius:10px;font-size:.9rem;margin-bottom:1.75rem;
+    }
+    .placeholder-note strong{color:#4a3a00}
+
+    footer.site{background:var(--primary);color:#c9cde0;margin-top:3rem}
+    footer.site .wrap{max-width:1100px;margin:0 auto;padding:2rem 1.25rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center}
+    footer.site .brand{display:flex;align-items:center;gap:.6rem;color:#fff}
+    footer.site .brand img{width:32px;height:32px;border-radius:8px}
+    footer.site nav{display:flex;gap:1.1rem;flex-wrap:wrap;margin-left:auto}
+    footer.site nav a{color:#c9cde0;font-size:.9rem}
+    footer.site nav a:hover{color:#fff}
+    footer.site .copy{width:100%;border-top:1px solid rgba(255,255,255,.1);padding-top:1rem;margin-top:1rem;font-size:.85rem;color:#a5abc4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+    .backlink{display:inline-block;margin-top:1.5rem;color:var(--primary);font-weight:600}
+
+    @media (max-width:640px){
+      h1{font-size:1.75rem}
+      header.site nav{display:none}
+      main{padding-top:1.5rem}
+    }
+  </style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://thuisitaliaans.com/index.html">
+      <img src="https://thuisitaliaans.com/assets/icons/icon-512.png" alt="Thuis Italiaans">
+      <span>Thuis Italiaans</span>
+    </a>
+    <nav>
+      <a href="https://thuisitaliaans.com/index.html#about">Over mij</a>
+      <a href="https://thuisitaliaans.com/index.html#lessons">Lessen</a>
+      <a href="https://thuisitaliaans.com/blog/index.html">Blog</a>
+      <a href="https://thuisitaliaans.com/esercizi/index.html">Oefeningen</a>
+      <a href="https://thuisitaliaans.com/index.html#reviews">Reviews</a>
+      <a class="cta" href="https://thuisitaliaans.com/index.html#contact">Gratis intake</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="lang" role="tablist" aria-label="Language">
+    <button role="tab" data-lang="nl" class="active">NL</button>
+    <button role="tab" data-lang="en">EN</button>
+    <button role="tab" data-lang="it">IT</button>
+  </div>
+
+  <article id="content"></article>
+
+  <a class="backlink" href="https://thuisitaliaans.com/index.html">← <span data-back>Terug naar de homepage</span></a>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a class="brand" href="https://thuisitaliaans.com/index.html">
+      <img src="https://thuisitaliaans.com/assets/icons/icon-512.png" alt="Thuis Italiaans">
+      <span>Thuis Italiaans</span>
+    </a>
+    <nav>
+      <a href="https://thuisitaliaans.com/privacy.html">Privacybeleid site</a>
+      <a href="https://thuisitaliaans.com/app-privacy.html">Privacy app</a>
+      <a href="https://thuisitaliaans.com/app-termini.html">Voorwaarden app</a>
+      <a href="mailto:info@thuisitaliaans.com">info@thuisitaliaans.com</a>
+    </nav>
+    <div class="copy">
+      <span>© 2026 Thuis Italiaans. Alle rechten voorbehouden.</span>
+      <span>In behandeling bij de KvK</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/json" id="data">
+{
+  "nl": {
+    "back": "Terug naar de homepage",
+    "sections": [
+      { "titolo": "Privacyverklaring", "corpo": "Laatst bijgewerkt: 14 juli 2026. Deze verklaring beschrijft welke gegevens de app <em>ti</em> (\"de App\") verwerkt en hoe. Verwerkingsverantwoordelijke: [Naam], [adres], bereikbaar via info@thuisitaliaans.com." },
+      { "titolo": "Het principe: je gegevens blijven op je toestel", "corpo": "De App is ontworpen om lokaal te werken. Studievoortgang, geleerde woorden, statistieken en instellingen worden uitsluitend op je toestel opgeslagen en niet naar onze servers gestuurd (die hebben we niet). We gebruiken geen analytics van derden, tonen geen advertenties en volgen je activiteit niet." },
+      { "titolo": "Gegevens bij Inloggen met Apple", "corpo": "Kies je voor \"Inloggen met Apple\", dan ontvangen we van Apple een anonieme identificatie en, alleen bij de eerste keer en als je dat wilt delen, je naam en eventueel je e-mailadres (ook in de privé-doorstuurvorm van Apple). Deze gegevens staan alleen op je toestel en dienen uitsluitend om je naam in de App te tonen. We versturen of verkopen ze nooit. Je kunt ook een lokaal profiel met een gebruikersnaam aanmaken of de App als gast gebruiken: er wordt nooit een wachtwoord gevraagd of opgeslagen." },
+      { "titolo": "Aankopen", "corpo": "Aankopen (abonnementen, lifetime, losse leerroutes en romans) worden volledig door Apple via de App Store afgehandeld. Wij ontvangen of bewaren nooit betaalgegevens. Via StoreKit controleren we alleen welke producten actief zijn op je Apple-account, om de bijbehorende inhoud te ontgrendelen." },
+      { "titolo": "Gegevens die we niet verzamelen", "corpo": "We verzamelen geen locatie, contacten, foto's, microfoon-, gezondheids- of surfgegevens. We maken geen gebruikersprofielen en delen geen gegevens met derden voor marketing." },
+      { "titolo": "Bewaren en verwijderen", "corpo": "Omdat de gegevens op je toestel staan, heb je er volledige controle over: via \"Account en privacy\" kun je met \"Verwijder mijn gegevens\" profiel, voortgang, woorden en statistieken definitief wissen. Ook het verwijderen van de App wist alle lokale gegevens. Aankopen blijven gekoppeld aan je Apple-account en zijn na herinstallatie te herstellen." },
+      { "titolo": "Je rechten (AVG)", "corpo": "Als EU-inwoner heb je recht op inzage, rectificatie, verwijdering, beperking en overdraagbaarheid, en het recht om een klacht in te dienen bij een toezichthouder. Omdat persoonsgegevens op je toestel staan, oefen je de meeste rechten rechtstreeks in de App uit; voor verzoeken: info@thuisitaliaans.com." },
+      { "titolo": "Kinderen", "corpo": "De App vereist geen persoonsgegevens en is ook geschikt voor jonge leerlingen. Denkt een ouder dat een minderjarige zonder toestemming gegevens heeft gedeeld via Inloggen met Apple, neem dan contact op voor hulp bij verwijdering (dat kan ook rechtstreeks in de App)." },
+      { "titolo": "Wijzigingen", "corpo": "Als de App in de toekomst functies introduceert met nieuwe verwerkingen (bijvoorbeeld cloud-synchronisatie), werken we deze verklaring bij en vragen we eerst je toestemming. De actuele versie staat altijd op deze pagina." }
+    ]
+  },
+  "en": {
+    "back": "Back to the homepage",
+    "sections": [
+      { "titolo": "Privacy Policy", "corpo": "Last updated: 14 July 2026. This policy describes what data the <em>ti</em> app (\"the App\") processes and how. Data controller: [Controller name], [address], reachable at info@thuisitaliaans.com." },
+      { "titolo": "The principle: your data stays on your device", "corpo": "The App is designed to work locally. Study progress, learned words, statistics, settings and preferences are stored exclusively on your device and are not sent to our servers (we have none). We use no third-party analytics, show no ads, and do not track your activity." },
+      { "titolo": "Data processed with Sign in with Apple", "corpo": "If you choose \"Sign in with Apple\", we receive an anonymous identifier from Apple and, on first sign-in only and if you choose to share them, your name and possibly your email address (including Apple's private relay form). These are stored only on your device and are used solely to display your name in the App. We never transmit or sell them. Alternatively, you can create a local profile with a simple username or use the App as a guest: no password is ever requested or stored." },
+      { "titolo": "Purchases", "corpo": "Purchases (subscriptions, lifetime purchase, individual paths and novels) are handled entirely by Apple through the App Store. We never receive or store payment data. Via StoreKit we only verify which products are active on your Apple account, in order to unlock the corresponding content." },
+      { "titolo": "Data we do not collect", "corpo": "We do not collect location, contacts, photos, microphone, health or browsing data. We do not build user profiles and do not share data with third parties for marketing purposes." },
+      { "titolo": "Retention and deletion", "corpo": "Because data lives on your device, you are in full control: from the \"Account and privacy\" screen you can use \"Delete my data\" to permanently remove profile, progress, words and statistics. Uninstalling the App also deletes all local data. Purchases remain tied to your Apple account and can be restored after reinstalling." },
+      { "titolo": "Your rights (GDPR)", "corpo": "As an EU resident you have the rights of access, rectification, erasure, restriction and portability, and the right to lodge a complaint with a supervisory authority. Since personal data resides on your device, most of these rights are exercised directly in the App; for any request, write to info@thuisitaliaans.com." },
+      { "titolo": "Children", "corpo": "The App requires no personal data to be used and is suitable for young learners. If a parent believes a minor shared data via Sign in with Apple without consent, contact us for help with removal (which is also possible directly in the App)." },
+      { "titolo": "Changes to this policy", "corpo": "If the App introduces features involving new processing in the future (for example cloud sync), we will update this policy and ask for your consent before enabling them. The current version is always published on this page." }
+    ]
+  },
+  "it": {
+    "back": "Torna alla homepage",
+    "sections": [
+      { "titolo": "Informativa sulla privacy", "corpo": "Ultimo aggiornamento: 14 luglio 2026. Questa informativa descrive quali dati tratta l'app <em>ti</em> (\"l'App\") e come. Titolare del trattamento: [Nome del titolare], [indirizzo], contattabile a info@thuisitaliaans.com." },
+      { "titolo": "Il principio: i tuoi dati restano sul tuo dispositivo", "corpo": "L'App è progettata per funzionare in locale. Progressi di studio, parole imparate, statistiche, impostazioni e preferenze sono salvati esclusivamente sul tuo dispositivo e non vengono inviati ai nostri server (non ne abbiamo). Non usiamo strumenti di analisi di terze parti, non mostriamo pubblicità e non tracciamo la tua attività." },
+      { "titolo": "Dati trattati con Accedi con Apple", "corpo": "Se scegli \"Accedi con Apple\", riceviamo da Apple un identificativo anonimo e, solo al primo accesso e se decidi di condividerli, il tuo nome ed eventualmente il tuo indirizzo email (anche nella forma privata di inoltro Apple). Questi dati sono salvati solo sul tuo dispositivo e servono unicamente a mostrare il tuo nome nell'App. Non li trasmettiamo né li vendiamo a nessuno. In alternativa puoi creare un profilo locale con un semplice username o usare l'App come ospite: nessuna password viene mai richiesta o memorizzata." },
+      { "titolo": "Acquisti", "corpo": "Gli acquisti (abbonamenti, acquisto a vita, percorsi e romanzi singoli) sono gestiti interamente da Apple tramite App Store. Non riceviamo né conserviamo dati di pagamento: nome del titolare della carta, numero di carta e indirizzo di fatturazione non ci arrivano mai. Verifichiamo solo, tramite StoreKit, quali prodotti risultano attivi sul tuo account Apple per sbloccare i contenuti corrispondenti." },
+      { "titolo": "Dati che non raccogliamo", "corpo": "Non raccogliamo posizione, contatti, foto, microfono, dati sanitari o di navigazione. Non creiamo profili degli utenti e non condividiamo dati con terze parti per finalità di marketing." },
+      { "titolo": "Conservazione e cancellazione", "corpo": "Poiché i dati vivono sul tuo dispositivo, ne hai il pieno controllo: dalla schermata \"Account e privacy\" puoi usare \"Cancella i miei dati\" per eliminare definitivamente profilo, progressi, parole e statistiche. Anche la disinstallazione dell'App elimina tutti i dati locali. Gli acquisti restano legati al tuo account Apple e si possono ripristinare reinstallando l'App." },
+      { "titolo": "I tuoi diritti (GDPR)", "corpo": "In quanto residente nell'Unione Europea hai diritto di accesso, rettifica, cancellazione, limitazione e portabilità dei dati, e il diritto di proporre reclamo all'autorità di controllo. Dato che i dati personali risiedono sul tuo dispositivo, la maggior parte di questi diritti si esercita direttamente dall'App; per qualunque richiesta scrivi a info@thuisitaliaans.com." },
+      { "titolo": "Minori", "corpo": "L'App non richiede dati personali per essere usata ed è adatta anche a studenti giovani. Se un genitore ritiene che un minore abbia condiviso dati tramite Accedi con Apple senza consenso, può contattarci per assistenza alla rimozione (che è comunque possibile in autonomia dall'App)." },
+      { "titolo": "Modifiche a questa informativa", "corpo": "Se in futuro l'App introdurrà funzioni che comportano nuovi trattamenti (per esempio il salvataggio nel cloud), aggiorneremo questa informativa e chiederemo il tuo consenso prima di attivarle. La versione corrente è sempre pubblicata su questa pagina." }
+    ]
+  }
+}
+</script>
+
+<script>
+(function(){
+  const data = JSON.parse(document.getElementById('data').textContent);
+  const container = document.getElementById('content');
+  const backSpan = document.querySelector('[data-back]');
+  const buttons = document.querySelectorAll('.lang button');
+
+  function render(lang){
+    const d = data[lang];
+    const first = d.sections[0];
+    const rest = d.sections.slice(1);
+    const [firstLine, ...restOfCorpo] = first.corpo.split('. ');
+    // Prima sezione: titolo diventa H1, prima frase diventa "updated", resto diventa paragrafo
+    // Split più semplice: mostro H1 + intero corpo come intro; il "Ultimo aggiornamento" è già dentro il testo.
+    let html = '';
+    html += '<h1>' + first.titolo + '</h1>';
+    // estraggo la data se presente
+    const dateMatch = first.corpo.match(/^(Ultimo aggiornamento:[^.]+\.|Last updated:[^.]+\.|Laatst bijgewerkt:[^.]+\.)\s*/);
+    if(dateMatch){
+      html += '<p class="updated">' + dateMatch[1] + '</p>';
+      html += '<p>' + first.corpo.slice(dateMatch[0].length) + '</p>';
+    } else {
+      html += '<p>' + first.corpo + '</p>';
+    }
+    // Nota placeholder se il testo contiene [Nome...] o [adres]
+    if(first.corpo.match(/\[[^\]]+\]/)){
+      const notes = {
+        nl: '<strong>Voor publicatie:</strong> vervang de tekst tussen [haakjes] (naam en adres van de verwerkingsverantwoordelijke).',
+        en: '<strong>Before publishing:</strong> replace the text in [brackets] (controller name and address).',
+        it: '<strong>Prima di pubblicare:</strong> sostituisci il testo tra [parentesi] (nome e indirizzo del titolare).'
+      };
+      html += '<div class="placeholder-note">' + notes[lang] + '</div>';
+    }
+    for(const s of rest){
+      html += '<h2>' + s.titolo + '</h2>';
+      html += '<p>' + s.corpo + '</p>';
+    }
+    container.innerHTML = html;
+    backSpan.textContent = d.back;
+    document.documentElement.lang = lang;
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('tuffo-lang', lang); } catch(e){}
+  }
+
+  buttons.forEach(b => b.addEventListener('click', () => render(b.dataset.lang)));
+
+  let initial = 'nl';
+  try {
+    const saved = localStorage.getItem('tuffo-lang');
+    if(saved && data[saved]) initial = saved;
+  } catch(e){}
+  render(initial);
+})();
+</script>
+
+</body>
+</html>
