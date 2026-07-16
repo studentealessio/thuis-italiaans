@@ -214,14 +214,17 @@ line-height:1.55;
 .ex-app-promo-body strong{color:#f5b400;}
 .ex-app-btn{
 display:inline-flex;padding:12px 22px;border-radius:999px;
-background:var(--gold);color:#31394d !important;
+background:var(--gold) !important;
+color:#31394d !important;
 font-weight:700;font-size:.95rem;
 transition:var(--transition);
+border:none;
 }
 .ex-app-btn:hover{
 transform:translateY(-2px);
 box-shadow:0 10px 24px rgba(245,180,0,.35);
-background:#f5b400;
+background:#f5b400 !important;
+color:#31394d !important;
 }
 @media (max-width:640px){
 .ex-app-promo{
@@ -258,13 +261,17 @@ color:rgba(255,255,255,.9);font-size:.97rem;margin:0;line-height:1.55;
 .ex-app-promo-hero-text strong{color:#f5b400;}
 .ex-app-hero-btn{
 display:inline-flex;padding:14px 26px;border-radius:999px;
-background:#fff;color:#31394d !important;
+background:#fff !important;
+color:#31394d !important;
 font-weight:700;flex-shrink:0;
 transition:var(--transition);
+border:none;
 }
 .ex-app-hero-btn:hover{
 transform:translateY(-2px);
 box-shadow:0 12px 28px rgba(0,0,0,.2);
+background:#fff !important;
+color:#31394d !important;
 }
 @media (max-width:800px){
 .ex-app-promo-hero{padding:24px;}
