@@ -41,11 +41,30 @@
             box-shadow: 0 30px 70px rgba(49,57,77,.18);
         }
 
-        /* Screenshot carousel */
+        /* Screenshot carousels wrapper */
         .screenshots-section {
             padding: 110px 0 90px;
             background: var(--surface);
         }
+        .device-label {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 40px 0 4px;
+        }
+        .device-label h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary);
+        }
+        .device-label .device-count {
+            font-size: .85rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
         .screenshots-carousel {
             position: relative;
             width: 100%;
@@ -67,18 +86,29 @@
             background: var(--border);
             border-radius: 999px;
         }
+
+        /* iPhone shape: alto e stretto (9:19.5) */
         .screenshot-card {
             flex: 0 0 auto;
             scroll-snap-align: center;
-            width: 280px;
-            border-radius: 32px;
+            width: 260px;
+            border-radius: 34px;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(49,57,77,.15);
             background: var(--background);
+            display: flex;
+            flex-direction: column;
         }
-        .screenshot-card img {
+        .screenshot-card .phone-frame {
             width: 100%;
-            height: auto;
+            aspect-ratio: 9 / 19.5;
+            background: var(--surface);
+            overflow: hidden;
+        }
+        .screenshot-card .phone-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
         .screenshot-card figcaption {
@@ -88,6 +118,16 @@
             color: var(--primary);
             text-align: center;
             border-top: 1px solid var(--border);
+            line-height: 1.35;
+        }
+
+        /* iPad shape: 3:4 verticale, card più larga */
+        .ipad-track .screenshot-card {
+            width: 320px;
+            border-radius: 26px;
+        }
+        .ipad-track .screenshot-card .phone-frame {
+            aspect-ratio: 3 / 4;
         }
 
         /* Feature blocks */
@@ -121,16 +161,17 @@
             background: var(--surface);
             border-radius: var(--radius);
             padding: 40px;
-            aspect-ratio: 4/3;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--border);
+            aspect-ratio: 4/3;
         }
         .feature-visual img {
-            max-width: 100%;
+            max-width: 60%;
             max-height: 100%;
-            border-radius: 16px;
+            border-radius: 22px;
+            box-shadow: 0 15px 40px rgba(49,57,77,.12);
         }
 
         /* Final CTA */
@@ -164,10 +205,16 @@
             .feature-row.reverse {
                 direction: ltr;
             }
+            .feature-visual img {
+                max-width: 50%;
+            }
         }
         @media (max-width: 560px) {
             .screenshot-card {
-                width: 240px;
+                width: 220px;
+            }
+            .ipad-track .screenshot-card {
+                width: 270px;
             }
         }
     </style>
@@ -302,7 +349,7 @@
 
         </section>
 
-        <!-- ========= SCREENSHOTS CAROUSEL ========= -->
+        <!-- ========= SCREENSHOTS CAROUSELS ========= -->
         <section class="screenshots-section">
 
             <div class="container">
@@ -313,69 +360,183 @@
 
                     <h2>Ti in azione</h2>
 
-                    <p>Percorso, esercizi, edicola, dizionario e romanzi. Scorri per vedere.</p>
+                    <p>Scorri per vedere il percorso, gli esercizi, l'edicola e i romanzi.</p>
+
+                </div>
+
+                <!-- Etichetta iPhone -->
+                <div class="device-label">
+
+                    <h3>Su iPhone</h3>
+
+                    <span class="device-count">10 schermate</span>
 
                 </div>
 
             </div>
 
+            <!-- ========= CAROSELLO iPhone ========= -->
             <div class="screenshots-carousel">
 
                 <div class="screenshots-track">
 
                     <!--
-                        SOSTITUISCI QUESTE IMMAGINI CON LE TUE
+                        Metti i file in: assets/screenshots/iPhone/
                         Dimensione consigliata: 1290x2796 (iPhone 15 Pro Max)
-                        o 1170x2532 (iPhone 15 Pro).
-                        Metti i file in assets/screenshots/ e cambia i src.
+                        oppure 1284x2778 (iPhone 14 Plus)
                     -->
 
                     <figure class="screenshot-card">
-
-                        <img src="assets/screenshots/01-lingue.png" alt="Scegli la lingua di supporto">
-
-                        <figcaption>Capisci nella tua lingua</figcaption>
-
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/percorso.png" alt="Home del percorso">
+                        </div>
+                        <figcaption>Il percorso, dallo zero al C2</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
-
-                        <img src="assets/screenshots/02-percorso.png" alt="Percorso QCER A1-C2">
-
-                        <figcaption>Un corso vero, A1 → C2</figcaption>
-
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/view_percorso.png" alt="Dettaglio livello A1">
+                        </div>
+                        <figcaption>Ogni livello, tappa per tappa</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
-
-                        <img src="assets/screenshots/03-esercizi.png" alt="Esercizi e giochi">
-
-                        <figcaption>Esercizi che ti fanno parlare</figcaption>
-
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/grammatica.png" alt="Spiegazione grammaticale">
+                        </div>
+                        <figcaption>Grammatica nella tua lingua</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
-
-                        <img src="assets/screenshots/04-dizionario.png" alt="Dizionario con oltre 3000 parole">
-
-                        <figcaption>Dizionario con 3.000+ parole</figcaption>
-
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/tanti_giochi_view.png" alt="Sezione pratica ed esercizi">
+                        </div>
+                        <figcaption>Tanti modi per esercitarsi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
-
-                        <img src="assets/screenshots/05-classici.png" alt="Romanzi classici graduati">
-
-                        <figcaption>Leggi i grandi classici</figcaption>
-
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/gioco_comprensione.png" alt="Esercizio vero o falso">
+                        </div>
+                        <figcaption>Leggi e capisci</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/gioco_cruciverba.png" alt="Gioco cerca le parole">
+                        </div>
+                        <figcaption>Cerca le parole nascoste</figcaption>
+                    </figure>
 
-                        <img src="assets/screenshots/06-edicola.png" alt="Edicola dei libri tematici">
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/gioco_tabella_verbu.png" alt="Coniugazione verbi">
+                        </div>
+                        <figcaption>Coniuga i verbi</figcaption>
+                    </figure>
 
-                        <figcaption>Libri tematici in edicola</figcaption>
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/fine_percorso_feedback.png" alt="Tappa completata">
+                        </div>
+                        <figcaption>Tappa completata, ripassa</figcaption>
+                    </figure>
 
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/edicola_view.png" alt="L'edicola">
+                        </div>
+                        <figcaption>L'edicola: libri e romanzi</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPhone/romanzo_view.png" alt="Romanzo classico">
+                        </div>
+                        <figcaption>I classici, con dizionario integrato</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <!-- Etichetta iPad -->
+                <div class="device-label">
+
+                    <h3>Su iPad</h3>
+
+                    <span class="device-count">8 schermate</span>
+
+                </div>
+
+            </div>
+
+            <!-- ========= CAROSELLO iPad ========= -->
+            <div class="screenshots-carousel">
+
+                <div class="screenshots-track ipad-track">
+
+                    <!--
+                        File in: assets/screenshots/iPad/
+                        Dimensione originale: 2048x2732 (iPad Pro 12.9")
+                    -->
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/percorso_vista_a1-c2.png" alt="Home percorso, dallo zero al C2">
+                        </div>
+                        <figcaption>Il percorso, dallo zero al C2</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/percorso_vista_a1.png" alt="Dettaglio livello A1 con tappe">
+                        </div>
+                        <figcaption>Ogni livello, tappa per tappa</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/grammatica.png" alt="Spiegazione grammaticale nella tua lingua">
+                        </div>
+                        <figcaption>Grammatica nella tua lingua</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/tutti_i_giochi.png" alt="Tutti i tipi di esercizi disponibili">
+                        </div>
+                        <figcaption>Tanti modi per esercitarsi</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/_dialogo_cloze.png" alt="Dialogo con parola da completare">
+                        </div>
+                        <figcaption>Dialoghi da completare</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/cruciverba.png" alt="Cruciverba italiano">
+                        </div>
+                        <figcaption>Cruciverba per imparare</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/gioco_trova_intruso.png" alt="Gioco trova l'intruso">
+                        </div>
+                        <figcaption>Trova l'intruso</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img src="assets/screenshots/iPad/edicola.png" alt="Edicola con romanzi e percorsi tematici">
+                        </div>
+                        <figcaption>L'edicola: libri e romanzi</figcaption>
                     </figure>
 
                 </div>
@@ -425,8 +586,7 @@
 
                     <div class="feature-visual">
 
-                        <!-- Sostituisci con screenshot del percorso -->
-                        <img src="assets/screenshots/02-percorso.png" alt="Percorso QCER">
+                        <img src="assets/screenshots/iPhone/view_percorso.png" alt="Percorso QCER">
 
                     </div>
 
@@ -436,7 +596,7 @@
 
                     <div class="feature-text">
 
-                        <h3>L'edicola: libri tematici</h3>
+                        <h3>L'edicola: libri tematici e classici</h3>
 
                         <p>
 
@@ -449,8 +609,9 @@
 
                         <p>
 
-                            Catalogo in continua espansione. Compri solo
-                            quello che ti serve, quando ti serve.
+                            Accanto ai libri tematici, i grandi romanzi
+                            italiani: Manzoni, Verga, Pirandello, De Amicis,
+                            Serao, riscritti e graduati per il tuo livello.
 
                         </p>
 
@@ -458,8 +619,7 @@
 
                     <div class="feature-visual">
 
-                        <!-- Sostituisci con screenshot dell'edicola -->
-                        <img src="assets/screenshots/06-edicola.png" alt="Edicola">
+                        <img src="assets/screenshots/iPhone/edicola_view.png" alt="Edicola">
 
                     </div>
 
@@ -469,14 +629,15 @@
 
                     <div class="feature-text">
 
-                        <h3>I grandi classici, per il tuo livello</h3>
+                        <h3>I classici, con dizionario integrato</h3>
 
                         <p>
 
-                            Manzoni, Verga, Pirandello riscritti e graduati
-                            per il tuo livello QCER. Vocabolario a portata
-                            di parola, comprensione guidata, storie che ti
-                            fanno girare pagina — non solo studiare.
+                            Ogni parola difficile è a portata di tap:
+                            definizione dry, note del prof su contesto e
+                            cultura, sinonimi e famiglie di parole.
+                            Comprensione guidata mentre leggi, senza uscire
+                            dal romanzo.
 
                         </p>
 
@@ -491,8 +652,7 @@
 
                     <div class="feature-visual">
 
-                        <!-- Sostituisci con screenshot dei romanzi -->
-                        <img src="assets/screenshots/05-classici.png" alt="Romanzi classici">
+                        <img src="assets/screenshots/iPhone/romanzo_view.png" alt="Romanzo classico">
 
                     </div>
 
@@ -519,8 +679,7 @@
 
                     <div class="feature-visual">
 
-                        <!-- Sostituisci con screenshot delle lingue -->
-                        <img src="assets/screenshots/01-lingue.png" alt="Selezione lingua">
+                        <img src="assets/screenshots/iPhone/grammatica.png" alt="Grammatica multilingua">
 
                     </div>
 
