@@ -662,3 +662,43 @@ width:100%;
 text-align:center;
 }
 }
+
+/* ========= APP PROMO CARD (secondaria) ========= */
+.article-sidebar .sidebar-card + .sidebar-card{
+margin-top:20px;
+}
+.sidebar-card-app{
+background:linear-gradient(160deg,#31394d 0%,#3f4a66 100%);
+border-color:transparent;
+color:#fff;
+}
+.sidebar-card-app h3{
+color:#fff;
+}
+.sidebar-card-app p{
+color:rgba(255,255,255,.85);
+}
+.sidebar-card-app .button-app{
+display:inline-flex;
+width:100%;
+justify-content:center;
+padding:14px 20px;
+border-radius:999px;
+background:var(--gold);
+color:#31394d;
+font-weight:700;
+transition:var(--transition);
+margin-bottom:0;
+}
+.sidebar-card-app .button-app:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 28px rgba(245,180,0,.35);
+}
+@media (max-width:1000px){
+.article-sidebar .sidebar-card + .sidebar-card{
+margin-top:16px;
+}
+.sidebar-card-app .button-app{
+width:auto;
+}
+}
