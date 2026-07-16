@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ti — Impara l'italiano davvero | Thuis Italiaans</title>
+
+    <meta name="description" content="Ti è l'app per imparare l'italiano dallo zero al C2. Percorso QCER, edicola tematica, romanzi classici graduati, dizionario con oltre 3.000 parole. 14 lingue di supporto.">
+
+    <meta name="theme-color" content="#31394d">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="canonical" href="https://thuisitaliaans.com/marketing.html">
+
+    <!-- ========= STILI SPECIFICI PER QUESTA PAGINA ========= -->
+    <style>
+        /* Hero app icon */
+        .app-icon-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app-icon {
+            width: min(340px, 80vw);
+            height: auto;
+            border-radius: 60px;
+            box-shadow: 0 30px 70px rgba(49,57,77,.18);
+        }
+
+        /* Screenshot carousel */
+        .screenshots-section {
+            padding: 110px 0 90px;
+            background: var(--surface);
+        }
+        .screenshots-carousel {
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .screenshots-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 20px calc((100vw - min(92%, var(--container))) / 2) 30px;
+            scrollbar-width: thin;
+        }
+        .screenshots-track::-webkit-scrollbar {
+            height: 6px;
+        }
+        .screenshots-track::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 999px;
+        }
+        .screenshot-card {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            width: 280px;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(49,57,77,.15);
+            background: var(--background);
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .screenshot-card figcaption {
+            padding: 18px 20px;
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--primary);
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Feature blocks */
+        .features {
+            padding: 110px 0;
+        }
+        .feature-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 90px;
+        }
+        .feature-row:last-child {
+            margin-bottom: 0;
+        }
+        .feature-row.reverse {
+            direction: rtl;
+        }
+        .feature-row.reverse > * {
+            direction: ltr;
+        }
+        .feature-text h3 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+        .feature-text p {
+            margin-bottom: 14px;
+        }
+        .feature-visual {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 40px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+        .feature-visual img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 16px;
+        }
+
+        /* Final CTA */
+        .cta-section {
+            padding: 110px 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        .cta-section h2 {
+            color: white;
+            max-width: 720px;
+            margin: 0 auto 20px;
+        }
+        .cta-section p {
+            color: rgba(255,255,255,.75);
+            max-width: 560px;
+            margin: 0 auto 40px;
+            font-size: 1.15rem;
+        }
+        .cta-section .button {
+            background: white;
+            color: var(--primary);
+        }
+
+        @media (max-width: 900px) {
+            .feature-row {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .feature-row.reverse {
+                direction: ltr;
+            }
+        }
+        @media (max-width: 560px) {
+            .screenshot-card {
+                width: 240px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+
+                <img src="assets/icons/icon-512.png" alt="Thuis Italiaans" class="logo-mark">
+
+            </a>
+
+            <nav>
+
+                <ul class="nav-menu">
+
+                    <li><a href="marketing.html">L'app Ti</a></li>
+
+                    <li><a href="support.html">Supporto</a></li>
+
+                    <li><a href="privacy.html">Privacy</a></li>
+
+                    <li><a href="index.html">Homepage</a></li>
+
+                </ul>
+
+            </nav>
+
+            <a href="#download" class="button">
+
+                Scarica
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- ========= HERO ========= -->
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <span class="hero-tag">Disponibile su App Store</span>
+
+                    <h1>Impara l'italiano davvero.</h1>
+
+                    <p class="hero-text">
+
+                        Ti è l'app per portarti dallo zero al C2 seguendo il
+                        percorso QCER, con un metodo pensato per farti
+                        parlare, capire, leggere e scrivere in italiano
+                        vero — quello di tutti i giorni, non da manuale.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#download" class="button">Scarica su App Store</a>
+
+                    </div>
+
+                    <div class="hero-rating">
+
+                        <span class="stars">★★★★★</span>
+
+                        <p>Nuova su App Store · 14 lingue di supporto</p>
+
+                    </div>
+
+                </div>
+
+                <div class="app-icon-wrap">
+
+                    <!-- Sostituisci con l'icona alta risoluzione dell'app -->
+                    <img src="assets/icons/icon-512.png" alt="Icona Ti" class="app-icon">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========= TRUST / KEY NUMBERS ========= -->
+        <section class="trust">
+
+            <div class="container trust-grid">
+
+                <article>
+
+                    <h3>A1 → C2</h3>
+
+                    <p>Percorso QCER completo, con checkpoint ed esami di livello.</p>
+
+                </article>
+
+                <article>
+
+                    <h3>14 lingue</h3>
+
+                    <p>Grammatica e traduzioni in 14 lingue, non solo in inglese.</p>
+
+                </article>
+
+                <article>
+
+                    <h3>3.000+</h3>
+
+                    <p>Parole nel dizionario, con esempi, sinonimi e famiglie.</p>
+
+                </article>
+
+                <article>
+
+                    <h3>Classici</h3>
+
+                    <p>Romanzi italiani riscritti e graduati per il tuo livello.</p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ========= SCREENSHOTS CAROUSEL ========= -->
+        <section class="screenshots-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Guarda</span>
+
+                    <h2>Ti in azione</h2>
+
+                    <p>Percorso, esercizi, edicola, dizionario e romanzi. Scorri per vedere.</p>
+
+                </div>
+
+            </div>
+
+            <div class="screenshots-carousel">
+
+                <div class="screenshots-track">
+
+                    <!--
+                        SOSTITUISCI QUESTE IMMAGINI CON LE TUE
+                        Dimensione consigliata: 1290x2796 (iPhone 15 Pro Max)
+                        o 1170x2532 (iPhone 15 Pro).
+                        Metti i file in assets/screenshots/ e cambia i src.
+                    -->
+
+                    <figure class="screenshot-card">
+
+                        <img src="assets/screenshots/01-lingue.png" alt="Scegli la lingua di supporto">
+
+                        <figcaption>Capisci nella tua lingua</figcaption>
+
+                    </figure>
+
+                    <figure class="screenshot-card">
+
+                        <img src="assets/screenshots/02-percorso.png" alt="Percorso QCER A1-C2">
+
+                        <figcaption>Un corso vero, A1 → C2</figcaption>
+
+                    </figure>
+
+                    <figure class="screenshot-card">
+
+                        <img src="assets/screenshots/03-esercizi.png" alt="Esercizi e giochi">
+
+                        <figcaption>Esercizi che ti fanno parlare</figcaption>
+
+                    </figure>
+
+                    <figure class="screenshot-card">
+
+                        <img src="assets/screenshots/04-dizionario.png" alt="Dizionario con oltre 3000 parole">
+
+                        <figcaption>Dizionario con 3.000+ parole</figcaption>
+
+                    </figure>
+
+                    <figure class="screenshot-card">
+
+                        <img src="assets/screenshots/05-classici.png" alt="Romanzi classici graduati">
+
+                        <figcaption>Leggi i grandi classici</figcaption>
+
+                    </figure>
+
+                    <figure class="screenshot-card">
+
+                        <img src="assets/screenshots/06-edicola.png" alt="Edicola dei libri tematici">
+
+                        <figcaption>Libri tematici in edicola</figcaption>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========= FEATURES DETAIL ========= -->
+        <section class="features">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Perché Ti</span>
+
+                    <h2>Non un'app di parole. Un corso.</h2>
+
+                    <p>Quello che ti aspetteresti da un manuale serio, con il ritmo di un'app.</p>
+
+                </div>
+
+                <div class="feature-row">
+
+                    <div class="feature-text">
+
+                        <h3>Il percorso QCER completo</h3>
+
+                        <p>
+
+                            Dallo zero al C2 seguendo i livelli ufficiali europei.
+                            Ogni livello ha tappe di grammatica, vocabolario,
+                            cultura e comprensione, con checkpoint ed esami di
+                            livello.
+
+                        </p>
+
+                        <p>
+
+                            Sai sempre dove sei e cosa manca per il prossimo
+                            scalino.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-visual">
+
+                        <!-- Sostituisci con screenshot del percorso -->
+                        <img src="assets/screenshots/02-percorso.png" alt="Percorso QCER">
+
+                    </div>
+
+                </div>
+
+                <div class="feature-row reverse">
+
+                    <div class="feature-text">
+
+                        <h3>L'edicola: libri tematici</h3>
+
+                        <p>
+
+                            La dolce vita, la carriera, il gergo dei giovani,
+                            gli italiani famosi, viaggi, moda, motori,
+                            università, burocrazia. Ogni libro copre un
+                            aspetto dell'italiano vivo, dall'A1 al C2.
+
+                        </p>
+
+                        <p>
+
+                            Catalogo in continua espansione. Compri solo
+                            quello che ti serve, quando ti serve.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-visual">
+
+                        <!-- Sostituisci con screenshot dell'edicola -->
+                        <img src="assets/screenshots/06-edicola.png" alt="Edicola">
+
+                    </div>
+
+                </div>
+
+                <div class="feature-row">
+
+                    <div class="feature-text">
+
+                        <h3>I grandi classici, per il tuo livello</h3>
+
+                        <p>
+
+                            Manzoni, Verga, Pirandello riscritti e graduati
+                            per il tuo livello QCER. Vocabolario a portata
+                            di parola, comprensione guidata, storie che ti
+                            fanno girare pagina — non solo studiare.
+
+                        </p>
+
+                        <p>
+
+                            Leggi la letteratura italiana dal primo giorno,
+                            senza sentirti sopraffatto.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-visual">
+
+                        <!-- Sostituisci con screenshot dei romanzi -->
+                        <img src="assets/screenshots/05-classici.png" alt="Romanzi classici">
+
+                    </div>
+
+                </div>
+
+                <div class="feature-row reverse">
+
+                    <div class="feature-text">
+
+                        <h3>14 lingue di supporto</h3>
+
+                        <p>
+
+                            Non solo inglese, come quasi tutte le altre app.
+                            Ti è pensata anche per chi vive e lavora in Italia
+                            e non trova mai la propria lingua nelle altre
+                            app: albanese, arabo, bengalese, cinese, francese,
+                            inglese, olandese, portoghese, rumeno, spagnolo,
+                            tagalog, tedesco, tigrino, ucraino.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-visual">
+
+                        <!-- Sostituisci con screenshot delle lingue -->
+                        <img src="assets/screenshots/01-lingue.png" alt="Selezione lingua">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========= FINAL CTA ========= -->
+        <section id="download" class="cta-section">
+
+            <div class="container">
+
+                <h2>L'italiano vero ti aspetta.</h2>
+
+                <p>Scarica Ti e comincia il percorso. Il download è gratuito, il percorso QCER e il dizionario sono inclusi.</p>
+
+                <a href="#" class="button">Scarica su App Store</a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container footer-grid">
+
+            <a href="index.html" class="logo">
+
+                <img src="assets/icons/icon-512.png" alt="Thuis Italiaans" class="logo-mark">
+
+            </a>
+
+            <ul class="nav-menu">
+
+                <li><a href="marketing.html">L'app Ti</a></li>
+
+                <li><a href="support.html">Supporto</a></li>
+
+                <li><a href="privacy.html">Privacy</a></li>
+
+                <li><a href="index.html">Homepage</a></li>
+
+            </ul>
+
+            <p class="footer-copy">© 2026 Thuis Italiaans. Alle rechten voorbehouden.</p>
+
+        </div>
+
+        <div class="container footer-legal">
+
+            <p>In behandeling bij de KvK</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
