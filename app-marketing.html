@@ -121,17 +121,21 @@
 
     <!-- ========= STILI SPECIFICI PER QUESTA PAGINA ========= -->
     <style>
-        /* Hero app icon */
+        /* Hero phone mockup (era app-icon) */
         .app-icon-wrap {
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .app-icon {
-            width: min(340px, 80vw);
+            width: min(260px, 65vw);
+            aspect-ratio: 9 / 19.5;
             height: auto;
-            border-radius: 60px;
+            border-radius: 42px;
+            object-fit: cover;
+            background: var(--surface);
             box-shadow: 0 30px 70px rgba(49,57,77,.18);
+            display: block;
         }
 
         /* Screenshot carousels wrapper */
@@ -144,6 +148,7 @@
             align-items: center;
             gap: 14px;
             margin: 40px 0 4px;
+            flex-wrap: wrap;
         }
         .device-label h3 {
             font-size: 1.05rem;
@@ -153,9 +158,10 @@
             color: var(--primary);
         }
         .device-label .device-count {
-            font-size: .85rem;
+            font-size: .95rem;
             color: var(--secondary);
             font-weight: 500;
+            font-style: italic;
         }
 
         .screenshots-carousel {
@@ -471,8 +477,8 @@
 
                 <div class="app-icon-wrap">
 
-                    <!-- Sostituisci con l'icona alta risoluzione dell'app -->
-                    <img src="assets/icons/icon-512.png" alt="Icona Ti" class="app-icon">
+                    <!-- Screenshot iPhone del percorso, al posto della vecchia icona -->
+                    <img src="assets/screenshots/iPhone/percorso.png" alt="Il percorso di Ti su iPhone" class="app-icon">
 
                 </div>
 
@@ -541,7 +547,7 @@
 
                     <h3 data-i18n="scr_iphone">Su iPhone</h3>
 
-                    <span class="device-count" data-i18n="scr_iphone_count">10 schermate</span>
+                    <span class="device-count" data-i18n="scr_iphone_count">Ovunque tu sia</span>
 
                 </div>
 
@@ -639,7 +645,7 @@
 
                     <h3 data-i18n="scr_ipad">Su iPad</h3>
 
-                    <span class="device-count" data-i18n="scr_ipad_count">8 schermate</span>
+                    <span class="device-count" data-i18n="scr_ipad_count">Comodo per lo studio</span>
 
                 </div>
 
@@ -888,9 +894,9 @@
     "scr_h2": "Ti in azione",
     "scr_p": "Scorri per vedere il percorso, gli esercizi, l'edicola e i romanzi.",
     "scr_iphone": "Su iPhone",
-    "scr_iphone_count": "10 schermate",
+    "scr_iphone_count": "Ovunque tu sia",
     "scr_ipad": "Su iPad",
-    "scr_ipad_count": "8 schermate",
+    "scr_ipad_count": "Comodo per lo studio",
     "cap_percorso": "Percorso",
     "cap_vista_percorso": "Vista percorso",
     "cap_grammatica": "Grammatica",
@@ -945,9 +951,9 @@
     "scr_h2": "Ti in actie",
     "scr_p": "Scroll om het pad, de oefeningen, de edicola en de romans te zien.",
     "scr_iphone": "Op iPhone",
-    "scr_iphone_count": "10 schermen",
+    "scr_iphone_count": "Waar je ook bent",
     "scr_ipad": "Op iPad",
-    "scr_ipad_count": "8 schermen",
+    "scr_ipad_count": "Comfortabel bij het studeren",
     "cap_percorso": "Pad",
     "cap_vista_percorso": "Padoverzicht",
     "cap_grammatica": "Grammatica",
@@ -1003,9 +1009,9 @@
     "scr_h2": "Ti in action",
     "scr_p": "Scroll to see the path, the exercises, the edicola and the novels.",
     "scr_iphone": "On iPhone",
-    "scr_iphone_count": "10 screens",
+    "scr_iphone_count": "Wherever you are",
     "scr_ipad": "On iPad",
-    "scr_ipad_count": "8 screens",
+    "scr_ipad_count": "Comfortable while you study",
     "cap_percorso": "Path",
     "cap_vista_percorso": "Path view",
     "cap_grammatica": "Grammar",
@@ -1061,9 +1067,9 @@
     "scr_h2": "Ti en acción",
     "scr_p": "Desplaza para ver el recorrido, los ejercicios, el kiosco y las novelas.",
     "scr_iphone": "En iPhone",
-    "scr_iphone_count": "10 pantallas",
+    "scr_iphone_count": "Dondequiera que estés",
     "scr_ipad": "En iPad",
-    "scr_ipad_count": "8 pantallas",
+    "scr_ipad_count": "Cómodo para estudiar",
     "cap_percorso": "Recorrido",
     "cap_vista_percorso": "Vista recorrido",
     "cap_grammatica": "Gramática",
@@ -1119,9 +1125,9 @@
     "scr_h2": "Ti en action",
     "scr_p": "Fais défiler pour voir le parcours, les exercices, l'edicola et les romans.",
     "scr_iphone": "Sur iPhone",
-    "scr_iphone_count": "10 écrans",
+    "scr_iphone_count": "Où que tu sois",
     "scr_ipad": "Sur iPad",
-    "scr_ipad_count": "8 écrans",
+    "scr_ipad_count": "À l'aise pour étudier",
     "cap_percorso": "Parcours",
     "cap_vista_percorso": "Vue parcours",
     "cap_grammatica": "Grammaire",
@@ -1177,9 +1183,9 @@
     "scr_h2": "Ti in Aktion",
     "scr_p": "Scrolle, um Weg, Übungen, Edicola und Romane zu sehen.",
     "scr_iphone": "Auf dem iPhone",
-    "scr_iphone_count": "10 Bildschirme",
+    "scr_iphone_count": "Wo immer du bist",
     "scr_ipad": "Auf dem iPad",
-    "scr_ipad_count": "8 Bildschirme",
+    "scr_ipad_count": "Bequem beim Lernen",
     "cap_percorso": "Weg",
     "cap_vista_percorso": "Wegansicht",
     "cap_grammatica": "Grammatik",
@@ -1235,9 +1241,9 @@
     "scr_h2": "Ti em ação",
     "scr_p": "Desliza para veres o percurso, os exercícios, a edicola e os romances.",
     "scr_iphone": "No iPhone",
-    "scr_iphone_count": "10 ecrãs",
+    "scr_iphone_count": "Onde quer que estejas",
     "scr_ipad": "No iPad",
-    "scr_ipad_count": "8 ecrãs",
+    "scr_ipad_count": "Confortável para estudar",
     "cap_percorso": "Percurso",
     "cap_vista_percorso": "Vista percurso",
     "cap_grammatica": "Gramática",
@@ -1293,9 +1299,9 @@
     "scr_h2": "Ti în acțiune",
     "scr_p": "Derulează pentru a vedea traseul, exercițiile, edicola și romanele.",
     "scr_iphone": "Pe iPhone",
-    "scr_iphone_count": "10 ecrane",
+    "scr_iphone_count": "Oriunde ai fi",
     "scr_ipad": "Pe iPad",
-    "scr_ipad_count": "8 ecrane",
+    "scr_ipad_count": "Comod pentru studiu",
     "cap_percorso": "Traseu",
     "cap_vista_percorso": "Vedere traseu",
     "cap_grammatica": "Gramatică",
@@ -1351,9 +1357,9 @@
     "scr_h2": "Ti në veprim",
     "scr_p": "Rrëshqit për të parë rrugën, ushtrimet, edicola-n dhe romanet.",
     "scr_iphone": "Në iPhone",
-    "scr_iphone_count": "10 ekrane",
+    "scr_iphone_count": "Kudo që të jesh",
     "scr_ipad": "Në iPad",
-    "scr_ipad_count": "8 ekrane",
+    "scr_ipad_count": "Rehat për të studiuar",
     "cap_percorso": "Rruga",
     "cap_vista_percorso": "Pamja e rrugës",
     "cap_grammatica": "Gramatikë",
@@ -1409,9 +1415,9 @@
     "scr_h2": "Ti أثناء العمل",
     "scr_p": "مرّر لرؤية المسار والتمارين والكشك والروايات.",
     "scr_iphone": "على iPhone",
-    "scr_iphone_count": "10 شاشات",
+    "scr_iphone_count": "أينما كنت",
     "scr_ipad": "على iPad",
-    "scr_ipad_count": "8 شاشات",
+    "scr_ipad_count": "مريح أثناء الدراسة",
     "cap_percorso": "المسار",
     "cap_vista_percorso": "عرض المسار",
     "cap_grammatica": "القواعد",
@@ -1467,9 +1473,9 @@
     "scr_h2": "Ti কাজ করছে",
     "scr_p": "পথ, ব্যায়াম, এডিকোলা এবং উপন্যাস দেখতে স্ক্রল করুন।",
     "scr_iphone": "iPhone-এ",
-    "scr_iphone_count": "১০টি স্ক্রিন",
+    "scr_iphone_count": "যেখানেই থাকুন না কেন",
     "scr_ipad": "iPad-এ",
-    "scr_ipad_count": "৮টি স্ক্রিন",
+    "scr_ipad_count": "পড়াশোনার সময় আরামদায়ক",
     "cap_percorso": "পথ",
     "cap_vista_percorso": "পথ দর্শন",
     "cap_grammatica": "ব্যাকরণ",
@@ -1525,9 +1531,9 @@
     "scr_h2": "Ti 实战",
     "scr_p": "滚动查看路径、练习、书报亭和小说。",
     "scr_iphone": "iPhone 上",
-    "scr_iphone_count": "10 张截图",
+    "scr_iphone_count": "无论你在哪里",
     "scr_ipad": "iPad 上",
-    "scr_ipad_count": "8 张截图",
+    "scr_ipad_count": "学习时更舒适",
     "cap_percorso": "路径",
     "cap_vista_percorso": "路径视图",
     "cap_grammatica": "语法",
@@ -1583,9 +1589,9 @@
     "scr_h2": "Ti sa aksyon",
     "scr_p": "Mag-scroll para makita ang daan, mga pagsasanay, ang edicola at mga nobela.",
     "scr_iphone": "Sa iPhone",
-    "scr_iphone_count": "10 screen",
+    "scr_iphone_count": "Saan ka man naroroon",
     "scr_ipad": "Sa iPad",
-    "scr_ipad_count": "8 screen",
+    "scr_ipad_count": "Kumportable sa pag-aaral",
     "cap_percorso": "Daan",
     "cap_vista_percorso": "Tanaw ng daan",
     "cap_grammatica": "Grammar",
@@ -1641,9 +1647,9 @@
     "scr_h2": "Ti ኣብ ስራሕ",
     "scr_p": "ንመገዲ፣ ንልምምዳት፣ ንኤዲኮላን ንልብ-ወለዳትን ንምርኣይ ኣንሸራሸር።",
     "scr_iphone": "ኣብ iPhone",
-    "scr_iphone_count": "10 ስክሪናት",
+    "scr_iphone_count": "ኣበይ እንተለኻ",
     "scr_ipad": "ኣብ iPad",
-    "scr_ipad_count": "8 ስክሪናት",
+    "scr_ipad_count": "ንትምህርቲ ምችኡ",
     "cap_percorso": "መገዲ",
     "cap_vista_percorso": "ናይ መገዲ ትርኢት",
     "cap_grammatica": "ግራመር",
@@ -1699,9 +1705,9 @@
     "scr_h2": "Ti у дії",
     "scr_p": "Гортай, щоб побачити шлях, вправи, edicola та романи.",
     "scr_iphone": "На iPhone",
-    "scr_iphone_count": "10 екранів",
+    "scr_iphone_count": "Де б ти не був",
     "scr_ipad": "На iPad",
-    "scr_ipad_count": "8 екранів",
+    "scr_ipad_count": "Зручно для навчання",
     "cap_percorso": "Шлях",
     "cap_vista_percorso": "Огляд шляху",
     "cap_grammatica": "Граматика",
