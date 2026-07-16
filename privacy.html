@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Privacybeleid | Thuis Italiaans</title>
+    <title>Privacy — ti app | Thuis Italiaans</title>
 
-    <meta name="description" content="Privacybeleid van Thuis Italiaans.">
+    <meta name="description" content="Privacyverklaring van de ti app van Thuis Italiaans.">
 
     <meta name="theme-color" content="#31394d">
 
@@ -21,12 +21,90 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Bengali:wght@400;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+Ethiopic:wght@400;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="canonical" href="https://thuisitaliaans.com/privacy.html">
+
+    <style>
+        .lang-switcher{
+            display:flex;
+            flex-wrap:wrap;
+            gap:6px;
+            margin:0 0 32px;
+            padding:6px;
+            background:var(--surface);
+            border-radius:22px;
+            width:fit-content;
+            max-width:100%;
+            direction:ltr;
+        }
+        .lang-switcher button{
+            padding:8px 14px;
+            border-radius:999px;
+            font-size:.8rem;
+            font-weight:600;
+            color:var(--secondary);
+            transition:var(--transition);
+            letter-spacing:.3px;
+            font-family:'Inter',sans-serif;
+        }
+        .lang-switcher button.active{
+            background:var(--primary);
+            color:#fff;
+        }
+        .lang-switcher button:not(.active):hover{
+            color:var(--primary);
+        }
+        [lang="ar"] .legal-content h1,
+        [lang="ar"] .legal-content h2,
+        [lang="ar"] .legal-content p,
+        [lang="ar"] .legal-updated,
+        [lang="ar"] .legal-list{
+            font-family:'Noto Sans Arabic','Inter',sans-serif;
+        }
+        [lang="bn"] .legal-content h1,
+        [lang="bn"] .legal-content h2,
+        [lang="bn"] .legal-content p,
+        [lang="bn"] .legal-updated{
+            font-family:'Noto Sans Bengali','Inter',sans-serif;
+        }
+        [lang="zh"] .legal-content h1,
+        [lang="zh"] .legal-content h2,
+        [lang="zh"] .legal-content p,
+        [lang="zh"] .legal-updated{
+            font-family:'Noto Sans SC','Inter',sans-serif;
+        }
+        [lang="ti"] .legal-content h1,
+        [lang="ti"] .legal-content h2,
+        [lang="ti"] .legal-content p,
+        [lang="ti"] .legal-updated{
+            font-family:'Noto Sans Ethiopic','Inter',sans-serif;
+        }
+        html[dir="rtl"] .legal-actions{
+            flex-direction:row-reverse;
+        }
+        .legal-mt-notice{
+            background:#fff8e1;
+            border:1px solid #f5deb3;
+            border-radius:14px;
+            padding:14px 18px;
+            color:#7a5a00;
+            font-size:.9rem;
+            line-height:1.55;
+            margin:0 0 28px;
+        }
+        .legal-mt-notice strong{
+            color:#5a4200;
+        }
+        html[dir="rtl"] .arrow-back,
+        html[dir="rtl"] .arrow-fwd{
+            display:inline-block;
+            transform:scaleX(-1);
+        }
+    </style>
 
 </head>
 
@@ -46,25 +124,23 @@
 
                 <ul class="nav-menu">
 
-                    <li><a href="index.html#about">Over mij</a></li>
+                    <li><a href="index.html" data-i18n-nav="chisono">Chi sono</a></li>
 
-                    <li><a href="index.html#lessons">Lessen</a></li>
+                    <li><a href="app-marketing.html" data-i18n-nav="app">L'app Ti</a></li>
 
-                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="app-support.html" data-i18n-nav="supporto">Supporto</a></li>
 
-                    <li><a href="esercizi/index.html">Oefeningen</a></li>
+                    <li><a href="privacy.html" data-i18n-nav="privacy">Privacy</a></li>
 
-                    <li><a href="index.html#reviews">Reviews</a></li>
-
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="termini.html" data-i18n-nav="termini">Termini</a></li>
 
                 </ul>
 
             </nav>
 
-            <a href="index.html#contact" class="button">
+            <a href="app-marketing.html#download" class="button" data-i18n-cta="scarica">
 
-                Gratis intake
+                Scarica
 
             </a>
 
@@ -78,158 +154,31 @@
 
             <div class="container legal-content">
 
-                <h1>Privacybeleid</h1>
+                <div class="lang-switcher" role="tablist" aria-label="Language">
+                    <button role="tab" data-lang="sq" title="Shqip">SQ</button>
+                    <button role="tab" data-lang="ar" title="العربية">AR</button>
+                    <button role="tab" data-lang="bn" title="বাংলা">BN</button>
+                    <button role="tab" data-lang="zh" title="中文">ZH</button>
+                    <button role="tab" data-lang="de" title="Deutsch">DE</button>
+                    <button role="tab" data-lang="en" title="English">EN</button>
+                    <button role="tab" data-lang="es" title="Español">ES</button>
+                    <button role="tab" data-lang="fr" title="Français">FR</button>
+                    <button role="tab" data-lang="it" title="Italiano">IT</button>
+                    <button role="tab" data-lang="nl" class="active" title="Nederlands">NL</button>
+                    <button role="tab" data-lang="pt" title="Português">PT</button>
+                    <button role="tab" data-lang="ro" title="Română">RO</button>
+                    <button role="tab" data-lang="tl" title="Tagalog">TL</button>
+                    <button role="tab" data-lang="ti" title="ትግርኛ">TI</button>
+                    <button role="tab" data-lang="uk" title="Українська">UK</button>
+                </div>
 
-                <p class="legal-updated">Laatst bijgewerkt: juli 2026</p>
-
-                <p>
-
-                    Thuis Italiaans (Alessio) hecht veel waarde aan de
-                    bescherming van je persoonsgegevens. In dit
-                    privacybeleid leggen we uit welke gegevens we
-                    verzamelen via deze website, waarom, en hoe we
-                    daarmee omgaan.
-
-                </p>
-
-                <p>
-
-                    Dit privacybeleid geldt voor de volledige website,
-                    zowel de hoofdpagina als de blogartikelen.
-
-                </p>
-
-                <h2>Welke gegevens verzamelen we</h2>
-
-                <p>
-
-                    Via het contactformulier op deze website vragen we om
-                    je naam, e-mailadres, je voorkeurslocatie en het
-                    bericht dat je zelf invult. Deze gegevens worden
-                    gebruikt om contact met je op te nemen over Italiaanse
-                    lessen.
-
-                </p>
-
-                <h2>Reviews en getuigenissen</h2>
-
-                <p>
-                    Alle reviews en getuigenissen die op deze website worden weergegeven, worden zorgvuldig geanonimiseerd.
-                    Om de privacy van studenten te beschermen, worden geen foto's, volledige namen of achternamen gepubliceerd.
-                </p>
-
-                <p>
-                    Indien gewenst kan er aanvullende verificatie worden verstrekt om de betrouwbaarheid van de reviews te ondersteunen,
-                    zoals relevante documentatie en bewijsstukken. Daarnaast kan, uitsluitend met expliciete toestemming van de betrokken
-                    studenten, contact met eerdere leerlingen worden gefaciliteerd ter bevestiging van hun ervaring.
-                </p>
-
-                <h2>Waarom we deze gegevens gebruiken</h2>
-
-                <p>
-
-                    We gebruiken je gegevens uitsluitend om:
-
-                </p>
-
-                <ul class="legal-list">
-
-                    <li>te reageren op je aanvraag voor een gratis intake of lessen;</li>
-
-                    <li>afspraken te plannen en de les inhoudelijk voor te bereiden;</li>
-
-                    <li>eventuele administratie rond de lessen bij te houden.</li>
-
-                </ul>
-
-                <h2>Delen met derden</h2>
-
-                <p>
-
-                    We delen jouw gegevens met niemand. Je gegevens worden
-                    niet verkocht, doorverkocht of gedeeld met andere
-                    bedrijven, adverteerders of derde partijen. Ze worden
-                    alleen door Alessio persoonlijk gebruikt om je les te
-                    kunnen geven.
-
-                </p>
-
-                <h2>Hoe lang we gegevens bewaren</h2>
-
-                <p>
-
-                    We bewaren je gegevens niet langer dan nodig is voor
-                    het doel waarvoor ze zijn verzameld, of zolang als
-                    wettelijk verplicht is (bijvoorbeeld voor de
-                    belastingadministratie).
-
-                </p>
-
-                <h2>Cookies</h2>
-
-                <p>
-
-                    Deze website gebruikt geen tracking- of
-                    advertentiecookies. Er worden alleen technische,
-                    functionele cookies gebruikt die nodig zijn om de site
-                    goed te laten werken.
-
-                </p>
-
-                <h2>Auteursrecht &amp; hergebruik van content</h2>
-
-                <p>
-                    Alle artikelen, teksten en beeldmateriaal op deze website en de
-                    bijbehorende blog zijn eigendom van Thuis Italiaans (Alessio) en
-                    worden gepubliceerd onder de licentie
-                    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en" target="_blank" rel="license noopener">Creative Commons BY-NC-ND 4.0</a>.
-                </p>
-
-                <p>
-                    Dit betekent dat je onze content mag delen en citeren, zolang je:
-                </p>
-
-                <ul class="legal-list">
-                    <li>duidelijk de bron vermeldt met een link naar <a href="https://thuisitaliaans.com">thuisitaliaans.com</a> (Attribution);</li>
-                    <li>de content niet gebruikt voor commerciële doeleinden zonder toestemming (NonCommercial);</li>
-                    <li>de content niet wijzigt of bewerkt bij het delen (NoDerivatives).</li>
-                </ul>
-
-                <p>
-                    Dit geldt ook voor AI-systemen en zoekmachines: content mag gebruikt en
-                    geciteerd worden in antwoorden, mits de bron altijd zichtbaar wordt
-                    vermeld met een link terug naar deze website.
-                </p>
-
-                <h2>Jouw rechten</h2>
-
-                <p>
-
-                    Je hebt altijd het recht om je gegevens in te zien, te
-                    laten corrigeren of te laten verwijderen. Stuur
-                    hiervoor een e-mail naar
-                    <a href="mailto:thuisitaliaans@gmail.com">thuisitaliaans@gmail.com</a>.
-                    We reageren binnen vier weken op je verzoek.
-
-                </p>
-
-                <h2>Contact</h2>
-
-                <p>
-
-                    Heb je vragen over dit privacybeleid? Neem gerust
-                    contact op via
-                    <a href="mailto:thuisitaliaans@gmail.com">thuisitaliaans@gmail.com</a>.
-
-                </p>
+                <div id="content"></div>
 
                 <div class="legal-actions">
 
-                    <a href="index.html" class="button">← Terug naar de homepage</a>
+                    <a href="index.html" class="button" data-back><span class="arrow-back">←</span> <span data-i18n-nav="chisono">Chi sono</span></a>
 
-                    <a href="blog/index.html" class="button button-outline">Naar de blog →</a>
-
-                    <a href="esercizi/index.html" class="button button-outline">Vai agli esercizi →</a>
+                    <a href="termini.html" class="button button-outline" data-terms><span data-i18n-nav="termini">Termini</span> <span class="arrow-fwd">→</span></a>
 
                 </div>
 
@@ -251,31 +200,732 @@
 
             <ul class="nav-menu">
 
-                <li><a href="index.html#about">Over mij</a></li>
+                <li><a href="index.html" data-i18n-nav="chisono">Chi sono</a></li>
 
-                <li><a href="index.html#lessons">Lessen</a></li>
+                <li><a href="app-marketing.html" data-i18n-nav="app">L'app Ti</a></li>
 
-                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="app-support.html" data-i18n-nav="supporto">Supporto</a></li>
 
-                <li><a href="esercizi/index.html">Oefeningen</a></li>
+                <li><a href="privacy.html" data-i18n-nav="privacy">Privacy</a></li>
 
-                <li><a href="index.html#reviews">Reviews</a></li>
-
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="termini.html" data-i18n-nav="termini">Termini</a></li>
 
             </ul>
 
-            <p class="footer-copy">© 2026 Thuis Italiaans. Alle rechten voorbehouden.</p>
+            <p class="footer-copy" data-i18n-footer="copy">© 2026 Thuis Italiaans. Tutti i diritti riservati.</p>
 
         </div>
 
         <div class="container footer-legal">
 
-            <p>In behandeling bij de KvK</p>
+            <p data-i18n-footer="kvk">In elaborazione presso la KvK</p>
 
         </div>
 
     </footer>
+
+    <script type="application/json" id="data">
+{
+  "sq": {
+    "back": "← Kthehu në faqen kryesore",
+    "terms": "Kushtet e përdorimit të app-it →",
+    "mt_notice": "Na vjen keq — ky version është përkthyer automatikisht dhe disa formulime mund të mos jenë plotësisht të sakta. Nëse vëren ndonjë gabim, na shkruaj në thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Politika e privatësisë",
+        "corpo": "Përditësuar së fundmi: 14 korrik 2026. Kjo politikë përshkruan cilat të dhëna përpunon aplikacioni <em>ti</em> (\"Aplikacioni\") dhe si. Kontrollues i të dhënave: Thuis Italiaans, i kontaktueshëm në thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Parimi: të dhënat e tua qëndrojnë në pajisjen tënde",
+        "corpo": "Aplikacioni është projektuar për të funksionuar në mënyrë lokale. Progresi i studimit, fjalët e mësuara, statistikat, cilësimet dhe preferencat ruhen ekskluzivisht në pajisjen tënde dhe nuk dërgohen në serverët tanë (nuk kemi). Nuk përdorim mjete analitike të palëve të treta, nuk shfaqim reklama dhe nuk ndjekim aktivitetin tënd."
+      },
+      {
+        "titolo": "Të dhënat me Hyr me Apple",
+        "corpo": "Nëse zgjedh \"Hyr me Apple\", marrim nga Apple një identifikues anonim dhe, vetëm në hyrjen e parë dhe nëse vendos t'i ndash, emrin tënd dhe eventualisht adresën e email-it (edhe në formën private të përcjelljes së Apple). Këto të dhëna ruhen vetëm në pajisjen tënde dhe shërbejnë vetëm për të shfaqur emrin tënd në Aplikacion. Nuk i transmetojmë kurrë dhe nuk i shesim. Përndryshe, mund të krijosh një profil lokal me një emër përdoruesi të thjeshtë ose të përdorësh Aplikacionin si mysafir: asnjë fjalëkalim nuk kërkohet ose ruhet."
+      },
+      {
+        "titolo": "Blerjet",
+        "corpo": "Blerjet (abonimet, blerja Lifetime, kurset dhe romanet individuale) menaxhohen tërësisht nga Apple përmes App Store. Ne kurrë nuk marrim as ruajmë të dhëna pagese. Përmes StoreKit verifikojmë vetëm cilat produkte janë aktive në llogarinë tënde Apple, për të zhbllokuar përmbajtjen përkatëse."
+      },
+      {
+        "titolo": "Të dhënat që nuk mbledhim",
+        "corpo": "Nuk mbledhim vendndodhje, kontakte, foto, të dhëna mikrofoni, shëndeti apo shfletimi. Nuk krijojmë profile përdoruesish dhe nuk ndajmë të dhëna me palë të treta për qëllime marketingu."
+      },
+      {
+        "titolo": "Ruajtja dhe fshirja",
+        "corpo": "Meqë të dhënat qëndrojnë në pajisjen tënde, ke kontroll të plotë: nga ekrani \"Llogaria dhe privatësia\" mund të përdorësh \"Fshi të dhënat e mia\" për të hequr përfundimisht profilin, progresin, fjalët dhe statistikat. Çinstalimi i Aplikacionit fshin gjithashtu të gjitha të dhënat lokale. Blerjet mbeten të lidhura me llogarinë tënde Apple dhe mund të restaurohen pas riinstalimit."
+      },
+      {
+        "titolo": "Të drejtat e tua (GDPR)",
+        "corpo": "Si banor i BE-së, ke të drejtë aksesi, korrigjimi, fshirjeje, kufizimi dhe portabiliteti, si dhe të drejtë të ankohesh pranë një autoriteti mbikëqyrës. Meqë të dhënat personale qëndrojnë në pajisjen tënde, shumica e këtyre të drejtave ushtrohen drejtpërdrejt nga Aplikacioni; për çdo kërkesë, shkruaj në thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Të miturit",
+        "corpo": "Aplikacioni nuk kërkon të dhëna personale për t'u përdorur dhe është i përshtatshëm edhe për nxënës të rinj. Nëse një prind mendon se një i mitur ka ndarë të dhëna përmes Hyr me Apple pa pëlqim, na kontakto për ndihmë me heqjen (është gjithashtu e mundur drejtpërdrejt nga Aplikacioni)."
+      },
+      {
+        "titolo": "Ndryshimet e kësaj politike",
+        "corpo": "Nëse Aplikacioni në të ardhmen prezanton funksione me përpunime të reja (për shembull sinkronizimin në cloud), do ta përditësojmë këtë politikë dhe do të kërkojmə pëlqimin tënd para se t'i aktivizojmə. Versioni aktual publikohet gjithmonė në këtė faqe."
+      }
+    ]
+  },
+  "ar": {
+    "back": "← العودة إلى الصفحة الرئيسية",
+    "terms": "شروط استخدام التطبيق ←",
+    "mt_notice": "نعتذر — تُرجمت هذه النسخة آلياً وقد لا تكون بعض الصياغات دقيقة تماماً. إن لاحظت خطأً، فيرجى مراسلتنا على thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "سياسة الخصوصية",
+        "corpo": "آخر تحديث: 14 يوليو 2026. تصف هذه السياسة البيانات التي يعالجها تطبيق <em>ti</em> («التطبيق») وكيفية معالجتها. المسؤول عن معالجة البيانات: Thuis Italiaans، يمكن الوصول إليه عبر thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "المبدأ: بياناتك تبقى على جهازك",
+        "corpo": "صُمم التطبيق ليعمل محلياً. يتم تخزين تقدم الدراسة والكلمات المكتسبة والإحصائيات والإعدادات والتفضيلات حصرياً على جهازك ولا تُرسل إلى خوادمنا (ليس لدينا خوادم). لا نستخدم أدوات تحليل من أطراف ثالثة، ولا نعرض إعلانات، ولا نتتبع نشاطك."
+      },
+      {
+        "titolo": "البيانات المُعالجة مع تسجيل الدخول بواسطة Apple",
+        "corpo": "إذا اخترت «تسجيل الدخول بواسطة Apple»، نستلم من Apple معرّفاً مجهول الهوية، وفقط في أول تسجيل دخول وإذا قررت مشاركتهما، اسمك وربما عنوان بريدك الإلكتروني (بما في ذلك بصيغة إعادة التوجيه الخاص من Apple). تُحفظ هذه البيانات على جهازك فقط وتُستخدم حصراً لعرض اسمك في التطبيق. لا نُرسلها ولا نبيعها أبداً. بدلاً من ذلك، يمكنك إنشاء ملف تعريف محلي باسم مستخدم بسيط أو استخدام التطبيق كضيف: لا يُطلب أو يُخزَّن أي كلمة مرور أبداً."
+      },
+      {
+        "titolo": "عمليات الشراء",
+        "corpo": "تتم عمليات الشراء (الاشتراكات، الشراء مدى الحياة، المسارات والروايات الفردية) بالكامل عبر Apple من خلال App Store. لا نستلم ولا نحتفظ ببيانات الدفع مطلقاً. عبر StoreKit نتحقق فقط من المنتجات النشطة في حساب Apple الخاص بك لفتح المحتوى المقابل."
+      },
+      {
+        "titolo": "البيانات التي لا نجمعها",
+        "corpo": "لا نجمع الموقع أو جهات الاتصال أو الصور أو الميكروفون أو البيانات الصحية أو التصفح. لا ننشئ ملفات تعريف للمستخدمين ولا نشارك البيانات مع أطراف ثالثة لأغراض تسويقية."
+      },
+      {
+        "titolo": "الاحتفاظ والحذف",
+        "corpo": "بما أن البيانات موجودة على جهازك، فأنت تتحكم بها بالكامل: من شاشة «الحساب والخصوصية» يمكنك استخدام «حذف بياناتي» لحذف الملف الشخصي والتقدم والكلمات والإحصائيات نهائياً. كذلك يؤدي حذف التطبيق إلى حذف جميع البيانات المحلية. تبقى عمليات الشراء مرتبطة بحساب Apple الخاص بك ويمكن استعادتها بعد إعادة التثبيت."
+      },
+      {
+        "titolo": "حقوقك (GDPR)",
+        "corpo": "بصفتك مقيماً في الاتحاد الأوروبي، لك الحق في الوصول والتصحيح والحذف والتقييد وقابلية النقل، والحق في تقديم شكوى إلى سلطة رقابية. بما أن البيانات الشخصية موجودة على جهازك، تُمارَس معظم هذه الحقوق مباشرة من التطبيق؛ لأي طلب، اكتب إلى thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "القاصرون",
+        "corpo": "لا يتطلب التطبيق بيانات شخصية لاستخدامه وهو مناسب للطلاب الصغار أيضاً. إذا اعتقد أحد الوالدين أن قاصراً شارك بيانات عبر تسجيل الدخول بواسطة Apple دون موافقة، تواصل معنا للمساعدة في الحذف (الممكن أيضاً مباشرة من التطبيق)."
+      },
+      {
+        "titolo": "تعديلات هذه السياسة",
+        "corpo": "إذا قدَّم التطبيق مستقبلاً ميزات تنطوي على معالجات جديدة (على سبيل المثال المزامنة السحابية)، فسنُحدِّث هذه السياسة ونطلب موافقتك قبل تفعيلها. النسخة الحالية منشورة دائماً على هذه الصفحة."
+      }
+    ]
+  },
+  "bn": {
+    "back": "← হোমপেজে ফিরে যান",
+    "terms": "অ্যাপ ব্যবহারের শর্তাবলী →",
+    "mt_notice": "দুঃখিত — এই সংস্করণটি স্বয়ংক্রিয়ভাবে অনূদিত এবং কিছু শব্দচয়ন সম্পূর্ণ সঠিক নাও হতে পারে। কোনো ত্রুটি দেখলে অনুগ্রহ করে thuisitaliaans@gmail.com-এ লিখুন।",
+    "sections": [
+      {
+        "titolo": "গোপনীয়তা নীতি",
+        "corpo": "সর্বশেষ আপডেট: ১৪ জুলাই ২০২৬। এই নীতিতে বর্ণনা করা হয়েছে <em>ti</em> অ্যাপ (\"অ্যাপ\") কী কী তথ্য প্রক্রিয়া করে এবং কীভাবে করে। ডেটা কন্ট্রোলার: Thuis Italiaans, যোগাযোগ: thuisitaliaans@gmail.com।"
+      },
+      {
+        "titolo": "মূলনীতি: আপনার তথ্য আপনার ডিভাইসেই থাকে",
+        "corpo": "অ্যাপটি স্থানীয়ভাবে কাজ করার জন্য ডিজাইন করা হয়েছে। অধ্যয়নের অগ্রগতি, শেখা শব্দ, পরিসংখ্যান, সেটিংস ও পছন্দসমূহ শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত হয় এবং আমাদের সার্ভারে পাঠানো হয় না (আমাদের কোনো সার্ভার নেই)। আমরা তৃতীয় পক্ষের অ্যানালিটিক্স ব্যবহার করি না, বিজ্ঞাপন দেখাই না এবং আপনার কার্যকলাপ ট্র্যাক করি না।"
+      },
+      {
+        "titolo": "Sign in with Apple-এ প্রক্রিয়াকৃত তথ্য",
+        "corpo": "যদি আপনি \"Sign in with Apple\" বেছে নেন, আমরা Apple থেকে একটি বেনামী শনাক্তকারী পাই এবং শুধুমাত্র প্রথম সাইন-ইনে ও যদি আপনি শেয়ার করতে চান তবে আপনার নাম ও সম্ভবত ইমেইল ঠিকানা পাই (Apple-এর প্রাইভেট রিলে ফর্ম সহ)। এই তথ্য শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত হয় এবং শুধুমাত্র অ্যাপে আপনার নাম প্রদর্শনের জন্য ব্যবহৃত হয়। আমরা এগুলি কখনো প্রেরণ বা বিক্রি করি না। বিকল্পভাবে, আপনি একটি সাধারণ ইউজারনেম দিয়ে একটি স্থানীয় প্রোফাইল তৈরি করতে পারেন বা অ্যাপটি গেস্ট হিসেবে ব্যবহার করতে পারেন: কখনো পাসওয়ার্ড চাওয়া বা সংরক্ষণ করা হয় না।"
+      },
+      {
+        "titolo": "ক্রয়",
+        "corpo": "ক্রয়সমূহ (সাবস্ক্রিপশন, Lifetime ক্রয়, পৃথক পথ ও উপন্যাস) সম্পূর্ণরূপে Apple App Store-এর মাধ্যমে পরিচালিত হয়। আমরা কখনো পেমেন্ট তথ্য গ্রহণ বা সংরক্ষণ করি না। StoreKit-এর মাধ্যমে আমরা শুধুমাত্র যাচাই করি আপনার Apple অ্যাকাউন্টে কোন পণ্যগুলি সক্রিয় আছে, সংশ্লিষ্ট বিষয়বস্তু আনলক করার জন্য।"
+      },
+      {
+        "titolo": "যে তথ্যগুলি আমরা সংগ্রহ করি না",
+        "corpo": "আমরা অবস্থান, পরিচিতি, ছবি, মাইক্রোফোন, স্বাস্থ্য বা ব্রাউজিং তথ্য সংগ্রহ করি না। আমরা ব্যবহারকারী প্রোফাইল তৈরি করি না এবং বিপণনের উদ্দেশ্যে তৃতীয় পক্ষের সাথে তথ্য শেয়ার করি না।"
+      },
+      {
+        "titolo": "সংরক্ষণ ও মুছে ফেলা",
+        "corpo": "যেহেতু তথ্য আপনার ডিভাইসে থাকে, আপনার সম্পূর্ণ নিয়ন্ত্রণ আছে: \"অ্যাকাউন্ট ও গোপনীয়তা\" স্ক্রীন থেকে আপনি \"আমার তথ্য মুছুন\" ব্যবহার করে প্রোফাইল, অগ্রগতি, শব্দ ও পরিসংখ্যান স্থায়ীভাবে মুছে ফেলতে পারেন। অ্যাপ আনইনস্টল করলেও সমস্ত স্থানীয় তথ্য মুছে যায়। ক্রয়সমূহ আপনার Apple অ্যাকাউন্টের সাথে যুক্ত থাকে এবং পুনরায় ইনস্টলের পরে পুনরুদ্ধার করা যায়।"
+      },
+      {
+        "titolo": "আপনার অধিকার (GDPR)",
+        "corpo": "EU নিবাসী হিসেবে আপনার তথ্যে প্রবেশাধিকার, সংশোধন, মুছে ফেলা, সীমাবদ্ধতা ও বহনযোগ্যতার অধিকার রয়েছে, এবং তত্ত্বাবধায়ক কর্তৃপক্ষের কাছে অভিযোগ দায়ের করার অধিকার রয়েছে। যেহেতু ব্যক্তিগত তথ্য আপনার ডিভাইসেই থাকে, এই অধিকারগুলির অধিকাংশই সরাসরি অ্যাপ থেকে প্রয়োগ করা হয়; যেকোনো অনুরোধের জন্য: thuisitaliaans@gmail.com।"
+      },
+      {
+        "titolo": "অপ্রাপ্তবয়স্করা",
+        "corpo": "অ্যাপটি ব্যবহারের জন্য কোনো ব্যক্তিগত তথ্য প্রয়োজন হয় না এবং তরুণ শিক্ষার্থীদের জন্যও উপযোগী। যদি একজন পিতা-মাতা মনে করেন একজন অপ্রাপ্তবয়স্ক Sign in with Apple-এর মাধ্যমে সম্মতি ছাড়া তথ্য শেয়ার করেছে, মুছে ফেলার সহায়তার জন্য আমাদের সাথে যোগাযোগ করুন (এটি সরাসরি অ্যাপ থেকেও সম্ভব)।"
+      },
+      {
+        "titolo": "এই নীতির পরিবর্তন",
+        "corpo": "যদি ভবিষ্যতে অ্যাপটি নতুন প্রক্রিয়াকরণসহ বৈশিষ্ট্য চালু করে (উদাহরণস্বরূপ ক্লাউড সিঙ্ক), আমরা এই নীতি আপডেট করব এবং সক্রিয় করার আগে আপনার সম্মতি চাইব। বর্তমান সংস্করণ সর্বদা এই পৃষ্ঠায় প্রকাশিত থাকে।"
+      }
+    ]
+  },
+  "zh": {
+    "back": "← 返回首页",
+    "terms": "应用使用条款 →",
+    "mt_notice": "抱歉 — 此版本为机器翻译,部分措辞可能不完全准确。如发现错误,请写信至 thuisitaliaans@gmail.com。",
+    "sections": [
+      {
+        "titolo": "隐私政策",
+        "corpo": "最后更新:2026年7月14日。本政策说明 <em>ti</em> 应用(下称“本应用”)处理哪些数据以及如何处理。数据控制者:Thuis Italiaans,可通过 thuisitaliaans@gmail.com 联系。"
+      },
+      {
+        "titolo": "原则:您的数据保留在您的设备上",
+        "corpo": "本应用设计为在本地运行。学习进度、已学词汇、统计信息、设置和偏好仅存储在您的设备上,不会发送到我们的服务器(我们没有服务器)。我们不使用第三方分析工具,不展示广告,也不追踪您的活动。"
+      },
+      {
+        "titolo": "通过“使用 Apple 登录”处理的数据",
+        "corpo": "如果您选择“使用 Apple 登录”,我们会从 Apple 收到一个匿名标识符,并且仅在首次登录时以及您选择共享的情况下,收到您的姓名和可能的电子邮件地址(包括 Apple 的私人中继形式)。这些数据仅存储在您的设备上,仅用于在应用中显示您的姓名。我们从不传输或出售它们。或者,您可以使用简单的用户名创建本地档案,或作为访客使用本应用:从不要求或存储密码。"
+      },
+      {
+        "titolo": "购买",
+        "corpo": "购买(订阅、终身购买、单独的学习路径和小说)完全由 Apple 通过 App Store 处理。我们从不接收或存储付款数据。通过 StoreKit,我们仅验证您的 Apple 账户上激活了哪些产品,以解锁相应的内容。"
+      },
+      {
+        "titolo": "我们不收集的数据",
+        "corpo": "我们不收集位置、通讯录、照片、麦克风、健康或浏览数据。我们不建立用户画像,也不出于营销目的与第三方共享数据。"
+      },
+      {
+        "titolo": "保留和删除",
+        "corpo": "由于数据存储在您的设备上,您拥有完全的控制权:从“账户和隐私”屏幕,您可以使用“删除我的数据”永久删除档案、进度、词汇和统计。卸载应用也会删除所有本地数据。购买记录仍与您的 Apple 账户关联,重新安装后可以恢复。"
+      },
+      {
+        "titolo": "您的权利 (GDPR)",
+        "corpo": "作为欧盟居民,您有权访问、更正、删除、限制和转移数据,并有权向监管机构投诉。由于个人数据存储在您的设备上,大多数权利可直接从应用中行使;如有任何请求,请发送邮件至 thuisitaliaans@gmail.com。"
+      },
+      {
+        "titolo": "未成年人",
+        "corpo": "本应用无需任何个人数据即可使用,也适合年轻学习者。如果家长认为未成年人在未经同意的情况下通过“使用 Apple 登录”分享了数据,请联系我们协助删除(也可以直接在应用中删除)。"
+      },
+      {
+        "titolo": "本政策的变更",
+        "corpo": "如果本应用将来引入涉及新处理的功能(例如云同步),我们将更新本政策并在启用之前征求您的同意。当前版本始终发布在本页面。"
+      }
+    ]
+  },
+  "de": {
+    "back": "← Zurück zur Startseite",
+    "terms": "Nutzungsbedingungen App →",
+    "mt_notice": "Entschuldigung — diese Version wurde maschinell übersetzt und einige Formulierungen könnten nicht ganz genau sein. Wenn dir etwas auffällt, schreib bitte an thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Datenschutzerklärung",
+        "corpo": "Zuletzt aktualisiert: 14. Juli 2026. Diese Erklärung beschreibt, welche Daten die App <em>ti</em> („die App\") verarbeitet und wie. Verantwortlicher: Thuis Italiaans, erreichbar unter thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Der Grundsatz: Deine Daten bleiben auf deinem Gerät",
+        "corpo": "Die App ist so konzipiert, dass sie lokal funktioniert. Lernfortschritt, gelernte Wörter, Statistiken, Einstellungen und Präferenzen werden ausschließlich auf deinem Gerät gespeichert und nicht an unsere Server gesendet (die haben wir nicht). Wir verwenden keine Analysewerkzeuge Dritter, zeigen keine Werbung und verfolgen deine Aktivitäten nicht."
+      },
+      {
+        "titolo": "Daten bei „Mit Apple anmelden\"",
+        "corpo": "Wenn du „Mit Apple anmelden\" wählst, erhalten wir von Apple eine anonyme Kennung und – nur beim ersten Login und wenn du zustimmst – deinen Namen und ggf. deine E-Mail-Adresse (auch in Apples privater Relay-Form). Diese Daten werden nur auf deinem Gerät gespeichert und dienen ausschließlich dazu, deinen Namen in der App anzuzeigen. Wir übertragen oder verkaufen sie nie. Alternativ kannst du ein lokales Profil mit einem einfachen Benutzernamen erstellen oder die App als Gast nutzen: Es wird nie ein Passwort verlangt oder gespeichert."
+      },
+      {
+        "titolo": "Käufe",
+        "corpo": "Käufe (Abonnements, Lifetime-Kauf, einzelne Lernpfade und Romane) werden vollständig von Apple über den App Store abgewickelt. Wir erhalten oder speichern keine Zahlungsdaten. Über StoreKit prüfen wir nur, welche Produkte auf deinem Apple-Konto aktiv sind, um die entsprechenden Inhalte freizuschalten."
+      },
+      {
+        "titolo": "Daten, die wir nicht erheben",
+        "corpo": "Wir erheben keine Standort-, Kontakt-, Foto-, Mikrofon-, Gesundheits- oder Browsing-Daten. Wir erstellen keine Nutzerprofile und geben zu Marketingzwecken keine Daten an Dritte weiter."
+      },
+      {
+        "titolo": "Speicherung und Löschung",
+        "corpo": "Da die Daten auf deinem Gerät liegen, hast du die volle Kontrolle: Im Bildschirm „Konto und Datenschutz\" kannst du mit „Meine Daten löschen\" Profil, Fortschritt, Wörter und Statistiken endgültig entfernen. Auch das Deinstallieren der App löscht alle lokalen Daten. Käufe bleiben mit deinem Apple-Konto verknüpft und können nach der Neuinstallation wiederhergestellt werden."
+      },
+      {
+        "titolo": "Deine Rechte (DSGVO)",
+        "corpo": "Als EU-Bürger:in hast du das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Übertragbarkeit sowie das Recht, Beschwerde bei einer Aufsichtsbehörde einzureichen. Da personenbezogene Daten auf deinem Gerät gespeichert sind, übst du die meisten Rechte direkt in der App aus; für Anfragen: thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Kinder",
+        "corpo": "Die App erfordert keine personenbezogenen Daten und ist auch für junge Lernende geeignet. Wenn ein Elternteil vermutet, dass ein Minderjähriger ohne Zustimmung Daten über „Mit Apple anmelden\" geteilt hat, kontaktiere uns für Hilfe bei der Löschung (die auch direkt in der App möglich ist)."
+      },
+      {
+        "titolo": "Änderungen dieser Erklärung",
+        "corpo": "Wenn die App in Zukunft Funktionen mit neuen Verarbeitungen einführt (z. B. Cloud-Synchronisierung), aktualisieren wir diese Erklärung und bitten vorher um deine Zustimmung. Die aktuelle Fassung ist immer auf dieser Seite veröffentlicht."
+      }
+    ]
+  },
+  "en": {
+    "back": "← Back to homepage",
+    "terms": "App terms of use →",
+    "mt_notice": "Sorry — this version was machine-translated and some wording may not be fully accurate. If you spot an issue, please write to thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Privacy Policy",
+        "corpo": "Last updated: 14 July 2026. This policy describes what data the <em>ti</em> app (\"the App\") processes and how. Data controller: Thuis Italiaans, reachable at thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "The principle: your data stays on your device",
+        "corpo": "The App is designed to work locally. Study progress, learned words, statistics, settings and preferences are stored exclusively on your device and are not sent to our servers (we have none). We use no third-party analytics, show no ads, and do not track your activity."
+      },
+      {
+        "titolo": "Data processed with Sign in with Apple",
+        "corpo": "If you choose \"Sign in with Apple\", we receive an anonymous identifier from Apple and, on first sign-in only and if you choose to share them, your name and possibly your email address (including Apple's private relay form). These are stored only on your device and are used solely to display your name in the App. We never transmit or sell them. Alternatively, you can create a local profile with a simple username or use the App as a guest: no password is ever requested or stored."
+      },
+      {
+        "titolo": "Purchases",
+        "corpo": "Purchases (subscriptions, lifetime purchase, individual paths and novels) are handled entirely by Apple through the App Store. We never receive or store payment data. Via StoreKit we only verify which products are active on your Apple account, in order to unlock the corresponding content."
+      },
+      {
+        "titolo": "Data we do not collect",
+        "corpo": "We do not collect location, contacts, photos, microphone, health or browsing data. We do not build user profiles and do not share data with third parties for marketing purposes."
+      },
+      {
+        "titolo": "Retention and deletion",
+        "corpo": "Because data lives on your device, you are in full control: from the \"Account and privacy\" screen you can use \"Delete my data\" to permanently remove profile, progress, words and statistics. Uninstalling the App also deletes all local data. Purchases remain tied to your Apple account and can be restored after reinstalling."
+      },
+      {
+        "titolo": "Your rights (GDPR)",
+        "corpo": "As an EU resident you have the rights of access, rectification, erasure, restriction and portability, and the right to lodge a complaint with a supervisory authority. Since personal data resides on your device, most of these rights are exercised directly in the App; for any request, write to thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Children",
+        "corpo": "The App requires no personal data to be used and is suitable for young learners. If a parent believes a minor shared data via Sign in with Apple without consent, contact us for help with removal (which is also possible directly in the App)."
+      },
+      {
+        "titolo": "Changes to this policy",
+        "corpo": "If the App introduces features involving new processing in the future (for example cloud sync), we will update this policy and ask for your consent before enabling them. The current version is always published on this page."
+      }
+    ]
+  },
+  "es": {
+    "back": "← Volver a la página principal",
+    "terms": "Términos de uso de la app →",
+    "mt_notice": "Perdona — esta versión ha sido traducida automáticamente y algunas formulaciones podrían no ser del todo precisas. Si detectas algún error, escribe a thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Política de privacidad",
+        "corpo": "Última actualización: 14 de julio de 2026. Esta política describe qué datos trata la app <em>ti</em> («la App») y cómo. Responsable del tratamiento: Thuis Italiaans, contactable en thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "El principio: tus datos permanecen en tu dispositivo",
+        "corpo": "La App está diseñada para funcionar en local. Progreso de estudio, palabras aprendidas, estadísticas, ajustes y preferencias se guardan exclusivamente en tu dispositivo y no se envían a nuestros servidores (no tenemos). No usamos herramientas de análisis de terceros, no mostramos publicidad y no rastreamos tu actividad."
+      },
+      {
+        "titolo": "Datos tratados con Iniciar sesión con Apple",
+        "corpo": "Si eliges «Iniciar sesión con Apple», recibimos de Apple un identificador anónimo y, solo en el primer acceso y si decides compartirlos, tu nombre y eventualmente tu correo electrónico (también en la forma de reenvío privado de Apple). Estos datos se guardan solo en tu dispositivo y sirven únicamente para mostrar tu nombre en la App. Nunca los transmitimos ni los vendemos. Alternativamente, puedes crear un perfil local con un simple nombre de usuario o usar la App como invitado: nunca se solicita ni se guarda una contraseña."
+      },
+      {
+        "titolo": "Compras",
+        "corpo": "Las compras (suscripciones, compra vitalicia, itinerarios y novelas individuales) son gestionadas por Apple a través del App Store. Nunca recibimos ni conservamos datos de pago. Mediante StoreKit solo verificamos qué productos están activos en tu cuenta Apple para desbloquear los contenidos correspondientes."
+      },
+      {
+        "titolo": "Datos que no recopilamos",
+        "corpo": "No recopilamos ubicación, contactos, fotos, micrófono, datos de salud ni de navegación. No creamos perfiles de usuarios ni compartimos datos con terceros con fines de marketing."
+      },
+      {
+        "titolo": "Conservación y eliminación",
+        "corpo": "Como los datos residen en tu dispositivo, tienes control total: desde la pantalla «Cuenta y privacidad» puedes usar «Eliminar mis datos» para borrar definitivamente perfil, progreso, palabras y estadísticas. Desinstalar la App también elimina todos los datos locales. Las compras siguen vinculadas a tu cuenta Apple y pueden restaurarse tras reinstalar."
+      },
+      {
+        "titolo": "Tus derechos (RGPD)",
+        "corpo": "Como residente en la UE tienes derecho de acceso, rectificación, supresión, limitación y portabilidad, y derecho a presentar una reclamación ante una autoridad de control. Dado que los datos personales residen en tu dispositivo, la mayoría de estos derechos se ejercen directamente desde la App; para cualquier solicitud, escribe a thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Menores",
+        "corpo": "La App no requiere datos personales para su uso y es adecuada también para estudiantes jóvenes. Si un progenitor considera que un menor ha compartido datos mediante Iniciar sesión con Apple sin consentimiento, contáctanos para ayuda con la eliminación (que también es posible directamente desde la App)."
+      },
+      {
+        "titolo": "Cambios en esta política",
+        "corpo": "Si en el futuro la App introduce funciones que implican nuevos tratamientos (por ejemplo, sincronización en la nube), actualizaremos esta política y pediremos tu consentimiento antes de activarlas. La versión actual está siempre publicada en esta página."
+      }
+    ]
+  },
+  "fr": {
+    "back": "← Retour à l'accueil",
+    "terms": "Conditions d'utilisation de l'app →",
+    "mt_notice": "Désolé — cette version a été traduite automatiquement et certaines formulations peuvent ne pas être tout à fait précises. Si tu remarques un problème, écris à thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Politique de confidentialité",
+        "corpo": "Dernière mise à jour : 14 juillet 2026. La présente politique décrit quelles données l'application <em>ti</em> (« l'App ») traite et comment. Responsable du traitement : Thuis Italiaans, joignable à thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Le principe : tes données restent sur ton appareil",
+        "corpo": "L'App est conçue pour fonctionner en local. Progrès d'étude, mots appris, statistiques, réglages et préférences sont stockés uniquement sur ton appareil et ne sont pas envoyés à nos serveurs (nous n'en avons pas). Nous n'utilisons aucun outil d'analyse tiers, n'affichons aucune publicité et ne suivons pas ton activité."
+      },
+      {
+        "titolo": "Données traitées avec Se connecter avec Apple",
+        "corpo": "Si tu choisis « Se connecter avec Apple », nous recevons d'Apple un identifiant anonyme et, uniquement lors de la première connexion et si tu décides de les partager, ton nom et éventuellement ton adresse e-mail (y compris dans la forme de relais privé Apple). Ces données sont stockées uniquement sur ton appareil et servent seulement à afficher ton nom dans l'App. Nous ne les transmettons ni ne les vendons jamais. Autrement, tu peux créer un profil local avec un simple nom d'utilisateur ou utiliser l'App en invité : aucun mot de passe n'est jamais demandé ni stocké."
+      },
+      {
+        "titolo": "Achats",
+        "corpo": "Les achats (abonnements, achat à vie, parcours et romans individuels) sont gérés entièrement par Apple via l'App Store. Nous ne recevons ni ne conservons aucune donnée de paiement. Via StoreKit, nous vérifions uniquement quels produits sont actifs sur ton compte Apple, afin de déverrouiller les contenus correspondants."
+      },
+      {
+        "titolo": "Données que nous ne collectons pas",
+        "corpo": "Nous ne collectons pas de données de localisation, de contacts, de photos, de microphone, de santé ni de navigation. Nous ne créons pas de profils d'utilisateurs et ne partageons pas de données avec des tiers à des fins de marketing."
+      },
+      {
+        "titolo": "Conservation et suppression",
+        "corpo": "Puisque les données résident sur ton appareil, tu en as le contrôle total : depuis l'écran « Compte et confidentialité », tu peux utiliser « Supprimer mes données » pour effacer définitivement profil, progrès, mots et statistiques. La désinstallation de l'App efface également toutes les données locales. Les achats restent liés à ton compte Apple et peuvent être restaurés après réinstallation."
+      },
+      {
+        "titolo": "Tes droits (RGPD)",
+        "corpo": "En tant que résident de l'UE, tu disposes des droits d'accès, de rectification, d'effacement, de limitation et de portabilité, ainsi que du droit d'introduire une réclamation auprès d'une autorité de contrôle. Comme les données personnelles résident sur ton appareil, la plupart de ces droits s'exercent directement depuis l'App ; pour toute demande, écris à thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Mineurs",
+        "corpo": "L'App ne requiert aucune donnée personnelle pour être utilisée et convient également aux jeunes apprenants. Si un parent estime qu'un mineur a partagé des données via Se connecter avec Apple sans consentement, contacte-nous pour t'aider à les supprimer (ce qui est également possible directement dans l'App)."
+      },
+      {
+        "titolo": "Modifications de cette politique",
+        "corpo": "Si l'App introduit à l'avenir des fonctionnalités impliquant de nouveaux traitements (par exemple la synchronisation cloud), nous mettrons à jour cette politique et demanderons ton consentement avant leur activation. La version en vigueur est toujours publiée sur cette page."
+      }
+    ]
+  },
+  "it": {
+    "back": "← Torna alla homepage",
+    "terms": "Termini d'uso app →",
+    "mt_notice": "",
+    "sections": [
+      {
+        "titolo": "Informativa sulla privacy",
+        "corpo": "Ultimo aggiornamento: 14 luglio 2026. Questa informativa descrive quali dati tratta l'app <em>ti</em> (\"l'App\") e come. Titolare del trattamento: Thuis Italiaans, contattabile a thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Il principio: i tuoi dati restano sul tuo dispositivo",
+        "corpo": "L'App è progettata per funzionare in locale. Progressi di studio, parole imparate, statistiche, impostazioni e preferenze sono salvati esclusivamente sul tuo dispositivo e non vengono inviati ai nostri server (non ne abbiamo). Non usiamo strumenti di analisi di terze parti, non mostriamo pubblicità e non tracciamo la tua attività."
+      },
+      {
+        "titolo": "Dati trattati con Accedi con Apple",
+        "corpo": "Se scegli \"Accedi con Apple\", riceviamo da Apple un identificativo anonimo e, solo al primo accesso e se decidi di condividerli, il tuo nome ed eventualmente il tuo indirizzo email (anche nella forma privata di inoltro Apple). Questi dati sono salvati solo sul tuo dispositivo e servono unicamente a mostrare il tuo nome nell'App. Non li trasmettiamo né li vendiamo a nessuno. In alternativa puoi creare un profilo locale con un semplice username o usare l'App come ospite: nessuna password viene mai richiesta o memorizzata."
+      },
+      {
+        "titolo": "Acquisti",
+        "corpo": "Gli acquisti (abbonamenti, acquisto a vita, percorsi e romanzi singoli) sono gestiti interamente da Apple tramite App Store. Non riceviamo né conserviamo dati di pagamento: nome del titolare della carta, numero di carta e indirizzo di fatturazione non ci arrivano mai. Verifichiamo solo, tramite StoreKit, quali prodotti risultano attivi sul tuo account Apple per sbloccare i contenuti corrispondenti."
+      },
+      {
+        "titolo": "Dati che non raccogliamo",
+        "corpo": "Non raccogliamo posizione, contatti, foto, microfono, dati sanitari o di navigazione. Non creiamo profili degli utenti e non condividiamo dati con terze parti per finalità di marketing."
+      },
+      {
+        "titolo": "Conservazione e cancellazione",
+        "corpo": "Poiché i dati vivono sul tuo dispositivo, ne hai il pieno controllo: dalla schermata \"Account e privacy\" puoi usare \"Cancella i miei dati\" per eliminare definitivamente profilo, progressi, parole e statistiche. Anche la disinstallazione dell'App elimina tutti i dati locali. Gli acquisti restano legati al tuo account Apple e si possono ripristinare reinstallando l'App."
+      },
+      {
+        "titolo": "I tuoi diritti (GDPR)",
+        "corpo": "In quanto residente nell'Unione Europea hai diritto di accesso, rettifica, cancellazione, limitazione e portabilità dei dati, e il diritto di proporre reclamo all'autorità di controllo. Dato che i dati personali risiedono sul tuo dispositivo, la maggior parte di questi diritti si esercita direttamente dall'App; per qualunque richiesta scrivi a thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Minori",
+        "corpo": "L'App non richiede dati personali per essere usata ed è adatta anche a studenti giovani. Se un genitore ritiene che un minore abbia condiviso dati tramite Accedi con Apple senza consenso, può contattarci per assistenza alla rimozione (che è comunque possibile in autonomia dall'App)."
+      },
+      {
+        "titolo": "Modifiche a questa informativa",
+        "corpo": "Se in futuro l'App introdurrà funzioni che comportano nuovi trattamenti (per esempio il salvataggio nel cloud), aggiorneremo questa informativa e chiederemo il tuo consenso prima di attivarle. La versione corrente è sempre pubblicata su questa pagina."
+      }
+    ]
+  },
+  "nl": {
+    "back": "← Terug naar de homepage",
+    "terms": "Voorwaarden app →",
+    "mt_notice": "",
+    "sections": [
+      {
+        "titolo": "Privacyverklaring",
+        "corpo": "Laatst bijgewerkt: 14 juli 2026. Deze verklaring beschrijft welke gegevens de app <em>ti</em> (\"de App\") verwerkt en hoe. Verwerkingsverantwoordelijke: Thuis Italiaans, bereikbaar via thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Het principe: je gegevens blijven op je toestel",
+        "corpo": "De App is ontworpen om lokaal te werken. Studievoortgang, geleerde woorden, statistieken en instellingen worden uitsluitend op je toestel opgeslagen en niet naar onze servers gestuurd (die hebben we niet). We gebruiken geen analytics van derden, tonen geen advertenties en volgen je activiteit niet."
+      },
+      {
+        "titolo": "Gegevens bij Inloggen met Apple",
+        "corpo": "Kies je voor \"Inloggen met Apple\", dan ontvangen we van Apple een anonieme identificatie en, alleen bij de eerste keer en als je dat wilt delen, je naam en eventueel je e-mailadres (ook in de privé-doorstuurvorm van Apple). Deze gegevens staan alleen op je toestel en dienen uitsluitend om je naam in de App te tonen. We versturen of verkopen ze nooit. Je kunt ook een lokaal profiel met een gebruikersnaam aanmaken of de App als gast gebruiken: er wordt nooit een wachtwoord gevraagd of opgeslagen."
+      },
+      {
+        "titolo": "Aankopen",
+        "corpo": "Aankopen (abonnementen, lifetime, losse leerroutes en romans) worden volledig door Apple via de App Store afgehandeld. Wij ontvangen of bewaren nooit betaalgegevens. Via StoreKit controleren we alleen welke producten actief zijn op je Apple-account, om de bijbehorende inhoud te ontgrendelen."
+      },
+      {
+        "titolo": "Gegevens die we niet verzamelen",
+        "corpo": "We verzamelen geen locatie, contacten, foto's, microfoon-, gezondheids- of surfgegevens. We maken geen gebruikersprofielen en delen geen gegevens met derden voor marketing."
+      },
+      {
+        "titolo": "Bewaren en verwijderen",
+        "corpo": "Omdat de gegevens op je toestel staan, heb je er volledige controle over: via \"Account en privacy\" kun je met \"Verwijder mijn gegevens\" profiel, voortgang, woorden en statistieken definitief wissen. Ook het verwijderen van de App wist alle lokale gegevens. Aankopen blijven gekoppeld aan je Apple-account en zijn na herinstallatie te herstellen."
+      },
+      {
+        "titolo": "Je rechten (AVG)",
+        "corpo": "Als EU-inwoner heb je recht op inzage, rectificatie, verwijdering, beperking en overdraagbaarheid, en het recht om een klacht in te dienen bij een toezichthouder. Omdat persoonsgegevens op je toestel staan, oefen je de meeste rechten rechtstreeks in de App uit; voor verzoeken: thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Kinderen",
+        "corpo": "De App vereist geen persoonsgegevens en is ook geschikt voor jonge leerlingen. Denkt een ouder dat een minderjarige zonder toestemming gegevens heeft gedeeld via Inloggen met Apple, neem dan contact op voor hulp bij verwijdering (dat kan ook rechtstreeks in de App)."
+      },
+      {
+        "titolo": "Wijzigingen",
+        "corpo": "Als de App in de toekomst functies introduceert met nieuwe verwerkingen (bijvoorbeeld cloud-synchronisatie), werken we deze verklaring bij en vragen we eerst je toestemming. De actuele versie staat altijd op deze pagina."
+      }
+    ]
+  },
+  "pt": {
+    "back": "← Voltar à página inicial",
+    "terms": "Termos de uso do app →",
+    "mt_notice": "Desculpa — esta versão foi traduzida automaticamente e algumas formulações podem não estar totalmente precisas. Se notares algo errado, escreve para thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Política de privacidade",
+        "corpo": "Última atualização: 14 de julho de 2026. Esta política descreve quais dados o app <em>ti</em> (\"o App\") processa e como. Responsável pelo tratamento: Thuis Italiaans, contactável em thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "O princípio: os teus dados ficam no teu dispositivo",
+        "corpo": "O App foi concebido para funcionar localmente. Progresso de estudo, palavras aprendidas, estatísticas, definições e preferências são guardados exclusivamente no teu dispositivo e não são enviados aos nossos servidores (não temos). Não usamos ferramentas de análise de terceiros, não mostramos publicidade e não seguimos a tua atividade."
+      },
+      {
+        "titolo": "Dados tratados com Iniciar sessão com a Apple",
+        "corpo": "Se escolheres \"Iniciar sessão com a Apple\", recebemos da Apple um identificador anónimo e, apenas no primeiro acesso e se decidires partilhá-los, o teu nome e eventualmente o teu email (também na forma de reencaminhamento privado da Apple). Estes dados são guardados apenas no teu dispositivo e servem unicamente para mostrar o teu nome no App. Nunca os transmitimos nem os vendemos. Em alternativa, podes criar um perfil local com um simples nome de utilizador ou usar o App como convidado: nunca é pedida ou guardada qualquer palavra-passe."
+      },
+      {
+        "titolo": "Compras",
+        "corpo": "As compras (subscrições, compra vitalícia, percursos e romances individuais) são geridas inteiramente pela Apple através da App Store. Nunca recebemos nem guardamos dados de pagamento. Através do StoreKit apenas verificamos que produtos estão ativos na tua conta Apple para desbloquear os conteúdos correspondentes."
+      },
+      {
+        "titolo": "Dados que não recolhemos",
+        "corpo": "Não recolhemos localização, contactos, fotos, microfone, dados de saúde ou de navegação. Não criamos perfis de utilizadores nem partilhamos dados com terceiros para fins de marketing."
+      },
+      {
+        "titolo": "Conservação e eliminação",
+        "corpo": "Como os dados residem no teu dispositivo, tens controlo total: no ecrã \"Conta e privacidade\" podes usar \"Apagar os meus dados\" para eliminar definitivamente perfil, progresso, palavras e estatísticas. Desinstalar o App também apaga todos os dados locais. As compras continuam ligadas à tua conta Apple e podem ser restauradas após reinstalação."
+      },
+      {
+        "titolo": "Os teus direitos (RGPD)",
+        "corpo": "Enquanto residente da UE, tens direito de acesso, retificação, apagamento, limitação e portabilidade, e o direito de apresentar reclamação junto de uma autoridade de controlo. Como os dados pessoais residem no teu dispositivo, a maioria destes direitos exerce-se diretamente no App; para qualquer pedido, escreve para thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Menores",
+        "corpo": "O App não requer dados pessoais para ser utilizado e é adequado também para estudantes jovens. Se um progenitor considerar que um menor partilhou dados através de Iniciar sessão com a Apple sem consentimento, contacta-nos para ajuda na eliminação (que também é possível diretamente no App)."
+      },
+      {
+        "titolo": "Alterações a esta política",
+        "corpo": "Se o App introduzir no futuro funcionalidades que impliquem novos tratamentos (por exemplo sincronização na cloud), atualizaremos esta política e pediremos o teu consentimento antes de as ativar. A versão atual está sempre publicada nesta página."
+      }
+    ]
+  },
+  "ro": {
+    "back": "← Înapoi la pagina principală",
+    "terms": "Termeni de utilizare app →",
+    "mt_notice": "Ne pare rău — această versiune a fost tradusă automat, iar unele formulări ar putea să nu fie complet precise. Dacă observi vreo problemă, scrie la thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Politica de confidențialitate",
+        "corpo": "Ultima actualizare: 14 iulie 2026. Această politică descrie ce date prelucrează aplicația <em>ti</em> („Aplicația\") și cum. Operator de date: Thuis Italiaans, contactabil la thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Principiul: datele tale rămân pe dispozitivul tău",
+        "corpo": "Aplicația este concepută să funcționeze local. Progresul de studiu, cuvintele învățate, statisticile, setările și preferințele sunt stocate exclusiv pe dispozitivul tău și nu sunt trimise pe serverele noastre (nu avem). Nu folosim instrumente de analiză de la terți, nu afișăm reclame și nu îți urmărim activitatea."
+      },
+      {
+        "titolo": "Date prelucrate cu Autentificare cu Apple",
+        "corpo": "Dacă alegi „Autentificare cu Apple\", primim de la Apple un identificator anonim și, doar la prima autentificare și dacă decizi să le partajezi, numele tău și, eventual, adresa de e-mail (inclusiv în forma de retransmitere privată de la Apple). Aceste date sunt stocate doar pe dispozitivul tău și servesc exclusiv pentru a afișa numele tău în Aplicație. Nu le transmitem și nu le vindem niciodată. Alternativ, poți crea un profil local cu un simplu nume de utilizator sau folosi Aplicația ca oaspete: nu se cere și nu se stochează nicio parolă."
+      },
+      {
+        "titolo": "Achiziții",
+        "corpo": "Achizițiile (abonamente, achiziția Lifetime, parcursuri și romane individuale) sunt gestionate integral de Apple prin App Store. Nu primim și nu păstrăm niciodată date de plată. Prin StoreKit verificăm doar ce produse sunt active în contul tău Apple pentru a debloca conținutul corespunzător."
+      },
+      {
+        "titolo": "Date pe care nu le colectăm",
+        "corpo": "Nu colectăm locația, contactele, pozele, datele de microfon, sănătate sau navigare. Nu creăm profiluri de utilizator și nu partajăm date cu terți în scopuri de marketing."
+      },
+      {
+        "titolo": "Păstrare și ștergere",
+        "corpo": "Pentru că datele stau pe dispozitivul tău, ai control complet: din ecranul „Cont și confidențialitate\" poți folosi „Șterge datele mele\" pentru a elimina definitiv profilul, progresul, cuvintele și statisticile. Dezinstalarea Aplicației șterge, de asemenea, toate datele locale. Achizițiile rămân legate de contul tău Apple și pot fi restaurate după reinstalare."
+      },
+      {
+        "titolo": "Drepturile tale (GDPR)",
+        "corpo": "Ca rezident UE ai dreptul de acces, rectificare, ștergere, limitare și portabilitate a datelor și dreptul de a depune plângere la o autoritate de supraveghere. Deoarece datele personale rezidă pe dispozitivul tău, majoritatea acestor drepturi se exercită direct din Aplicație; pentru orice cerere, scrie la thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Minori",
+        "corpo": "Aplicația nu necesită date personale pentru a fi utilizată și este potrivită și pentru elevi tineri. Dacă un părinte consideră că un minor a împărtășit date prin Autentificare cu Apple fără consimțământ, contactează-ne pentru ajutor la eliminare (posibilă și direct din Aplicație)."
+      },
+      {
+        "titolo": "Modificări ale acestei politici",
+        "corpo": "Dacă Aplicația introduce în viitor funcții care implică noi prelucrări (de exemplu sincronizare în cloud), vom actualiza această politică și îți vom cere consimțământul înainte de activare. Versiunea curentă este întotdeauna publicată pe această pagină."
+      }
+    ]
+  },
+  "tl": {
+    "back": "← Bumalik sa homepage",
+    "terms": "Mga tuntunin ng paggamit →",
+    "mt_notice": "Paumanhin — awtomatikong isinalin ang bersyong ito at ang ilang mga salita ay maaaring hindi ganap na tama. Kung may makita kang mali, mangyaring sumulat sa thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Patakaran sa privacy",
+        "corpo": "Huling na-update: 14 Hulyo 2026. Inilalarawan ng patakarang ito kung anong data ang pinoproseso ng <em>ti</em> app (\"ang App\") at kung paano. Data controller: Thuis Italiaans, maaabot sa thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Ang prinsipyo: nananatili sa iyong device ang iyong data",
+        "corpo": "Ang App ay idinisenyo upang gumana nang lokal. Ang progreso ng pag-aaral, natutunang mga salita, istatistika, mga setting at kagustuhan ay iniimbak lamang sa iyong device at hindi ipinapadala sa aming mga server (wala kami nito). Hindi kami gumagamit ng third-party analytics, hindi nagpapakita ng ads at hindi sinusubaybayan ang iyong aktibidad."
+      },
+      {
+        "titolo": "Data na pinoproseso gamit ang Mag-sign in gamit ang Apple",
+        "corpo": "Kung pipiliin mong \"Mag-sign in gamit ang Apple\", makakatanggap kami mula sa Apple ng isang anonymous na identifier at, tanging sa unang pag-sign in at kung nagpasya kang ibahagi ang mga ito, ng iyong pangalan at posibleng email address (kabilang ang private relay na anyo ng Apple). Ang mga datos na ito ay iniimbak lamang sa iyong device at ginagamit lamang upang ipakita ang iyong pangalan sa App. Hindi namin kailanman ipinapadala o ibinebenta ang mga ito. Bilang alternatibo, makakagawa ka ng lokal na profile gamit ang isang simpleng username o gamitin ang App bilang bisita: walang password na hinihingi o iniimbak kailanman."
+      },
+      {
+        "titolo": "Mga pagbili",
+        "corpo": "Ang mga pagbili (subscription, Lifetime na pagbili, mga indibidwal na kurso at nobela) ay ganap na hinahawakan ng Apple sa pamamagitan ng App Store. Hindi kami kailanman tumatanggap o nag-iimbak ng data ng pagbabayad. Sa pamamagitan ng StoreKit, sinusuri lamang namin kung anong mga produkto ang aktibo sa iyong Apple account, upang i-unlock ang kaukulang nilalaman."
+      },
+      {
+        "titolo": "Data na hindi namin kinokolekta",
+        "corpo": "Hindi kami nangongolekta ng lokasyon, mga contact, larawan, mikropono, kalusugan o data ng pagba-browse. Hindi kami gumagawa ng mga user profile at hindi namin ibinabahagi ang data sa mga third party para sa mga layunin ng marketing."
+      },
+      {
+        "titolo": "Pag-iimbak at pagtanggal",
+        "corpo": "Dahil ang data ay nasa iyong device, mayroon kang buong kontrol: mula sa screen na \"Account at privacy\" maaari mong gamitin ang \"Tanggalin ang aking data\" upang permanenteng alisin ang profile, progreso, mga salita at istatistika. Ang pag-uninstall ng App ay nagtatanggal din ng lahat ng lokal na data. Ang mga pagbili ay nananatiling nakatali sa iyong Apple account at maaaring maibalik pagkatapos mag-reinstall."
+      },
+      {
+        "titolo": "Ang iyong mga karapatan (GDPR)",
+        "corpo": "Bilang isang residente ng EU, mayroon kang mga karapatan sa pag-access, pagwawasto, pagbura, paglilimita at portability, at ang karapatang magsampa ng reklamo sa isang awtoridad na nangangasiwa. Dahil ang personal na data ay nasa iyong device, karamihan sa mga karapatang ito ay ginagampanan nang direkta mula sa App; para sa anumang kahilingan, sumulat sa thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Mga menor de edad",
+        "corpo": "Hindi nangangailangan ang App ng personal na data upang magamit at angkop din para sa mga batang mag-aaral. Kung ang isang magulang ay naniniwala na ang isang menor de edad ay nagbahagi ng data sa pamamagitan ng Mag-sign in gamit ang Apple nang walang pahintulot, makipag-ugnayan sa amin para sa tulong sa pagtanggal (posible rin nang direkta mula sa App)."
+      },
+      {
+        "titolo": "Mga pagbabago sa patakarang ito",
+        "corpo": "Kung ang App ay magpakilala sa hinaharap ng mga tampok na kinasasangkutan ng bagong pagproseso (halimbawa, cloud sync), i-update namin ang patakarang ito at hihilingin ang iyong pahintulot bago paganahin ang mga ito. Ang kasalukuyang bersyon ay palaging nai-publish sa pahinang ito."
+      }
+    ]
+  },
+  "ti": {
+    "back": "← ናብ መእተዊ ገጽ ተመለስ",
+    "terms": "ውዕል ኣጠቓቕማ ኣፕ →",
+    "mt_notice": "ይቕሬታ — እዚ ትሕዝቶ ብማሽን ተተርጒሙ እዩ፡ ገለ ኣገላልጻታት ኣብ ምሉእነት ልክዕ ኣይክኾኑን ይኽእሉ። ጌጋ እንተረኺብካ፡ ናብ thuisitaliaans@gmail.com ጽሓፍ።",
+    "sections": [
+      {
+        "titolo": "ፖሊሲ ሚስጢራውነት",
+        "corpo": "ናይ መወዳእታ ምዕባለ፡ 14 ሓምለ 2026። እዚ ፖሊሲ እዚ <em>ti</em> ኣፕ (\"እቲ ኣፕ\") እንታይ ዓይነት ሓበሬታ ከም ዝሰርሕን ብኸመይን ይገልጽ። ተቆጻጻሪ ሓበሬታ፡ Thuis Italiaans፡ ብ thuisitaliaans@gmail.com ክትረኽቦ ትኽእል።"
+      },
+      {
+        "titolo": "መትከል፡ ሓበሬታኻ ኣብ መሳርሒኻ ይተርፍ",
+        "corpo": "እቲ ኣፕ ብዘቤታዊ ንኽሰርሕ እዩ ተነዲፉ። ናይ መጽናዕቲ ምዕባለ፡ እተመሃርካዮም ቃላት፡ ስታቲስቲክስ፡ ኣቀማምጣን ምርጫታትን ኣብ መሳርሒኻ ጥራይ ይቕመጡ እምበር ናብ ኣገልገልትና ኣይለኣኹን (ኣገልገልቲ የብልናን)። ናይ ሳልሳይ ወገን ኣንድል ኣይንጥቀምን፡ መወዓውዒ ኣይነርእን፡ ንንጥፈታትካ ኣይንክተልን።"
+      },
+      {
+        "titolo": "ብ \"Sign in with Apple\" ዝስረሕ ሓበሬታ",
+        "corpo": "\"Sign in with Apple\" እንተመሪጽካ፡ ካብ Apple ስም ዘይብሉ መለለዪ ንቕበል፡ ኣብ ናይ መጀመርታ መእተዊ ጥራይ ከምኡውን ንኽትካፈሎ እንተወሲንካ፡ ስምካን ኣድራሻ ኢሜይልካን (ብናይ Apple ብሕታዊ ናይ መተሓላለፊ ኣገባብ እውን ክኸውን ይኽእል)። እዚ ሓበሬታ እዚ ኣብ መሳርሒኻ ጥራይ ይቕመጥ እሞ ስምካ ኣብ ኣፕ ንኸርኢ ጥራይ ይጠቅም። ፈጺምና ኣይነሕልፎን ኣይንሸይጦን። ኣብ ክንድኡ፡ ብቐሊል ናይ ተጠቃሚ ስም ዘቤታዊ ፕሮፋይል ክትፈጥር ወይ ኣፕ ከም ጋሻ ክትጥቀም ትኽእል፡ ፈጺሙ ፓስዎርድ ኣይሕተትን ኣይቕመጥን።"
+      },
+      {
+        "titolo": "ግዝኣት",
+        "corpo": "ግዝኣታት (ተመዝጋቢነት፡ ናይ ኩሉ ግዜ ግዝኣት፡ ውልቃውያን መገድታትን ልብ-ወለዳዊ ጽሑፋትን) ብምሉኡ ብ Apple ኣቢሉ ብ App Store ይመሓደር። ብምሉእ ኣይንቕበልን ኣይነከማችን ዝኾነ መኽፈሊ ሓበሬታ። ብ StoreKit ኣቢልና እንታይ ዓይነት ፍርያት ኣብ ናይ Apple ሕሳብካ ንጡፍ ምዃኑ ንኸተኣረምን ተመሳሳሊ ትሕዝቶ ንኽንኸፍትን ጥራይ ንርኢ።"
+      },
+      {
+        "titolo": "ዘይንእክቦ ሓበሬታ",
+        "corpo": "ኣይንእክብን ቦታ፡ ተራኸብቲ፡ ስእልታት፡ ማይክሮፎን፡ ጥዕናዊ ወይ ናይ ምድላይ ሓበሬታ። ናይ ተጠቀምቲ ፕሮፋይል ኣይንፈጥርን ንዕዳጋ ዕላማ ኸኣ ንሳልሳይ ወገን ሓበሬታ ኣይነካፍልን።"
+      },
+      {
+        "titolo": "ምዕቓብን ምስራዝን",
+        "corpo": "ሓበሬታ ኣብ መሳርሒኻ ስለዘሎ፡ ምሉእ ቁጽጽር ኣለካ፡ ካብቲ \"ሕሳብን ሚስጢራውነትን\" ስክሪን \"ሓበሬታይ ሰርዝ\" ብምጥቃም ፕሮፋይል፡ ምዕባለ፡ ቃላትን ስታቲስቲክስን ብቐዋሚ ክትስርዞ ትኽእል። ኣፕ ምድሓስ እውን ኩሉ ዘቤታዊ ሓበሬታ ይሰርዞ። ግዝኣታት ምስ ናይ Apple ሕሳብካ ተኣሳሲሮም ይተርፉ እሞ ድሕሪ ምሕዳስ ክምለሱ ይኽእሉ።"
+      },
+      {
+        "titolo": "መሰላትካ (GDPR)",
+        "corpo": "ከም ኣብ ኤውሮጳዊ ሕብረት ተቐማጣይ፡ ናይ ምዕዛብ፡ ምእራም፡ ምስራዝ፡ ምድራት ከምኡውን ምዝውውር መሰላት ኣሎካ፡ ከምኡውን ናብ ተቆጻጻሪ ኣካል ጥርዓን ናይ ምቕራብ መሰል። ውልቃዊ ሓበሬታ ኣብ መሳርሒኻ ስለዝቕመጥ፡ መብዛሕትኡ እዚ መሰላት እዚ ብቐጥታ ካብ ኣፕ ይተግበር፡ ንዝኾነ ጥርዓን ናብ thuisitaliaans@gmail.com ጽሓፍ።"
+      },
+      {
+        "titolo": "ንኣሽቱ",
+        "corpo": "ኣፕ ንኽትጥቀሞ ውልቃዊ ሓበሬታ ኣየድልየካን፡ ንንኣሽቱ ተመሃሮ እውን ዝሰማማዕ እዩ። ሓደ ወላዲ ንኣሽ ብ Sign in with Apple ብዘይፍቓድ ሓበሬታ ኣካፊሉ ኣሎ ኢሉ ዝኣምን እንተኾይኑ፡ ንምስራዝ ንደሃይና (ብቐጥታ ካብ ኣፕ እውን ይካኣል)።"
+      },
+      {
+        "titolo": "ናይ'ዚ ፖሊሲ ለውጥታት",
+        "corpo": "ኣብ መጻኢ ኣፕ ሓደስቲ ስራሓት ዘጠቓለሉ ባህርያት ኣተኣታቲዩ እንተኾይኑ (ንኣብነት ናይ ደመና ሓባራዊ ምዝማድ)፡ ንዚ ፖሊሲ ኣብ ግምት ከነቐምጥ ኢና እሞ ቅድሚ ምንቕቓሕ ፍቓድካ ክንሓትት ኢና። ህሉው ትሕዝቶ ኣብዚ ገጽ እዚ ኩሉ ግዜ ይዝርጋሕ።"
+      }
+    ]
+  },
+  "uk": {
+    "back": "← Повернутися на головну",
+    "terms": "Умови користування →",
+    "mt_notice": "Вибачте — цю версію перекладено автоматично, і деякі формулювання можуть бути не зовсім точними. Якщо ви помітите помилку, напишіть на thuisitaliaans@gmail.com.",
+    "sections": [
+      {
+        "titolo": "Політика конфіденційності",
+        "corpo": "Останнє оновлення: 14 липня 2026 року. Ця політика описує, які дані обробляє застосунок <em>ti</em> («Застосунок») та як. Розпорядник даних: Thuis Italiaans, звертайтеся на thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Принцип: твої дані залишаються на твоєму пристрої",
+        "corpo": "Застосунок розроблено для локальної роботи. Прогрес навчання, вивчені слова, статистика, налаштування та вподобання зберігаються виключно на твоєму пристрої і не надсилаються на наші сервери (ми їх не маємо). Ми не використовуємо аналітичних інструментів третіх сторін, не показуємо реклами й не відстежуємо твоєї активності."
+      },
+      {
+        "titolo": "Дані під час «Увійти через Apple»",
+        "corpo": "Якщо ти обираєш «Увійти через Apple», ми отримуємо від Apple анонімний ідентифікатор і — лише під час першого входу та якщо ти вирішиш ними поділитися — твоє ім'я та, за бажанням, електронну адресу (зокрема у формі приватного пересилання Apple). Ці дані зберігаються лише на твоєму пристрої й використовуються виключно для показу твого імені в Застосунку. Ми ніколи не передаємо їх і не продаємо. Як альтернатива, ти можеш створити локальний профіль зі звичайним іменем користувача або користуватися Застосунком як гість: пароль ніколи не запитується і не зберігається."
+      },
+      {
+        "titolo": "Покупки",
+        "corpo": "Покупки (підписки, покупка Lifetime, окремі курси та романи) повністю обробляє Apple через App Store. Ми ніколи не отримуємо й не зберігаємо платіжних даних. Через StoreKit ми лише перевіряємо, які продукти активні на твоєму обліковому записі Apple, щоб розблокувати відповідний вміст."
+      },
+      {
+        "titolo": "Дані, які ми не збираємо",
+        "corpo": "Ми не збираємо місцеперебування, контакти, фото, дані мікрофона, здоров'я або перегляду в Інтернеті. Ми не створюємо профілів користувачів і не передаємо даних третім сторонам для маркетингу."
+      },
+      {
+        "titolo": "Зберігання та видалення",
+        "corpo": "Оскільки дані знаходяться на твоєму пристрої, ти маєш повний контроль: з екрану «Обліковий запис і конфіденційність» можна використати «Видалити мої дані» для остаточного видалення профілю, прогресу, слів і статистики. Видалення Застосунку також видаляє всі локальні дані. Покупки залишаються прив'язаними до твого облікового запису Apple і можуть бути відновлені після перевстановлення."
+      },
+      {
+        "titolo": "Твої права (GDPR)",
+        "corpo": "Як мешканець ЄС, ти маєш право на доступ, виправлення, стирання, обмеження та перенесення даних, а також право подати скаргу до наглядового органу. Оскільки персональні дані знаходяться на твоєму пристрої, більшість цих прав здійснюються безпосередньо в Застосунку; для будь-яких запитів пиши на thuisitaliaans@gmail.com."
+      },
+      {
+        "titolo": "Неповнолітні",
+        "corpo": "Застосунок не вимагає персональних даних для використання і підходить також молодшим учням. Якщо один із батьків вважає, що неповнолітній поділився даними через «Увійти через Apple» без згоди, зв'яжися з нами для допомоги з видаленням (також можливо безпосередньо у Застосунку)."
+      },
+      {
+        "titolo": "Зміни цієї політики",
+        "corpo": "Якщо в майбутньому Застосунок запровадить функції з новими видами обробки (наприклад синхронізацію з хмарою), ми оновимо цю політику й попросимо твоєї згоди перед їх активацією. Поточна версія завжди опублікована на цій сторінці."
+      }
+    ]
+  }
+}
+    </script>
+
+    <script src="js/app-nav.js"></script>
+    <script>
+    (function(){
+      const data = JSON.parse(document.getElementById('data').textContent);
+      const container = document.getElementById('content');
+      const buttons = document.querySelectorAll('.lang-switcher button');
+      const RTL_LANGS = ['ar'];
+
+      function render(lang){
+        const d = data[lang];
+        if(!d) return;
+        const first = d.sections[0];
+        const rest = d.sections.slice(1);
+        let html = '';
+        html += '<h1>' + first.titolo + '</h1>';
+        if(d.mt_notice){
+          html += '<p class="legal-mt-notice">' + d.mt_notice + '</p>';
+        }
+        const dateMatch = first.corpo.match(/^(Ultimo aggiornamento:[^.]+\.|Last updated:[^.]+\.|Laatst bijgewerkt:[^.]+\.|Zuletzt aktualisiert:[^.]+\.|Dernière mise à jour[^.]+\.|Última actualización:[^.]+\.|Última atualização:[^.]+\.|Ultima actualizare:[^.]+\.|Останнє оновлення:[^.]+\.|Përditësuar së fundmi:[^.]+\.|آخر تحديث:[^.]+\.|সর্বশেষ আপডেট:[^.]+।|最后更新:[^。]+。|Huling na-update:[^.]+\.|ናይ መወዳእታ ምዕባለ[^።]+።)\s*/);
+        if(dateMatch){
+          html += '<p class="legal-updated">' + dateMatch[1].trim() + '</p>';
+          html += '<p>' + first.corpo.slice(dateMatch[0].length) + '</p>';
+        } else {
+          html += '<p>' + first.corpo + '</p>';
+        }
+        for(const s of rest){
+          html += '<h2>' + s.titolo + '</h2>';
+          html += '<p>' + s.corpo + '</p>';
+        }
+        container.innerHTML = html;
+        document.documentElement.lang = lang;
+        document.documentElement.dir = RTL_LANGS.includes(lang) ? 'rtl' : 'ltr';
+        buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+        if(window.applyAppNav) window.applyAppNav(lang);
+        try { localStorage.setItem('ti-lang', lang); } catch(e){}
+      }
+
+      buttons.forEach(b => b.addEventListener('click', () => render(b.dataset.lang)));
+
+      let initial = 'nl';
+      try {
+        const saved = localStorage.getItem('ti-lang');
+        if(saved && data[saved]) initial = saved;
+      } catch(e){}
+      // browser language auto-detect on first visit
+      if(!localStorage.getItem('ti-lang')){
+        const browserLang = (navigator.language || 'nl').slice(0, 2).toLowerCase();
+        if(data[browserLang]) initial = browserLang;
+      }
+      render(initial);
+    })();
+    </script>
 
 </body>
 
