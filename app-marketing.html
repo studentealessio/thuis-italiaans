@@ -19,7 +19,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Bengali:wght@400;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+Ethiopic:wght@400;600&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
@@ -217,6 +217,65 @@
                 width: 270px;
             }
         }
+
+        /* Lang switcher */
+        .lang-switcher{
+            display:flex;
+            flex-wrap:wrap;
+            gap:6px;
+            margin:24px auto 8px;
+            padding:6px;
+            background:var(--surface);
+            border-radius:22px;
+            width:fit-content;
+            max-width:100%;
+            direction:ltr;
+        }
+        .lang-switcher button{
+            padding:8px 14px;
+            border-radius:999px;
+            font-size:.8rem;
+            font-weight:600;
+            color:var(--secondary);
+            transition:var(--transition);
+            letter-spacing:.3px;
+            font-family:'Inter',sans-serif;
+        }
+        .lang-switcher button.active{
+            background:var(--primary);
+            color:#fff;
+        }
+        .lang-switcher button:not(.active):hover{
+            color:var(--primary);
+        }
+        .lang-switcher-wrap{
+            display:flex;
+            justify-content:center;
+            padding:20px 16px 0;
+        }
+        [lang="ar"]{ font-family:'Noto Sans Arabic','Inter',sans-serif; }
+        [lang="bn"]{ font-family:'Noto Sans Bengali','Inter',sans-serif; }
+        [lang="zh"]{ font-family:'Noto Sans SC','Inter',sans-serif; }
+        [lang="ti"]{ font-family:'Noto Sans Ethiopic','Inter',sans-serif; }
+        html[dir="rtl"] .hero-buttons,
+        html[dir="rtl"] .hero-rating{
+            flex-direction:row-reverse;
+        }
+        /* MT notice */
+        .mt-notice{
+            max-width:900px;
+            margin:0 auto;
+            background:#fff8e1;
+            border:1px solid #f5deb3;
+            border-radius:14px;
+            padding:14px 18px;
+            color:#7a5a00;
+            font-size:.9rem;
+            line-height:1.55;
+        }
+        .mt-notice-wrap{
+            padding:16px;
+        }
     </style>
 
 </head>
@@ -237,19 +296,21 @@
 
                 <ul class="nav-menu">
 
-                    <li><a href="marketing.html">L'app Ti</a></li>
+                    <li><a href="index.html" data-i18n-nav="chisono">Chi sono</a></li>
 
-                    <li><a href="app-support.html">Supporto</a></li>
+                    <li><a href="app-marketing.html" data-i18n-nav="app">L'app Ti</a></li>
 
-                    <li><a href="app-privacy.html">Privacy</a></li>
+                    <li><a href="app-support.html" data-i18n-nav="supporto">Supporto</a></li>
 
-                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="app-privacy.html" data-i18n-nav="privacy">Privacy</a></li>
+
+                    <li><a href="app-termini.html" data-i18n-nav="termini">Termini</a></li>
 
                 </ul>
 
             </nav>
 
-            <a href="#download" class="button">
+            <a href="#download" class="button" data-i18n-cta="scarica">
 
                 Scarica
 
@@ -261,6 +322,31 @@
 
     <main>
 
+        <!-- ========= LANG SWITCHER ========= -->
+        <div class="lang-switcher-wrap">
+            <div class="lang-switcher" role="tablist" aria-label="Language">
+                <button role="tab" data-lang="sq" title="Shqip">SQ</button>
+                <button role="tab" data-lang="ar" title="العربية">AR</button>
+                <button role="tab" data-lang="bn" title="বাংলা">BN</button>
+                <button role="tab" data-lang="zh" title="中文">ZH</button>
+                <button role="tab" data-lang="de" title="Deutsch">DE</button>
+                <button role="tab" data-lang="en" title="English">EN</button>
+                <button role="tab" data-lang="es" title="Español">ES</button>
+                <button role="tab" data-lang="fr" title="Français">FR</button>
+                <button role="tab" data-lang="it" class="active" title="Italiano">IT</button>
+                <button role="tab" data-lang="nl" title="Nederlands">NL</button>
+                <button role="tab" data-lang="pt" title="Português">PT</button>
+                <button role="tab" data-lang="ro" title="Română">RO</button>
+                <button role="tab" data-lang="tl" title="Tagalog">TL</button>
+                <button role="tab" data-lang="ti" title="ትግርኛ">TI</button>
+                <button role="tab" data-lang="uk" title="Українська">UK</button>
+            </div>
+        </div>
+
+        <div class="mt-notice-wrap" id="mt-notice-wrap" style="display:none;">
+            <div class="mt-notice" id="mt-notice"></div>
+        </div>
+
         <!-- ========= HERO ========= -->
         <section class="hero">
 
@@ -268,22 +354,15 @@
 
                 <div>
 
-                    <span class="hero-tag">Disponibile su App Store</span>
+                    <span class="hero-tag" data-i18n="hero_tag">Disponibile su App Store</span>
 
-                    <h1>Impara l'italiano davvero.</h1>
+                    <h1 data-i18n="hero_h1">Impara l'italiano davvero.</h1>
 
-                    <p class="hero-text">
-
-                        Ti è l'app per portarti dallo zero al C2 seguendo il
-                        percorso QCER, con un metodo pensato per farti
-                        parlare, capire, leggere e scrivere in italiano
-                        vero — quello di tutti i giorni, non da manuale.
-
-                    </p>
+                    <p class="hero-text" data-i18n="hero_text">Ti è l'app per portarti dallo zero al C2 seguendo il percorso QCER, con un metodo pensato per farti parlare, capire, leggere e scrivere in italiano vero — quello di tutti i giorni, non da manuale.</p>
 
                     <div class="hero-buttons">
 
-                        <a href="#download" class="button">Scarica su App Store</a>
+                        <a href="#download" class="button" data-i18n="hero_btn">Scarica su App Store</a>
 
                     </div>
 
@@ -291,7 +370,7 @@
 
                         <span class="stars">★★★★★</span>
 
-                        <p>Nuova su App Store · 14 lingue di supporto</p>
+                        <p data-i18n="hero_rating">Nuova su App Store · 14 lingue di supporto</p>
 
                     </div>
 
@@ -315,33 +394,33 @@
 
                 <article>
 
-                    <h3>A1 → C2</h3>
+                    <h3 data-i18n="trust_h3_1">A1 → C2</h3>
 
-                    <p>Percorso QCER completo, con checkpoint ed esami di livello.</p>
-
-                </article>
-
-                <article>
-
-                    <h3>14 lingue</h3>
-
-                    <p>Grammatica e traduzioni in 14 lingue, non solo in inglese.</p>
+                    <p data-i18n="trust_p_1">Percorso QCER completo, con checkpoint ed esami di livello.</p>
 
                 </article>
 
                 <article>
 
-                    <h3>3.000+</h3>
+                    <h3 data-i18n="trust_h3_2">14 lingue</h3>
 
-                    <p>Parole nel dizionario, con esempi, sinonimi e famiglie.</p>
+                    <p data-i18n="trust_p_2">Grammatica e traduzioni in 14 lingue, non solo in inglese.</p>
 
                 </article>
 
                 <article>
 
-                    <h3>Classici</h3>
+                    <h3 data-i18n="trust_h3_3">3.000+</h3>
 
-                    <p>Romanzi italiani riscritti e graduati per il tuo livello.</p>
+                    <p data-i18n="trust_p_3">Parole nel dizionario, con esempi, sinonimi e famiglie.</p>
+
+                </article>
+
+                <article>
+
+                    <h3 data-i18n="trust_h3_4">Classici</h3>
+
+                    <p data-i18n="trust_p_4">Romanzi italiani riscritti e graduati per il tuo livello.</p>
 
                 </article>
 
@@ -356,20 +435,20 @@
 
                 <div class="section-heading">
 
-                    <span class="section-tag">Guarda</span>
+                    <span class="section-tag" data-i18n="scr_tag">Guarda</span>
 
-                    <h2>Ti in azione</h2>
+                    <h2 data-i18n="scr_h2">Ti in azione</h2>
 
-                    <p>Scorri per vedere il percorso, gli esercizi, l'edicola e i romanzi.</p>
+                    <p data-i18n="scr_p">Scorri per vedere il percorso, gli esercizi, l'edicola e i romanzi.</p>
 
                 </div>
 
                 <!-- Etichetta iPhone -->
                 <div class="device-label">
 
-                    <h3>Su iPhone</h3>
+                    <h3 data-i18n="scr_iphone">Su iPhone</h3>
 
-                    <span class="device-count">10 schermate</span>
+                    <span class="device-count" data-i18n="scr_iphone_count">10 schermate</span>
 
                 </div>
 
@@ -390,70 +469,70 @@
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/percorso.png" alt="Home del percorso">
                         </div>
-                        <figcaption>Percorso</figcaption>
+                        <figcaption data-i18n="cap_percorso">Percorso</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/view_percorso.png" alt="Dettaglio livello A1">
                         </div>
-                        <figcaption>Vista percorso</figcaption>
+                        <figcaption data-i18n="cap_vista_percorso">Vista percorso</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/grammatica.png" alt="Spiegazione grammaticale">
                         </div>
-                        <figcaption>Grammatica</figcaption>
+                        <figcaption data-i18n="cap_grammatica">Grammatica</figcaption>
                     </figure>
 
                       <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/edicola_view.png" alt="L'edicola">
                         </div>
-                        <figcaption>Edicola</figcaption>
+                        <figcaption data-i18n="cap_edicola">Edicola</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/romanzo_view.png" alt="Romanzo classico">
                         </div>
-                        <figcaption>Romanzo</figcaption>
+                        <figcaption data-i18n="cap_romanzo">Romanzo</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/tanti_giochi_view.png" alt="Sezione pratica ed esercizi">
                         </div>
-                        <figcaption>Tanti giochi</figcaption>
+                        <figcaption data-i18n="cap_tanti_giochi">Tanti giochi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/gioco_comprensione.png" alt="Esercizio vero o falso">
                         </div>
-                        <figcaption>Comprensione</figcaption>
+                        <figcaption data-i18n="cap_comprensione">Comprensione</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/gioco_cruciverba.png" alt="Gioco cerca le parole">
                         </div>
-                        <figcaption>Cruciverba</figcaption>
+                        <figcaption data-i18n="cap_cruciverba">Cruciverba</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/gioco_tabella_verbi.png" alt="Coniugazione verbi">
                         </div>
-                        <figcaption>Tabella verbi</figcaption>
+                        <figcaption data-i18n="cap_tabella_verbi">Tabella verbi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPhone/fine_percorso_feedback.png" alt="Tappa completata">
                         </div>
-                        <figcaption>Feedback</figcaption>
+                        <figcaption data-i18n="cap_feedback">Feedback</figcaption>
                     </figure>
 
                 </div>
@@ -465,9 +544,9 @@
                 <!-- Etichetta iPad -->
                 <div class="device-label">
 
-                    <h3>Su iPad</h3>
+                    <h3 data-i18n="scr_ipad">Su iPad</h3>
 
-                    <span class="device-count">8 schermate</span>
+                    <span class="device-count" data-i18n="scr_ipad_count">8 schermate</span>
 
                 </div>
 
@@ -487,56 +566,56 @@
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/percorso_vista_a1-c2.png" alt="Home percorso, dallo zero al C2">
                         </div>
-                        <figcaption>Percorso A1–C2</figcaption>
+                        <figcaption data-i18n="cap_percorso_a1c2">Percorso A1–C2</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/percorso_vista_a1.png" alt="Dettaglio livello A1 con tappe">
                         </div>
-                        <figcaption>Percorso A1</figcaption>
+                        <figcaption data-i18n="cap_percorso_a1">Percorso A1</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/grammatica.png" alt="Spiegazione grammaticale nella tua lingua">
                         </div>
-                        <figcaption>Grammatica</figcaption>
+                        <figcaption data-i18n="cap_grammatica2">Grammatica</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/tutti_i_giochi.png" alt="Tutti i tipi di esercizi disponibili">
                         </div>
-                        <figcaption>Tutti i giochi</figcaption>
+                        <figcaption data-i18n="cap_tutti_giochi">Tutti i giochi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/dialogo_cloze.png" alt="Dialogo con parola da completare">
                         </div>
-                        <figcaption>Dialogo</figcaption>
+                        <figcaption data-i18n="cap_dialogo">Dialogo</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/cruciverba.png" alt="Cruciverba italiano">
                         </div>
-                        <figcaption>Cruciverba</figcaption>
+                        <figcaption data-i18n="cap_cruciverba2">Cruciverba</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/gioco_trova_intruso.png" alt="Gioco trova l'intruso">
                         </div>
-                        <figcaption>Trova l'intruso</figcaption>
+                        <figcaption data-i18n="cap_intruso">Trova l'intruso</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
                             <img src="assets/screenshots/iPad/edicola.png" alt="Edicola con romanzi e percorsi tematici">
                         </div>
-                        <figcaption>Edicola</figcaption>
+                        <figcaption data-i18n="cap_edicola2">Edicola</figcaption>
                     </figure>
 
                 </div>
@@ -552,11 +631,11 @@
 
                 <div class="section-heading">
 
-                    <span class="section-tag">Perché Ti</span>
+                    <span class="section-tag" data-i18n="feat_tag">Perché Ti</span>
 
-                    <h2>Non un'app di parole. Un corso.</h2>
+                    <h2 data-i18n="feat_h2">Non un'app di parole. Un corso.</h2>
 
-                    <p>Quello che ti aspetteresti da un manuale serio, con il ritmo di un'app.</p>
+                    <p data-i18n="feat_p">Quello che ti aspetteresti da un manuale serio, con il ritmo di un'app.</p>
 
                 </div>
 
@@ -564,23 +643,11 @@
 
                     <div class="feature-text">
 
-                        <h3>Il percorso QCER completo</h3>
+                        <h3 data-i18n="f1_h3">Il percorso QCER completo</h3>
 
-                        <p>
+                        <p data-i18n="f1_p1">Dallo zero al C2 seguendo i livelli ufficiali europei. Ogni livello ha tappe di grammatica, vocabolario, cultura e comprensione, con checkpoint ed esami di livello.</p>
 
-                            Dallo zero al C2 seguendo i livelli ufficiali europei.
-                            Ogni livello ha tappe di grammatica, vocabolario,
-                            cultura e comprensione, con checkpoint ed esami di
-                            livello.
-
-                        </p>
-
-                        <p>
-
-                            Sai sempre dove sei e cosa manca per il prossimo
-                            scalino.
-
-                        </p>
+                        <p data-i18n="f1_p2">Sai sempre dove sei e cosa manca per il prossimo scalino.</p>
 
                     </div>
 
@@ -596,24 +663,11 @@
 
                     <div class="feature-text">
 
-                        <h3>L'edicola: libri tematici e classici</h3>
+                        <h3 data-i18n="f2_h3">L'edicola: libri tematici e classici</h3>
 
-                        <p>
+                        <p data-i18n="f2_p1">La dolce vita, la carriera, il gergo dei giovani, gli italiani famosi, viaggi, moda, motori, università, burocrazia. Ogni libro copre un aspetto dell'italiano vivo, dall'A1 al C2.</p>
 
-                            La dolce vita, la carriera, il gergo dei giovani,
-                            gli italiani famosi, viaggi, moda, motori,
-                            università, burocrazia. Ogni libro copre un
-                            aspetto dell'italiano vivo, dall'A1 al C2.
-
-                        </p>
-
-                        <p>
-
-                            Accanto ai libri tematici, i grandi romanzi
-                            italiani: Manzoni, Verga, Pirandello, De Amicis,
-                            Serao, riscritti e graduati per il tuo livello.
-
-                        </p>
+                        <p data-i18n="f2_p2">Accanto ai libri tematici, i grandi romanzi italiani: Manzoni, Verga, Pirandello, De Amicis, Serao, riscritti e graduati per il tuo livello.</p>
 
                     </div>
 
@@ -629,24 +683,11 @@
 
                     <div class="feature-text">
 
-                        <h3>I classici, con dizionario integrato</h3>
+                        <h3 data-i18n="f3_h3">I classici, con dizionario integrato</h3>
 
-                        <p>
+                        <p data-i18n="f3_p1">Ogni parola difficile è a portata di tap: definizione dry, note del prof su contesto e cultura, sinonimi e famiglie di parole. Comprensione guidata mentre leggi, senza uscire dal romanzo.</p>
 
-                            Ogni parola difficile è a portata di tap:
-                            definizione dry, note del prof su contesto e
-                            cultura, sinonimi e famiglie di parole.
-                            Comprensione guidata mentre leggi, senza uscire
-                            dal romanzo.
-
-                        </p>
-
-                        <p>
-
-                            Leggi la letteratura italiana dal primo giorno,
-                            senza sentirti sopraffatto.
-
-                        </p>
+                        <p data-i18n="f3_p2">Leggi la letteratura italiana dal primo giorno, senza sentirti sopraffatto.</p>
 
                     </div>
 
@@ -662,18 +703,9 @@
 
                     <div class="feature-text">
 
-                        <h3>14 lingue di supporto</h3>
+                        <h3 data-i18n="f4_h3">14 lingue di supporto</h3>
 
-                        <p>
-
-                            Non solo inglese, come quasi tutte le altre app.
-                            Ti è pensata anche per chi vive e lavora in Italia
-                            e non trova mai la propria lingua nelle altre
-                            app: albanese, arabo, bengalese, cinese, francese,
-                            inglese, olandese, portoghese, rumeno, spagnolo,
-                            tagalog, tedesco, tigrino, ucraino.
-
-                        </p>
+                        <p data-i18n="f4_p1">Non solo inglese, come quasi tutte le altre app. Ti è pensata anche per chi vive e lavora in Italia e non trova mai la propria lingua nelle altre app: albanese, arabo, bengalese, cinese, francese, inglese, olandese, portoghese, rumeno, spagnolo, tagalog, tedesco, tigrino, ucraino.</p>
 
                     </div>
 
@@ -694,11 +726,11 @@
 
             <div class="container">
 
-                <h2>L'italiano vero ti aspetta.</h2>
+                <h2 data-i18n="cta_h2">L'italiano vero ti aspetta.</h2>
 
-                <p>Scarica Ti e comincia il percorso. Il download è gratuito, il percorso QCER e il dizionario sono inclusi.</p>
+                <p data-i18n="cta_p">Scarica Ti e comincia il percorso. Il download è gratuito, il percorso QCER e il dizionario sono inclusi.</p>
 
-                <a href="#" class="button">Scarica su App Store</a>
+                <a href="#" class="button" data-i18n="cta_btn">Scarica su App Store</a>
 
             </div>
 
@@ -718,27 +750,954 @@
 
             <ul class="nav-menu">
 
-                <li><a href="marketing.html">L'app Ti</a></li>
+                <li><a href="index.html" data-i18n-nav="chisono">Chi sono</a></li>
 
-                <li><a href="support.html">Supporto</a></li>
+                <li><a href="app-marketing.html" data-i18n-nav="app">L'app Ti</a></li>
 
-                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="app-support.html" data-i18n-nav="supporto">Supporto</a></li>
 
-                <li><a href="index.html">Homepage</a></li>
+                <li><a href="app-privacy.html" data-i18n-nav="privacy">Privacy</a></li>
+
+                <li><a href="app-termini.html" data-i18n-nav="termini">Termini</a></li>
 
             </ul>
 
-            <p class="footer-copy">© 2026 Thuis Italiaans. Alle rechten voorbehouden.</p>
+            <p class="footer-copy" data-i18n-footer="copy">© 2026 Thuis Italiaans. Tutti i diritti riservati.</p>
 
         </div>
 
         <div class="container footer-legal">
 
-            <p>In behandeling bij de KvK</p>
+            <p data-i18n-footer="kvk">In elaborazione presso la KvK</p>
 
         </div>
 
     </footer>
+
+
+    <script type="application/json" id="i18n-data">
+{
+  "it": {
+    "hero_tag": "Disponibile su App Store",
+    "hero_h1": "Impara l'italiano davvero.",
+    "hero_text": "Ti è l'app per portarti dallo zero al C2 seguendo il percorso QCER, con un metodo pensato per farti parlare, capire, leggere e scrivere in italiano vero — quello di tutti i giorni, non da manuale.",
+    "hero_btn": "Scarica su App Store",
+    "hero_rating": "Nuova su App Store · 14 lingue di supporto",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Percorso QCER completo, con checkpoint ed esami di livello.",
+    "trust_h3_2": "14 lingue",
+    "trust_p_2": "Grammatica e traduzioni in 14 lingue, non solo in inglese.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Parole nel dizionario, con esempi, sinonimi e famiglie.",
+    "trust_h3_4": "Classici",
+    "trust_p_4": "Romanzi italiani riscritti e graduati per il tuo livello.",
+    "scr_tag": "Guarda",
+    "scr_h2": "Ti in azione",
+    "scr_p": "Scorri per vedere il percorso, gli esercizi, l'edicola e i romanzi.",
+    "scr_iphone": "Su iPhone",
+    "scr_iphone_count": "10 schermate",
+    "scr_ipad": "Su iPad",
+    "scr_ipad_count": "8 schermate",
+    "cap_percorso": "Percorso",
+    "cap_vista_percorso": "Vista percorso",
+    "cap_grammatica": "Grammatica",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Romanzo",
+    "cap_tanti_giochi": "Tanti giochi",
+    "cap_comprensione": "Comprensione",
+    "cap_cruciverba": "Cruciverba",
+    "cap_tabella_verbi": "Tabella verbi",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Percorso A1–C2",
+    "cap_percorso_a1": "Percorso A1",
+    "cap_grammatica2": "Grammatica",
+    "cap_tutti_giochi": "Tutti i giochi",
+    "cap_dialogo": "Dialogo",
+    "cap_cruciverba2": "Cruciverba",
+    "cap_intruso": "Trova l'intruso",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Perché Ti",
+    "feat_h2": "Non un'app di parole. Un corso.",
+    "feat_p": "Quello che ti aspetteresti da un manuale serio, con il ritmo di un'app.",
+    "f1_h3": "Il percorso QCER completo",
+    "f1_p1": "Dallo zero al C2 seguendo i livelli ufficiali europei. Ogni livello ha tappe di grammatica, vocabolario, cultura e comprensione, con checkpoint ed esami di livello.",
+    "f1_p2": "Sai sempre dove sei e cosa manca per il prossimo scalino.",
+    "f2_h3": "L'edicola: libri tematici e classici",
+    "f2_p1": "La dolce vita, la carriera, il gergo dei giovani, gli italiani famosi, viaggi, moda, motori, università, burocrazia. Ogni libro copre un aspetto dell'italiano vivo, dall'A1 al C2.",
+    "f2_p2": "Accanto ai libri tematici, i grandi romanzi italiani: Manzoni, Verga, Pirandello, De Amicis, Serao, riscritti e graduati per il tuo livello.",
+    "f3_h3": "I classici, con dizionario integrato",
+    "f3_p1": "Ogni parola difficile è a portata di tap: definizione dry, note del prof su contesto e cultura, sinonimi e famiglie di parole. Comprensione guidata mentre leggi, senza uscire dal romanzo.",
+    "f3_p2": "Leggi la letteratura italiana dal primo giorno, senza sentirti sopraffatto.",
+    "f4_h3": "14 lingue di supporto",
+    "f4_p1": "Non solo inglese, come quasi tutte le altre app. Ti è pensata anche per chi vive e lavora in Italia e non trova mai la propria lingua nelle altre app: albanese, arabo, bengalese, cinese, francese, inglese, olandese, portoghese, rumeno, spagnolo, tagalog, tedesco, tigrino, ucraino.",
+    "cta_h2": "L'italiano vero ti aspetta.",
+    "cta_p": "Scarica Ti e comincia il percorso. Il download è gratuito, il percorso QCER e il dizionario sono inclusi.",
+    "cta_btn": "Scarica su App Store"
+  },
+  "nl": {
+    "hero_tag": "Beschikbaar in de App Store",
+    "hero_h1": "Leer echt Italiaans.",
+    "hero_text": "Ti is de app die je van nul naar C2 brengt volgens het ERK-pad, met een methode die je laat spreken, begrijpen, lezen en schrijven in écht Italiaans — dat van elke dag, niet uit het handboek.",
+    "hero_btn": "Download uit App Store",
+    "hero_rating": "Nieuw in de App Store · 14 ondersteuningstalen",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Volledig ERK-pad, met checkpoints en niveau-examens.",
+    "trust_h3_2": "14 talen",
+    "trust_p_2": "Grammatica en vertalingen in 14 talen, niet alleen in het Engels.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Woorden in het woordenboek, met voorbeelden, synoniemen en families.",
+    "trust_h3_4": "Klassiekers",
+    "trust_p_4": "Italiaanse romans herschreven en gegradeerd voor jouw niveau.",
+    "scr_tag": "Kijk",
+    "scr_h2": "Ti in actie",
+    "scr_p": "Scroll om het pad, de oefeningen, de edicola en de romans te zien.",
+    "scr_iphone": "Op iPhone",
+    "scr_iphone_count": "10 schermen",
+    "scr_ipad": "Op iPad",
+    "scr_ipad_count": "8 schermen",
+    "cap_percorso": "Pad",
+    "cap_vista_percorso": "Padoverzicht",
+    "cap_grammatica": "Grammatica",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Roman",
+    "cap_tanti_giochi": "Veel spelletjes",
+    "cap_comprensione": "Begrip",
+    "cap_cruciverba": "Kruiswoord",
+    "cap_tabella_verbi": "Werkwoordtabel",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Pad A1–C2",
+    "cap_percorso_a1": "Pad A1",
+    "cap_grammatica2": "Grammatica",
+    "cap_tutti_giochi": "Alle spelletjes",
+    "cap_dialogo": "Dialoog",
+    "cap_cruciverba2": "Kruiswoord",
+    "cap_intruso": "Vind de indringer",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Waarom Ti",
+    "feat_h2": "Geen woorden-app. Een cursus.",
+    "feat_p": "Wat je zou verwachten van een serieus handboek, met het ritme van een app.",
+    "f1_h3": "Het volledige ERK-pad",
+    "f1_p1": "Van nul tot C2 volgens de officiële Europese niveaus. Elk niveau heeft etappes voor grammatica, woordenschat, cultuur en begrip, met checkpoints en niveau-examens.",
+    "f1_p2": "Je weet altijd waar je staat en wat er nog nodig is voor de volgende stap.",
+    "f2_h3": "De edicola: thematische boeken en klassiekers",
+    "f2_p1": "La dolce vita, de carrière, jongerentaal, beroemde Italianen, reizen, mode, motoren, universiteit, bureaucratie. Elk boek dekt een aspect van het levende Italiaans, van A1 tot C2.",
+    "f2_p2": "Naast de thematische boeken de grote Italiaanse romans: Manzoni, Verga, Pirandello, De Amicis, Serao, herschreven en gegradeerd voor jouw niveau.",
+    "f3_h3": "De klassiekers, met geïntegreerd woordenboek",
+    "f3_p1": "Elk moeilijk woord is één tik verderop: droge definitie, notities van de leraar over context en cultuur, synoniemen en woordfamilies. Begeleid begrip terwijl je leest, zonder de roman te verlaten.",
+    "f3_p2": "Lees Italiaanse literatuur vanaf dag één, zonder je overweldigd te voelen.",
+    "f4_h3": "14 ondersteuningstalen",
+    "f4_p1": "Niet alleen Engels, zoals bijna alle andere apps. Ti is ook bedacht voor wie in Italië woont en werkt en zijn taal nooit terugvindt in andere apps: Albanees, Arabisch, Bengaals, Chinees, Frans, Engels, Nederlands, Portugees, Roemeens, Spaans, Tagalog, Duits, Tigrinya, Oekraïens.",
+    "cta_h2": "Het echte Italiaans wacht op je.",
+    "cta_p": "Download Ti en begin het pad. De download is gratis, het ERK-pad en het woordenboek zijn inbegrepen.",
+    "cta_btn": "Download uit App Store",
+    "mt_notice": "Sorry — deze versie is automatisch vertaald en sommige formuleringen zijn misschien niet volledig accuraat. Zie je een fout? Mail ons op thuisitaliaans@gmail.com."
+  },
+  "en": {
+    "hero_tag": "Available on the App Store",
+    "hero_h1": "Really learn Italian.",
+    "hero_text": "Ti is the app that takes you from zero to C2 along the CEFR path, with a method designed to make you speak, understand, read and write real Italian — the everyday kind, not textbook Italian.",
+    "hero_btn": "Download on the App Store",
+    "hero_rating": "New on the App Store · 14 support languages",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Complete CEFR path, with checkpoints and level exams.",
+    "trust_h3_2": "14 languages",
+    "trust_p_2": "Grammar and translations in 14 languages, not only English.",
+    "trust_h3_3": "3,000+",
+    "trust_p_3": "Words in the dictionary, with examples, synonyms and families.",
+    "trust_h3_4": "Classics",
+    "trust_p_4": "Italian novels rewritten and graded for your level.",
+    "scr_tag": "Take a look",
+    "scr_h2": "Ti in action",
+    "scr_p": "Scroll to see the path, the exercises, the edicola and the novels.",
+    "scr_iphone": "On iPhone",
+    "scr_iphone_count": "10 screens",
+    "scr_ipad": "On iPad",
+    "scr_ipad_count": "8 screens",
+    "cap_percorso": "Path",
+    "cap_vista_percorso": "Path view",
+    "cap_grammatica": "Grammar",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Novel",
+    "cap_tanti_giochi": "Many games",
+    "cap_comprensione": "Comprehension",
+    "cap_cruciverba": "Crossword",
+    "cap_tabella_verbi": "Verb table",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Path A1–C2",
+    "cap_percorso_a1": "Path A1",
+    "cap_grammatica2": "Grammar",
+    "cap_tutti_giochi": "All the games",
+    "cap_dialogo": "Dialogue",
+    "cap_cruciverba2": "Crossword",
+    "cap_intruso": "Odd one out",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Why Ti",
+    "feat_h2": "Not a word app. A course.",
+    "feat_p": "What you'd expect from a serious textbook, with the rhythm of an app.",
+    "f1_h3": "The complete CEFR path",
+    "f1_p1": "From zero to C2 along the official European levels. Every level has stages for grammar, vocabulary, culture and comprehension, with checkpoints and level exams.",
+    "f1_p2": "You always know where you are and what's needed for the next step.",
+    "f2_h3": "The edicola: themed books and classics",
+    "f2_p1": "La dolce vita, careers, youth slang, famous Italians, travel, fashion, motors, university, bureaucracy. Every book covers a slice of living Italian, from A1 to C2.",
+    "f2_p2": "Alongside the themed books, the great Italian novels: Manzoni, Verga, Pirandello, De Amicis, Serao, rewritten and graded for your level.",
+    "f3_h3": "The classics, with an integrated dictionary",
+    "f3_p1": "Every hard word is a tap away: dry definition, teacher's notes on context and culture, synonyms and word families. Guided comprehension as you read, without leaving the novel.",
+    "f3_p2": "Read Italian literature from day one, without feeling overwhelmed.",
+    "f4_h3": "14 support languages",
+    "f4_p1": "Not only English, like almost every other app. Ti is also thought for those who live and work in Italy and never find their language in other apps: Albanian, Arabic, Bengali, Chinese, French, English, Dutch, Portuguese, Romanian, Spanish, Tagalog, German, Tigrinya, Ukrainian.",
+    "cta_h2": "Real Italian is waiting for you.",
+    "cta_p": "Download Ti and start the path. The download is free, the CEFR path and the dictionary are included.",
+    "cta_btn": "Download on the App Store",
+    "mt_notice": "Sorry — this version has been machine-translated and some wording may not be entirely accurate. If you spot a mistake, write to us at thuisitaliaans@gmail.com."
+  },
+  "es": {
+    "hero_tag": "Disponible en App Store",
+    "hero_h1": "Aprende italiano de verdad.",
+    "hero_text": "Ti es la app para llevarte del cero al C2 siguiendo el recorrido MCER, con un método pensado para hacerte hablar, entender, leer y escribir en italiano de verdad — el de todos los días, no el del manual.",
+    "hero_btn": "Descargar en App Store",
+    "hero_rating": "Nueva en App Store · 14 idiomas de soporte",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Recorrido MCER completo, con checkpoints y exámenes de nivel.",
+    "trust_h3_2": "14 idiomas",
+    "trust_p_2": "Gramática y traducciones en 14 idiomas, no solo en inglés.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Palabras en el diccionario, con ejemplos, sinónimos y familias.",
+    "trust_h3_4": "Clásicos",
+    "trust_p_4": "Novelas italianas reescritas y graduadas para tu nivel.",
+    "scr_tag": "Mira",
+    "scr_h2": "Ti en acción",
+    "scr_p": "Desplaza para ver el recorrido, los ejercicios, el kiosco y las novelas.",
+    "scr_iphone": "En iPhone",
+    "scr_iphone_count": "10 pantallas",
+    "scr_ipad": "En iPad",
+    "scr_ipad_count": "8 pantallas",
+    "cap_percorso": "Recorrido",
+    "cap_vista_percorso": "Vista recorrido",
+    "cap_grammatica": "Gramática",
+    "cap_edicola": "Kiosco",
+    "cap_romanzo": "Novela",
+    "cap_tanti_giochi": "Muchos juegos",
+    "cap_comprensione": "Comprensión",
+    "cap_cruciverba": "Crucigrama",
+    "cap_tabella_verbi": "Tabla verbos",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Recorrido A1–C2",
+    "cap_percorso_a1": "Recorrido A1",
+    "cap_grammatica2": "Gramática",
+    "cap_tutti_giochi": "Todos los juegos",
+    "cap_dialogo": "Diálogo",
+    "cap_cruciverba2": "Crucigrama",
+    "cap_intruso": "Encuentra el intruso",
+    "cap_edicola2": "Kiosco",
+    "feat_tag": "Por qué Ti",
+    "feat_h2": "No una app de palabras. Un curso.",
+    "feat_p": "Lo que esperarías de un manual serio, con el ritmo de una app.",
+    "f1_h3": "El recorrido MCER completo",
+    "f1_p1": "Del cero al C2 siguiendo los niveles oficiales europeos. Cada nivel tiene etapas de gramática, vocabulario, cultura y comprensión, con checkpoints y exámenes de nivel.",
+    "f1_p2": "Sabes siempre dónde estás y qué falta para el próximo escalón.",
+    "f2_h3": "El kiosco: libros temáticos y clásicos",
+    "f2_p1": "La dolce vita, la carrera, la jerga juvenil, italianos famosos, viajes, moda, motores, universidad, burocracia. Cada libro cubre un aspecto del italiano vivo, del A1 al C2.",
+    "f2_p2": "Junto a los libros temáticos, las grandes novelas italianas: Manzoni, Verga, Pirandello, De Amicis, Serao, reescritas y graduadas para tu nivel.",
+    "f3_h3": "Los clásicos, con diccionario integrado",
+    "f3_p1": "Cada palabra difícil está a un toque: definición seca, notas del profe sobre contexto y cultura, sinónimos y familias de palabras. Comprensión guiada mientras lees, sin salir de la novela.",
+    "f3_p2": "Lee la literatura italiana desde el primer día, sin sentirte abrumado.",
+    "f4_h3": "14 idiomas de soporte",
+    "f4_p1": "No solo inglés, como casi todas las demás apps. Ti está pensada también para quien vive y trabaja en Italia y nunca encuentra su idioma en las otras apps: albanés, árabe, bengalí, chino, francés, inglés, holandés, portugués, rumano, español, tagalo, alemán, tigriña, ucraniano.",
+    "cta_h2": "El italiano de verdad te espera.",
+    "cta_p": "Descarga Ti y empieza el recorrido. La descarga es gratis, el recorrido MCER y el diccionario están incluidos.",
+    "cta_btn": "Descargar en App Store",
+    "mt_notice": "Lo sentimos — esta versión ha sido traducida automáticamente y algunas formulaciones pueden no ser del todo precisas. Si detectas un error, escríbenos a thuisitaliaans@gmail.com."
+  },
+  "fr": {
+    "hero_tag": "Disponible sur l'App Store",
+    "hero_h1": "Apprends vraiment l'italien.",
+    "hero_text": "Ti est l'app qui t'amène de zéro au C2 sur le parcours CECRL, avec une méthode pensée pour te faire parler, comprendre, lire et écrire en italien vrai — celui de tous les jours, pas celui du manuel.",
+    "hero_btn": "Télécharger sur l'App Store",
+    "hero_rating": "Nouveau sur l'App Store · 14 langues de support",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Parcours CECRL complet, avec checkpoints et examens de niveau.",
+    "trust_h3_2": "14 langues",
+    "trust_p_2": "Grammaire et traductions en 14 langues, pas seulement en anglais.",
+    "trust_h3_3": "3 000+",
+    "trust_p_3": "Mots dans le dictionnaire, avec exemples, synonymes et familles.",
+    "trust_h3_4": "Classiques",
+    "trust_p_4": "Romans italiens réécrits et adaptés à ton niveau.",
+    "scr_tag": "Regarde",
+    "scr_h2": "Ti en action",
+    "scr_p": "Fais défiler pour voir le parcours, les exercices, l'edicola et les romans.",
+    "scr_iphone": "Sur iPhone",
+    "scr_iphone_count": "10 écrans",
+    "scr_ipad": "Sur iPad",
+    "scr_ipad_count": "8 écrans",
+    "cap_percorso": "Parcours",
+    "cap_vista_percorso": "Vue parcours",
+    "cap_grammatica": "Grammaire",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Roman",
+    "cap_tanti_giochi": "Plein de jeux",
+    "cap_comprensione": "Compréhension",
+    "cap_cruciverba": "Mots croisés",
+    "cap_tabella_verbi": "Tableau verbes",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Parcours A1–C2",
+    "cap_percorso_a1": "Parcours A1",
+    "cap_grammatica2": "Grammaire",
+    "cap_tutti_giochi": "Tous les jeux",
+    "cap_dialogo": "Dialogue",
+    "cap_cruciverba2": "Mots croisés",
+    "cap_intruso": "Trouve l'intrus",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Pourquoi Ti",
+    "feat_h2": "Pas une app de mots. Un cours.",
+    "feat_p": "Ce que tu attendrais d'un vrai manuel, au rythme d'une app.",
+    "f1_h3": "Le parcours CECRL complet",
+    "f1_p1": "De zéro à C2 sur les niveaux officiels européens. Chaque niveau a des étapes de grammaire, vocabulaire, culture et compréhension, avec checkpoints et examens de niveau.",
+    "f1_p2": "Tu sais toujours où tu en es et ce qu'il manque pour la marche suivante.",
+    "f2_h3": "L'edicola : livres thématiques et classiques",
+    "f2_p1": "La dolce vita, la carrière, l'argot des jeunes, les Italiens célèbres, voyages, mode, moteurs, université, bureaucratie. Chaque livre couvre un pan d'italien vivant, de A1 à C2.",
+    "f2_p2": "À côté des livres thématiques, les grands romans italiens : Manzoni, Verga, Pirandello, De Amicis, Serao, réécrits et adaptés à ton niveau.",
+    "f3_h3": "Les classiques, avec dictionnaire intégré",
+    "f3_p1": "Chaque mot difficile est à un tap : définition sèche, notes du prof sur contexte et culture, synonymes et familles de mots. Compréhension guidée pendant que tu lis, sans quitter le roman.",
+    "f3_p2": "Lis la littérature italienne dès le premier jour, sans te sentir dépassé.",
+    "f4_h3": "14 langues de support",
+    "f4_p1": "Pas seulement l'anglais, comme presque toutes les autres apps. Ti est aussi pensée pour ceux qui vivent et travaillent en Italie et ne trouvent jamais leur langue dans les autres apps : albanais, arabe, bengali, chinois, français, anglais, néerlandais, portugais, roumain, espagnol, tagalog, allemand, tigrigna, ukrainien.",
+    "cta_h2": "L'italien vrai t'attend.",
+    "cta_p": "Télécharge Ti et commence le parcours. Le téléchargement est gratuit, le parcours CECRL et le dictionnaire sont inclus.",
+    "cta_btn": "Télécharger sur l'App Store",
+    "mt_notice": "Désolé — cette version a été traduite automatiquement et certaines formulations peuvent ne pas être totalement exactes. Si tu repères une erreur, écris-nous à thuisitaliaans@gmail.com."
+  },
+  "de": {
+    "hero_tag": "Verfügbar im App Store",
+    "hero_h1": "Italienisch wirklich lernen.",
+    "hero_text": "Ti ist die App, die dich vom Nullpunkt bis C2 auf dem GER-Weg begleitet, mit einer Methode, die dich echtes Italienisch sprechen, verstehen, lesen und schreiben lässt — das Alltagsitalienisch, kein Lehrbuch-Italienisch.",
+    "hero_btn": "Im App Store laden",
+    "hero_rating": "Neu im App Store · 14 Unterstützungssprachen",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Vollständiger GER-Weg, mit Checkpoints und Niveauprüfungen.",
+    "trust_h3_2": "14 Sprachen",
+    "trust_p_2": "Grammatik und Übersetzungen in 14 Sprachen, nicht nur auf Englisch.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Wörter im Wörterbuch, mit Beispielen, Synonymen und Familien.",
+    "trust_h3_4": "Klassiker",
+    "trust_p_4": "Italienische Romane, umgeschrieben und für dein Niveau adaptiert.",
+    "scr_tag": "Schau",
+    "scr_h2": "Ti in Aktion",
+    "scr_p": "Scrolle, um Weg, Übungen, Edicola und Romane zu sehen.",
+    "scr_iphone": "Auf dem iPhone",
+    "scr_iphone_count": "10 Bildschirme",
+    "scr_ipad": "Auf dem iPad",
+    "scr_ipad_count": "8 Bildschirme",
+    "cap_percorso": "Weg",
+    "cap_vista_percorso": "Wegansicht",
+    "cap_grammatica": "Grammatik",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Roman",
+    "cap_tanti_giochi": "Viele Spiele",
+    "cap_comprensione": "Verständnis",
+    "cap_cruciverba": "Kreuzworträtsel",
+    "cap_tabella_verbi": "Verbtabelle",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Weg A1–C2",
+    "cap_percorso_a1": "Weg A1",
+    "cap_grammatica2": "Grammatik",
+    "cap_tutti_giochi": "Alle Spiele",
+    "cap_dialogo": "Dialog",
+    "cap_cruciverba2": "Kreuzworträtsel",
+    "cap_intruso": "Finde den Eindringling",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Warum Ti",
+    "feat_h2": "Keine Wörter-App. Ein Kurs.",
+    "feat_p": "Was du von einem seriösen Lehrbuch erwartest, im Rhythmus einer App.",
+    "f1_h3": "Der komplette GER-Weg",
+    "f1_p1": "Von Null bis C2 entlang der offiziellen europäischen Niveaus. Jedes Niveau hat Etappen für Grammatik, Wortschatz, Kultur und Verständnis, mit Checkpoints und Niveauprüfungen.",
+    "f1_p2": "Du weißt immer, wo du stehst und was für die nächste Stufe fehlt.",
+    "f2_h3": "Die Edicola: Themenbücher und Klassiker",
+    "f2_p1": "La dolce vita, Karriere, Jugendslang, berühmte Italiener, Reisen, Mode, Motoren, Universität, Bürokratie. Jedes Buch behandelt einen Aspekt lebendigen Italienisch, von A1 bis C2.",
+    "f2_p2": "Neben den Themenbüchern die großen italienischen Romane: Manzoni, Verga, Pirandello, De Amicis, Serao, umgeschrieben und für dein Niveau adaptiert.",
+    "f3_h3": "Die Klassiker, mit integriertem Wörterbuch",
+    "f3_p1": "Jedes schwierige Wort ist einen Tipp entfernt: knappe Definition, Anmerkungen vom Lehrer zu Kontext und Kultur, Synonyme und Wortfamilien. Geführtes Verständnis beim Lesen, ohne den Roman zu verlassen.",
+    "f3_p2": "Lies italienische Literatur vom ersten Tag an, ohne dich überfordert zu fühlen.",
+    "f4_h3": "14 Unterstützungssprachen",
+    "f4_p1": "Nicht nur Englisch, wie fast alle anderen Apps. Ti ist auch für die gedacht, die in Italien leben und arbeiten und ihre Sprache in anderen Apps nie finden: Albanisch, Arabisch, Bengalisch, Chinesisch, Französisch, Englisch, Niederländisch, Portugiesisch, Rumänisch, Spanisch, Tagalog, Deutsch, Tigrinya, Ukrainisch.",
+    "cta_h2": "Das echte Italienisch wartet auf dich.",
+    "cta_p": "Lade Ti herunter und beginne den Weg. Der Download ist kostenlos, der GER-Weg und das Wörterbuch sind inbegriffen.",
+    "cta_btn": "Im App Store laden",
+    "mt_notice": "Entschuldigung — diese Version wurde maschinell übersetzt und einige Formulierungen sind möglicherweise nicht ganz präzise. Wenn dir ein Fehler auffällt, schreib uns an thuisitaliaans@gmail.com."
+  },
+  "pt": {
+    "hero_tag": "Disponível na App Store",
+    "hero_h1": "Aprende italiano a sério.",
+    "hero_text": "Ti é a app que te leva do zero ao C2 seguindo o percurso QECR, com um método pensado para te fazer falar, perceber, ler e escrever em italiano verdadeiro — o de todos os dias, não o do manual.",
+    "hero_btn": "Descarregar na App Store",
+    "hero_rating": "Novo na App Store · 14 línguas de suporte",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Percurso QECR completo, com checkpoints e exames de nível.",
+    "trust_h3_2": "14 línguas",
+    "trust_p_2": "Gramática e traduções em 14 línguas, não só em inglês.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Palavras no dicionário, com exemplos, sinónimos e famílias.",
+    "trust_h3_4": "Clássicos",
+    "trust_p_4": "Romances italianos reescritos e adaptados ao teu nível.",
+    "scr_tag": "Olha",
+    "scr_h2": "Ti em ação",
+    "scr_p": "Desliza para veres o percurso, os exercícios, a edicola e os romances.",
+    "scr_iphone": "No iPhone",
+    "scr_iphone_count": "10 ecrãs",
+    "scr_ipad": "No iPad",
+    "scr_ipad_count": "8 ecrãs",
+    "cap_percorso": "Percurso",
+    "cap_vista_percorso": "Vista percurso",
+    "cap_grammatica": "Gramática",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Romance",
+    "cap_tanti_giochi": "Muitos jogos",
+    "cap_comprensione": "Compreensão",
+    "cap_cruciverba": "Palavras cruzadas",
+    "cap_tabella_verbi": "Tabela verbos",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Percurso A1–C2",
+    "cap_percorso_a1": "Percurso A1",
+    "cap_grammatica2": "Gramática",
+    "cap_tutti_giochi": "Todos os jogos",
+    "cap_dialogo": "Diálogo",
+    "cap_cruciverba2": "Palavras cruzadas",
+    "cap_intruso": "Encontra o intruso",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Porquê Ti",
+    "feat_h2": "Não uma app de palavras. Um curso.",
+    "feat_p": "O que esperarias de um manual sério, com o ritmo de uma app.",
+    "f1_h3": "O percurso QECR completo",
+    "f1_p1": "Do zero ao C2 seguindo os níveis oficiais europeus. Cada nível tem etapas de gramática, vocabulário, cultura e compreensão, com checkpoints e exames de nível.",
+    "f1_p2": "Sabes sempre onde estás e o que falta para o próximo degrau.",
+    "f2_h3": "A edicola: livros temáticos e clássicos",
+    "f2_p1": "La dolce vita, a carreira, a gíria dos jovens, italianos famosos, viagens, moda, motores, universidade, burocracia. Cada livro cobre um lado do italiano vivo, do A1 ao C2.",
+    "f2_p2": "Ao lado dos livros temáticos, os grandes romances italianos: Manzoni, Verga, Pirandello, De Amicis, Serao, reescritos e adaptados ao teu nível.",
+    "f3_h3": "Os clássicos, com dicionário integrado",
+    "f3_p1": "Cada palavra difícil está a um toque: definição seca, notas do professor sobre contexto e cultura, sinónimos e famílias de palavras. Compreensão guiada enquanto lês, sem sair do romance.",
+    "f3_p2": "Lê literatura italiana desde o primeiro dia, sem te sentires sobrecarregado.",
+    "f4_h3": "14 línguas de suporte",
+    "f4_p1": "Não só inglês, como quase todas as outras apps. Ti é pensada também para quem vive e trabalha em Itália e nunca encontra a sua língua nas outras apps: albanês, árabe, bengali, chinês, francês, inglês, neerlandês, português, romeno, espanhol, tagalog, alemão, tigrínia, ucraniano.",
+    "cta_h2": "O italiano verdadeiro está à tua espera.",
+    "cta_p": "Descarrega Ti e começa o percurso. O download é grátis, o percurso QECR e o dicionário estão incluídos.",
+    "cta_btn": "Descarregar na App Store",
+    "mt_notice": "Desculpa — esta versão foi traduzida automaticamente e algumas formulações podem não ser totalmente precisas. Se notares um erro, escreve-nos para thuisitaliaans@gmail.com."
+  },
+  "ro": {
+    "hero_tag": "Disponibil în App Store",
+    "hero_h1": "Învață cu adevărat italiana.",
+    "hero_text": "Ti este aplicația care te duce de la zero la C2 pe traseul CECR, cu o metodă gândită să te facă să vorbești, să înțelegi, să citești și să scrii în italiană adevărată — cea de zi cu zi, nu cea de manual.",
+    "hero_btn": "Descarcă din App Store",
+    "hero_rating": "Nou în App Store · 14 limbi de suport",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Traseu CECR complet, cu puncte de control și examene de nivel.",
+    "trust_h3_2": "14 limbi",
+    "trust_p_2": "Gramatică și traduceri în 14 limbi, nu doar în engleză.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Cuvinte în dicționar, cu exemple, sinonime și familii.",
+    "trust_h3_4": "Clasici",
+    "trust_p_4": "Romane italiene rescrise și adaptate pentru nivelul tău.",
+    "scr_tag": "Uite",
+    "scr_h2": "Ti în acțiune",
+    "scr_p": "Derulează pentru a vedea traseul, exercițiile, edicola și romanele.",
+    "scr_iphone": "Pe iPhone",
+    "scr_iphone_count": "10 ecrane",
+    "scr_ipad": "Pe iPad",
+    "scr_ipad_count": "8 ecrane",
+    "cap_percorso": "Traseu",
+    "cap_vista_percorso": "Vedere traseu",
+    "cap_grammatica": "Gramatică",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Roman",
+    "cap_tanti_giochi": "Multe jocuri",
+    "cap_comprensione": "Comprehensiune",
+    "cap_cruciverba": "Cuvinte încrucișate",
+    "cap_tabella_verbi": "Tabel verbe",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Traseu A1–C2",
+    "cap_percorso_a1": "Traseu A1",
+    "cap_grammatica2": "Gramatică",
+    "cap_tutti_giochi": "Toate jocurile",
+    "cap_dialogo": "Dialog",
+    "cap_cruciverba2": "Cuvinte încrucișate",
+    "cap_intruso": "Găsește intrusul",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "De ce Ti",
+    "feat_h2": "Nu o aplicație de cuvinte. Un curs.",
+    "feat_p": "Ce ai aștepta de la un manual serios, cu ritmul unei aplicații.",
+    "f1_h3": "Traseul CECR complet",
+    "f1_p1": "De la zero la C2 pe nivelurile oficiale europene. Fiecare nivel are etape de gramatică, vocabular, cultură și comprehensiune, cu puncte de control și examene de nivel.",
+    "f1_p2": "Știi mereu unde ești și ce lipsește pentru treapta următoare.",
+    "f2_h3": "Edicola: cărți tematice și clasici",
+    "f2_p1": "La dolce vita, cariera, argoul tinerilor, italieni celebri, călătorii, modă, motoare, universitate, birocrație. Fiecare carte acoperă o parte din italiana vie, de la A1 la C2.",
+    "f2_p2": "Alături de cărțile tematice, marile romane italiene: Manzoni, Verga, Pirandello, De Amicis, Serao, rescrise și adaptate pentru nivelul tău.",
+    "f3_h3": "Clasicii, cu dicționar integrat",
+    "f3_p1": "Fiecare cuvânt dificil este la o atingere: definiție seacă, note ale profesorului despre context și cultură, sinonime și familii de cuvinte. Comprehensiune ghidată în timp ce citești, fără să ieși din roman.",
+    "f3_p2": "Citește literatura italiană din prima zi, fără să te simți copleșit.",
+    "f4_h3": "14 limbi de suport",
+    "f4_p1": "Nu doar engleza, ca aproape toate celelalte aplicații. Ti este gândită și pentru cine trăiește și lucrează în Italia și nu-și găsește niciodată limba în alte aplicații: albaneză, arabă, bengaleză, chineză, franceză, engleză, olandeză, portugheză, română, spaniolă, tagalog, germană, tigrinya, ucraineană.",
+    "cta_h2": "Italiana adevărată te așteaptă.",
+    "cta_p": "Descarcă Ti și începe traseul. Descărcarea e gratuită, traseul CECR și dicționarul sunt incluse.",
+    "cta_btn": "Descarcă din App Store",
+    "mt_notice": "Ne pare rău — această versiune a fost tradusă automat și unele formulări pot să nu fie complet precise. Dacă observi o greșeală, scrie-ne la thuisitaliaans@gmail.com."
+  },
+  "sq": {
+    "hero_tag": "E disponueshme në App Store",
+    "hero_h1": "Mëso italishten vërtet.",
+    "hero_text": "Ti është app-i që të çon nga zero në C2 duke ndjekur rrugën QCER, me një metodë të menduar për të bërë të flasësh, të kuptosh, të lexosh dhe të shkruash në italishten e vërtetë — atë të përditshme, jo atë të manualit.",
+    "hero_btn": "Shkarko në App Store",
+    "hero_rating": "E re në App Store · 14 gjuhë mbështetjeje",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Rrugë e plotë QCER, me pika kontrolli dhe provime niveli.",
+    "trust_h3_2": "14 gjuhë",
+    "trust_p_2": "Gramatikë dhe përkthime në 14 gjuhë, jo vetëm në anglisht.",
+    "trust_h3_3": "3.000+",
+    "trust_p_3": "Fjalë në fjalor, me shembuj, sinonime dhe familje.",
+    "trust_h3_4": "Klasikët",
+    "trust_p_4": "Romane italiane të rishkruar dhe të graduar për nivelin tënd.",
+    "scr_tag": "Shiko",
+    "scr_h2": "Ti në veprim",
+    "scr_p": "Rrëshqit për të parë rrugën, ushtrimet, edicola-n dhe romanet.",
+    "scr_iphone": "Në iPhone",
+    "scr_iphone_count": "10 ekrane",
+    "scr_ipad": "Në iPad",
+    "scr_ipad_count": "8 ekrane",
+    "cap_percorso": "Rruga",
+    "cap_vista_percorso": "Pamja e rrugës",
+    "cap_grammatica": "Gramatikë",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Roman",
+    "cap_tanti_giochi": "Shumë lojëra",
+    "cap_comprensione": "Kuptim",
+    "cap_cruciverba": "Fjalëkryq",
+    "cap_tabella_verbi": "Tabelë foljesh",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Rruga A1–C2",
+    "cap_percorso_a1": "Rruga A1",
+    "cap_grammatica2": "Gramatikë",
+    "cap_tutti_giochi": "Të gjitha lojërat",
+    "cap_dialogo": "Dialog",
+    "cap_cruciverba2": "Fjalëkryq",
+    "cap_intruso": "Gjej ndërhyrësin",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Pse Ti",
+    "feat_h2": "Jo një app fjalësh. Një kurs.",
+    "feat_p": "Ajo që do të prisje nga një manual serioz, me ritmin e një app-i.",
+    "f1_h3": "Rruga e plotë QCER",
+    "f1_p1": "Nga zero në C2 duke ndjekur nivelet zyrtare evropiane. Çdo nivel ka etapa gramatike, fjalori, kulture dhe kuptimi, me pika kontrolli dhe provime niveli.",
+    "f1_p2": "E di gjithmonë ku je dhe çfarë mungon për shkallën tjetër.",
+    "f2_h3": "Edicola: libra tematikë dhe klasikë",
+    "f2_p1": "La dolce vita, karriera, zhargoni i të rinjve, italianë të famshëm, udhëtime, modë, motorë, universitet, burokraci. Çdo libër mbulon një anë të italishtes së gjallë, nga A1 në C2.",
+    "f2_p2": "Krahas librave tematikë, romanet e mëdha italiane: Manzoni, Verga, Pirandello, De Amicis, Serao, të rishkruar dhe të graduar për nivelin tënd.",
+    "f3_h3": "Klasikët, me fjalor të integruar",
+    "f3_p1": "Çdo fjalë e vështirë është një prekje larg: përkufizim i thatë, shënime të profesorit për kontekstin dhe kulturën, sinonime dhe familje fjalësh. Kuptim i drejtuar teksa lexon, pa dalë nga romani.",
+    "f3_p2": "Lexo letërsinë italiane që nga dita e parë, pa u ndjerë i mbingarkuar.",
+    "f4_h3": "14 gjuhë mbështetjeje",
+    "f4_p1": "Jo vetëm anglishtja, siç bëjnë pothuajse të gjitha app-et e tjera. Ti është menduar edhe për ata që jetojnë e punojnë në Itali dhe nuk e gjejnë kurrë gjuhën e tyre në app-et e tjera: shqip, arabisht, bengalisht, kinezisht, frëngjisht, anglisht, holandisht, portugalisht, rumanisht, spanjisht, tagalog, gjermanisht, tigrinisht, ukrainisht.",
+    "cta_h2": "Italishtja e vërtetë të pret.",
+    "cta_p": "Shkarko Ti dhe fillo rrugën. Shkarkimi është falas, rruga QCER dhe fjalori janë të përfshirë.",
+    "cta_btn": "Shkarko në App Store",
+    "mt_notice": "Na vjen keq — ky version është përkthyer automatikisht dhe disa formulime mund të mos jenë plotësisht të sakta. Nëse vëren ndonjë gabim, na shkruaj në thuisitaliaans@gmail.com."
+  },
+  "ar": {
+    "hero_tag": "متوفر على App Store",
+    "hero_h1": "تعلّم الإيطالية حقًا.",
+    "hero_text": "Ti هو التطبيق الذي يأخذك من الصفر إلى C2 عبر مسار CEFR، بمنهج مصمَّم ليجعلك تتحدّث وتفهم وتقرأ وتكتب بإيطالية حقيقية — إيطالية الحياة اليومية، لا إيطالية الكتب.",
+    "hero_btn": "التنزيل من App Store",
+    "hero_rating": "جديد على App Store · 14 لغة دعم",
+    "trust_h3_1": "A1 ← C2",
+    "trust_p_1": "مسار CEFR كامل، مع نقاط تحقّق واختبارات مستوى.",
+    "trust_h3_2": "14 لغة",
+    "trust_p_2": "قواعد وترجمات بأربع عشرة لغة، لا بالإنجليزية فقط.",
+    "trust_h3_3": "+3,000",
+    "trust_p_3": "كلمة في القاموس، مع أمثلة ومرادفات وعائلات.",
+    "trust_h3_4": "الكلاسيكيات",
+    "trust_p_4": "روايات إيطالية أُعيدت كتابتها ودُرِّجت وفق مستواك.",
+    "scr_tag": "انظر",
+    "scr_h2": "Ti أثناء العمل",
+    "scr_p": "مرّر لرؤية المسار والتمارين والكشك والروايات.",
+    "scr_iphone": "على iPhone",
+    "scr_iphone_count": "10 شاشات",
+    "scr_ipad": "على iPad",
+    "scr_ipad_count": "8 شاشات",
+    "cap_percorso": "المسار",
+    "cap_vista_percorso": "عرض المسار",
+    "cap_grammatica": "القواعد",
+    "cap_edicola": "الكشك",
+    "cap_romanzo": "رواية",
+    "cap_tanti_giochi": "ألعاب كثيرة",
+    "cap_comprensione": "الفهم",
+    "cap_cruciverba": "الكلمات المتقاطعة",
+    "cap_tabella_verbi": "جدول الأفعال",
+    "cap_feedback": "التقييم",
+    "cap_percorso_a1c2": "المسار A1–C2",
+    "cap_percorso_a1": "المسار A1",
+    "cap_grammatica2": "القواعد",
+    "cap_tutti_giochi": "كلّ الألعاب",
+    "cap_dialogo": "حوار",
+    "cap_cruciverba2": "الكلمات المتقاطعة",
+    "cap_intruso": "ابحث عن الدخيل",
+    "cap_edicola2": "الكشك",
+    "feat_tag": "لماذا Ti",
+    "feat_h2": "ليس تطبيق كلمات. بل كورس.",
+    "feat_p": "ما تتوقعه من كتاب جادّ، بإيقاع تطبيق.",
+    "f1_h3": "مسار CEFR الكامل",
+    "f1_p1": "من الصفر إلى C2 عبر المستويات الأوروبية الرسمية. كلّ مستوى فيه محطّات للقواعد والمفردات والثقافة والفهم، مع نقاط تحقّق واختبارات مستوى.",
+    "f1_p2": "تعرف دائمًا أين تقف وما ينقصك للمرحلة التالية.",
+    "f2_h3": "الكشك: كتب موضوعية وكلاسيكيات",
+    "f2_p1": "La dolce vita، العمل، عاميّة الشباب، إيطاليون مشهورون، السفر، الموضة، المحرّكات، الجامعة، البيروقراطية. كلّ كتاب يغطّي جانبًا من الإيطالية الحية، من A1 إلى C2.",
+    "f2_p2": "إلى جانب الكتب الموضوعية، الروايات الإيطالية الكبرى: Manzoni وVerga وPirandello وDe Amicis وSerao، مُعاد صياغتها ومُدرَّجة وفق مستواك.",
+    "f3_h3": "الكلاسيكيات، بقاموس مدمج",
+    "f3_p1": "كل كلمة صعبة على بعد نقرة: تعريف مقتضب، وملاحظات المعلّم عن السياق والثقافة، ومرادفات وعائلات كلمات. فهم موجَّه أثناء القراءة، دون الخروج من الرواية.",
+    "f3_p2": "اقرأ الأدب الإيطالي من اليوم الأول، دون أن تشعر بالإرهاق.",
+    "f4_h3": "14 لغة دعم",
+    "f4_p1": "ليست الإنجليزية وحدها، كما في كل التطبيقات الأخرى تقريبًا. Ti مُصمَّم أيضًا لمن يعيش ويعمل في إيطاليا ولا يجد لغته في التطبيقات الأخرى: الألبانية، والعربية، والبنغالية، والصينية، والفرنسية، والإنجليزية، والهولندية، والبرتغالية، والرومانية، والإسبانية، والتاغالوغية، والألمانية، والتغرينية، والأوكرانية.",
+    "cta_h2": "الإيطالية الحقيقية تنتظرك.",
+    "cta_p": "نزّل Ti وابدأ المسار. التنزيل مجاني، ومسار CEFR والقاموس مضمّنان.",
+    "cta_btn": "التنزيل من App Store",
+    "mt_notice": "نعتذر — تُرجمت هذه النسخة آليًا وقد لا تكون بعض الصياغات دقيقة تمامًا. إذا لاحظت خطأ، فراسلنا على thuisitaliaans@gmail.com."
+  },
+  "bn": {
+    "hero_tag": "App Store-এ পাওয়া যাচ্ছে",
+    "hero_h1": "সত্যিই ইতালিয়ান শিখুন।",
+    "hero_text": "Ti হল সেই অ্যাপ যা আপনাকে শূন্য থেকে C2 পর্যন্ত CEFR পথে নিয়ে যায়, এমন এক পদ্ধতিতে যা আপনাকে সত্যিকারের ইতালিয়ান বলতে, বুঝতে, পড়তে এবং লিখতে সাহায্য করে — দৈনন্দিন জীবনের ইতালিয়ান, বইয়ের ইতালিয়ান নয়।",
+    "hero_btn": "App Store থেকে ডাউনলোড করুন",
+    "hero_rating": "App Store-এ নতুন · ১৪টি সহায়ক ভাষা",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "সম্পূর্ণ CEFR পথ, চেকপয়েন্ট এবং স্তর পরীক্ষা সহ।",
+    "trust_h3_2": "১৪টি ভাষা",
+    "trust_p_2": "১৪টি ভাষায় ব্যাকরণ এবং অনুবাদ, শুধু ইংরেজিতে নয়।",
+    "trust_h3_3": "৩,০০০+",
+    "trust_p_3": "অভিধানে শব্দ, উদাহরণ, প্রতিশব্দ এবং পরিবারসহ।",
+    "trust_h3_4": "ক্লাসিক",
+    "trust_p_4": "আপনার স্তরের জন্য পুনর্লিখিত ও শ্রেণীবদ্ধ ইতালিয়ান উপন্যাস।",
+    "scr_tag": "দেখুন",
+    "scr_h2": "Ti কাজ করছে",
+    "scr_p": "পথ, ব্যায়াম, এডিকোলা এবং উপন্যাস দেখতে স্ক্রল করুন।",
+    "scr_iphone": "iPhone-এ",
+    "scr_iphone_count": "১০টি স্ক্রিন",
+    "scr_ipad": "iPad-এ",
+    "scr_ipad_count": "৮টি স্ক্রিন",
+    "cap_percorso": "পথ",
+    "cap_vista_percorso": "পথ দর্শন",
+    "cap_grammatica": "ব্যাকরণ",
+    "cap_edicola": "এডিকোলা",
+    "cap_romanzo": "উপন্যাস",
+    "cap_tanti_giochi": "অনেক খেলা",
+    "cap_comprensione": "বোধগম্যতা",
+    "cap_cruciverba": "শব্দছক",
+    "cap_tabella_verbi": "ক্রিয়া সারণি",
+    "cap_feedback": "প্রতিক্রিয়া",
+    "cap_percorso_a1c2": "পথ A1–C2",
+    "cap_percorso_a1": "পথ A1",
+    "cap_grammatica2": "ব্যাকরণ",
+    "cap_tutti_giochi": "সব খেলা",
+    "cap_dialogo": "সংলাপ",
+    "cap_cruciverba2": "শব্দছক",
+    "cap_intruso": "অনুপ্রবেশকারী খুঁজুন",
+    "cap_edicola2": "এডিকোলা",
+    "feat_tag": "কেন Ti",
+    "feat_h2": "শব্দের অ্যাপ নয়। একটি কোর্স।",
+    "feat_p": "যা আপনি একটি গুরুতর ম্যানুয়াল থেকে আশা করবেন, একটি অ্যাপের ছন্দে।",
+    "f1_h3": "সম্পূর্ণ CEFR পথ",
+    "f1_p1": "শূন্য থেকে C2, অফিসিয়াল ইউরোপীয় স্তর অনুসরণ করে। প্রতিটি স্তরে ব্যাকরণ, শব্দভাণ্ডার, সংস্কৃতি এবং বোধগম্যতার পর্যায় আছে, চেকপয়েন্ট এবং স্তর পরীক্ষা সহ।",
+    "f1_p2": "আপনি সবসময় জানেন আপনি কোথায় আছেন এবং পরবর্তী ধাপের জন্য কী প্রয়োজন।",
+    "f2_h3": "এডিকোলা: বিষয়ভিত্তিক বই এবং ক্লাসিক",
+    "f2_p1": "La dolce vita, ক্যারিয়ার, তরুণদের অপভাষা, বিখ্যাত ইতালীয়, ভ্রমণ, ফ্যাশন, মোটর, বিশ্ববিদ্যালয়, আমলাতন্ত্র। প্রতিটি বই A1 থেকে C2 পর্যন্ত জীবন্ত ইতালিয়ানের একটি দিক তুলে ধরে।",
+    "f2_p2": "বিষয়ভিত্তিক বইগুলির পাশাপাশি, মহান ইতালিয়ান উপন্যাস: Manzoni, Verga, Pirandello, De Amicis, Serao, আপনার স্তরের জন্য পুনর্লিখিত এবং শ্রেণীবদ্ধ।",
+    "f3_h3": "ক্লাসিক, সমন্বিত অভিধান সহ",
+    "f3_p1": "প্রতিটি কঠিন শব্দ এক ট্যাপ দূরে: সংক্ষিপ্ত সংজ্ঞা, প্রেক্ষাপট এবং সংস্কৃতি সম্পর্কে শিক্ষকের নোট, প্রতিশব্দ এবং শব্দ পরিবার। পড়ার সময় নির্দেশিত বোধগম্যতা, উপন্যাস থেকে না বেরিয়ে।",
+    "f3_p2": "প্রথম দিন থেকেই ইতালিয়ান সাহিত্য পড়ুন, অভিভূত না হয়ে।",
+    "f4_h3": "১৪টি সহায়ক ভাষা",
+    "f4_p1": "শুধু ইংরেজি নয়, প্রায় সব অন্যান্য অ্যাপের মতো। Ti তাদের জন্যও ভাবা হয়েছে যারা ইতালিতে বাস করেন এবং কাজ করেন এবং অন্যান্য অ্যাপে কখনও তাদের ভাষা খুঁজে পান না: আলবেনীয়, আরবি, বাংলা, চীনা, ফরাসি, ইংরেজি, ওলন্দাজ, পর্তুগিজ, রোমানীয়, স্প্যানিশ, তাগালোগ, জার্মান, টিগ্রিনিয়া, ইউক্রেনীয়।",
+    "cta_h2": "সত্যিকারের ইতালিয়ান আপনার জন্য অপেক্ষা করছে।",
+    "cta_p": "Ti ডাউনলোড করুন এবং পথ শুরু করুন। ডাউনলোড ফ্রি, CEFR পথ এবং অভিধান অন্তর্ভুক্ত।",
+    "cta_btn": "App Store থেকে ডাউনলোড করুন",
+    "mt_notice": "আমরা দুঃখিত — এই সংস্করণটি স্বয়ংক্রিয়ভাবে অনুবাদ করা হয়েছে এবং কিছু বাক্যাংশ সম্পূর্ণ সঠিক না-ও হতে পারে। কোনো ভুল দেখলে আমাদের thuisitaliaans@gmail.com-এ লিখুন।"
+  },
+  "zh": {
+    "hero_tag": "在 App Store 上线",
+    "hero_h1": "真正学会意大利语。",
+    "hero_text": "Ti 是带你从零到 C2 的应用，遵循 CEFR 路径，方法专为让你说、听、读、写真实的意大利语——日常口语的意大利语，而不是教科书上的意大利语。",
+    "hero_btn": "从 App Store 下载",
+    "hero_rating": "App Store 新上架 · 14 种支持语言",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "完整 CEFR 路径，含检查点和分级考试。",
+    "trust_h3_2": "14 种语言",
+    "trust_p_2": "14 种语言的语法和翻译，不仅仅是英语。",
+    "trust_h3_3": "3,000+",
+    "trust_p_3": "词典里的词条，附例句、同义词和词族。",
+    "trust_h3_4": "经典",
+    "trust_p_4": "根据你的水平改写和分级的意大利小说。",
+    "scr_tag": "看看",
+    "scr_h2": "Ti 实战",
+    "scr_p": "滚动查看路径、练习、书报亭和小说。",
+    "scr_iphone": "iPhone 上",
+    "scr_iphone_count": "10 张截图",
+    "scr_ipad": "iPad 上",
+    "scr_ipad_count": "8 张截图",
+    "cap_percorso": "路径",
+    "cap_vista_percorso": "路径视图",
+    "cap_grammatica": "语法",
+    "cap_edicola": "书报亭",
+    "cap_romanzo": "小说",
+    "cap_tanti_giochi": "多种游戏",
+    "cap_comprensione": "理解",
+    "cap_cruciverba": "填字",
+    "cap_tabella_verbi": "动词表",
+    "cap_feedback": "反馈",
+    "cap_percorso_a1c2": "路径 A1–C2",
+    "cap_percorso_a1": "路径 A1",
+    "cap_grammatica2": "语法",
+    "cap_tutti_giochi": "所有游戏",
+    "cap_dialogo": "对话",
+    "cap_cruciverba2": "填字",
+    "cap_intruso": "找出异类",
+    "cap_edicola2": "书报亭",
+    "feat_tag": "为什么选 Ti",
+    "feat_h2": "不是词汇 app。是一门课。",
+    "feat_p": "你从严肃教材期待的一切，配合 app 的节奏。",
+    "f1_h3": "完整的 CEFR 路径",
+    "f1_p1": "从零到 C2，沿着欧洲官方等级。每个等级都有语法、词汇、文化和理解的阶段，含检查点和分级考试。",
+    "f1_p2": "你永远知道自己在哪里，以及距离下一步还需要什么。",
+    "f2_h3": "书报亭：主题图书和经典",
+    "f2_p1": "La dolce vita、职场、青年俚语、意大利名人、旅行、时尚、汽车、大学、官僚制度。每本书涵盖鲜活意大利语的一个方面，从 A1 到 C2。",
+    "f2_p2": "在主题书之外，还有意大利伟大小说：Manzoni、Verga、Pirandello、De Amicis、Serao，根据你的水平改写并分级。",
+    "f3_h3": "经典，配备内嵌词典",
+    "f3_p1": "每个难词只需一点击：简洁的定义，老师关于语境和文化的注释，同义词和词族。阅读时的引导式理解，无需离开小说。",
+    "f3_p2": "从第一天起就读意大利文学，而不会感到压力。",
+    "f4_h3": "14 种支持语言",
+    "f4_p1": "不仅是英语，几乎所有其他 app 都只有英语。Ti 也为在意大利生活和工作、在其他 app 中永远找不到自己语言的人而设计：阿尔巴尼亚语、阿拉伯语、孟加拉语、中文、法语、英语、荷兰语、葡萄牙语、罗马尼亚语、西班牙语、他加禄语、德语、提格利尼亚语、乌克兰语。",
+    "cta_h2": "真正的意大利语在等你。",
+    "cta_p": "下载 Ti，开始路径。下载免费，CEFR 路径和词典包含在内。",
+    "cta_btn": "从 App Store 下载",
+    "mt_notice": "抱歉——此版本为机器翻译，某些措辞可能不完全准确。如发现错误，请写信至 thuisitaliaans@gmail.com。"
+  },
+  "tl": {
+    "hero_tag": "Available sa App Store",
+    "hero_h1": "Talagang matuto ng Italyano.",
+    "hero_text": "Ang Ti ay ang app na maghahatid sa iyo mula zero hanggang C2 sa daan ng CEFR, may paraang inisip para mapagsalita, maintindihan, mabasa at masulat mo ang tunay na Italyano — ang pang-araw-araw, hindi ang nasa libro.",
+    "hero_btn": "I-download sa App Store",
+    "hero_rating": "Bago sa App Store · 14 na wika ng suporta",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Kumpletong daan ng CEFR, may mga checkpoint at pagsusulit ng antas.",
+    "trust_h3_2": "14 na wika",
+    "trust_p_2": "Grammar at mga pagsasalin sa 14 na wika, hindi lang sa Ingles.",
+    "trust_h3_3": "3,000+",
+    "trust_p_3": "Mga salita sa diksyunaryo, may mga halimbawa, kasingkahulugan at pamilya.",
+    "trust_h3_4": "Klasiko",
+    "trust_p_4": "Mga Italyanong nobelang isinulat muli at ginawa ayon sa antas mo.",
+    "scr_tag": "Tingnan",
+    "scr_h2": "Ti sa aksyon",
+    "scr_p": "Mag-scroll para makita ang daan, mga pagsasanay, ang edicola at mga nobela.",
+    "scr_iphone": "Sa iPhone",
+    "scr_iphone_count": "10 screen",
+    "scr_ipad": "Sa iPad",
+    "scr_ipad_count": "8 screen",
+    "cap_percorso": "Daan",
+    "cap_vista_percorso": "Tanaw ng daan",
+    "cap_grammatica": "Grammar",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Nobela",
+    "cap_tanti_giochi": "Maraming laro",
+    "cap_comprensione": "Pag-unawa",
+    "cap_cruciverba": "Krosword",
+    "cap_tabella_verbi": "Talahanayan ng pandiwa",
+    "cap_feedback": "Feedback",
+    "cap_percorso_a1c2": "Daan A1–C2",
+    "cap_percorso_a1": "Daan A1",
+    "cap_grammatica2": "Grammar",
+    "cap_tutti_giochi": "Lahat ng laro",
+    "cap_dialogo": "Diyalogo",
+    "cap_cruciverba2": "Krosword",
+    "cap_intruso": "Hanapin ang intruso",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Bakit Ti",
+    "feat_h2": "Hindi app ng salita. Isang kurso.",
+    "feat_p": "Ang inaasahan mo sa seryosong libro, sa ritmo ng isang app.",
+    "f1_h3": "Ang kumpletong daan ng CEFR",
+    "f1_p1": "Mula zero hanggang C2 sa opisyal na mga antas ng Europa. Bawat antas ay may mga yugto para sa grammar, bokabularyo, kultura at pag-unawa, may mga checkpoint at pagsusulit ng antas.",
+    "f1_p2": "Alam mo lagi kung nasaan ka at kung ano ang kulang para sa susunod na hakbang.",
+    "f2_h3": "Ang edicola: mga aklat na may tema at klasiko",
+    "f2_p1": "La dolce vita, karera, salitang kabataan, sikat na mga Italyano, paglalakbay, moda, sasakyan, unibersidad, burokrasya. Bawat aklat ay sumasaklaw sa isang bahagi ng buhay na Italyano, mula A1 hanggang C2.",
+    "f2_p2": "Katabi ng mga aklat na may tema, ang malalaking Italyanong nobela: Manzoni, Verga, Pirandello, De Amicis, Serao, isinulat muli at ginawa ayon sa antas mo.",
+    "f3_h3": "Ang mga klasiko, may kasamang diksyunaryo",
+    "f3_p1": "Bawat mahirap na salita ay isang tap lang: tuyong depinisyon, mga tala ng guro tungkol sa konteksto at kultura, mga kasingkahulugan at pamilya ng salita. Ginabayan na pag-unawa habang nagbabasa, nang hindi umaalis sa nobela.",
+    "f3_p2": "Basahin ang panitikang Italyano mula sa unang araw, nang hindi nadadaig.",
+    "f4_h3": "14 na wika ng suporta",
+    "f4_p1": "Hindi lang Ingles, tulad ng halos lahat ng ibang app. Ang Ti ay iniisip din para sa mga nakatira at nagtatrabaho sa Italya at hindi kailanman nahahanap ang kanilang wika sa ibang mga app: Albaniano, Arabe, Bengali, Tsino, Pranses, Ingles, Olandes, Portuges, Romaniano, Espanyol, Tagalog, Aleman, Tigrinya, Ukraniano.",
+    "cta_h2": "Ang tunay na Italyano ay naghihintay sa iyo.",
+    "cta_p": "I-download ang Ti at simulan ang daan. Libre ang pag-download, kasama ang daan ng CEFR at ang diksyunaryo.",
+    "cta_btn": "I-download sa App Store",
+    "mt_notice": "Pasensya na — awtomatikong isinalin ang bersyon na ito at maaaring hindi ganap na tumpak ang ilang pananalita. Kung may makikita kang mali, sumulat sa amin sa thuisitaliaans@gmail.com."
+  },
+  "ti": {
+    "hero_tag": "ኣብ App Store ይርከብ",
+    "hero_h1": "ብሓቂ ጣልያንኛ ተምሃር።",
+    "hero_text": "Ti ካብ ዜሮ ናብ C2 ብ CEFR መገዲ ዘብጽሓካ መተግበሪ እዩ፣ ናይ ብሓቂ ጣልያንኛ ንክትዛረብ፣ ንክትርድእ፣ ንክተንብብን ንክትጽሕፍን ዝተሓስበ ኣገባብ ኣለዎ — ናይ መዓልታዊ ጣልያንኛ፣ ናይ መጽሓፍ ኣይኰነን።",
+    "hero_btn": "ካብ App Store ኣውርድ",
+    "hero_rating": "ኣብ App Store ሓዲሽ · 14 ናይ ደገፍ ቋንቋታት",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "ምሉእ ናይ CEFR መገዲ፣ ምስ መርመራ ደረጃታት።",
+    "trust_h3_2": "14 ቋንቋታት",
+    "trust_p_2": "ግራመርን ትርጓሜታትን ብ14 ቋንቋታት፣ ብእንግሊዝኛ ጥራይ ኣይኰነን።",
+    "trust_h3_3": "3,000+",
+    "trust_p_3": "ኣብ መዝገበ-ቃላት ቃላት፣ ምስ ኣብነታት፣ ተመሳሳልቲን ስድራታት ቃላትን።",
+    "trust_h3_4": "ክላሲኪ",
+    "trust_p_4": "ጣልያናውያን ልብ-ወለዳት ንደረጃኻ ተዳልዮም።",
+    "scr_tag": "ርኣ",
+    "scr_h2": "Ti ኣብ ስራሕ",
+    "scr_p": "ንመገዲ፣ ንልምምዳት፣ ንኤዲኮላን ንልብ-ወለዳትን ንምርኣይ ኣንሸራሸር።",
+    "scr_iphone": "ኣብ iPhone",
+    "scr_iphone_count": "10 ስክሪናት",
+    "scr_ipad": "ኣብ iPad",
+    "scr_ipad_count": "8 ስክሪናት",
+    "cap_percorso": "መገዲ",
+    "cap_vista_percorso": "ናይ መገዲ ትርኢት",
+    "cap_grammatica": "ግራመር",
+    "cap_edicola": "ኤዲኮላ",
+    "cap_romanzo": "ልብ-ወለድ",
+    "cap_tanti_giochi": "ብዙሓት ጸወታታት",
+    "cap_comprensione": "ምርድዳእ",
+    "cap_cruciverba": "ቅርጻ ቃላት",
+    "cap_tabella_verbi": "ሰንጠረዥ ግሲታት",
+    "cap_feedback": "ግብረ-መልሲ",
+    "cap_percorso_a1c2": "መገዲ A1–C2",
+    "cap_percorso_a1": "መገዲ A1",
+    "cap_grammatica2": "ግራመር",
+    "cap_tutti_giochi": "ኩሎም ጸወታታት",
+    "cap_dialogo": "ዘተ",
+    "cap_cruciverba2": "ቅርጻ ቃላት",
+    "cap_intruso": "ሓደገኛ ርኸብ",
+    "cap_edicola2": "ኤዲኮላ",
+    "feat_tag": "ስለምንታይ Ti",
+    "feat_h2": "መተግበሪ ቃላት ኣይኰነትን። ኮርስ እያ።",
+    "feat_p": "ካብ ከቢድ መጽሓፍ እትጽበዮ፣ ብናይ መተግበሪ ቅልጣፈ።",
+    "f1_h3": "ምሉእ ናይ CEFR መገዲ",
+    "f1_p1": "ካብ ዜሮ ናብ C2 ብ ኦፊሻል ኤውሮጳዊ ደረጃታት። ኣብ ኩሉ ደረጃ ናይ ግራመር፣ ቃላት፣ ባህልን ምርድዳእን ጣብያታት ኣለዉዎ፣ ምስ መርመራ ደረጃታት።",
+    "f1_p2": "ኣበይ ኣሎኻን ንዝቕጽል ደረጃ እንታይ ይጎድለካን ሓደ ግዜ ትፈልጥ።",
+    "f2_h3": "ኤዲኮላ: ትሕዞ-ኣተኰርቲ መጻሕፍትን ክላሲኮታትን",
+    "f2_p1": "La dolce vita፣ ሞያ፣ ናይ መንእሰያት ንባብ፣ ፍሉጣት ጣልያናውያን፣ ጉዕዞታት፣ ፋሽን፣ መኪናታት፣ ዩኒቨርስቲ፣ ቢሮክራሲ። ኣብ ኩሉ መጽሓፍ ካብ A1 ናብ C2 ናይ ህያው ጣልያንኛ ወገን ይሽፍን።",
+    "f2_p2": "ምስ ትሕዞ-ኣተኰርቲ መጻሕፍቲ፣ ዓበይቲ ጣልያናውያን ልብ-ወለዳት: Manzoni፣ Verga፣ Pirandello፣ De Amicis፣ Serao፣ ንደረጃኻ ተሓድሶም።",
+    "f3_h3": "ክላሲኮታት፣ ምስ ውሁድ መዝገበ-ቃላት",
+    "f3_p1": "ኩሉ ዘጸግም ቃል ብሓደ ንኪ ይርከብ: ቀለልቲ ትርጉም፣ ናይ መምህር ኣብ ኩነታትን ባህልን ማስታወሻታት፣ ተመሳሳልቲን ስድራታት ቃላትን። ካብ ልብ-ወለድ ብዘይ ምውጻእ፣ እናንበብካ ዝምራሕ ምርድዳእ።",
+    "f3_p2": "ካብ ቀዳማይ መዓልቲ ጣልያናዊ ስነ-ጽሑፍ ኣንብብ፣ ብዘይ ምጭናቕ።",
+    "f4_h3": "14 ናይ ደገፍ ቋንቋታት",
+    "f4_p1": "ከምቲ ኩሉ ካልእ መተግበሪታት፣ እንግሊዝኛ ጥራይ ኣይኰነን። Ti ንኣብ ኢጣልያ ንዝነብሩን ንዝሰርሑን፣ ኣብ ካልእ መተግበሪታት ቋንቋኦም ንዘይረኽብዎ ዝተሓስበት እያ: ኣልባንኛ፣ ዓረብኛ፣ ቤንጋልኛ፣ ቻይንኛ፣ ፈረንሳይኛ፣ እንግሊዝኛ፣ ሆላንድኛ፣ ፖርቱጋልኛ፣ ሮማንኛ፣ ስፓንሽ፣ ታጋሎግ፣ ጀርመንኛ፣ ትግርኛ፣ ኡክሬንኛ።",
+    "cta_h2": "ናይ ሓቂ ጣልያንኛ ይጽበየካ ኣሎ።",
+    "cta_p": "Ti ኣውርድን መገዲ ጀምርን። ምውራድ ብናጻ እዩ፣ ናይ CEFR መገድን መዝገበ-ቃላትን ተካታቲ እዮም።",
+    "cta_btn": "ካብ App Store ኣውርድ",
+    "mt_notice": "ኣይትሓዘልና — እዚ ትሕዞ ብኸምያ ተተርጒሙ ስለ ዘሎ ኵሉ ኣዘራርባ ግንዛብ ኣይኰነን። ጌጋ እንተ ኣስተብሂልካ ብ thuisitaliaans@gmail.com ጽሓፉልና።"
+  },
+  "uk": {
+    "hero_tag": "Доступно в App Store",
+    "hero_h1": "По-справжньому вивчи італійську.",
+    "hero_text": "Ti — це застосунок, який веде тебе від нуля до C2 шляхом CEFR, з методом, створеним, щоб змусити тебе говорити, розуміти, читати й писати справжньою італійською — тією, що звучить щодня, не з підручника.",
+    "hero_btn": "Завантажити з App Store",
+    "hero_rating": "Новий у App Store · 14 мов підтримки",
+    "trust_h3_1": "A1 → C2",
+    "trust_p_1": "Повний шлях CEFR, з контрольними точками та іспитами рівня.",
+    "trust_h3_2": "14 мов",
+    "trust_p_2": "Граматика та переклади 14 мовами, не тільки англійською.",
+    "trust_h3_3": "3 000+",
+    "trust_p_3": "Слів у словнику, з прикладами, синонімами та сім'ями.",
+    "trust_h3_4": "Класика",
+    "trust_p_4": "Італійські романи, переписані й адаптовані під твій рівень.",
+    "scr_tag": "Подивись",
+    "scr_h2": "Ti у дії",
+    "scr_p": "Гортай, щоб побачити шлях, вправи, edicola та романи.",
+    "scr_iphone": "На iPhone",
+    "scr_iphone_count": "10 екранів",
+    "scr_ipad": "На iPad",
+    "scr_ipad_count": "8 екранів",
+    "cap_percorso": "Шлях",
+    "cap_vista_percorso": "Огляд шляху",
+    "cap_grammatica": "Граматика",
+    "cap_edicola": "Edicola",
+    "cap_romanzo": "Роман",
+    "cap_tanti_giochi": "Багато ігор",
+    "cap_comprensione": "Розуміння",
+    "cap_cruciverba": "Кросворд",
+    "cap_tabella_verbi": "Таблиця дієслів",
+    "cap_feedback": "Фідбек",
+    "cap_percorso_a1c2": "Шлях A1–C2",
+    "cap_percorso_a1": "Шлях A1",
+    "cap_grammatica2": "Граматика",
+    "cap_tutti_giochi": "Усі ігри",
+    "cap_dialogo": "Діалог",
+    "cap_cruciverba2": "Кросворд",
+    "cap_intruso": "Знайди чужинця",
+    "cap_edicola2": "Edicola",
+    "feat_tag": "Чому Ti",
+    "feat_h2": "Це не застосунок про слова. Це курс.",
+    "feat_p": "Те, що очікуєш від серйозного підручника, у ритмі застосунку.",
+    "f1_h3": "Повний шлях CEFR",
+    "f1_p1": "Від нуля до C2 за офіційними європейськими рівнями. На кожному рівні є етапи граматики, лексики, культури й розуміння, з контрольними точками та іспитами рівня.",
+    "f1_p2": "Ти завжди знаєш, де перебуваєш і чого бракує для наступного кроку.",
+    "f2_h3": "Edicola: тематичні книги й класика",
+    "f2_p1": "La dolce vita, кар'єра, молодіжний сленг, знамениті італійці, подорожі, мода, автомобілі, університет, бюрократія. Кожна книга охоплює свій зріз живої італійської — від A1 до C2.",
+    "f2_p2": "Поряд із тематичними книгами — великі італійські романи: Manzoni, Verga, Pirandello, De Amicis, Serao, переписані й адаптовані під твій рівень.",
+    "f3_h3": "Класика з інтегрованим словником",
+    "f3_p1": "Кожне складне слово — на дотик: сухе визначення, нотатки викладача про контекст і культуру, синоніми та сім'ї слів. Скеровуване розуміння під час читання, не виходячи з роману.",
+    "f3_p2": "Читай італійську літературу з першого дня, не почуваючись перевантаженим.",
+    "f4_h3": "14 мов підтримки",
+    "f4_p1": "Не тільки англійська, як майже в усіх інших застосунках. Ti створено також для тих, хто живе й працює в Італії і ніколи не знаходить своєї мови в інших застосунках: албанська, арабська, бенгальська, китайська, французька, англійська, нідерландська, португальська, румунська, іспанська, тагальська, німецька, тигриня, українська.",
+    "cta_h2": "Справжня італійська чекає на тебе.",
+    "cta_p": "Завантаж Ti і починай шлях. Завантаження безкоштовне, шлях CEFR і словник включені.",
+    "cta_btn": "Завантажити з App Store",
+    "mt_notice": "Вибачте — цю версію перекладено автоматично, і деякі формулювання можуть бути не зовсім точними. Якщо ви помітите помилку, напишіть на thuisitaliaans@gmail.com."
+  }
+}
+    </script>
+
+    <script src="js/app-nav.js"></script>
+    <script>
+    (function(){
+      var data = JSON.parse(document.getElementById('i18n-data').textContent);
+      var buttons = document.querySelectorAll('.lang-switcher button');
+      var mtWrap = document.getElementById('mt-notice-wrap');
+      var mtEl = document.getElementById('mt-notice');
+      var RTL_LANGS = ['ar'];
+
+      function render(lang){
+        var d = data[lang];
+        if(!d) return;
+        // testi
+        document.querySelectorAll('[data-i18n]').forEach(function(el){
+          var key = el.getAttribute('data-i18n');
+          if(d[key] != null) el.textContent = d[key];
+        });
+        // MT notice
+        if(d.mt_notice){
+          mtEl.textContent = d.mt_notice;
+          mtWrap.style.display = 'block';
+        } else {
+          mtWrap.style.display = 'none';
+        }
+        // lang / dir
+        document.documentElement.lang = lang;
+        document.documentElement.dir = RTL_LANGS.indexOf(lang) !== -1 ? 'rtl' : 'ltr';
+        // active button
+        buttons.forEach(function(b){ b.classList.toggle('active', b.dataset.lang === lang); });
+        // shared nav / footer strings
+        if(window.applyAppNav) window.applyAppNav(lang);
+        // persist
+        try { localStorage.setItem('ti-lang', lang); } catch(e){}
+      }
+
+      buttons.forEach(function(b){ b.addEventListener('click', function(){ render(b.dataset.lang); }); });
+
+      var initial = 'it';
+      try {
+        var saved = localStorage.getItem('ti-lang');
+        if(saved && data[saved]) initial = saved;
+      } catch(e){}
+      if(!localStorage.getItem('ti-lang')){
+        var browserLang = (navigator.language || 'it').slice(0, 2).toLowerCase();
+        if(data[browserLang]) initial = browserLang;
+      }
+      render(initial);
+    })();
+    </script>
 
 </body>
 

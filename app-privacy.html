@@ -99,6 +99,11 @@
         .legal-mt-notice strong{
             color:#5a4200;
         }
+        html[dir="rtl"] .arrow-back,
+        html[dir="rtl"] .arrow-fwd{
+            display:inline-block;
+            transform:scaleX(-1);
+        }
     </style>
 
 </head>
@@ -119,25 +124,23 @@
 
                 <ul class="nav-menu">
 
-                    <li><a href="index.html#about">Over mij</a></li>
+                    <li><a href="index.html" data-i18n-nav="chisono">Chi sono</a></li>
 
-                    <li><a href="index.html#lessons">Lessen</a></li>
+                    <li><a href="app-marketing.html" data-i18n-nav="app">L'app Ti</a></li>
 
-                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="app-support.html" data-i18n-nav="supporto">Supporto</a></li>
 
-                    <li><a href="esercizi/index.html">Oefeningen</a></li>
+                    <li><a href="app-privacy.html" data-i18n-nav="privacy">Privacy</a></li>
 
-                    <li><a href="index.html#reviews">Reviews</a></li>
-
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="app-termini.html" data-i18n-nav="termini">Termini</a></li>
 
                 </ul>
 
             </nav>
 
-            <a href="index.html#contact" class="button">
+            <a href="app-marketing.html#download" class="button" data-i18n-cta="scarica">
 
-                Gratis intake
+                Scarica
 
             </a>
 
@@ -173,9 +176,9 @@
 
                 <div class="legal-actions">
 
-                    <a href="index.html" class="button" data-back>← Terug naar de homepage</a>
+                    <a href="index.html" class="button" data-back><span class="arrow-back">←</span> <span data-i18n-nav="chisono">Chi sono</span></a>
 
-                    <a href="app-termini.html" class="button button-outline" data-terms>Voorwaarden app →</a>
+                    <a href="app-termini.html" class="button button-outline" data-terms><span data-i18n-nav="termini">Termini</span> <span class="arrow-fwd">→</span></a>
 
                 </div>
 
@@ -197,27 +200,25 @@
 
             <ul class="nav-menu">
 
-                <li><a href="index.html#about">Over mij</a></li>
+                <li><a href="index.html" data-i18n-nav="chisono">Chi sono</a></li>
 
-                <li><a href="index.html#lessons">Lessen</a></li>
+                <li><a href="app-marketing.html" data-i18n-nav="app">L'app Ti</a></li>
 
-                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="app-support.html" data-i18n-nav="supporto">Supporto</a></li>
 
-                <li><a href="esercizi/index.html">Oefeningen</a></li>
+                <li><a href="app-privacy.html" data-i18n-nav="privacy">Privacy</a></li>
 
-                <li><a href="index.html#reviews">Reviews</a></li>
-
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="app-termini.html" data-i18n-nav="termini">Termini</a></li>
 
             </ul>
 
-            <p class="footer-copy">© 2026 Thuis Italiaans. Alle rechten voorbehouden.</p>
+            <p class="footer-copy" data-i18n-footer="copy">© 2026 Thuis Italiaans. Tutti i diritti riservati.</p>
 
         </div>
 
         <div class="container footer-legal">
 
-            <p>In behandeling bij de KvK</p>
+            <p data-i18n-footer="kvk">In elaborazione presso la KvK</p>
 
         </div>
 
@@ -873,13 +874,12 @@
 }
     </script>
 
+    <script src="js/app-nav.js"></script>
     <script>
     (function(){
       const data = JSON.parse(document.getElementById('data').textContent);
       const container = document.getElementById('content');
       const buttons = document.querySelectorAll('.lang-switcher button');
-      const backLink = document.querySelector('[data-back]');
-      const otherLink = document.querySelector('[data-terms]');
       const RTL_LANGS = ['ar'];
 
       function render(lang){
@@ -904,11 +904,10 @@
           html += '<p>' + s.corpo + '</p>';
         }
         container.innerHTML = html;
-        backLink.textContent = d.back;
-        otherLink.textContent = d.terms;
         document.documentElement.lang = lang;
         document.documentElement.dir = RTL_LANGS.includes(lang) ? 'rtl' : 'ltr';
         buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+        if(window.applyAppNav) window.applyAppNav(lang);
         try { localStorage.setItem('ti-lang', lang); } catch(e){}
       }
 
