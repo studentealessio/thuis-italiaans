@@ -137,6 +137,121 @@
             box-shadow: 0 30px 70px rgba(49,57,77,.18);
             display: block;
         }
+        /* Video element uses same shape as .app-icon */
+        video.app-icon {
+            object-fit: cover;
+        }
+
+        /* ========= ANIMAZIONI ========= */
+        @media (prefers-reduced-motion: no-preference) {
+
+            /* Hero fade-in cascade */
+            .hero-tag,
+            .hero h1,
+            .hero-text,
+            .hero-buttons,
+            .hero-rating {
+                opacity: 0;
+                animation: heroFadeIn .9s cubic-bezier(.2,.7,.2,1) forwards;
+            }
+            .hero-tag    { animation-delay: .10s; }
+            .hero h1     { animation-delay: .25s; }
+            .hero-text   { animation-delay: .40s; }
+            .hero-buttons{ animation-delay: .55s; }
+            .hero-rating { animation-delay: .70s; }
+
+            @keyframes heroFadeIn {
+                from { opacity: 0; transform: translateY(14px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Hero phone/video: float + entrance */
+            .app-icon-wrap {
+                animation: heroPhoneIn 1.1s cubic-bezier(.2,.7,.2,1) both;
+            }
+            @keyframes heroPhoneIn {
+                from { opacity: 0; transform: translateY(30px) scale(.96); }
+                to   { opacity: 1; transform: translateY(0) scale(1); }
+            }
+            .app-icon {
+                animation: heroFloat 6s ease-in-out 1.1s infinite;
+            }
+            @keyframes heroFloat {
+                0%, 100% { transform: translateY(0); }
+                50%      { transform: translateY(-10px); }
+            }
+
+            /* Reveal on scroll (added by JS with class="reveal") */
+            .reveal {
+                opacity: 0;
+                transform: translateY(28px);
+                transition: opacity .8s cubic-bezier(.2,.7,.2,1),
+                            transform .8s cubic-bezier(.2,.7,.2,1);
+                will-change: opacity, transform;
+            }
+            .reveal.is-visible {
+                opacity: 1;
+                transform: none;
+            }
+
+            /* Staggered reveal for grouped children */
+            .trust-grid > .reveal:nth-child(1) { transition-delay: 0s;    }
+            .trust-grid > .reveal:nth-child(2) { transition-delay: .10s;  }
+            .trust-grid > .reveal:nth-child(3) { transition-delay: .20s;  }
+            .trust-grid > .reveal:nth-child(4) { transition-delay: .30s;  }
+
+            .for-you-list > .reveal:nth-child(1) { transition-delay: 0s;   }
+            .for-you-list > .reveal:nth-child(2) { transition-delay: .10s; }
+            .for-you-list > .reveal:nth-child(3) { transition-delay: .20s; }
+            .for-you-list > .reveal:nth-child(4) { transition-delay: .30s; }
+
+            /* Hover interactions */
+            .trust article {
+                transition: transform .35s ease, box-shadow .35s ease;
+            }
+            .trust article:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 40px rgba(49,57,77,.12);
+            }
+
+            .screenshot-card {
+                transition: transform .35s ease, box-shadow .35s ease;
+            }
+            .screenshot-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 30px 60px rgba(49,57,77,.22);
+            }
+
+            .for-you-list li {
+                transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+            }
+            .for-you-list li:hover {
+                transform: translateX(4px);
+                box-shadow: 0 10px 24px rgba(49,57,77,.08);
+            }
+            html[dir="rtl"] .for-you-list li:hover {
+                transform: translateX(-4px);
+            }
+
+            .feature-visual img {
+                transition: transform .5s cubic-bezier(.2,.7,.2,1);
+            }
+            .feature-row:hover .feature-visual img {
+                transform: scale(1.03);
+            }
+
+            .cta-section .button {
+                transition: transform .25s ease, box-shadow .25s ease;
+            }
+            .cta-section .button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 30px rgba(0,0,0,.2);
+            }
+        }
+        /* Reduced motion: no anims, everything visible */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; }
+        }
 
         /* Screenshot carousels wrapper */
         .screenshots-section {
@@ -271,6 +386,55 @@
             max-height: 100%;
             border-radius: 22px;
             box-shadow: 0 15px 40px rgba(49,57,77,.12);
+        }
+
+        /* "Fatta per te se..." */
+        .for-you-section {
+            padding: 110px 0;
+            background: var(--surface);
+        }
+        .for-you-list {
+            max-width: 780px;
+            margin: 44px auto 0;
+            display: grid;
+            gap: 18px;
+            list-style: none;
+            padding: 0;
+        }
+        .for-you-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background: var(--background);
+            padding: 22px 26px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 16px rgba(49,57,77,.05);
+        }
+        .for-you-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .for-you-list li p {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        html[dir="rtl"] .for-you-list li {
+            flex-direction: row-reverse;
         }
 
         /* Final CTA */
@@ -457,7 +621,7 @@
 
                     <h1 data-i18n="hero_h1">Impara l'italiano davvero.</h1>
 
-                    <p class="hero-text" data-i18n="hero_text">Ti è l'app per portarti dallo zero al C2 seguendo il percorso QCER, con un metodo pensato per farti parlare, capire, leggere e scrivere in italiano vero — quello di tutti i giorni, non da manuale.</p>
+                    <p class="hero-text" data-i18n="hero_text">Ti è l'app per imparare l'italiano davvero — dallo zero al C2, con un metodo pensato per farti parlare, capire, leggere e scrivere l'italiano vivo di ogni giorno, non quello dei manuali.</p>
 
                     <div class="hero-buttons">
 
@@ -477,8 +641,21 @@
 
                 <div class="app-icon-wrap">
 
-                    <!-- Screenshot iPhone del percorso, al posto della vecchia icona -->
-                    <img src="assets/screenshots/iPhone/percorso.png" alt="Il percorso di Ti su iPhone" class="app-icon">
+                    <!--
+                        Video hero: droppa il file registrato in assets/videos/hero-percorso.mp4
+                        (dimensione consigliata 9:19.5, verticale, ~1080x2340 o simile).
+                        Se manca il file, viene mostrata la poster image come fallback.
+                    -->
+                    <video class="app-icon"
+                           autoplay muted loop playsinline
+                           preload="metadata"
+                           poster="assets/screenshots/iPhone/percorso.png"
+                           aria-label="Ti in azione: il percorso su iPhone">
+                        <source src="assets/videos/hero-percorso.mp4" type="video/mp4">
+                        <source src="assets/videos/hero-percorso.webm" type="video/webm">
+                        <!-- Fallback per browser che non supportano video -->
+                        <img src="assets/screenshots/iPhone/percorso.png" alt="Il percorso di Ti su iPhone">
+                    </video>
 
                 </div>
 
@@ -491,7 +668,7 @@
 
             <div class="container trust-grid">
 
-                <article>
+                <article class="reveal">
 
                     <h3 data-i18n="trust_h3_1">A1 → C2</h3>
 
@@ -499,7 +676,7 @@
 
                 </article>
 
-                <article>
+                <article class="reveal">
 
                     <h3 data-i18n="trust_h3_2">14 lingue</h3>
 
@@ -507,7 +684,7 @@
 
                 </article>
 
-                <article>
+                <article class="reveal">
 
                     <h3 data-i18n="trust_h3_3">3.000+</h3>
 
@@ -515,7 +692,7 @@
 
                 </article>
 
-                <article>
+                <article class="reveal">
 
                     <h3 data-i18n="trust_h3_4">Classici</h3>
 
@@ -532,7 +709,7 @@
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading reveal">
 
                     <span class="section-tag" data-i18n="scr_tag">Guarda</span>
 
@@ -663,7 +840,7 @@
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPad/view_percorso.png" alt="Home percorso, dallo zero al C2">
+                            <img src="assets/screenshots/iPad/percorso_vista_a1-c2.png" alt="Home percorso, dallo zero al C2">
                         </div>
                         <figcaption data-i18n="cap_percorso_a1c2">Percorso A1–C2</figcaption>
                     </figure>
@@ -728,7 +905,7 @@
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading reveal">
 
                     <span class="section-tag" data-i18n="feat_tag">Perché Ti</span>
 
@@ -738,7 +915,7 @@
 
                 </div>
 
-                <div class="feature-row">
+                <div class="feature-row reveal">
 
                     <div class="feature-text">
 
@@ -758,13 +935,13 @@
 
                 </div>
 
-                <div class="feature-row reverse">
+                <div class="feature-row reverse reveal">
 
                     <div class="feature-text">
 
                         <h3 data-i18n="f2_h3">L'edicola: libri tematici e classici</h3>
 
-                        <p data-i18n="f2_p1">La dolce vita, la carriera, il gergo dei giovani, gli italiani famosi, viaggi, moda, motori, università, burocrazia. Ogni libro copre un aspetto dell'italiano vivo, dall'A1 al C2.</p>
+                        <p data-i18n="f2_p1">Carriera per il lavoro, Burocrazia per i documenti, Gergo dei giovani, La dolce vita, Italiani famosi, Viaggi, Moda, Motori, Università, Radici, Idiomi. Ogni libro copre un aspetto dell'italiano vivo, dall'A1 al C2. Il catalogo continua a crescere.</p>
 
                         <p data-i18n="f2_p2">Accanto ai libri tematici, i grandi romanzi italiani: Manzoni, Verga, Pirandello, De Amicis, Serao, riscritti e graduati per il tuo livello.</p>
 
@@ -778,7 +955,7 @@
 
                 </div>
 
-                <div class="feature-row">
+                <div class="feature-row reveal">
 
                     <div class="feature-text">
 
@@ -798,7 +975,7 @@
 
                 </div>
 
-                <div class="feature-row reverse">
+                <div class="feature-row reverse reveal">
 
                     <div class="feature-text">
 
@@ -815,6 +992,47 @@
                     </div>
 
                 </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========= FATTA PER TE SE... ========= -->
+        <section class="for-you-section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <span class="section-tag" data-i18n="foryou_tag">Pensata per te</span>
+
+                    <h2 data-i18n="foryou_h2">Fatta per te se...</h2>
+
+                </div>
+
+                <ul class="for-you-list">
+
+                    <li class="reveal">
+                        <span class="for-you-mark" aria-hidden="true">✓</span>
+                        <p data-i18n="foryou_1">Vivi o lavori in Italia e vuoi capire come si parla davvero.</p>
+                    </li>
+
+                    <li class="reveal">
+                        <span class="for-you-mark" aria-hidden="true">✓</span>
+                        <p data-i18n="foryou_2">Prepari una certificazione (CILS, CELI, PLIDA).</p>
+                    </li>
+
+                    <li class="reveal">
+                        <span class="for-you-mark" aria-hidden="true">✓</span>
+                        <p data-i18n="foryou_3">Vuoi finalmente leggere Pirandello in originale.</p>
+                    </li>
+
+                    <li class="reveal">
+                        <span class="for-you-mark" aria-hidden="true">✓</span>
+                        <p data-i18n="foryou_4">Ami la cultura e la letteratura italiane.</p>
+                    </li>
+
+                </ul>
 
             </div>
 
@@ -879,7 +1097,7 @@
   "it": {
     "hero_tag": "Disponibile su App Store",
     "hero_h1": "Impara l'italiano davvero.",
-    "hero_text": "Ti è l'app per portarti dallo zero al C2 seguendo il percorso QCER, con un metodo pensato per farti parlare, capire, leggere e scrivere in italiano vero — quello di tutti i giorni, non da manuale.",
+    "hero_text": "Ti è l'app per imparare l'italiano davvero — dallo zero al C2, con un metodo pensato per farti parlare, capire, leggere e scrivere l'italiano vivo di ogni giorno, non quello dei manuali.",
     "hero_btn": "Scarica su App Store",
     "hero_rating": "Nuova su App Store · 14 lingue di supporto",
     "trust_h3_1": "A1 → C2",
@@ -922,7 +1140,7 @@
     "f1_p1": "Dallo zero al C2 seguendo i livelli ufficiali europei. Ogni livello ha tappe di grammatica, vocabolario, cultura e comprensione, con checkpoint ed esami di livello.",
     "f1_p2": "Sai sempre dove sei e cosa manca per il prossimo scalino.",
     "f2_h3": "L'edicola: libri tematici e classici",
-    "f2_p1": "La dolce vita, la carriera, il gergo dei giovani, gli italiani famosi, viaggi, moda, motori, università, burocrazia. Ogni libro copre un aspetto dell'italiano vivo, dall'A1 al C2.",
+    "f2_p1": "Carriera per il lavoro, Burocrazia per i documenti, Gergo dei giovani, La dolce vita, Italiani famosi, Viaggi, Moda, Motori, Università, Radici, Idiomi. Ogni libro copre un aspetto dell'italiano vivo, dall'A1 al C2. Il catalogo continua a crescere.",
     "f2_p2": "Accanto ai libri tematici, i grandi romanzi italiani: Manzoni, Verga, Pirandello, De Amicis, Serao, riscritti e graduati per il tuo livello.",
     "f3_h3": "I classici, con dizionario integrato",
     "f3_p1": "Ogni parola difficile è a portata di tap: definizione dry, note del prof su contesto e cultura, sinonimi e famiglie di parole. Comprensione guidata mentre leggi, senza uscire dal romanzo.",
@@ -931,12 +1149,18 @@
     "f4_p1": "Non solo inglese, come quasi tutte le altre app. Ti è pensata anche per chi vive e lavora in Italia e non trova mai la propria lingua nelle altre app: albanese, arabo, bengalese, cinese, francese, inglese, olandese, portoghese, rumeno, spagnolo, tagalog, tedesco, tigrino, ucraino.",
     "cta_h2": "L'italiano vero ti aspetta.",
     "cta_p": "Scarica Ti e comincia il percorso.",
-    "cta_btn": "Scarica su App Store"
+    "cta_btn": "Scarica su App Store",
+    "foryou_tag": "Pensata per te",
+    "foryou_h2": "Fatta per te se...",
+    "foryou_1": "Vivi o lavori in Italia e vuoi capire come si parla davvero.",
+    "foryou_2": "Prepari una certificazione (CILS, CELI, PLIDA).",
+    "foryou_3": "Vuoi finalmente leggere Pirandello in originale.",
+    "foryou_4": "Ami la cultura e la letteratura italiane."
   },
   "nl": {
     "hero_tag": "Beschikbaar in de App Store",
     "hero_h1": "Leer echt Italiaans.",
-    "hero_text": "Ti is de app die je van nul naar C2 brengt volgens het ERK-pad, met een methode die je laat spreken, begrijpen, lezen en schrijven in écht Italiaans — dat van elke dag, niet uit het handboek.",
+    "hero_text": "Ti is de app om echt Italiaans te leren — van nul tot C2, met een methode die je laat spreken, begrijpen, lezen en schrijven in het echte alledaagse Italiaans, niet dat uit de schoolboeken.",
     "hero_btn": "Download uit App Store",
     "hero_rating": "Nieuw in de App Store · 14 ondersteuningstalen",
     "trust_h3_1": "A1 → C2",
@@ -979,7 +1203,7 @@
     "f1_p1": "Van nul tot C2 volgens de officiële Europese niveaus. Elk niveau heeft etappes voor grammatica, woordenschat, cultuur en begrip, met checkpoints en niveau-examens.",
     "f1_p2": "Je weet altijd waar je staat en wat er nog nodig is voor de volgende stap.",
     "f2_h3": "De edicola: thematische boeken en klassiekers",
-    "f2_p1": "La dolce vita, de carrière, jongerentaal, beroemde Italianen, reizen, mode, motoren, universiteit, bureaucratie. Elk boek dekt een aspect van het levende Italiaans, van A1 tot C2.",
+    "f2_p1": "La dolce vita, Beroemde Italianen (grammatica verteld via grote namen), Jongerentaal, Reizen, Mode, Motoren, Universiteit, Wortels, Uitdrukkingen, Vrije tijd, Carrière. Elk boek dekt een stuk levend Italiaans, van A1 tot C2. De catalogus blijft groeien.",
     "f2_p2": "Naast de thematische boeken de grote Italiaanse romans: Manzoni, Verga, Pirandello, De Amicis, Serao, herschreven en gegradeerd voor jouw niveau.",
     "f3_h3": "De klassiekers, met geïntegreerd woordenboek",
     "f3_p1": "Elk moeilijk woord is één tik verderop: droge definitie, notities van de leraar over context en cultuur, synoniemen en woordfamilies. Begeleid begrip terwijl je leest, zonder de roman te verlaten.",
@@ -989,12 +1213,18 @@
     "cta_h2": "Het echte Italiaans wacht op je.",
     "cta_p": "Download Ti en begin het pad.",
     "cta_btn": "Download uit App Store",
-    "mt_notice": "Sorry — deze versie is automatisch vertaald en sommige formuleringen zijn misschien niet volledig accuraat. Zie je een fout? Mail ons op thuisitaliaans@gmail.com."
+    "mt_notice": "Sorry — deze versie is automatisch vertaald en sommige formuleringen zijn misschien niet volledig accuraat. Zie je een fout? Mail ons op thuisitaliaans@gmail.com.",
+    "foryou_tag": "Voor jou gemaakt",
+    "foryou_h2": "Gemaakt voor jou als...",
+    "foryou_1": "Je van Italiaanse literatuur en cultuur houdt.",
+    "foryou_2": "Je een certificaat voorbereidt (CILS, CELI, PLIDA).",
+    "foryou_3": "Je vaak in Italië bent of er woont.",
+    "foryou_4": "Je eindelijk Pirandello in het origineel wilt lezen."
   },
   "en": {
     "hero_tag": "Available on the App Store",
     "hero_h1": "Really learn Italian.",
-    "hero_text": "Ti is the app that takes you from zero to C2 along the CEFR path, with a method designed to make you speak, understand, read and write real Italian — the everyday kind, not textbook Italian.",
+    "hero_text": "Ti is the app to actually learn Italian — from zero to C2, with a method built to make you speak, understand, read and write real everyday Italian, not textbook Italian.",
     "hero_btn": "Download on the App Store",
     "hero_rating": "New on the App Store · 14 support languages",
     "trust_h3_1": "A1 → C2",
@@ -1037,7 +1267,7 @@
     "f1_p1": "From zero to C2 along the official European levels. Every level has stages for grammar, vocabulary, culture and comprehension, with checkpoints and level exams.",
     "f1_p2": "You always know where you are and what's needed for the next step.",
     "f2_h3": "The edicola: themed books and classics",
-    "f2_p1": "La dolce vita, careers, youth slang, famous Italians, travel, fashion, motors, university, bureaucracy. Every book covers a slice of living Italian, from A1 to C2.",
+    "f2_p1": "La dolce vita, Famous Italians (grammar told through the great names), Youth slang, Travel, Fashion, Cars, University, Roots, Idioms, Free time, Career, Bureaucracy. Every book covers a slice of living Italian, from A1 to C2. The catalogue keeps growing.",
     "f2_p2": "Alongside the themed books, the great Italian novels: Manzoni, Verga, Pirandello, De Amicis, Serao, rewritten and graded for your level.",
     "f3_h3": "The classics, with an integrated dictionary",
     "f3_p1": "Every hard word is a tap away: dry definition, teacher's notes on context and culture, synonyms and word families. Guided comprehension as you read, without leaving the novel.",
@@ -1047,12 +1277,18 @@
     "cta_h2": "Real Italian is waiting for you.",
     "cta_p": "Download Ti and start the path.",
     "cta_btn": "Download on the App Store",
-    "mt_notice": "Sorry — this version has been machine-translated and some wording may not be entirely accurate. If you spot a mistake, write to us at thuisitaliaans@gmail.com."
+    "mt_notice": "Sorry — this version has been machine-translated and some wording may not be entirely accurate. If you spot a mistake, write to us at thuisitaliaans@gmail.com.",
+    "foryou_tag": "Built for you",
+    "foryou_h2": "Built for you if...",
+    "foryou_1": "You want a serious method, not a game with streaks.",
+    "foryou_2": "You're preparing for a certification (CILS, CELI, PLIDA).",
+    "foryou_3": "You live, work or travel often in Italy.",
+    "foryou_4": "You love Italian literature and culture."
   },
   "es": {
     "hero_tag": "Disponible en App Store",
     "hero_h1": "Aprende italiano de verdad.",
-    "hero_text": "Ti es la app para llevarte del cero al C2 siguiendo el recorrido MCER, con un método pensado para hacerte hablar, entender, leer y escribir en italiano de verdad — el de todos los días, no el del manual.",
+    "hero_text": "Ti es la app para aprender italiano de verdad — de cero a C2, con un método pensado para que hables, entiendas, leas y escribas italiano vivo, el de cada día, no el de los manuales.",
     "hero_btn": "Descargar en App Store",
     "hero_rating": "Nueva en App Store · 14 idiomas de soporte",
     "trust_h3_1": "A1 → C2",
@@ -1095,7 +1331,7 @@
     "f1_p1": "Del cero al C2 siguiendo los niveles oficiales europeos. Cada nivel tiene etapas de gramática, vocabulario, cultura y comprensión, con checkpoints y exámenes de nivel.",
     "f1_p2": "Sabes siempre dónde estás y qué falta para el próximo escalón.",
     "f2_h3": "El kiosco: libros temáticos y clásicos",
-    "f2_p1": "La dolce vita, la carrera, la jerga juvenil, italianos famosos, viajes, moda, motores, universidad, burocracia. Cada libro cubre un aspecto del italiano vivo, del A1 al C2.",
+    "f2_p1": "La dolce vita, La carrera (italiano del trabajo), Italianos famosos (la gramática contada por los grandes), Jerga juvenil, Viajes, Moda, Motores, Universidad, Raíces, Modismos, Burocracia. Cada libro cubre un aspecto del italiano vivo, del A1 al C2.",
     "f2_p2": "Junto a los libros temáticos, las grandes novelas italianas: Manzoni, Verga, Pirandello, De Amicis, Serao, reescritas y graduadas para tu nivel.",
     "f3_h3": "Los clásicos, con diccionario integrado",
     "f3_p1": "Cada palabra difícil está a un toque: definición seca, notas del profe sobre contexto y cultura, sinónimos y familias de palabras. Comprensión guiada mientras lees, sin salir de la novela.",
@@ -1105,12 +1341,18 @@
     "cta_h2": "El italiano de verdad te espera.",
     "cta_p": "Descarga Ti y empieza el recorrido.",
     "cta_btn": "Descargar en App Store",
-    "mt_notice": "Lo sentimos — esta versión ha sido traducida automáticamente y algunas formulaciones pueden no ser del todo precisas. Si detectas un error, escríbenos a thuisitaliaans@gmail.com."
+    "mt_notice": "Lo sentimos — esta versión ha sido traducida automáticamente y algunas formulaciones pueden no ser del todo precisas. Si detectas un error, escríbenos a thuisitaliaans@gmail.com.",
+    "foryou_tag": "Pensada para ti",
+    "foryou_h2": "Hecha para ti si...",
+    "foryou_1": "Te apasionan la cultura y la literatura italianas.",
+    "foryou_2": "Vives, trabajas o viajas a menudo a Italia.",
+    "foryou_3": "Preparas una certificación (CILS, CELI, PLIDA).",
+    "foryou_4": "Quieres un método serio, no un juego de rachas."
   },
   "fr": {
     "hero_tag": "Disponible sur l'App Store",
     "hero_h1": "Apprends vraiment l'italien.",
-    "hero_text": "Ti est l'app qui t'amène de zéro au C2 sur le parcours CECRL, avec une méthode pensée pour te faire parler, comprendre, lire et écrire en italien vrai — celui de tous les jours, pas celui du manuel.",
+    "hero_text": "Ti est l'application pour apprendre l'italien pour de vrai — de zéro à C2, avec une méthode pensée pour te faire parler, comprendre, lire et écrire l'italien vivant, celui de tous les jours, pas celui des manuels.",
     "hero_btn": "Télécharger sur l'App Store",
     "hero_rating": "Nouveau sur l'App Store · 14 langues de support",
     "trust_h3_1": "A1 → C2",
@@ -1153,7 +1395,7 @@
     "f1_p1": "De zéro à C2 sur les niveaux officiels européens. Chaque niveau a des étapes de grammaire, vocabulaire, culture et compréhension, avec checkpoints et examens de niveau.",
     "f1_p2": "Tu sais toujours où tu en es et ce qu'il manque pour la marche suivante.",
     "f2_h3": "L'edicola : livres thématiques et classiques",
-    "f2_p1": "La dolce vita, la carrière, l'argot des jeunes, les Italiens célèbres, voyages, mode, moteurs, université, bureaucratie. Chaque livre couvre un pan d'italien vivant, de A1 à C2.",
+    "f2_p1": "La dolce vita, Italiens célèbres (la grammaire racontée par les grands noms), Argot des jeunes, Voyages, Mode, Moteurs, Université, Racines, Expressions, Temps libre, Carrière, Bureaucratie. Chaque livre couvre un pan d'italien vivant, de A1 à C2. Le catalogue s'agrandit.",
     "f2_p2": "À côté des livres thématiques, les grands romans italiens : Manzoni, Verga, Pirandello, De Amicis, Serao, réécrits et adaptés à ton niveau.",
     "f3_h3": "Les classiques, avec dictionnaire intégré",
     "f3_p1": "Chaque mot difficile est à un tap : définition sèche, notes du prof sur contexte et culture, synonymes et familles de mots. Compréhension guidée pendant que tu lis, sans quitter le roman.",
@@ -1163,12 +1405,18 @@
     "cta_h2": "L'italien vrai t'attend.",
     "cta_p": "Télécharge Ti et commence le parcours.",
     "cta_btn": "Télécharger sur l'App Store",
-    "mt_notice": "Désolé — cette version a été traduite automatiquement et certaines formulations peuvent ne pas être totalement exactes. Si tu repères une erreur, écris-nous à thuisitaliaans@gmail.com."
+    "mt_notice": "Désolé — cette version a été traduite automatiquement et certaines formulations peuvent ne pas être totalement exactes. Si tu repères une erreur, écris-nous à thuisitaliaans@gmail.com.",
+    "foryou_tag": "Pensée pour toi",
+    "foryou_h2": "Faite pour toi si...",
+    "foryou_1": "Tu aimes la littérature et la culture italiennes.",
+    "foryou_2": "Tu prépares une certification (CILS, CELI, PLIDA).",
+    "foryou_3": "Tu veux enfin lire Pirandello dans le texte.",
+    "foryou_4": "Tu vis, travailles ou voyages souvent en Italie."
   },
   "de": {
     "hero_tag": "Verfügbar im App Store",
     "hero_h1": "Italienisch wirklich lernen.",
-    "hero_text": "Ti ist die App, die dich vom Nullpunkt bis C2 auf dem GER-Weg begleitet, mit einer Methode, die dich echtes Italienisch sprechen, verstehen, lesen und schreiben lässt — das Alltagsitalienisch, kein Lehrbuch-Italienisch.",
+    "hero_text": "Ti ist die App, um Italienisch wirklich zu lernen — von null bis C2, mit einer Methode, die dich sprechen, verstehen, lesen und schreiben lässt: das echte Italienisch des Alltags, nicht das aus dem Schulbuch.",
     "hero_btn": "Im App Store laden",
     "hero_rating": "Neu im App Store · 14 Unterstützungssprachen",
     "trust_h3_1": "A1 → C2",
@@ -1211,7 +1459,7 @@
     "f1_p1": "Von Null bis C2 entlang der offiziellen europäischen Niveaus. Jedes Niveau hat Etappen für Grammatik, Wortschatz, Kultur und Verständnis, mit Checkpoints und Niveauprüfungen.",
     "f1_p2": "Du weißt immer, wo du stehst und was für die nächste Stufe fehlt.",
     "f2_h3": "Die Edicola: Themenbücher und Klassiker",
-    "f2_p1": "La dolce vita, Karriere, Jugendslang, berühmte Italiener, Reisen, Mode, Motoren, Universität, Bürokratie. Jedes Buch behandelt einen Aspekt lebendigen Italienisch, von A1 bis C2.",
+    "f2_p1": "La dolce vita (das echte Italien), Berühmte Italiener (Grammatik erzählt durch große Namen), Jugendslang, Reisen, Mode, Motoren, Universität, Wurzeln, Redewendungen, Freizeit, Karriere. Jedes Buch behandelt ein Stück lebendigen Italienisch, von A1 bis C2. Der Katalog wächst.",
     "f2_p2": "Neben den Themenbüchern die großen italienischen Romane: Manzoni, Verga, Pirandello, De Amicis, Serao, umgeschrieben und für dein Niveau adaptiert.",
     "f3_h3": "Die Klassiker, mit integriertem Wörterbuch",
     "f3_p1": "Jedes schwierige Wort ist einen Tipp entfernt: knappe Definition, Anmerkungen vom Lehrer zu Kontext und Kultur, Synonyme und Wortfamilien. Geführtes Verständnis beim Lesen, ohne den Roman zu verlassen.",
@@ -1221,12 +1469,18 @@
     "cta_h2": "Das echte Italienisch wartet auf dich.",
     "cta_p": "Lade Ti herunter und beginne den Weg.",
     "cta_btn": "Im App Store laden",
-    "mt_notice": "Entschuldigung — diese Version wurde maschinell übersetzt und einige Formulierungen sind möglicherweise nicht ganz präzise. Wenn dir ein Fehler auffällt, schreib uns an thuisitaliaans@gmail.com."
+    "mt_notice": "Entschuldigung — diese Version wurde maschinell übersetzt und einige Formulierungen sind möglicherweise nicht ganz präzise. Wenn dir ein Fehler auffällt, schreib uns an thuisitaliaans@gmail.com.",
+    "foryou_tag": "Für dich gemacht",
+    "foryou_h2": "Für dich, wenn...",
+    "foryou_1": "Du italienische Literatur und Kultur liebst.",
+    "foryou_2": "Du eine Zertifizierung vorbereitest (CILS, CELI, PLIDA).",
+    "foryou_3": "Du in Italien lebst, arbeitest oder oft dorthin reist.",
+    "foryou_4": "Du endlich Pirandello im Original lesen willst."
   },
   "pt": {
     "hero_tag": "Disponível na App Store",
     "hero_h1": "Aprende italiano a sério.",
-    "hero_text": "Ti é a app que te leva do zero ao C2 seguindo o percurso QECR, com um método pensado para te fazer falar, perceber, ler e escrever em italiano verdadeiro — o de todos os dias, não o do manual.",
+    "hero_text": "Ti é o app para aprender italiano de verdade — do zero ao C2, com um método pensado para te fazer falar, entender, ler e escrever o italiano vivo, o de todos os dias, não o dos manuais.",
     "hero_btn": "Descarregar na App Store",
     "hero_rating": "Novo na App Store · 14 línguas de suporte",
     "trust_h3_1": "A1 → C2",
@@ -1269,7 +1523,7 @@
     "f1_p1": "Do zero ao C2 seguindo os níveis oficiais europeus. Cada nível tem etapas de gramática, vocabulário, cultura e compreensão, com checkpoints e exames de nível.",
     "f1_p2": "Sabes sempre onde estás e o que falta para o próximo degrau.",
     "f2_h3": "A edicola: livros temáticos e clássicos",
-    "f2_p1": "La dolce vita, a carreira, a gíria dos jovens, italianos famosos, viagens, moda, motores, universidade, burocracia. Cada livro cobre um lado do italiano vivo, do A1 ao C2.",
+    "f2_p1": "La dolce vita, Italianos famosos (a gramática contada pelos grandes nomes), Raízes (para quem tem família em Itália), Gíria dos jovens, Viagens, Moda, Motores, Universidade, Ditados, Tempo livre. Cada livro cobre um lado do italiano vivo, do A1 ao C2.",
     "f2_p2": "Ao lado dos livros temáticos, os grandes romances italianos: Manzoni, Verga, Pirandello, De Amicis, Serao, reescritos e adaptados ao teu nível.",
     "f3_h3": "Os clássicos, com dicionário integrado",
     "f3_p1": "Cada palavra difícil está a um toque: definição seca, notas do professor sobre contexto e cultura, sinónimos e famílias de palavras. Compreensão guiada enquanto lês, sem sair do romance.",
@@ -1279,12 +1533,18 @@
     "cta_h2": "O italiano verdadeiro está à tua espera.",
     "cta_p": "Descarrega Ti e começa o percurso.",
     "cta_btn": "Descarregar na App Store",
-    "mt_notice": "Desculpa — esta versão foi traduzida automaticamente e algumas formulações podem não ser totalmente precisas. Se notares um erro, escreve-nos para thuisitaliaans@gmail.com."
+    "mt_notice": "Desculpa — esta versão foi traduzida automaticamente e algumas formulações podem não ser totalmente precisas. Se notares um erro, escreve-nos para thuisitaliaans@gmail.com.",
+    "foryou_tag": "Pensada para ti",
+    "foryou_h2": "Feita para ti se...",
+    "foryou_1": "Amas a cultura e a literatura italianas.",
+    "foryou_2": "Tens raízes italianas e queres reencontrar a língua.",
+    "foryou_3": "Preparas uma certificação (CILS, CELI, PLIDA).",
+    "foryou_4": "Vives, trabalhas ou viajas com frequência para Itália."
   },
   "ro": {
     "hero_tag": "Disponibil în App Store",
     "hero_h1": "Învață cu adevărat italiana.",
-    "hero_text": "Ti este aplicația care te duce de la zero la C2 pe traseul CECR, cu o metodă gândită să te facă să vorbești, să înțelegi, să citești și să scrii în italiană adevărată — cea de zi cu zi, nu cea de manual.",
+    "hero_text": "Ti este aplicația pentru a învăța italiana cu adevărat — de la zero până la C2, cu o metodă gândită să te facă să vorbești, să înțelegi, să citești și să scrii italiana vie de zi cu zi, nu cea din manuale.",
     "hero_btn": "Descarcă din App Store",
     "hero_rating": "Nou în App Store · 14 limbi de suport",
     "trust_h3_1": "A1 → C2",
@@ -1327,7 +1587,7 @@
     "f1_p1": "De la zero la C2 pe nivelurile oficiale europene. Fiecare nivel are etape de gramatică, vocabular, cultură și comprehensiune, cu puncte de control și examene de nivel.",
     "f1_p2": "Știi mereu unde ești și ce lipsește pentru treapta următoare.",
     "f2_h3": "Edicola: cărți tematice și clasici",
-    "f2_p1": "La dolce vita, cariera, argoul tinerilor, italieni celebri, călătorii, modă, motoare, universitate, birocrație. Fiecare carte acoperă o parte din italiana vie, de la A1 la C2.",
+    "f2_p1": "Carieră (italiana la muncă, interviuri, e-mailuri), Birocrația (documente, comuna, permesso di soggiorno), Argou tineresc, La dolce vita, Călătorii, Modă, Motoare, Universitate, Rădăcini, Expresii. Fiecare carte acoperă o parte din italiana vie, de la A1 la C2.",
     "f2_p2": "Alături de cărțile tematice, marile romane italiene: Manzoni, Verga, Pirandello, De Amicis, Serao, rescrise și adaptate pentru nivelul tău.",
     "f3_h3": "Clasicii, cu dicționar integrat",
     "f3_p1": "Fiecare cuvânt dificil este la o atingere: definiție seacă, note ale profesorului despre context și cultură, sinonime și familii de cuvinte. Comprehensiune ghidată în timp ce citești, fără să ieși din roman.",
@@ -1337,12 +1597,18 @@
     "cta_h2": "Italiana adevărată te așteaptă.",
     "cta_p": "Descarcă Ti și începe traseul.",
     "cta_btn": "Descarcă din App Store",
-    "mt_notice": "Ne pare rău — această versiune a fost tradusă automat și unele formulări pot să nu fie complet precise. Dacă observi o greșeală, scrie-ne la thuisitaliaans@gmail.com."
+    "mt_notice": "Ne pare rău — această versiune a fost tradusă automat și unele formulări pot să nu fie complet precise. Dacă observi o greșeală, scrie-ne la thuisitaliaans@gmail.com.",
+    "foryou_tag": "Gândită pentru tine",
+    "foryou_h2": "Potrivită pentru tine dacă...",
+    "foryou_1": "Trăiești sau muncești în Italia și vrei să înțelegi cum se vorbește cu adevărat.",
+    "foryou_2": "Ești începător și vrei o metodă serioasă.",
+    "foryou_3": "Studiezi pentru un certificat (CILS, CELI, PLIDA).",
+    "foryou_4": "Iubești cultura italiană."
   },
   "sq": {
     "hero_tag": "E disponueshme në App Store",
     "hero_h1": "Mëso italishten vërtet.",
-    "hero_text": "Ti është app-i që të çon nga zero në C2 duke ndjekur rrugën QCER, me një metodë të menduar për të bërë të flasësh, të kuptosh, të lexosh dhe të shkruash në italishten e vërtetë — atë të përditshme, jo atë të manualit.",
+    "hero_text": "Ti është aplikacioni për të mësuar italishten seriozisht — nga zero deri në C2, me një metodë të menduar për të të bërë të flasësh, kuptosh, lexosh e shkruash italishten e vërtetë të çdo dite, jo atë të manualit.",
     "hero_btn": "Shkarko në App Store",
     "hero_rating": "E re në App Store · 14 gjuhë mbështetjeje",
     "trust_h3_1": "A1 → C2",
@@ -1385,7 +1651,7 @@
     "f1_p1": "Nga zero në C2 duke ndjekur nivelet zyrtare evropiane. Çdo nivel ka etapa gramatike, fjalori, kulture dhe kuptimi, me pika kontrolli dhe provime niveli.",
     "f1_p2": "E di gjithmonë ku je dhe çfarë mungon për shkallën tjetër.",
     "f2_h3": "Edicola: libra tematikë dhe klasikë",
-    "f2_p1": "La dolce vita, karriera, zhargoni i të rinjve, italianë të famshëm, udhëtime, modë, motorë, universitet, burokraci. Çdo libër mbulon një anë të italishtes së gjallë, nga A1 në C2.",
+    "f2_p1": "Karriera për punë, Burokracia për dokumentet, Zhargoni i të rinjve, La dolce vita, Italianë të famshëm, Udhëtime, Modë, Motorë, Universitet, Rrënjë, Idioma. Çdo libër mbulon një anë të italishtes së gjallë, nga A1 në C2. Libra të rinj shtohen rregullisht.",
     "f2_p2": "Krahas librave tematikë, romanet e mëdha italiane: Manzoni, Verga, Pirandello, De Amicis, Serao, të rishkruar dhe të graduar për nivelin tënd.",
     "f3_h3": "Klasikët, me fjalor të integruar",
     "f3_p1": "Çdo fjalë e vështirë është një prekje larg: përkufizim i thatë, shënime të profesorit për kontekstin dhe kulturën, sinonime dhe familje fjalësh. Kuptim i drejtuar teksa lexon, pa dalë nga romani.",
@@ -1395,12 +1661,18 @@
     "cta_h2": "Italishtja e vërtetë të pret.",
     "cta_p": "Shkarko Ti dhe fillo rrugën.",
     "cta_btn": "Shkarko në App Store",
-    "mt_notice": "Na vjen keq — ky version është përkthyer automatikisht dhe disa formulime mund të mos jenë plotësisht të sakta. Nëse vëren ndonjë gabim, na shkruaj në thuisitaliaans@gmail.com."
+    "mt_notice": "Na vjen keq — ky version është përkthyer automatikisht dhe disa formulime mund të mos jenë plotësisht të sakta. Nëse vëren ndonjë gabim, na shkruaj në thuisitaliaans@gmail.com.",
+    "foryou_tag": "Menduar për ty",
+    "foryou_h2": "E bërë për ty nëse...",
+    "foryou_1": "Jeton ose punon në Itali dhe do të kuptosh si flitet vërtet.",
+    "foryou_2": "Je fillestar dhe do të nisësh me një metodë serioze.",
+    "foryou_3": "Studion për një çertifikatë (CILS, CELI, PLIDA).",
+    "foryou_4": "Do italishten reale, jo atë të manualeve."
   },
   "ar": {
     "hero_tag": "متوفر على App Store",
     "hero_h1": "تعلّم الإيطالية حقًا.",
-    "hero_text": "Ti هو التطبيق الذي يأخذك من الصفر إلى C2 عبر مسار CEFR، بمنهج مصمَّم ليجعلك تتحدّث وتفهم وتقرأ وتكتب بإيطالية حقيقية — إيطالية الحياة اليومية، لا إيطالية الكتب.",
+    "hero_text": "Ti هو التطبيق لتعلّم الإيطالية فعلاً — من الصفر إلى مستوى C2، بمنهج مصمَّم ليجعلك تتكلم وتفهم وتقرأ وتكتب الإيطالية الحقيقية، إيطالية الحياة اليومية لا إيطالية الكتب.",
     "hero_btn": "التنزيل من App Store",
     "hero_rating": "جديد على App Store · 14 لغة دعم",
     "trust_h3_1": "A1 ← C2",
@@ -1443,7 +1715,7 @@
     "f1_p1": "من الصفر إلى C2 عبر المستويات الأوروبية الرسمية. كلّ مستوى فيه محطّات للقواعد والمفردات والثقافة والفهم، مع نقاط تحقّق واختبارات مستوى.",
     "f1_p2": "تعرف دائمًا أين تقف وما ينقصك للمرحلة التالية.",
     "f2_h3": "الكشك: كتب موضوعية وكلاسيكيات",
-    "f2_p1": "La dolce vita، العمل، عاميّة الشباب، إيطاليون مشهورون، السفر، الموضة، المحرّكات، الجامعة، البيروقراطية. كلّ كتاب يغطّي جانبًا من الإيطالية الحية، من A1 إلى C2.",
+    "f2_p1": "المهنة للعمل، الإدارة للوثائق، عاميّة الشباب، La dolce vita، إيطاليون مشهورون، السفر، الموضة، المحرّكات، الجامعة، الجذور، التعابير. كل كتاب يغطّي جانبًا من الإيطالية الحية، من A1 إلى C2. كتب جديدة تُضاف بانتظام.",
     "f2_p2": "إلى جانب الكتب الموضوعية، الروايات الإيطالية الكبرى: Manzoni وVerga وPirandello وDe Amicis وSerao، مُعاد صياغتها ومُدرَّجة وفق مستواك.",
     "f3_h3": "الكلاسيكيات، بقاموس مدمج",
     "f3_p1": "كل كلمة صعبة على بعد نقرة: تعريف مقتضب، وملاحظات المعلّم عن السياق والثقافة، ومرادفات وعائلات كلمات. فهم موجَّه أثناء القراءة، دون الخروج من الرواية.",
@@ -1453,12 +1725,18 @@
     "cta_h2": "الإيطالية الحقيقية تنتظرك.",
     "cta_p": "نزّل Ti وابدأ المسار.",
     "cta_btn": "التنزيل من App Store",
-    "mt_notice": "نعتذر — تُرجمت هذه النسخة آليًا وقد لا تكون بعض الصياغات دقيقة تمامًا. إذا لاحظت خطأ، فراسلنا على thuisitaliaans@gmail.com."
+    "mt_notice": "نعتذر — تُرجمت هذه النسخة آليًا وقد لا تكون بعض الصياغات دقيقة تمامًا. إذا لاحظت خطأ، فراسلنا على thuisitaliaans@gmail.com.",
+    "foryou_tag": "مصمَّم لك",
+    "foryou_h2": "مناسب لك إذا...",
+    "foryou_1": "تعيش أو تعمل في إيطاليا وتريد فهم الإيطالية الحقيقية.",
+    "foryou_2": "تدرس لشهادة (CILS, CELI, PLIDA).",
+    "foryou_3": "تحبّ الأدب والثقافة الإيطالية.",
+    "foryou_4": "تريد تعلّم إيطالية الحياة اليومية."
   },
   "bn": {
     "hero_tag": "App Store-এ পাওয়া যাচ্ছে",
     "hero_h1": "সত্যিই ইতালিয়ান শিখুন।",
-    "hero_text": "Ti হল সেই অ্যাপ যা আপনাকে শূন্য থেকে C2 পর্যন্ত CEFR পথে নিয়ে যায়, এমন এক পদ্ধতিতে যা আপনাকে সত্যিকারের ইতালিয়ান বলতে, বুঝতে, পড়তে এবং লিখতে সাহায্য করে — দৈনন্দিন জীবনের ইতালিয়ান, বইয়ের ইতালিয়ান নয়।",
+    "hero_text": "Ti হলো ইতালীয় ভাষা সত্যিই শেখার অ্যাপ — শূন্য থেকে C2 পর্যন্ত, এমন এক পদ্ধতিতে যা আপনাকে দৈনন্দিন জীবনের প্রকৃত ইতালীয় ভাষা বলতে, বুঝতে, পড়তে ও লিখতে শেখায়।",
     "hero_btn": "App Store থেকে ডাউনলোড করুন",
     "hero_rating": "App Store-এ নতুন · ১৪টি সহায়ক ভাষা",
     "trust_h3_1": "A1 → C2",
@@ -1501,7 +1779,7 @@
     "f1_p1": "শূন্য থেকে C2, অফিসিয়াল ইউরোপীয় স্তর অনুসরণ করে। প্রতিটি স্তরে ব্যাকরণ, শব্দভাণ্ডার, সংস্কৃতি এবং বোধগম্যতার পর্যায় আছে, চেকপয়েন্ট এবং স্তর পরীক্ষা সহ।",
     "f1_p2": "আপনি সবসময় জানেন আপনি কোথায় আছেন এবং পরবর্তী ধাপের জন্য কী প্রয়োজন।",
     "f2_h3": "এডিকোলা: বিষয়ভিত্তিক বই এবং ক্লাসিক",
-    "f2_p1": "La dolce vita, ক্যারিয়ার, তরুণদের অপভাষা, বিখ্যাত ইতালীয়, ভ্রমণ, ফ্যাশন, মোটর, বিশ্ববিদ্যালয়, আমলাতন্ত্র। প্রতিটি বই A1 থেকে C2 পর্যন্ত জীবন্ত ইতালিয়ানের একটি দিক তুলে ধরে।",
+    "f2_p1": "ক্যারিয়ার (কাজের ইতালীয়), আমলাতন্ত্র (permesso di soggiorno, কাগজপত্র), যুব-অপভাষা, La dolce vita, বিখ্যাত ইতালীয়, ভ্রমণ, ফ্যাশন, গাড়ি, বিশ্ববিদ্যালয়, বাগধারা। প্রতিটি বই A1 থেকে C2 পর্যন্ত জীবন্ত ইতালিয়ানের একটি দিক তুলে ধরে।",
     "f2_p2": "বিষয়ভিত্তিক বইগুলির পাশাপাশি, মহান ইতালিয়ান উপন্যাস: Manzoni, Verga, Pirandello, De Amicis, Serao, আপনার স্তরের জন্য পুনর্লিখিত এবং শ্রেণীবদ্ধ।",
     "f3_h3": "ক্লাসিক, সমন্বিত অভিধান সহ",
     "f3_p1": "প্রতিটি কঠিন শব্দ এক ট্যাপ দূরে: সংক্ষিপ্ত সংজ্ঞা, প্রেক্ষাপট এবং সংস্কৃতি সম্পর্কে শিক্ষকের নোট, প্রতিশব্দ এবং শব্দ পরিবার। পড়ার সময় নির্দেশিত বোধগম্যতা, উপন্যাস থেকে না বেরিয়ে।",
@@ -1511,12 +1789,18 @@
     "cta_h2": "সত্যিকারের ইতালিয়ান আপনার জন্য অপেক্ষা করছে।",
     "cta_p": "Ti ডাউনলোড করুন এবং পথ শুরু করুন।",
     "cta_btn": "App Store থেকে ডাউনলোড করুন",
-    "mt_notice": "আমরা দুঃখিত — এই সংস্করণটি স্বয়ংক্রিয়ভাবে অনুবাদ করা হয়েছে এবং কিছু বাক্যাংশ সম্পূর্ণ সঠিক না-ও হতে পারে। কোনো ভুল দেখলে আমাদের thuisitaliaans@gmail.com-এ লিখুন।"
+    "mt_notice": "আমরা দুঃখিত — এই সংস্করণটি স্বয়ংক্রিয়ভাবে অনুবাদ করা হয়েছে এবং কিছু বাক্যাংশ সম্পূর্ণ সঠিক না-ও হতে পারে। কোনো ভুল দেখলে আমাদের thuisitaliaans@gmail.com-এ লিখুন।",
+    "foryou_tag": "আপনার জন্য",
+    "foryou_h2": "আপনার জন্য উপযুক্ত যদি...",
+    "foryou_1": "আপনি ইতালিতে বাস করেন বা কাজ করেন।",
+    "foryou_2": "একটি সার্টিফিকেটের জন্য পড়ছেন (CILS, CELI, PLIDA)।",
+    "foryou_3": "সত্যিকারের ইতালীয় ভাষা চান, বইয়ের নয়।",
+    "foryou_4": "ইতালীয়রা কীভাবে সত্যিই কথা বলে তা বুঝতে চান।"
   },
   "zh": {
     "hero_tag": "在 App Store 上线",
     "hero_h1": "真正学会意大利语。",
-    "hero_text": "Ti 是带你从零到 C2 的应用，遵循 CEFR 路径，方法专为让你说、听、读、写真实的意大利语——日常口语的意大利语，而不是教科书上的意大利语。",
+    "hero_text": "Ti 是真正学习意大利语的应用程序 — 从零基础到 C2,用一套让你真正开口说、听懂、阅读并写出日常意大利语的方法,不是课本上的意大利语。",
     "hero_btn": "从 App Store 下载",
     "hero_rating": "App Store 新上架 · 14 种支持语言",
     "trust_h3_1": "A1 → C2",
@@ -1559,7 +1843,7 @@
     "f1_p1": "从零到 C2，沿着欧洲官方等级。每个等级都有语法、词汇、文化和理解的阶段，含检查点和分级考试。",
     "f1_p2": "你永远知道自己在哪里，以及距离下一步还需要什么。",
     "f2_h3": "书报亭：主题图书和经典",
-    "f2_p1": "La dolce vita、职场、青年俚语、意大利名人、旅行、时尚、汽车、大学、官僚制度。每本书涵盖鲜活意大利语的一个方面，从 A1 到 C2。",
+    "f2_p1": "职业(工作意大利语)、甜蜜生活(真实的意大利)、意大利名人、年轻人俚语、旅行、时尚、汽车、大学、词根、习语、官僚事务。每本书涵盖鲜活意大利语的一个方面,从 A1 到 C2。目录不断扩展。",
     "f2_p2": "在主题书之外，还有意大利伟大小说：Manzoni、Verga、Pirandello、De Amicis、Serao，根据你的水平改写并分级。",
     "f3_h3": "经典，配备内嵌词典",
     "f3_p1": "每个难词只需一点击：简洁的定义，老师关于语境和文化的注释，同义词和词族。阅读时的引导式理解，无需离开小说。",
@@ -1569,12 +1853,18 @@
     "cta_h2": "真正的意大利语在等你。",
     "cta_p": "下载 Ti，开始路径。",
     "cta_btn": "从 App Store 下载",
-    "mt_notice": "抱歉——此版本为机器翻译，某些措辞可能不完全准确。如发现错误，请写信至 thuisitaliaans@gmail.com。"
+    "mt_notice": "抱歉——此版本为机器翻译，某些措辞可能不完全准确。如发现错误，请写信至 thuisitaliaans@gmail.com。",
+    "foryou_tag": "为你而设",
+    "foryou_h2": "适合你,如果...",
+    "foryou_1": "你想认真学习意大利语。",
+    "foryou_2": "你在准备证书考试(CILS、CELI、PLIDA)。",
+    "foryou_3": "你在意大利生活或工作。",
+    "foryou_4": "你热爱意大利文学与文化。"
   },
   "tl": {
     "hero_tag": "Available sa App Store",
     "hero_h1": "Talagang matuto ng Italyano.",
-    "hero_text": "Ang Ti ay ang app na maghahatid sa iyo mula zero hanggang C2 sa daan ng CEFR, may paraang inisip para mapagsalita, maintindihan, mabasa at masulat mo ang tunay na Italyano — ang pang-araw-araw, hindi ang nasa libro.",
+    "hero_text": "Ang Ti ay ang app para talagang matutunan ang Italyano — mula sero hanggang C2, na may pamamaraang gagawa sa iyong magsalita, umunawa, magbasa at magsulat ng totoong pang-araw-araw na Italyano, hindi ang Italyano ng mga libro sa eskuwelahan.",
     "hero_btn": "I-download sa App Store",
     "hero_rating": "Bago sa App Store · 14 na wika ng suporta",
     "trust_h3_1": "A1 → C2",
@@ -1617,7 +1907,7 @@
     "f1_p1": "Mula zero hanggang C2 sa opisyal na mga antas ng Europa. Bawat antas ay may mga yugto para sa grammar, bokabularyo, kultura at pag-unawa, may mga checkpoint at pagsusulit ng antas.",
     "f1_p2": "Alam mo lagi kung nasaan ka at kung ano ang kulang para sa susunod na hakbang.",
     "f2_h3": "Ang edicola: mga aklat na may tema at klasiko",
-    "f2_p1": "La dolce vita, karera, salitang kabataan, sikat na mga Italyano, paglalakbay, moda, sasakyan, unibersidad, burokrasya. Bawat aklat ay sumasaklaw sa isang bahagi ng buhay na Italyano, mula A1 hanggang C2.",
+    "f2_p1": "Karera (Italyano sa trabaho, panayam, email), Burukrasya (permesso di soggiorno, dokumento), Balbal ng kabataan, La dolce vita, Paglalakbay, Fashion, Sasakyan, Unibersidad, Idyoma, Libreng oras. Bawat aklat ay sumasaklaw sa isang bahagi ng buhay na Italyano, mula A1 hanggang C2.",
     "f2_p2": "Katabi ng mga aklat na may tema, ang malalaking Italyanong nobela: Manzoni, Verga, Pirandello, De Amicis, Serao, isinulat muli at ginawa ayon sa antas mo.",
     "f3_h3": "Ang mga klasiko, may kasamang diksyunaryo",
     "f3_p1": "Bawat mahirap na salita ay isang tap lang: tuyong depinisyon, mga tala ng guro tungkol sa konteksto at kultura, mga kasingkahulugan at pamilya ng salita. Ginabayan na pag-unawa habang nagbabasa, nang hindi umaalis sa nobela.",
@@ -1627,12 +1917,18 @@
     "cta_h2": "Ang tunay na Italyano ay naghihintay sa iyo.",
     "cta_p": "I-download ang Ti at simulan ang daan.",
     "cta_btn": "I-download sa App Store",
-    "mt_notice": "Pasensya na — awtomatikong isinalin ang bersyon na ito at maaaring hindi ganap na tumpak ang ilang pananalita. Kung may makikita kang mali, sumulat sa amin sa thuisitaliaans@gmail.com."
+    "mt_notice": "Pasensya na — awtomatikong isinalin ang bersyon na ito at maaaring hindi ganap na tumpak ang ilang pananalita. Kung may makikita kang mali, sumulat sa amin sa thuisitaliaans@gmail.com.",
+    "foryou_tag": "Para sa iyo",
+    "foryou_h2": "Para sa iyo kung...",
+    "foryou_1": "Nakatira o nagtatrabaho ka sa Italya.",
+    "foryou_2": "Naghahanda ka para sa isang sertipikasyon (CILS, CELI, PLIDA).",
+    "foryou_3": "Gusto mong maintindihan kung paano talaga nagsasalita ang mga Italyano.",
+    "foryou_4": "Gusto mong matutunan ang pang-araw-araw na Italyano."
   },
   "ti": {
     "hero_tag": "ኣብ App Store ይርከብ",
     "hero_h1": "ብሓቂ ጣልያንኛ ተምሃር።",
-    "hero_text": "Ti ካብ ዜሮ ናብ C2 ብ CEFR መገዲ ዘብጽሓካ መተግበሪ እዩ፣ ናይ ብሓቂ ጣልያንኛ ንክትዛረብ፣ ንክትርድእ፣ ንክተንብብን ንክትጽሕፍን ዝተሓስበ ኣገባብ ኣለዎ — ናይ መዓልታዊ ጣልያንኛ፣ ናይ መጽሓፍ ኣይኰነን።",
+    "hero_text": "ንTi ኣብ ጣልያንኛ ብሓቂ ንምምሃር ዝተሰርሐ መተግበሪ እዩ — ካብ ዜሮ ክሳብ C2፡ ብዘረባ፡ ብምርድዳእ፡ ብንባብን ብጽሕፈትን ናይ መዓልቲ ጣልያንኛ ንኽትጥቀም ዝተሓስበ መንገዲ።",
     "hero_btn": "ካብ App Store ኣውርድ",
     "hero_rating": "ኣብ App Store ሓዲሽ · 14 ናይ ደገፍ ቋንቋታት",
     "trust_h3_1": "A1 → C2",
@@ -1675,7 +1971,7 @@
     "f1_p1": "ካብ ዜሮ ናብ C2 ብ ኦፊሻል ኤውሮጳዊ ደረጃታት። ኣብ ኩሉ ደረጃ ናይ ግራመር፣ ቃላት፣ ባህልን ምርድዳእን ጣብያታት ኣለዉዎ፣ ምስ መርመራ ደረጃታት።",
     "f1_p2": "ኣበይ ኣሎኻን ንዝቕጽል ደረጃ እንታይ ይጎድለካን ሓደ ግዜ ትፈልጥ።",
     "f2_h3": "ኤዲኮላ: ትሕዞ-ኣተኰርቲ መጻሕፍትን ክላሲኮታትን",
-    "f2_p1": "La dolce vita፣ ሞያ፣ ናይ መንእሰያት ንባብ፣ ፍሉጣት ጣልያናውያን፣ ጉዕዞታት፣ ፋሽን፣ መኪናታት፣ ዩኒቨርስቲ፣ ቢሮክራሲ። ኣብ ኩሉ መጽሓፍ ካብ A1 ናብ C2 ናይ ህያው ጣልያንኛ ወገን ይሽፍን።",
+    "f2_p1": "ሞያ (ናይ ስራሕ ጣልያንኛ፡ ቃለ-መጠይቕ፡ ኢመይል)፡ ቢሮክራሲ (permesso di soggiorno፡ ሰነዳት)፡ ጃርጎን ናይ መንእሰያት፡ La dolce vita፡ ጉዕዞ፡ ፋሽን፡ መኪናታት፡ ዩኒቨርስቲ፡ ስድራ ቃላት፡ ናጻ ግዜ። ኣብ ኩሉ መጽሓፍ ካብ A1 ናብ C2 ናይ ህያው ጣልያንኛ ወገን ይሽፍን።",
     "f2_p2": "ምስ ትሕዞ-ኣተኰርቲ መጻሕፍቲ፣ ዓበይቲ ጣልያናውያን ልብ-ወለዳት: Manzoni፣ Verga፣ Pirandello፣ De Amicis፣ Serao፣ ንደረጃኻ ተሓድሶም።",
     "f3_h3": "ክላሲኮታት፣ ምስ ውሁድ መዝገበ-ቃላት",
     "f3_p1": "ኩሉ ዘጸግም ቃል ብሓደ ንኪ ይርከብ: ቀለልቲ ትርጉም፣ ናይ መምህር ኣብ ኩነታትን ባህልን ማስታወሻታት፣ ተመሳሳልቲን ስድራታት ቃላትን። ካብ ልብ-ወለድ ብዘይ ምውጻእ፣ እናንበብካ ዝምራሕ ምርድዳእ።",
@@ -1685,12 +1981,18 @@
     "cta_h2": "ናይ ሓቂ ጣልያንኛ ይጽበየካ ኣሎ።",
     "cta_p": "Ti ኣውርድን መገዲ ጀምርን።",
     "cta_btn": "ካብ App Store ኣውርድ",
-    "mt_notice": "ኣይትሓዘልና — እዚ ትሕዞ ብኸምያ ተተርጒሙ ስለ ዘሎ ኵሉ ኣዘራርባ ግንዛብ ኣይኰነን። ጌጋ እንተ ኣስተብሂልካ ብ thuisitaliaans@gmail.com ጽሓፉልና።"
+    "mt_notice": "ኣይትሓዘልና — እዚ ትሕዞ ብኸምያ ተተርጒሙ ስለ ዘሎ ኵሉ ኣዘራርባ ግንዛብ ኣይኰነን። ጌጋ እንተ ኣስተብሂልካ ብ thuisitaliaans@gmail.com ጽሓፉልና።",
+    "foryou_tag": "ንዓኻ ተሓሲቡ",
+    "foryou_h2": "ንዓኻ ዝኸውን እዩ እንተኾነ...",
+    "foryou_1": "ኣብ ጣልያን ትነብር ወይ ትሰርሕ እንተኾንካ።",
+    "foryou_2": "ንምስክር ወረቀት (CILS, CELI, PLIDA) ትዳሎ እንተሎካ።",
+    "foryou_3": "ናይ ብሓቂ ጣልያንኛ ክትፈልጥ እንተደሌኻ።",
+    "foryou_4": "ጣልያውያን ብሓቂ ኸመይ ከም ዝዛረቡ ክትርዳእ እንተደሌኻ።"
   },
   "uk": {
     "hero_tag": "Доступно в App Store",
     "hero_h1": "По-справжньому вивчи італійську.",
-    "hero_text": "Ti — це застосунок, який веде тебе від нуля до C2 шляхом CEFR, з методом, створеним, щоб змусити тебе говорити, розуміти, читати й писати справжньою італійською — тією, що звучить щодня, не з підручника.",
+    "hero_text": "Ti — це застосунок, щоб дійсно вивчити італійську — з нуля до C2, за методом, створеним, щоб ви говорили, розуміли, читали й писали справжньою повсякденною італійською, а не тією, що в підручниках.",
     "hero_btn": "Завантажити з App Store",
     "hero_rating": "Новий у App Store · 14 мов підтримки",
     "trust_h3_1": "A1 → C2",
@@ -1733,7 +2035,7 @@
     "f1_p1": "Від нуля до C2 за офіційними європейськими рівнями. На кожному рівні є етапи граматики, лексики, культури й розуміння, з контрольними точками та іспитами рівня.",
     "f1_p2": "Ти завжди знаєш, де перебуваєш і чого бракує для наступного кроку.",
     "f2_h3": "Edicola: тематичні книги й класика",
-    "f2_p1": "La dolce vita, кар'єра, молодіжний сленг, знамениті італійці, подорожі, мода, автомобілі, університет, бюрократія. Кожна книга охоплює свій зріз живої італійської — від A1 до C2.",
+    "f2_p1": "Кар'єра (італійська на роботі, співбесіди, листи), Бюрократія (documenti, comuna, permesso di soggiorno), Молодіжний сленг, La dolce vita, Подорожі, Мода, Автомобілі, Університет, Ідіоми, Дозвілля. Кожна книга охоплює шматок живої італійської — від A1 до C2.",
     "f2_p2": "Поряд із тематичними книгами — великі італійські романи: Manzoni, Verga, Pirandello, De Amicis, Serao, переписані й адаптовані під твій рівень.",
     "f3_h3": "Класика з інтегрованим словником",
     "f3_p1": "Кожне складне слово — на дотик: сухе визначення, нотатки викладача про контекст і культуру, синоніми та сім'ї слів. Скеровуване розуміння під час читання, не виходячи з роману.",
@@ -1743,9 +2045,37 @@
     "cta_h2": "Справжня італійська чекає на тебе.",
     "cta_p": "Завантаж Ti і починай шлях.",
     "cta_btn": "Завантажити з App Store",
-    "mt_notice": "Вибачте — цю версію перекладено автоматично, і деякі формулювання можуть бути не зовсім точними. Якщо ви помітите помилку, напишіть на thuisitaliaans@gmail.com."
+    "mt_notice": "Вибачте — цю версію перекладено автоматично, і деякі формулювання можуть бути не зовсім точними. Якщо ви помітите помилку, напишіть на thuisitaliaans@gmail.com.",
+    "foryou_tag": "Створено для тебе",
+    "foryou_h2": "Створено для тебе, якщо...",
+    "foryou_1": "Ти живеш або працюєш в Італії.",
+    "foryou_2": "Ти готуєшся до сертифікації (CILS, CELI, PLIDA).",
+    "foryou_3": "Ти хочеш розуміти справжню італійську.",
+    "foryou_4": "Ти любиш італійську культуру та літературу."
   }
 }
+    </script>
+
+    <script>
+    // Reveal on scroll — attiva class="is-visible" quando l'elemento entra nel viewport
+    (function(){
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var els = document.querySelectorAll('.reveal');
+        if (prefersReduced || !('IntersectionObserver' in window)) {
+            // Reduced motion o browser vecchio: mostra tutto subito
+            els.forEach(function(el){ el.classList.add('is-visible'); });
+            return;
+        }
+        var io = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){
+                if (e.isIntersecting) {
+                    e.target.classList.add('is-visible');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+        els.forEach(function(el){ io.observe(el); });
+    })();
     </script>
 
     <script src="js/app-nav.js"></script>
