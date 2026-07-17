@@ -168,6 +168,55 @@
 </div>
 
 
+
+<style>
+/* ===== Ti — iPhone showcase (injected) ===== */
+.ti-showcase{background:linear-gradient(180deg,#f7f8fb 0%,#fff 100%);padding:64px 0 56px;margin-top:60px;border-top:1px solid rgba(49,57,77,.08);}
+.ti-showcase-inner{max-width:1180px;margin:0 auto;padding:0 20px;}
+.ti-showcase-head{text-align:center;margin-bottom:32px;}
+.ti-showcase-eyebrow{display:inline-block;color:#c8a951;font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.ti-showcase-title{font-size:1.7rem;line-height:1.25;font-weight:700;color:#31394d;margin:0 0 8px;}
+.ti-showcase-sub{font-size:1rem;color:#5a6478;margin:0;max-width:520px;margin-left:auto;margin-right:auto;}
+.ti-showcase-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:24px 20px 32px;margin:0 -20px;scrollbar-width:thin;}
+.ti-showcase-track::-webkit-scrollbar{height:5px;}
+.ti-showcase-track::-webkit-scrollbar-thumb{background:rgba(49,57,77,.15);border-radius:99px;}
+.ti-showcase-card{flex:0 0 auto;scroll-snap-align:center;width:200px;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 16px 40px rgba(49,57,77,.12);display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease;}
+.ti-showcase-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(49,57,77,.18);}
+.ti-showcase-frame{width:100%;aspect-ratio:9/19.5;background:#f2f4f8;overflow:hidden;}
+.ti-showcase-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+.ti-showcase-cap{padding:12px 14px;font-weight:600;font-size:.82rem;color:#31394d;text-align:center;border-top:1px solid rgba(49,57,77,.08);letter-spacing:.02em;}
+.ti-showcase-foot{text-align:center;margin-top:8px;}
+.ti-showcase-cta{display:inline-block;background:#31394d;color:#fff;font-weight:600;padding:14px 28px;border-radius:99px;text-decoration:none;font-size:.95rem;transition:transform .2s ease,box-shadow .2s ease;}
+.ti-showcase-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(49,57,77,.25);color:#fff;}
+@media (max-width:560px){.ti-showcase-card{width:170px;}.ti-showcase-title{font-size:1.4rem;}}
+[dir="rtl"] .ti-showcase-cta::after{content:" ←";}
+[dir="ltr"] .ti-showcase-cta::after,html:not([dir]) .ti-showcase-cta::after{content:" →";}
+</style>
+<section class="ti-showcase" aria-label="Ti iPhone app showcase">
+  <div class="ti-showcase-inner">
+    <div class="ti-showcase-head">
+      <span class="ti-showcase-eyebrow">Ti · iOS app</span>
+      <h2 class="ti-showcase-title">See Ti in action</h2>
+      <p class="ti-showcase-sub">The CEFR path, exercises, edicola and graded Italian classics — from A1 to C2, in 14 languages.</p>
+    </div>
+    <div class="ti-showcase-track">
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/percorso.png" alt="Percorso" loading="lazy"></div><figcaption class="ti-showcase-cap">Percorso</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/view_percorso.png" alt="Livello A1" loading="lazy"></div><figcaption class="ti-showcase-cap">Livello A1</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/grammatica.png" alt="Grammatica" loading="lazy"></div><figcaption class="ti-showcase-cap">Grammatica</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/edicola_view.png" alt="Edicola" loading="lazy"></div><figcaption class="ti-showcase-cap">Edicola</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/romanzo_view.png" alt="Romanzo" loading="lazy"></div><figcaption class="ti-showcase-cap">Romanzo</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/tanti_giochi_view.png" alt="Giochi" loading="lazy"></div><figcaption class="ti-showcase-cap">Giochi</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/gioco_comprensione.png" alt="Comprensione" loading="lazy"></div><figcaption class="ti-showcase-cap">Comprensione</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/gioco_cruciverba.png" alt="Cruciverba" loading="lazy"></div><figcaption class="ti-showcase-cap">Cruciverba</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/gioco_tabella_verbi.png" alt="Verbi" loading="lazy"></div><figcaption class="ti-showcase-cap">Verbi</figcaption></figure>
+      <figure class="ti-showcase-card"><div class="ti-showcase-frame"><img src="../assets/screenshots/iPhone/fine_percorso_feedback.png" alt="Feedback" loading="lazy"></div><figcaption class="ti-showcase-cap">Feedback</figcaption></figure>
+    </div>
+    <div class="ti-showcase-foot">
+      <a href="../app-marketing.html" class="ti-showcase-cta">Discover Ti</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="lang-footer">
