@@ -33,7 +33,11 @@
 .hub-name{font-size:1.15rem;}
 .hub-blurb{color:var(--secondary);font-size:.95rem;margin-bottom:12px;}
 .hub-topics{list-style:none;margin:0;padding:0;border-top:1px solid var(--border);padding-top:12px;}
-.hub-topics li{margin-bottom:6px;}
+.hub-topics li{margin-bottom:6px;line-height:1.4;}
+.hub-topics{max-height:260px;overflow-y:auto;padding-right:6px;}
+.hub-topics::-webkit-scrollbar{width:5px;}
+.hub-topics::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+.hub-count{background:var(--gold,#c8a951);color:#fff;font-size:.72rem;padding:2px 8px;border-radius:99px;margin-left:8px;font-weight:600;letter-spacing:.5px;}
 .hub-topics a{font-size:.88rem;color:var(--primary);font-weight:500;}
 .hub-topics a:hover{color:var(--gold);}
 </style>
@@ -71,132 +75,267 @@
 <section>
   <div class="container">
     <div class="hub-grid">
-    <article class="hub-card">
-      <a href="learn-italian-app.html" class="hub-lang">
-        <span class="hub-flag">🇬🇧</span>
-        <span class="hub-name">English</span>
-      </a>
-      <p class="hub-blurb">Learn Italian from A1 to C2</p>
-      <ul class="hub-topics"><li><a href="italian-citizenship-test-a2.html">→ Italian citizenship test (CILS A2)</a></li><li><a href="italian-for-beginners.html">→ Italian for beginners: first 50 words</a></li><li><a href="best-free-italian-app.html">→ Best free apps to learn Italian in 2026</a></li><li><a href="how-long-to-learn-italian.html">→ How long does it take to learn Italian?</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="best-free-italian-app.html" class="hub-lang">
+          <span class="hub-flag">🇬🇧</span>
+          <span class="hub-name">English</span><span class="hub-count">40</span>
+        </a>
+        <p class="hub-blurb">Learn Italian from A1 to C2</p>
+        <ul class="hub-topics">
+          <li><a href="italian-cognates.html">→ 1000 Italian Words You Already Know: The Cognates Guide</a></li>
+          <li><a href="italian-idioms.html">→ 15 Italian Idioms You'll Hear Every Day</a></li>
+          <li><a href="italian-in-6-months.html">→ Can You Learn Italian in 6 Months? Realistic Plan</a></li>
+          <li><a href="cils-vs-celi-vs-plida.html">→ CILS vs CELI vs PLIDA vs Roma Tre: Which Italian Test to Take?</a></li>
+          <li><a href="italian-days-months.html">→ Days of the Week and Months in Italian</a></li>
+          <li><a href="how-long-to-learn-italian.html">→ How Long Does It Take to Learn Italian? A Realistic Timeline</a></li>
+          <li><a href="italian-apologies-thanks.html">→ How to Apologise and Thank in Italian</a></li>
+          <li><a href="how-to-ask-directions-italian.html">→ How to Ask For Directions in Italian</a></li>
+          <li><a href="how-to-introduce-yourself-italian.html">→ How to Introduce Yourself in Italian: 10 Phrases</a></li>
+          <li><a href="italian-phone-calls.html">→ How to Make a Phone Call in Italian</a></li>
+          <li><a href="how-to-order-food-italian.html">→ How to Order Food in Italian: Café, Restaurant, Takeaway</a></li>
+          <li><a href="italian-articles.html">→ Italian Articles (il, la, lo, l', i, gli, le): The Complete Guide</a></li>
+          <li><a href="italian-body-parts.html">→ Italian Body Parts Vocabulary</a></li>
+          <li><a href="italian-citizenship-test-a2.html">→ Italian Citizenship Test (CILS A2): How It Works & How to Prepare</a></li>
+          <li><a href="italian-clothing-vocabulary.html">→ Italian Clothing Vocabulary and Shopping Phrases</a></li>
+          <li><a href="italian-colors.html">→ Italian Colors: Vocabulary With Agreement Rules</a></li>
+          <li><a href="italian-conditional.html">→ Italian Conditional (Condizionale): The Polite Verb Form</a></li>
+          <li><a href="italian-family-vocabulary.html">→ Italian Family Vocabulary: Parents, Siblings, Extended Family</a></li>
+          <li><a href="italian-food-vocabulary.html">→ Italian Food Vocabulary: 60 Words You'll Actually Use</a></li>
+          <li><a href="italian-for-beginners.html">→ Italian for Beginners: Your First 50 Words and Phrases</a></li>
+          <li><a href="italian-for-english-speakers.html">→ Italian for English Speakers: Cognates, False Friends, Tips</a></li>
+          <li><a href="italian-future-tense.html">→ Italian Future Tense: Simple and Compound Explained</a></li>
+          <li><a href="italian-greetings-farewells.html">→ Italian Greetings and Farewells: Which One When?</a></li>
+          <li><a href="italian-house-vocabulary.html">→ Italian House and Rooms Vocabulary</a></li>
+          <li><a href="italian-imperative.html">→ Italian Imperative: Commands, Instructions, Recipes</a></li>
+          <li><a href="italian-imperfetto.html">→ Italian Imperfetto: How and When to Use It</a></li>
+          <li><a href="italian-jobs-vocabulary.html">→ Italian Jobs and Professions Vocabulary</a></li>
+          <li><a href="italian-common-mistakes.html">→ Italian Mistakes English Speakers Make (And How to Fix Them)</a></li>
+          <li><a href="italian-numbers-1-100.html">→ Italian Numbers 1 to 100: How to Count in Italian</a></li>
+          <li><a href="italian-passato-prossimo.html">→ Italian Passato Prossimo: The Compound Past Tense Explained</a></li>
+          <li><a href="italian-prepositions.html">→ Italian Prepositions (di, a, da, in, con, per): A Practical Guide</a></li>
+          <li><a href="italian-pronouns.html">→ Italian Pronouns: Personal, Direct, Indirect, Reflexive</a></li>
+          <li><a href="italian-reflexive-verbs.html">→ Italian Reflexive Verbs: Mi lavo, Ti alzi, Si veste</a></li>
+          <li><a href="italian-small-talk.html">→ Italian Small Talk: The Phrases That Break the Ice</a></li>
+          <li><a href="italian-subjunctive.html">→ Italian Subjunctive (Congiuntivo): When and How</a></li>
+          <li><a href="italian-permesso-di-soggiorno.html">→ Italian Vocabulary for Permesso di Soggiorno</a></li>
+          <li><a href="italian-weather-vocabulary.html">→ Italian Weather Vocabulary: Talk About the Weather Like a Local</a></li>
+          <li><a href="learn-italian-app.html">→ Learn Italian: the iOS app that walks you from A1 to C2</a></li>
+          <li><a href="italian-present-tense.html">→ The Italian Present Tense: Regular and Irregular Verbs</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="aprender-italiano-app.html" class="hub-lang">
-        <span class="hub-flag">🇪🇸</span>
-        <span class="hub-name">Español</span>
-      </a>
-      <p class="hub-blurb">Aprende italiano de A1 a C2</p>
-      <ul class="hub-topics"><li><a href="test-italiano-ciudadania.html">→ Test italiano para la ciudadanía (CILS A2)</a></li><li><a href="italiano-para-principiantes.html">→ Italiano para principiantes: 50 palabras</a></li><li><a href="mejor-app-italiano.html">→ Mejores apps para aprender italiano (2026)</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="aprender-italiano-app.html" class="hub-lang">
+          <span class="hub-flag">🇪🇸</span>
+          <span class="hub-name">Español</span><span class="hub-count">25</span>
+        </a>
+        <p class="hub-blurb">Aprende italiano de A1 a C2</p>
+        <ul class="hub-topics">
+          <li><a href="articulos-italianos.html">→ Artículos italianos (il, la, lo, l', i, gli, le): guía completa</a></li>
+          <li><a href="pedir-comida-italiano.html">→ Cómo pedir comida en italiano: bar, restaurante, para llevar</a></li>
+          <li><a href="direcciones-italiano.html">→ Cómo preguntar direcciones en italiano</a></li>
+          <li><a href="presentarse-italiano.html">→ Cómo presentarse en italiano: 10 frases esenciales</a></li>
+          <li><a href="imperfetto-italiano.html">→ El imperfetto italiano: cómo y cuándo usarlo</a></li>
+          <li><a href="passato-prossimo-espanol.html">→ El passato prossimo italiano: pretérito perfecto explicado</a></li>
+          <li><a href="presente-italiano.html">→ El presente de indicativo italiano: verbos regulares e irregulares</a></li>
+          <li><a href="errores-italiano-espanoles.html">→ Errores comunes de italiano para hispanohablantes</a></li>
+          <li><a href="italiano-hispanohablantes.html">→ Italiano para hispanohablantes: ventajas, trampas y consejos</a></li>
+          <li><a href="italiano-negocios.html">→ Italiano para los negocios: vocabulario y frases</a></li>
+          <li><a href="italiano-para-migrantes.html">→ Italiano para migrantes: primeros pasos y recursos</a></li>
+          <li><a href="italiano-para-principiantes.html">→ Italiano para principiantes: tus primeras 50 palabras y frases</a></li>
+          <li><a href="italiano-viajar.html">→ Italiano para viajar: 50 frases esenciales</a></li>
+          <li><a href="mejor-app-italiano.html">→ Las mejores apps para aprender italiano (comparativa 2026)</a></li>
+          <li><a href="colores-italiano.html">→ Los colores en italiano con reglas de concordancia</a></li>
+          <li><a href="modismos-italianos.html">→ Modismos italianos: 15 expresiones que usan todos los días</a></li>
+          <li><a href="numeros-italianos.html">→ Números italianos del 1 al 100: cómo contar en italiano</a></li>
+          <li><a href="preposiciones-italianas.html">→ Preposiciones italianas (di, a, da, in, con, per): guía práctica</a></li>
+          <li><a href="test-italiano-ciudadania.html">→ Test de italiano para la ciudadanía (CILS A2): cómo es y cómo prepararlo</a></li>
+          <li><a href="vocabulario-comida-italiano.html">→ Vocabulario de comida en italiano: 60 palabras esenciales</a></li>
+          <li><a href="familia-italiano.html">→ Vocabulario de la familia en italiano</a></li>
+          <li><a href="italiano-permesso-soggiorno.html">→ Vocabulario italiano para el permesso di soggiorno</a></li>
+          <li><a href="italiano-trabajo-vocabulario.html">→ Vocabulario italiano para el trabajo</a></li>
+          <li><a href="italiano-en-6-meses.html">→ ¿Aprender italiano en 6 meses? Plan realista</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="apprendre-italien-app.html" class="hub-lang">
-        <span class="hub-flag">🇫🇷</span>
-        <span class="hub-name">Français</span>
-      </a>
-      <p class="hub-blurb">Apprenez l'italien de A1 à C2</p>
-      <ul class="hub-topics"><li><a href="test-italien-citoyennete.html">→ Test d'italien pour la citoyenneté (CILS A2)</a></li><li><a href="italien-debutant.html">→ Italien pour débutants : 50 mots</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="apprendre-italien-app.html" class="hub-lang">
+          <span class="hub-flag">🇫🇷</span>
+          <span class="hub-name">Français</span><span class="hub-count">17</span>
+        </a>
+        <p class="hub-blurb">Apprenez l'italien de A1 à C2</p>
+        <ul class="hub-topics">
+          <li><a href="erreurs-italien-francophones.html">→ 10 erreurs fréquentes en italien pour les francophones</a></li>
+          <li><a href="idiomes-italiens.html">→ 15 expressions idiomatiques italiennes indispensables</a></li>
+          <li><a href="italien-en-6-mois.html">→ Apprendre l'italien en 6 mois : plan réaliste</a></li>
+          <li><a href="articles-italiens.html">→ Articles italiens (il, la, lo, l', i, gli, le) : guide complet</a></li>
+          <li><a href="commander-italien.html">→ Comment commander à manger en italien</a></li>
+          <li><a href="se-presenter-italien.html">→ Comment se présenter en italien : 10 phrases essentielles</a></li>
+          <li><a href="italien-debutant.html">→ Italien pour débutants : vos 50 premiers mots et phrases</a></li>
+          <li><a href="italien-pour-francophones.html">→ L'italien pour francophones : avantages et pièges</a></li>
+          <li><a href="famille-italien.html">→ La famille en italien : vocabulaire complet</a></li>
+          <li><a href="passato-prossimo-francais.html">→ Le passato prossimo italien : le passé composé expliqué</a></li>
+          <li><a href="present-italien.html">→ Le présent italien : verbes réguliers et irréguliers</a></li>
+          <li><a href="nombres-italiens.html">→ Les nombres italiens de 1 à 100 : compter en italien</a></li>
+          <li><a href="prepositions-italiennes.html">→ Les prépositions italiennes (di, a, da, in, con, per)</a></li>
+          <li><a href="test-italien-citoyennete.html">→ Test d'italien pour la citoyenneté italienne (CILS A2) : comment ça marche</a></li>
+          <li><a href="nourriture-italienne.html">→ Vocabulaire de la nourriture en italien</a></li>
+          <li><a href="italien-permesso.html">→ Vocabulaire italien pour le permesso di soggiorno</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="italienisch-lernen-app.html" class="hub-lang">
-        <span class="hub-flag">🇩🇪</span>
-        <span class="hub-name">Deutsch</span>
-      </a>
-      <p class="hub-blurb">Italienisch lernen von A1 bis C2</p>
-      <ul class="hub-topics"><li><a href="italienisch-staatsbuergerschaft-test.html">→ Italienisch-Test für die Einbürgerung (CILS A2)</a></li><li><a href="italienisch-fuer-anfaenger.html">→ Italienisch für Anfänger: 50 Wörter</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="italienisch-lernen-app.html" class="hub-lang">
+          <span class="hub-flag">🇩🇪</span>
+          <span class="hub-name">Deutsch</span><span class="hub-count">17</span>
+        </a>
+        <p class="hub-blurb">Italienisch lernen von A1 bis C2</p>
+        <ul class="hub-topics">
+          <li><a href="fehler-italienisch-deutsche.html">→ 10 typische Italienisch-Fehler von Deutschsprachigen</a></li>
+          <li><a href="italienische-redewendungen.html">→ 15 italienische Redewendungen, die du täglich hörst</a></li>
+          <li><a href="bestellen-italienisch.html">→ Auf Italienisch bestellen: Café, Restaurant, Pizza</a></li>
+          <li><a href="passato-prossimo-deutsch.html">→ Das italienische Passato Prossimo: das Perfekt erklärt</a></li>
+          <li><a href="italienisch-praesens.html">→ Das italienische Präsens: regelmäßige und unregelmäßige Verben</a></li>
+          <li><a href="familie-italienisch.html">→ Die Familie auf Italienisch: Vokabelset</a></li>
+          <li><a href="italienisch-fuer-anfaenger.html">→ Italienisch für Anfänger: deine ersten 50 Wörter und Sätze</a></li>
+          <li><a href="italienisch-permesso.html">→ Italienisch für das Permesso di Soggiorno</a></li>
+          <li><a href="italienisch-fuer-deutsche.html">→ Italienisch für Deutschsprachige: Vorteile und Fallen</a></li>
+          <li><a href="italienisch-in-6-monaten.html">→ Italienisch in 6 Monaten lernen: realistischer Plan</a></li>
+          <li><a href="italienisch-staatsbuergerschaft-test.html">→ Italienisch-Test für die italienische Staatsbürgerschaft (CILS A2)</a></li>
+          <li><a href="italienisch-essen.html">→ Italienisch: Essen und Trinken - Vokabeln</a></li>
+          <li><a href="italienische-artikel.html">→ Italienische Artikel (il, la, lo, l', i, gli, le): der komplette Guide</a></li>
+          <li><a href="italienische-praepositionen.html">→ Italienische Präpositionen (di, a, da, in, con, per)</a></li>
+          <li><a href="italienische-zahlen.html">→ Italienische Zahlen von 1 bis 100: auf Italienisch zählen</a></li>
+          <li><a href="sich-vorstellen-italienisch.html">→ Wie man sich auf Italienisch vorstellt: 10 Sätze</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="aprender-italiano-pt-app.html" class="hub-lang">
-        <span class="hub-flag">🇵🇹</span>
-        <span class="hub-name">Português</span>
-      </a>
-      <p class="hub-blurb">Aprende italiano de A1 a C2</p>
-      <ul class="hub-topics"><li><a href="teste-italiano-cidadania.html">→ Teste de italiano para a cidadania (CILS A2)</a></li><li><a href="italiano-para-iniciantes.html">→ Italiano para iniciantes: 50 palavras</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="aprender-italiano-pt-app.html" class="hub-lang">
+          <span class="hub-flag">🇵🇹</span>
+          <span class="hub-name">Português</span><span class="hub-count">9</span>
+        </a>
+        <p class="hub-blurb">Aprende italiano de A1 a C2</p>
+        <ul class="hub-topics">
+          <li><a href="artigos-italianos.html">→ Artigos italianos (il, la, lo, l', i, gli, le)</a></li>
+          <li><a href="italiano-para-lusofonos.html">→ Italiano para falantes de português: vantagens e armadilhas</a></li>
+          <li><a href="italiano-para-iniciantes.html">→ Italiano para iniciantes: as tuas primeiras 50 palavras e frases</a></li>
+          <li><a href="numeros-italianos-pt.html">→ Números italianos de 1 a 100: contar em italiano</a></li>
+          <li><a href="passato-prossimo-pt.html">→ O passato prossimo italiano: o pretérito perfeito composto</a></li>
+          <li><a href="presente-italiano-pt.html">→ O presente do indicativo italiano: verbos regulares e irregulares</a></li>
+          <li><a href="teste-italiano-cidadania.html">→ Teste de italiano para a cidadania italiana (CILS A2): como funciona</a></li>
+          <li><a href="comida-italiano-pt.html">→ Vocabulário de comida em italiano</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="italiaans-leren-app.html" class="hub-lang">
-        <span class="hub-flag">🇳🇱</span>
-        <span class="hub-name">Nederlands</span>
-      </a>
-      <p class="hub-blurb">Italiaans leren van A1 tot C2</p>
-      <ul class="hub-topics"><li><a href="italiaans-voor-beginners.html">→ Italiaans voor beginners: 50 woorden</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="italiaans-leren-app.html" class="hub-lang">
+          <span class="hub-flag">🇳🇱</span>
+          <span class="hub-name">Nederlands</span><span class="hub-count">5</span>
+        </a>
+        <p class="hub-blurb">Italiaans leren van A1 tot C2</p>
+        <ul class="hub-topics">
+          <li><a href="italiaans-tegenwoordige-tijd.html">→ De Italiaanse tegenwoordige tijd: regelmatige en onregelmatige werkwoorden</a></li>
+          <li><a href="italiaans-voor-beginners.html">→ Italiaans voor beginners: je eerste 50 woorden en zinnen</a></li>
+          <li><a href="italiaans-permesso-nl.html">→ Italiaans voor het permesso di soggiorno</a></li>
+          <li><a href="italiaans-lidwoorden.html">→ Italiaanse lidwoorden (il, la, lo, l', i, gli, le)</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="invata-italiana-aplicatie.html" class="hub-lang">
-        <span class="hub-flag">🇷🇴</span>
-        <span class="hub-name">Română</span>
-      </a>
-      <p class="hub-blurb">Învață italiana de la A1 la C2</p>
-      <ul class="hub-topics"><li><a href="italiana-pentru-cetatenie.html">→ Testul de italiană pentru cetățenie (CILS A2)</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="invata-italiana-aplicatie.html" class="hub-lang">
+          <span class="hub-flag">🇷🇴</span>
+          <span class="hub-name">Română</span><span class="hub-count">5</span>
+        </a>
+        <p class="hub-blurb">Învață italiana de la A1 la C2</p>
+        <ul class="hub-topics">
+          <li><a href="italiana-pentru-munca.html">→ Italiana pentru muncă: vocabular esențial</a></li>
+          <li><a href="italiana-permesso-ro.html">→ Italiana pentru permesso di soggiorno</a></li>
+          <li><a href="prezent-italian.html">→ Prezentul italian: verbe regulate și neregulate</a></li>
+          <li><a href="italiana-pentru-cetatenie.html">→ Testul de italiană pentru cetățenia italiană (CILS A2): cum funcționează</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="meso-italishten-app.html" class="hub-lang">
-        <span class="hub-flag">🇦🇱</span>
-        <span class="hub-name">Shqip</span>
-      </a>
-      <p class="hub-blurb">Mëso italishten nga A1 në C2</p>
-      <ul class="hub-topics"><li><a href="italishtja-per-shtetesi.html">→ Testi i italishtes për shtetësinë (CILS A2)</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="meso-italishten-app.html" class="hub-lang">
+          <span class="hub-flag">🇦🇱</span>
+          <span class="hub-name">Shqip</span><span class="hub-count">3</span>
+        </a>
+        <p class="hub-blurb">Mëso italishten nga A1 në C2</p>
+        <ul class="hub-topics">
+          <li><a href="italishtja-per-punen.html">→ Italishtja për punën: fjalor thelbësor</a></li>
+          <li><a href="italishtja-per-shtetesi.html">→ Testi i italishtes për shtetësinë italiane (CILS A2)</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="vyvchaty-italiisku-mova.html" class="hub-lang">
-        <span class="hub-flag">🇺🇦</span>
-        <span class="hub-name">Українська</span>
-      </a>
-      <p class="hub-blurb">Вивчати італійську від A1 до C2</p>
-      <ul class="hub-topics"><li><a href="italiiska-dlia-hromadianstva.html">→ Тест з італійської для громадянства (CILS A2)</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="italiiska-dla-roboty.html" class="hub-lang">
+          <span class="hub-flag">🇺🇦</span>
+          <span class="hub-name">Українська</span><span class="hub-count">3</span>
+        </a>
+        <p class="hub-blurb">Вивчати італійську від A1 до C2</p>
+        <ul class="hub-topics">
+          <li><a href="vyvchaty-italiisku-mova.html">→ Вивчати італійську: iOS-додаток, який веде вас від A1 до C2</a></li>
+          <li><a href="italiiska-dlia-hromadianstva.html">→ Тест з італійської мови для громадянства (CILS A2)</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="xue-yidaliyu-app.html" class="hub-lang">
-        <span class="hub-flag">🇨🇳</span>
-        <span class="hub-name">中文</span>
-      </a>
-      <p class="hub-blurb">从 A1 到 C2 学意大利语</p>
-      <ul class="hub-topics"><li><a href="yidaliyu-gongmin-kaoshi.html">→ 意大利公民入籍意大利语考试(CILS A2)</a></li></ul>
-    </article>
+      <article class="hub-card">
+        <a href="xue-yidaliyu-app.html" class="hub-lang">
+          <span class="hub-flag">🇨🇳</span>
+          <span class="hub-name">中文</span><span class="hub-count">3</span>
+        </a>
+        <p class="hub-blurb">从 A1 到 C2 学意大利语</p>
+        <ul class="hub-topics">
+          <li><a href="yidaliyu-gongmin-kaoshi.html">→ 意大利公民入籍意大利语考试(CILS A2):怎么考、怎么准备</a></li>
+          <li><a href="yidaliyu-xianzai-shi.html">→ 意大利语现在时:规则动词和不规则动词</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="taallum-italiyya-tatbiq.html" class="hub-lang">
-        <span class="hub-flag">🇸🇦</span>
-        <span class="hub-name">العربية</span>
-      </a>
-      <p class="hub-blurb">تعلّم الإيطالية من A1 إلى C2</p>
-      <ul class="hub-topics"><li><a href="italiyya-lil-jinsiyya.html">→ اختبار الإيطالية للجنسية (CILS A2)</a></li></ul>
-    </article>
+      <article class="hub-card" dir="rtl">
+        <a href="italiyya-fael-mudarie.html" class="hub-lang">
+          <span class="hub-flag">🇸🇦</span>
+          <span class="hub-name">العربية</span><span class="hub-count">3</span>
+        </a>
+        <p class="hub-blurb">تعلّم الإيطالية من A1 إلى C2</p>
+        <ul class="hub-topics">
+          <li><a href="italiyya-lil-jinsiyya.html">→ اختبار الإيطالية للجنسية الإيطالية (CILS A2): كيف يعمل وكيف تستعد</a></li>
+          <li><a href="taallum-italiyya-tatbiq.html">→ تعلّم الإيطالية: تطبيق iOS يأخذك من A1 إلى C2</a></li>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="matuto-italyano-app.html" class="hub-lang">
-        <span class="hub-flag">🇵🇭</span>
-        <span class="hub-name">Filipino</span>
-      </a>
-      <p class="hub-blurb">Matuto ng Italyano mula A1 hanggang C2</p>
-      
-    </article>
+      <article class="hub-card">
+        <a href="matuto-italyano-app.html" class="hub-lang">
+          <span class="hub-flag">🇵🇭</span>
+          <span class="hub-name">Filipino</span><span class="hub-count">1</span>
+        </a>
+        <p class="hub-blurb">Matuto ng Italyano mula A1 hanggang C2</p>
+        <ul class="hub-topics">
 
-    <article class="hub-card">
-      <a href="italian-shikha-app.html" class="hub-lang">
-        <span class="hub-flag">🇧🇩</span>
-        <span class="hub-name">বাংলা</span>
-      </a>
-      <p class="hub-blurb">A1 থেকে C2 পর্যন্ত ইতালীয় শিখুন</p>
-      
-    </article>
+        </ul>
+      </article>
 
-    <article class="hub-card">
-      <a href="italian-timhro-app.html" class="hub-lang">
-        <span class="hub-flag">🇪🇷</span>
-        <span class="hub-name">ትግርኛ</span>
-      </a>
-      <p class="hub-blurb">ካብ A1 ክሳብ C2 ጣልያንኛ ተምሃር</p>
-      
-    </article>
+      <article class="hub-card">
+        <a href="italian-shikha-app.html" class="hub-lang">
+          <span class="hub-flag">🇧🇩</span>
+          <span class="hub-name">বাংলা</span><span class="hub-count">1</span>
+        </a>
+        <p class="hub-blurb">A1 থেকে C2 পর্যন্ত ইতালীয় শিখুন</p>
+        <ul class="hub-topics">
 
+        </ul>
+      </article>
+
+      <article class="hub-card">
+        <a href="italian-timhro-app.html" class="hub-lang">
+          <span class="hub-flag">🇪🇷</span>
+          <span class="hub-name">ትግርኛ</span><span class="hub-count">1</span>
+        </a>
+        <p class="hub-blurb">ካብ A1 ክሳብ C2 ጣልያንኛ ተምሃር</p>
+        <ul class="hub-topics">
+
+        </ul>
+      </article>
     </div>
   </div>
 </section>
