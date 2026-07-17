@@ -137,11 +137,6 @@
             box-shadow: 0 30px 70px rgba(49,57,77,.18);
             display: block;
         }
-        /* Video element uses same shape as .app-icon */
-        video.app-icon {
-            object-fit: cover;
-        }
-
         /* ========= ANIMAZIONI ========= */
         @media (prefers-reduced-motion: no-preference) {
 
@@ -386,6 +381,18 @@
             max-height: 100%;
             border-radius: 22px;
             box-shadow: 0 15px 40px rgba(49,57,77,.12);
+        }
+        /* Modifier per immagini promozionali già "framate" (con dispositivi + margine bianco) */
+        .feature-visual.wide {
+            padding: 20px;
+            background: transparent;
+            border: 0;
+        }
+        .feature-visual.wide img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 0;
+            box-shadow: 0 20px 50px rgba(49,57,77,.15);
         }
 
         /* "Fatta per te se..." */
@@ -641,21 +648,10 @@
 
                 <div class="app-icon-wrap">
 
-                    <!--
-                        Video hero: droppa il file registrato in assets/videos/hero-percorso.mp4
-                        (dimensione consigliata 9:19.5, verticale, ~1080x2340 o simile).
-                        Se manca il file, viene mostrata la poster image come fallback.
-                    -->
-                    <video class="app-icon"
-                           autoplay muted loop playsinline
-                           preload="metadata"
-                           poster="assets/screenshots/iPhone/percorso.png"
-                           aria-label="Ti in azione: il percorso su iPhone">
-                        <source src="assets/videos/hero-percorso.mp4" type="video/mp4">
-                        <source src="assets/videos/hero-percorso.webm" type="video/webm">
-                        <!-- Fallback per browser che non supportano video -->
-                        <img src="assets/screenshots/iPhone/percorso.png" alt="Il percorso di Ti su iPhone">
-                    </video>
+                    <!-- Screenshot iPhone del percorso -->
+                    <img src="assets/screenshots/iPhone/percorso.png"
+                         alt="Il percorso di Ti su iPhone"
+                         class="app-icon">
 
                 </div>
 
@@ -840,13 +836,6 @@
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPad/percorso_vista_a1-c2.png" alt="Home percorso, dallo zero al C2">
-                        </div>
-                        <figcaption data-i18n="cap_percorso_a1c2">Percorso A1–C2</figcaption>
-                    </figure>
-
-                    <figure class="screenshot-card">
-                        <div class="phone-frame">
                             <img src="assets/screenshots/iPad/percorso_vista_a1.png" alt="Dettaglio livello A1 con tappe">
                         </div>
                         <figcaption data-i18n="cap_percorso_a1">Percorso A1</figcaption>
@@ -927,9 +916,9 @@
 
                     </div>
 
-                    <div class="feature-visual">
+                    <div class="feature-visual wide">
 
-                        <img src="assets/screenshots/iPhone/view_percorso.png" alt="Percorso QCER">
+                        <img src="assets/screenshots/iPad/percorso_vista_a1-c2.png" alt="Percorso QCER dallo zero al C2 su iPad">
 
                     </div>
 
