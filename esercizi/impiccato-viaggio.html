@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'impiccato: parole di viaggio | Esercizi Thuis Italiaans</title>
+<meta name="description" content="Gioca all'impiccato per indovinare parole italiane a tema viaggio, lettera dopo lettera.">
+<meta name="theme-color" content="#31394d">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Alessio · Thuis Italiaans">
+<meta name="keywords" content="l'impiccato: parole di viaggio, esercizi italiano, italiano A1, imparare italiano, l'impiccato, lessico: i viaggi, italiaans oefeningen, italian exercises, italiano per stranieri">
+
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/esercizi.css">
+<link rel="canonical" href="https://thuisitaliaans.com/esercizi/impiccato-viaggio.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L'impiccato: parole di viaggio | Esercizi Thuis Italiaans">
+<meta property="og:description" content="Gioca all'impiccato per indovinare parole italiane a tema viaggio, lettera dopo lettera.">
+<meta property="og:url" content="https://thuisitaliaans.com/esercizi/impiccato-viaggio.html">
+<meta property="og:image" content="https://thuisitaliaans.com/assets/icons/icon-512.png">
+<meta property="og:image:alt" content="L'impiccato: parole di viaggio">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Thuis Italiaans">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="L'impiccato: parole di viaggio | Esercizi Thuis Italiaans">
+<meta name="twitter:description" content="Gioca all'impiccato per indovinare parole italiane a tema viaggio, lettera dopo lettera.">
+<meta name="twitter:image" content="https://thuisitaliaans.com/assets/icons/icon-512.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LearningResource",
+ "name": "L'impiccato: parole di viaggio",
+ "description": "Indovina la parola nascosta lettera dopo lettera.",
+ "url": "https://thuisitaliaans.com/esercizi/impiccato-viaggio.html",
+ "learningResourceType": "Giochi",
+ "educationalLevel": "A1, A2",
+ "inLanguage": "it",
+ "isAccessibleForFree": true,
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com/"
+ },
+ "provider": {
+  "@type": "Person",
+  "name": "Alessio"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Thuis Italiaans",
+  "url": "https://thuisitaliaans.com",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://thuisitaliaans.com/assets/icons/icon-512.png"
+  }
+ },
+ "audience": {
+  "@type": "EducationalAudience",
+  "educationalRole": "student"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Thuis Italiaans",
+   "item": "https://thuisitaliaans.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Esercizi",
+   "item": "https://thuisitaliaans.com/esercizi/index.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "L'impiccato: parole di viaggio",
+   "item": "https://thuisitaliaans.com/esercizi/impiccato-viaggio.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="ex-topbar">
+  <div class="container">
+    <a href="index.html" class="ex-back">
+      <img src="../assets/icons/icon-512.png" alt="Logo Thuis Italiaans">
+      <span>← Tutti gli esercizi</span>
+    </a>
+    <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+  </div>
+</header>
+
+<main class="ex-page">
+  <div class="container">
+
+    <div class="ex-page-header">
+      <div class="print-header">
+        <img src="../assets/icons/icon-512.png" alt="Logo Thuis Italiaans">
+        <span><strong>Thuis Italiaans</strong><br>thuisitaliaans.com/esercizi/impiccato-viaggio.html</span>
+      </div>
+      
+      <div class="ex-badge-row">
+        <span class="ex-badge ex-badge-level">A1–A2</span>
+        <span class="ex-badge ex-badge-type">🎪 L'impiccato</span>
+        <span class="ex-badge ex-badge-type">Lessico: i viaggi</span>
+      </div>
+      <h1>L'impiccato: parole di viaggio</h1>
+      <p>Indovina la parola nascosta cliccando le lettere. Hai 6 tentativi sbagliati a disposizione!</p>
+    </div>
+
+    <div class="ex-panel" style="text-align:center;">
+      <div class="hangman-wrap">
+        <div class="hangman-drawing" id="hangmanDrawing">🙂</div>
+        <div>
+          <p class="hangman-hint" id="hangmanHint"></p>
+          <div class="hangman-word" id="hangmanWord"></div>
+          <div class="hangman-keyboard" id="hangmanKeyboard"></div>
+        </div>
+      </div>
+      <p class="hangman-status" id="hangmanStatus"></p>
+      <div class="ex-actions">
+        <button class="ex-btn ex-btn-ghost" id="retryBtn">Nuova parola</button>
+      </div>
+    </div>
+
+    <div class="ex-explainer">
+      <h2>📘 Lessico dei viaggi</h2>
+      <p>Parole utili da conoscere prima di partire per un viaggio in Italia (o ovunque tu voglia andare).</p>
+      <p>Padroneggiare questo argomento ti aiuta a comunicare con sicurezza nelle situazioni più semplici e quotidiane. Questo esercizio allena il lessico dei viaggi e della cultura italiana, perfetto per chi visita o vive in Italia.</p>
+      <p>Questo argomento fa parte del livello base del QCER (Quadro Comune Europeo di Riferimento per le lingue), il punto di partenza per chi inizia lo studio dell'italiano da zero.</p>
+      <p>Non avere fretta di rispondere: anche in un gioco, ogni domanda è un piccolo esercizio a sé, e vale la pena rifletterci un momento prima di scegliere.</p>
+    </div>
+
+    <div class="ex-end-cta">
+      <h3>Preparati al tuo prossimo viaggio in italiano</h3>
+      <p>Se stai organizzando un viaggio in Italia, possiamo preparare insieme il lessico che ti servirà davvero.</p>
+      <a href="../index.html#contact" class="button">Prenota una lezione gratuita</a>
+    
+    <div class="ex-app-promo">
+      <div class="ex-app-promo-icon">
+        <img src="../assets/icons/icon-512.png" alt="Icona app Ti">
+      </div>
+      <div class="ex-app-promo-body">
+        <h3>Vuoi allenarti anche fuori dal sito?</h3>
+        <p>Con l'app <strong>Ti</strong> hai un percorso QCER completo dall'A1 al C2, edicola tematica, romanzi graduati e un dizionario in 14 lingue.</p>
+        <a href="../app-marketing.html" class="button ex-app-btn">Scopri l'app Ti →</a>
+      </div>
+    </div>
+
+
+    <p class="ex-blog-link">📖 Approfondisci con il blog: <a href="../blog/category-cultura-italiana.html">cultura italiana</a></p>
+    <div class="print-qr-block">
+      <img src="../assets/qr/impiccato-viaggio.png" alt="Codice QR per questo esercizio" class="qr-image" id="qrImg">
+      <div class="print-qr-actions">
+        <a href="../assets/qr/impiccato-viaggio.png" download="impiccato-viaggio-qr.png" class="ex-btn ex-btn-ghost">⬇️ Scarica QR</a>
+        <button class="ex-btn ex-btn-ghost" id="copyLinkBtn" type="button">🔗 Copia link</button>
+        <button class="ex-btn ex-btn-ghost" onclick="window.print()" type="button">🖨️ Stampa / Salva PDF</button>
+      </div>
+    </div>
+    <div class="print-footer">
+      Thuis Italiaans — thuisitaliaans.com/esercizi/impiccato-viaggio.html
+    </div>
+
+    <div class="ex-back-wrap">
+      <a href="index.html" class="ex-back-link">← Torna a tutti gli esercizi</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="ex-footer">
+  <div class="container">
+    <p>© 2026 Thuis Italiaans. Esercizi per imparare l'italiano. <a href="../index.html#contact">Prenota una lezione gratuita</a></p>
+    <p class="ex-footer-license">Contenuto pubblicato sotto licenza <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.it" target="_blank" rel="license noopener">CC BY-NC-ND 4.0</a> — condividi e cita con indicazione della fonte e link a <a href="https://thuisitaliaans.com">thuisitaliaans.com</a>.</p>
+  </div>
+</footer>
+
+<script>
+const words = [
+  { word: "VALIGIA", hint: "La riempi di vestiti prima di partire" },
+  { word: "PASSAPORTO", hint: "Documento indispensabile per l'estero" },
+  { word: "AEROPORTO", hint: "Da qui partono e arrivano gli aerei" },
+  { word: "BIGLIETTO", hint: "Serve per salire su treno o aereo" },
+  { word: "ALBERGO", hint: "Ci dormi durante un viaggio" },
+];
+
+const faces = ['🙂','😐','😟','😦','😧','😱','💀'];
+let currentWord, guessed, wrongCount;
+
+function pickWord() {
+  return words[Math.floor(Math.random() * words.length)];
+}
+
+function init() {
+  currentWord = pickWord();
+  guessed = new Set();
+  wrongCount = 0;
+  document.getElementById('hangmanHint').textContent = `💡 ${currentWord.hint}`;
+  document.getElementById('hangmanDrawing').textContent = faces[0];
+  document.getElementById('hangmanStatus').textContent = '';
+  renderWord();
+  renderKeyboard();
+}
+
+function renderWord() {
+  const display = currentWord.word.split('').map(l => guessed.has(l) ? l : '_').join(' ');
+  document.getElementById('hangmanWord').textContent = display;
+}
+
+function renderKeyboard() {
+  const kb = document.getElementById('hangmanKeyboard');
+  kb.innerHTML = '';
+  'ABCDEFGHILMNOPQRSTUVZ'.split('').forEach(letter => {
+    const btn = document.createElement('button');
+    btn.className = 'hangman-key';
+    btn.textContent = letter;
+    btn.addEventListener('click', () => guess(letter, btn));
+    kb.appendChild(btn);
+  });
+}
+
+function guess(letter, btn) {
+  if (btn.classList.contains('used-correct') || btn.classList.contains('used-wrong')) return;
+  if (currentWord.word.includes(letter)) {
+    guessed.add(letter);
+    btn.classList.add('used-correct');
+    renderWord();
+    if (currentWord.word.split('').every(l => guessed.has(l))) {
+      document.getElementById('hangmanStatus').textContent = 'Hai indovinato! Complimenti 🎉';
+      disableKeyboard();
+    }
+  } else {
+    wrongCount++;
+    btn.classList.add('used-wrong');
+    document.getElementById('hangmanDrawing').textContent = faces[Math.min(wrongCount, faces.length - 1)];
+    if (wrongCount >= faces.length - 1) {
+      document.getElementById('hangmanStatus').textContent = `Hai perso! La parola era: ${currentWord.word}`;
+      disableKeyboard();
+    }
+  }
+}
+
+function disableKeyboard() {
+  document.querySelectorAll('.hangman-key').forEach(k => k.style.pointerEvents = 'none');
+}
+
+document.getElementById('retryBtn').addEventListener('click', init);
+init();
+</script>
+
+<script src="js/game-mode.js"></script>
+<script>
+GameMode.init({ timerSeconds: 120, revealSolutions: function(){
+  currentWord.word.split('').forEach(l => guessed.add(l));
+  renderWord();
+  document.querySelectorAll('.hangman-key').forEach(k => {
+    if (currentWord.word.includes(k.textContent)) k.classList.add('used-correct', 'solution-revealed');
+  });
+}});
+</script>
+
+<script>
+document.getElementById('copyLinkBtn').addEventListener('click', function(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copyLinkBtn');
+    const original = btn.textContent;
+    btn.textContent = '✅ Copiato!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+});
+</script>
+</body>
+</html>
