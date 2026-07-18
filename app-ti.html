@@ -615,10 +615,6 @@
             </div>
         </div>
 
-        <div class="mt-notice-wrap" id="mt-notice-wrap" style="display:none;">
-            <div class="mt-notice" id="mt-notice"></div>
-        </div>
-
         <!-- ========= HERO ========= -->
         <section class="hero">
 
@@ -2074,8 +2070,6 @@
     (function(){
       var data = JSON.parse(document.getElementById('i18n-data').textContent);
       var buttons = document.querySelectorAll('.lang-switcher button');
-      var mtWrap = document.getElementById('mt-notice-wrap');
-      var mtEl = document.getElementById('mt-notice');
       var RTL_LANGS = ['ar'];
 
       function render(lang){
@@ -2086,13 +2080,6 @@
           var key = el.getAttribute('data-i18n');
           if(d[key] != null) el.textContent = d[key];
         });
-        // MT notice
-        if(d.mt_notice){
-          mtEl.textContent = d.mt_notice;
-          mtWrap.style.display = 'block';
-        } else {
-          mtWrap.style.display = 'none';
-        }
         // lang / dir
         document.documentElement.lang = lang;
         document.documentElement.dir = RTL_LANGS.indexOf(lang) !== -1 ? 'rtl' : 'ltr';

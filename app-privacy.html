@@ -889,9 +889,6 @@
         const rest = d.sections.slice(1);
         let html = '';
         html += '<h1>' + first.titolo + '</h1>';
-        if(d.mt_notice){
-          html += '<p class="legal-mt-notice">' + d.mt_notice + '</p>';
-        }
         const dateMatch = first.corpo.match(/^(Ultimo aggiornamento:[^.]+\.|Last updated:[^.]+\.|Laatst bijgewerkt:[^.]+\.|Zuletzt aktualisiert:[^.]+\.|Dernière mise à jour[^.]+\.|Última actualización:[^.]+\.|Última atualização:[^.]+\.|Ultima actualizare:[^.]+\.|Останнє оновлення:[^.]+\.|Përditësuar së fundmi:[^.]+\.|آخر تحديث:[^.]+\.|সর্বশেষ আপডেট:[^.]+।|最后更新:[^。]+。|Huling na-update:[^.]+\.|ናይ መወዳእታ ምዕባለ[^።]+።)\s*/);
         if(dateMatch){
           html += '<p class="legal-updated">' + dateMatch[1].trim() + '</p>';
