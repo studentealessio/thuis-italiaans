@@ -636,12 +636,43 @@ window.ConsensoModulo = (function () {
  font-size: 11px; color: #999; text-align: center;
  }
 
- /* Print styles: hide banner, tighten margins for A4 */
+ /* ── Print styles ──────────────────────────────────────────────────
+    Regole difensive: !important per battere gli stili di anteprima
+    del driver PDF, print-color-adjust per rispettare bg/colori esatti,
+    e @page con margine reale (non 0 — che alcuni driver ignorano o
+    rendono blank). Break-avoid sui titoli e sui blocchi campo per non
+    spaccare una riga a metà. */
  @media print {
- body { background: white; padding: 0; }
- .page { box-shadow: none; padding: 20mm; max-width: none; border-radius: 0; }
- .banner { display: none; }
- @page { size: A4; margin: 0; }
+ * {
+ -webkit-print-color-adjust: exact !important;
+ print-color-adjust: exact !important;
+ color-adjust: exact !important;
+ }
+ html, body {
+ margin: 0 !important;
+ padding: 0 !important;
+ background: white !important;
+ color: #1a1a1a !important;
+ }
+ .page {
+ max-width: 100% !important;
+ width: auto !important;
+ margin: 0 !important;
+ padding: 0 !important;
+ background: white !important;
+ box-shadow: none !important;
+ border-radius: 0 !important;
+ display: block !important;
+ }
+ .banner { display: none !important; }
+ .mt-notice {
+ background: white !important;
+ border: 1px solid #999 !important;
+ color: #1a1a1a !important;
+ }
+ h1, h2 { page-break-after: avoid; break-after: avoid; }
+ .field, .row, .sign-row, ul { page-break-inside: avoid; break-inside: avoid; }
+ @page { size: A4; margin: 15mm; }
  }
 
  /* Language-specific font size adjustments */
@@ -711,8 +742,10 @@ window.ConsensoModulo = (function () {
  a.click();
  document.body.removeChild(a);
  }
- // Rilascia la ObjectURL dopo un ritardo per non troncare la nuova tab.
- setTimeout(() => URL.revokeObjectURL(url), 30_000);
+ // Non revochiamo la ObjectURL: Safari re-fetch il blob durante
+ // window.print() per generare il PDF, e con URL revocata escono
+ // pagine vuote. Il footprint del blob è piccolo (~30 KB) e viene
+ // rilasciato dal browser alla chiusura della tab.
  }
 
  return { apri: apri, lingueDisponibili: Object.keys(T) };
