@@ -11,7 +11,7 @@
   'use strict';
 
   // 👉 CHANGE THIS ONE URL when the app is published
-  const APP_STORE_URL = 'https://apps.apple.com/app/ti-tuffo-italiano/id0000000000';
+  const APP_STORE_URL = 'https://apps.apple.com/app/id6791650799';
 
   // Small "Download on the" line above "App Store" — localized
   const SMALL_LABELS = {
