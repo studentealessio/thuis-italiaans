@@ -115,26 +115,27 @@ footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
    ═══════════════════════════════════════════════════════════════════ */
 const AUTORE_AMAZON = "https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks";
 const LIBRI = [
-  {titolo:"Cuore",                           autore:"Edmondo De Amicis",    livello:"A1", file:"Cuore_cover.jpg",                  asin:""},
-  {titolo:"Eva",                             autore:"Giovanni Verga",       livello:"A1", file:"Eva_cover.jpg",                    asin:""},
-  {titolo:"Giacinta",                        autore:"Luigi Capuana",        livello:"A1", file:"Giacinta_cover.jpg",               asin:""},
-  {titolo:"Il giornalino di Gian Burrasca",  autore:"Vamba",                livello:"A1", file:"GianBurrasca_cover.jpg",           asin:""},
-  {titolo:"Le avventure di Pinocchio",       autore:"Carlo Collodi",        livello:"A2", file:"Pinocchio_cover.jpg",              asin:""},
-  {titolo:"La coscienza di Zeno",            autore:"Italo Svevo",          livello:"A2", file:"Zeno_cover.jpg",                   asin:""},
-  {titolo:"Il corsaro nero",                 autore:"Emilio Salgari",       livello:"A2", file:"CorsaroNero_cover.jpg",            asin:""},
-  {titolo:"Demetrio Pianelli",               autore:"Emilio De Marchi",     livello:"A2", file:"DemetrioPianelli_cover.jpg",       asin:""},
-  {titolo:"Il fu Mattia Pascal",             autore:"Luigi Pirandello",     livello:"B1", file:"MattiaPascal_cover.jpg",           asin:""},
-  {titolo:"Canne al vento",                  autore:"Grazia Deledda",       livello:"B1", file:"CanneAlVento_Copertina_eBook.jpg", asin:""},
-  {titolo:"Il paese di Cuccagna",            autore:"Matilde Serao",        livello:"B1", file:"PaeseDiCuccagna_cover.jpg",        asin:""},
-  {titolo:"Il servitore di due padroni",     autore:"Carlo Goldoni",        livello:"B1", file:"ServitoreDuePadroni_cover.jpg",    asin:""},
-  {titolo:"I promessi sposi",                autore:"Alessandro Manzoni",   livello:"B2", file:"PromessiSposi_cover.jpg",          asin:""},
-  {titolo:"Il Milione",                      autore:"Marco Polo",           livello:"B2", file:"IlMilione_cover.jpg",              asin:""},
-  {titolo:"La giovinezza di Cesare",         autore:"Giuseppe Rovani",      livello:"B2", file:"GiovinezzaCesare_cover.jpg",       asin:""},
+  {titolo:"Cuore",                           autore:"Edmondo De Amicis",    livello:"A1", file:"Cuore_cover.jpg",                  asin:"B0H9PF662C"},
+  {titolo:"Eva",                             autore:"Giovanni Verga",       livello:"A1", file:"Eva_cover.jpg",                    asin:"B0H9VN7SCB"},
+  {titolo:"Giacinta",                        autore:"Luigi Capuana",        livello:"A1", file:"Giacinta_cover.jpg",               asin:"B0H9V5FDS8"},
+  {titolo:"Il giornalino di Gian Burrasca",  autore:"Vamba",                livello:"A1", file:"GianBurrasca_cover.jpg",           asin:"B0H9SRPWYT"},
+  {titolo:"Le avventure di Pinocchio",       autore:"Carlo Collodi",        livello:"A2", file:"Pinocchio_cover.jpg",              asin:"B0H9P9P6G3"},
+  {titolo:"La coscienza di Zeno",            autore:"Italo Svevo",          livello:"A2", file:"Zeno_cover.jpg",                   asin:"B0H9SHPT52"},
+  {titolo:"Il corsaro nero",                 autore:"Emilio Salgari",       livello:"A2", file:"CorsaroNero_cover.jpg",            asin:"B0H9TWQKX3"},
+  {titolo:"Demetrio Pianelli",               autore:"Emilio De Marchi",     livello:"A2", file:"DemetrioPianelli_cover.jpg",       asin:"B0H9V12THS"},
+  {titolo:"Il fu Mattia Pascal",             autore:"Luigi Pirandello",     livello:"B1", file:"MattiaPascal_cover.jpg",           asin:"B0H9P9NVRF"},
+  {titolo:"Canne al vento",                  autore:"Grazia Deledda",       livello:"B1", file:"CanneAlVento_Copertina_eBook.jpg", asin:"B0H9P9L2JD"},
+  {titolo:"Il paese di Cuccagna",            autore:"Matilde Serao",        livello:"B1", file:"PaeseDiCuccagna_cover.jpg",        asin:"B0H9RYH4MV"},
+  {titolo:"Il servitore di due padroni",     autore:"Carlo Goldoni",        livello:"B1", file:"ServitoreDuePadroni_cover.jpg",    asin:"B0H9V6J95N"},
+  {titolo:"I promessi sposi",                autore:"Alessandro Manzoni",   livello:"B2", file:"PromessiSposi_cover.jpg",          asin:"B0H9P9QVSK"},
+  {titolo:"Il Milione",                      autore:"Marco Polo",           livello:"B2", file:"IlMilione_cover.jpg",              asin:"B0H9PL1W58"},
+  {titolo:"La giovinezza di Cesare",         autore:"Giuseppe Rovani",      livello:"B2", file:"GiovinezzaCesare_cover.jpg",       asin:"B0H9V1H4P8"},
   {titolo:"I Viceré",                        autore:"Federico De Roberto",  livello:"B2", file:"Vicere_cover.jpg",                 asin:""},
-  {titolo:"Piccolo mondo antico",            autore:"Antonio Fogazzaro",    livello:"C1", file:"PiccoloMondoAntico_cover.jpg",     asin:""},
-  {titolo:"Il piacere",                      autore:"Gabriele D'Annunzio",  livello:"C1", file:"IlPiacere_cover.jpg",              asin:""},
-  {titolo:"La città del Sole",               autore:"Tommaso Campanella",   livello:"C1", file:"CittaDelSole_Copertina_eBook.jpg", asin:""},
-];
+  {titolo:"Piccolo mondo antico",            autore:"Antonio Fogazzaro",    livello:"C1", file:"PiccoloMondoAntico_cover.jpg",     asin:"B0H9S2X2WG"},
+  {titolo:"Il piacere",                      autore:"Gabriele D'Annunzio",  livello:"C1", file:"IlPiacere_cover.jpg",              asin:"B0H9RZPN2G"},
+  ];
+
+
 </script>
 
 
