@@ -1875,6 +1875,20 @@
       var buttons = document.querySelectorAll('.lang-switcher button');
       var RTL_LANGS = ['ar'];
 
+      // ── LINGUE CON SCREENSHOT LOCALIZZATI ────────────────────────────
+      // Se la lingua corrente non è in questa lista, si usa "en" come
+      // fallback. Copre tutti i [data-screenshot] della pagina: hero,
+      // carosello iPhone e sezioni feature.
+      var SCREENSHOTS_LANGS = ['it','en','fr','es','de','nl','ro','ar','zh','uk'];
+
+      function localizzaScreenshots(lang){
+        var target = SCREENSHOTS_LANGS.indexOf(lang) !== -1 ? lang : 'en';
+        document.querySelectorAll('[data-screenshot]').forEach(function(img){
+          var num = img.getAttribute('data-screenshot');
+          img.src = 'assets/screenshots/iPhone/' + target + '/' + num + '.png';
+        });
+      }
+
       function render(lang){
         var d = data[lang];
         if(!d) return;
@@ -1890,6 +1904,8 @@
         buttons.forEach(function(b){ b.classList.toggle('active', b.dataset.lang === lang); });
         // shared nav / footer strings
         if(window.applyAppNav) window.applyAppNav(lang);
+        // screenshot localizzati (hero, carosello, feature sections)
+        localizzaScreenshots(lang);
         // persist
         try { localStorage.setItem('ti-lang', lang); } catch(e){}
       }
