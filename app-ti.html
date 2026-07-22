@@ -730,72 +730,97 @@
                 <div class="screenshots-track">
 
                     <!--
-                        Metti i file in: assets/screenshots/iPhone/
-                        Dimensione consigliata: 1290x2796 (iPhone 15 Pro Max)
-                        oppure 1284x2778 (iPhone 14 Plus)
+                        Gli screenshot sono localizzati per lingua:
+                        assets/screenshots/iPhone/<lang>/1.png ... 9.png
+
+                        Il src iniziale è quello italiano; il JS in fondo
+                        pagina cambia gli src al momento del render()
+                        secondo la lingua attiva o quella salvata.
+
+                        Lingue con screenshot: it, en, fr, es, de, nl, ro,
+                        ar, zh, uk. Per le altre (sq, bn, pt, tl, ti) si
+                        usa "en" come fallback — invisibile all'utente.
                     -->
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/percorso.png" alt="Home del percorso">
+                            <img data-screenshot="1"
+                                 src="assets/screenshots/iPhone/it/1.png"
+                                 alt="Grammatica: c'è e ci sono">
+                        </div>
+                        <figcaption data-i18n="cap_grammatica">Grammatica</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img data-screenshot="2"
+                                 src="assets/screenshots/iPhone/it/2.png"
+                                 alt="Lettura guidata di Cuore">
+                        </div>
+                        <figcaption data-i18n="cap_lettura">Lettura</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img data-screenshot="3"
+                                 src="assets/screenshots/iPhone/it/3.png"
+                                 alt="Percorso A1">
                         </div>
                         <figcaption data-i18n="cap_percorso">Percorso</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/view_percorso.png" alt="Dettaglio livello A1">
+                            <img data-screenshot="4"
+                                 src="assets/screenshots/iPhone/it/4.png"
+                                 alt="Parola del giorno e progressi">
                         </div>
-                        <figcaption data-i18n="cap_vista_percorso">Vista percorso</figcaption>
+                        <figcaption data-i18n="cap_progressi">Progressi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/grammatica.png" alt="Spiegazione grammaticale">
-                        </div>
-                        <figcaption data-i18n="cap_grammatica">Grammatica</figcaption>
-                    </figure>
-
-                      <figure class="screenshot-card">
-                        <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/edicola_view.png" alt="L'edicola">
-                        </div>
-                        <figcaption data-i18n="cap_edicola">Edicola</figcaption>
-                    </figure>
-
-                    <figure class="screenshot-card">
-                        <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/romanzo_view.png" alt="Romanzo classico">
-                        </div>
-                        <figcaption data-i18n="cap_romanzo">Romanzo</figcaption>
-                    </figure>
-
-                    <figure class="screenshot-card">
-                        <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/tanti_giochi_view.png" alt="Sezione pratica ed esercizi">
+                            <img data-screenshot="5"
+                                 src="assets/screenshots/iPhone/it/5.png"
+                                 alt="Dodici tipi di gioco">
                         </div>
                         <figcaption data-i18n="cap_tanti_giochi">Tanti giochi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/gioco_comprensione.png" alt="Esercizio vero o falso">
+                            <img data-screenshot="6"
+                                 src="assets/screenshots/iPhone/it/6.png"
+                                 alt="Come funziona un gioco">
                         </div>
-                        <figcaption data-i18n="cap_comprensione">Comprensione</figcaption>
+                        <figcaption data-i18n="cap_come_giocare">Come giocare</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
                         <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/gioco_cruciverba.png" alt="Gioco cerca le parole">
+                            <img data-screenshot="7"
+                                 src="assets/screenshots/iPhone/it/7.png"
+                                 alt="L'edicola: romanzi e percorsi">
+                        </div>
+                        <figcaption data-i18n="cap_edicola">Edicola</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img data-screenshot="8"
+                                 src="assets/screenshots/iPhone/it/8.png"
+                                 alt="Dizionario e coniugazioni">
+                        </div>
+                        <figcaption data-i18n="cap_dizionario">Dizionario</figcaption>
+                    </figure>
+
+                    <figure class="screenshot-card">
+                        <div class="phone-frame">
+                            <img data-screenshot="9"
+                                 src="assets/screenshots/iPhone/it/9.png"
+                                 alt="Cerca le parole nascoste">
                         </div>
                         <figcaption data-i18n="cap_cruciverba">Cruciverba</figcaption>
-                    </figure>
-
-                    <figure class="screenshot-card">
-                        <div class="phone-frame">
-                            <img src="assets/screenshots/iPhone/gioco_tabella_verbi.png" alt="Coniugazione verbi">
-                        </div>
-                        <figcaption data-i18n="cap_tabella_verbi">Tabella verbi</figcaption>
                     </figure>
 
                     <figure class="screenshot-card">
@@ -1103,14 +1128,10 @@
     "scr_ipad": "Su iPad",
     "scr_ipad_count": "Comodo per lo studio",
     "cap_percorso": "Percorso",
-    "cap_vista_percorso": "Vista percorso",
     "cap_grammatica": "Grammatica",
     "cap_edicola": "Edicola",
-    "cap_romanzo": "Romanzo",
     "cap_tanti_giochi": "Tanti giochi",
-    "cap_comprensione": "Comprensione",
     "cap_cruciverba": "Cruciverba",
-    "cap_tabella_verbi": "Tabella verbi",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Percorso A1–C2",
     "cap_percorso_a1": "Percorso A1",
@@ -1142,8 +1163,12 @@
     "foryou_1": "Vivi o lavori in Italia e vuoi capire come si parla davvero.",
     "foryou_2": "Prepari una certificazione (CILS, CELI, PLIDA).",
     "foryou_3": "Vuoi finalmente leggere Pirandello in originale.",
-    "foryou_4": "Ami la cultura e la letteratura italiane."
-  },
+    "foryou_4": "Ami la cultura e la letteratura italiane.",
+    "cap_lettura": "Lettura",
+    "cap_progressi": "Progressi",
+    "cap_come_giocare": "Come giocare",
+    "cap_dizionario": "Dizionario"
+},
   "nl": {
     "hero_tag": "Beschikbaar in de App Store",
     "hero_h1": "Leer echt Italiaans.",
@@ -1165,15 +1190,11 @@
     "scr_iphone_count": "Waar je ook bent",
     "scr_ipad": "Op iPad",
     "scr_ipad_count": "Comfortabel bij het studeren",
-    "cap_percorso": "Pad",
-    "cap_vista_percorso": "Padoverzicht",
+    "cap_percorso": "Leerroute",
     "cap_grammatica": "Grammatica",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Roman",
-    "cap_tanti_giochi": "Veel spelletjes",
-    "cap_comprensione": "Begrip",
-    "cap_cruciverba": "Kruiswoord",
-    "cap_tabella_verbi": "Werkwoordtabel",
+    "cap_edicola": "Kiosk",
+    "cap_tanti_giochi": "Veel spellen",
+    "cap_cruciverba": "Woordzoeker",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Pad A1–C2",
     "cap_percorso_a1": "Pad A1",
@@ -1206,8 +1227,12 @@
     "foryou_1": "Je van Italiaanse literatuur en cultuur houdt.",
     "foryou_2": "Je een certificaat voorbereidt (CILS, CELI, PLIDA).",
     "foryou_3": "Je vaak in Italië bent of er woont.",
-    "foryou_4": "Je eindelijk Pirandello in het origineel wilt lezen."
-  },
+    "foryou_4": "Je eindelijk Pirandello in het origineel wilt lezen.",
+    "cap_lettura": "Lezen",
+    "cap_progressi": "Voortgang",
+    "cap_come_giocare": "Zo speel je",
+    "cap_dizionario": "Woordenboek"
+},
   "en": {
     "hero_tag": "Available on the App Store",
     "hero_h1": "Really learn Italian.",
@@ -1229,15 +1254,11 @@
     "scr_iphone_count": "Wherever you are",
     "scr_ipad": "On iPad",
     "scr_ipad_count": "Comfortable while you study",
-    "cap_percorso": "Path",
-    "cap_vista_percorso": "Path view",
+    "cap_percorso": "Learning path",
     "cap_grammatica": "Grammar",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Novel",
+    "cap_edicola": "Newsstand",
     "cap_tanti_giochi": "Many games",
-    "cap_comprensione": "Comprehension",
-    "cap_cruciverba": "Crossword",
-    "cap_tabella_verbi": "Verb table",
+    "cap_cruciverba": "Word search",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Path A1–C2",
     "cap_percorso_a1": "Path A1",
@@ -1270,8 +1291,12 @@
     "foryou_1": "You want a serious method, not a game with streaks.",
     "foryou_2": "You're preparing for a certification (CILS, CELI, PLIDA).",
     "foryou_3": "You live, work or travel often in Italy.",
-    "foryou_4": "You love Italian literature and culture."
-  },
+    "foryou_4": "You love Italian literature and culture.",
+    "cap_lettura": "Reading",
+    "cap_progressi": "Progress",
+    "cap_come_giocare": "How to play",
+    "cap_dizionario": "Dictionary"
+},
   "es": {
     "hero_tag": "Disponible en App Store",
     "hero_h1": "Aprende italiano de verdad.",
@@ -1293,15 +1318,11 @@
     "scr_iphone_count": "Dondequiera que estés",
     "scr_ipad": "En iPad",
     "scr_ipad_count": "Cómodo para estudiar",
-    "cap_percorso": "Recorrido",
-    "cap_vista_percorso": "Vista recorrido",
+    "cap_percorso": "Ruta",
     "cap_grammatica": "Gramática",
-    "cap_edicola": "Kiosco",
-    "cap_romanzo": "Novela",
+    "cap_edicola": "Quiosco",
     "cap_tanti_giochi": "Muchos juegos",
-    "cap_comprensione": "Comprensión",
-    "cap_cruciverba": "Crucigrama",
-    "cap_tabella_verbi": "Tabla verbos",
+    "cap_cruciverba": "Sopa de letras",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Recorrido A1–C2",
     "cap_percorso_a1": "Recorrido A1",
@@ -1334,8 +1355,12 @@
     "foryou_1": "Te apasionan la cultura y la literatura italianas.",
     "foryou_2": "Vives, trabajas o viajas a menudo a Italia.",
     "foryou_3": "Preparas una certificación (CILS, CELI, PLIDA).",
-    "foryou_4": "Quieres un método serio, no un juego de rachas."
-  },
+    "foryou_4": "Quieres un método serio, no un juego de rachas.",
+    "cap_lettura": "Lectura",
+    "cap_progressi": "Progreso",
+    "cap_come_giocare": "Cómo jugar",
+    "cap_dizionario": "Diccionario"
+},
   "fr": {
     "hero_tag": "Disponible sur l'App Store",
     "hero_h1": "Apprends vraiment l'italien.",
@@ -1358,14 +1383,10 @@
     "scr_ipad": "Sur iPad",
     "scr_ipad_count": "À l'aise pour étudier",
     "cap_percorso": "Parcours",
-    "cap_vista_percorso": "Vue parcours",
     "cap_grammatica": "Grammaire",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Roman",
-    "cap_tanti_giochi": "Plein de jeux",
-    "cap_comprensione": "Compréhension",
-    "cap_cruciverba": "Mots croisés",
-    "cap_tabella_verbi": "Tableau verbes",
+    "cap_edicola": "Kiosque",
+    "cap_tanti_giochi": "Beaucoup de jeux",
+    "cap_cruciverba": "Mots cachés",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Parcours A1–C2",
     "cap_percorso_a1": "Parcours A1",
@@ -1398,8 +1419,12 @@
     "foryou_1": "Tu aimes la littérature et la culture italiennes.",
     "foryou_2": "Tu prépares une certification (CILS, CELI, PLIDA).",
     "foryou_3": "Tu veux enfin lire Pirandello dans le texte.",
-    "foryou_4": "Tu vis, travailles ou voyages souvent en Italie."
-  },
+    "foryou_4": "Tu vis, travailles ou voyages souvent en Italie.",
+    "cap_lettura": "Lecture",
+    "cap_progressi": "Progrès",
+    "cap_come_giocare": "Comment jouer",
+    "cap_dizionario": "Dictionnaire"
+},
   "de": {
     "hero_tag": "Verfügbar im App Store",
     "hero_h1": "Italienisch wirklich lernen.",
@@ -1421,15 +1446,11 @@
     "scr_iphone_count": "Wo immer du bist",
     "scr_ipad": "Auf dem iPad",
     "scr_ipad_count": "Bequem beim Lernen",
-    "cap_percorso": "Weg",
-    "cap_vista_percorso": "Wegansicht",
+    "cap_percorso": "Lernweg",
     "cap_grammatica": "Grammatik",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Roman",
+    "cap_edicola": "Kiosk",
     "cap_tanti_giochi": "Viele Spiele",
-    "cap_comprensione": "Verständnis",
-    "cap_cruciverba": "Kreuzworträtsel",
-    "cap_tabella_verbi": "Verbtabelle",
+    "cap_cruciverba": "Wörtersuche",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Weg A1–C2",
     "cap_percorso_a1": "Weg A1",
@@ -1462,8 +1483,12 @@
     "foryou_1": "Du italienische Literatur und Kultur liebst.",
     "foryou_2": "Du eine Zertifizierung vorbereitest (CILS, CELI, PLIDA).",
     "foryou_3": "Du in Italien lebst, arbeitest oder oft dorthin reist.",
-    "foryou_4": "Du endlich Pirandello im Original lesen willst."
-  },
+    "foryou_4": "Du endlich Pirandello im Original lesen willst.",
+    "cap_lettura": "Lesen",
+    "cap_progressi": "Fortschritt",
+    "cap_come_giocare": "So spielt man",
+    "cap_dizionario": "Wörterbuch"
+},
   "pt": {
     "hero_tag": "Disponível na App Store",
     "hero_h1": "Aprende italiano a sério.",
@@ -1486,14 +1511,10 @@
     "scr_ipad": "No iPad",
     "scr_ipad_count": "Confortável para estudar",
     "cap_percorso": "Percurso",
-    "cap_vista_percorso": "Vista percurso",
     "cap_grammatica": "Gramática",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Romance",
+    "cap_edicola": "Banca",
     "cap_tanti_giochi": "Muitos jogos",
-    "cap_comprensione": "Compreensão",
-    "cap_cruciverba": "Palavras cruzadas",
-    "cap_tabella_verbi": "Tabela verbos",
+    "cap_cruciverba": "Caça-palavras",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Percurso A1–C2",
     "cap_percorso_a1": "Percurso A1",
@@ -1526,8 +1547,12 @@
     "foryou_1": "Amas a cultura e a literatura italianas.",
     "foryou_2": "Tens raízes italianas e queres reencontrar a língua.",
     "foryou_3": "Preparas uma certificação (CILS, CELI, PLIDA).",
-    "foryou_4": "Vives, trabalhas ou viajas com frequência para Itália."
-  },
+    "foryou_4": "Vives, trabalhas ou viajas com frequência para Itália.",
+    "cap_lettura": "Leitura",
+    "cap_progressi": "Progresso",
+    "cap_come_giocare": "Como jogar",
+    "cap_dizionario": "Dicionário"
+},
   "ro": {
     "hero_tag": "Disponibil în App Store",
     "hero_h1": "Învață cu adevărat italiana.",
@@ -1549,15 +1574,11 @@
     "scr_iphone_count": "Oriunde ai fi",
     "scr_ipad": "Pe iPad",
     "scr_ipad_count": "Comod pentru studiu",
-    "cap_percorso": "Traseu",
-    "cap_vista_percorso": "Vedere traseu",
+    "cap_percorso": "Parcurs",
     "cap_grammatica": "Gramatică",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Roman",
+    "cap_edicola": "Chioșc",
     "cap_tanti_giochi": "Multe jocuri",
-    "cap_comprensione": "Comprehensiune",
-    "cap_cruciverba": "Cuvinte încrucișate",
-    "cap_tabella_verbi": "Tabel verbe",
+    "cap_cruciverba": "Găsește cuvintele",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Traseu A1–C2",
     "cap_percorso_a1": "Traseu A1",
@@ -1590,8 +1611,12 @@
     "foryou_1": "Trăiești sau muncești în Italia și vrei să înțelegi cum se vorbește cu adevărat.",
     "foryou_2": "Ești începător și vrei o metodă serioasă.",
     "foryou_3": "Studiezi pentru un certificat (CILS, CELI, PLIDA).",
-    "foryou_4": "Iubești cultura italiană."
-  },
+    "foryou_4": "Iubești cultura italiană.",
+    "cap_lettura": "Lectură",
+    "cap_progressi": "Progres",
+    "cap_come_giocare": "Cum se joacă",
+    "cap_dizionario": "Dicționar"
+},
   "sq": {
     "hero_tag": "E disponueshme në App Store",
     "hero_h1": "Mëso italishten vërtet.",
@@ -1614,14 +1639,10 @@
     "scr_ipad": "Në iPad",
     "scr_ipad_count": "Rehat për të studiuar",
     "cap_percorso": "Rruga",
-    "cap_vista_percorso": "Pamja e rrugës",
-    "cap_grammatica": "Gramatikë",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Roman",
+    "cap_grammatica": "Gramatika",
+    "cap_edicola": "Kioska",
     "cap_tanti_giochi": "Shumë lojëra",
-    "cap_comprensione": "Kuptim",
-    "cap_cruciverba": "Fjalëkryq",
-    "cap_tabella_verbi": "Tabelë foljesh",
+    "cap_cruciverba": "Kërko fjalët",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Rruga A1–C2",
     "cap_percorso_a1": "Rruga A1",
@@ -1654,8 +1675,12 @@
     "foryou_1": "Jeton ose punon në Itali dhe do të kuptosh si flitet vërtet.",
     "foryou_2": "Je fillestar dhe do të nisësh me një metodë serioze.",
     "foryou_3": "Studion për një çertifikatë (CILS, CELI, PLIDA).",
-    "foryou_4": "Do italishten reale, jo atë të manualeve."
-  },
+    "foryou_4": "Do italishten reale, jo atë të manualeve.",
+    "cap_lettura": "Leximi",
+    "cap_progressi": "Përparimi",
+    "cap_come_giocare": "Si të luash",
+    "cap_dizionario": "Fjalor"
+},
   "ar": {
     "hero_tag": "متوفر على App Store",
     "hero_h1": "تعلّم الإيطالية حقًا.",
@@ -1678,14 +1703,10 @@
     "scr_ipad": "على iPad",
     "scr_ipad_count": "مريح أثناء الدراسة",
     "cap_percorso": "المسار",
-    "cap_vista_percorso": "عرض المسار",
     "cap_grammatica": "القواعد",
     "cap_edicola": "الكشك",
-    "cap_romanzo": "رواية",
     "cap_tanti_giochi": "ألعاب كثيرة",
-    "cap_comprensione": "الفهم",
-    "cap_cruciverba": "الكلمات المتقاطعة",
-    "cap_tabella_verbi": "جدول الأفعال",
+    "cap_cruciverba": "بحث الكلمات",
     "cap_feedback": "التقييم",
     "cap_percorso_a1c2": "المسار A1–C2",
     "cap_percorso_a1": "المسار A1",
@@ -1718,8 +1739,12 @@
     "foryou_1": "تعيش أو تعمل في إيطاليا وتريد فهم الإيطالية الحقيقية.",
     "foryou_2": "تدرس لشهادة (CILS, CELI, PLIDA).",
     "foryou_3": "تحبّ الأدب والثقافة الإيطالية.",
-    "foryou_4": "تريد تعلّم إيطالية الحياة اليومية."
-  },
+    "foryou_4": "تريد تعلّم إيطالية الحياة اليومية.",
+    "cap_lettura": "القراءة",
+    "cap_progressi": "التقدّم",
+    "cap_come_giocare": "طريقة اللعب",
+    "cap_dizionario": "القاموس"
+},
   "bn": {
     "hero_tag": "App Store-এ পাওয়া যাচ্ছে",
     "hero_h1": "সত্যিই ইতালিয়ান শিখুন।",
@@ -1742,14 +1767,10 @@
     "scr_ipad": "iPad-এ",
     "scr_ipad_count": "পড়াশোনার সময় আরামদায়ক",
     "cap_percorso": "পথ",
-    "cap_vista_percorso": "পথ দর্শন",
     "cap_grammatica": "ব্যাকরণ",
-    "cap_edicola": "এডিকোলা",
-    "cap_romanzo": "উপন্যাস",
+    "cap_edicola": "নিউজস্ট্যান্ড",
     "cap_tanti_giochi": "অনেক খেলা",
-    "cap_comprensione": "বোধগম্যতা",
-    "cap_cruciverba": "শব্দছক",
-    "cap_tabella_verbi": "ক্রিয়া সারণি",
+    "cap_cruciverba": "শব্দ খুঁজুন",
     "cap_feedback": "প্রতিক্রিয়া",
     "cap_percorso_a1c2": "পথ A1–C2",
     "cap_percorso_a1": "পথ A1",
@@ -1782,8 +1803,12 @@
     "foryou_1": "আপনি ইতালিতে বাস করেন বা কাজ করেন।",
     "foryou_2": "একটি সার্টিফিকেটের জন্য পড়ছেন (CILS, CELI, PLIDA)।",
     "foryou_3": "সত্যিকারের ইতালীয় ভাষা চান, বইয়ের নয়।",
-    "foryou_4": "ইতালীয়রা কীভাবে সত্যিই কথা বলে তা বুঝতে চান।"
-  },
+    "foryou_4": "ইতালীয়রা কীভাবে সত্যিই কথা বলে তা বুঝতে চান।",
+    "cap_lettura": "পঠন",
+    "cap_progressi": "অগ্রগতি",
+    "cap_come_giocare": "কীভাবে খেলবেন",
+    "cap_dizionario": "অভিধান"
+},
   "zh": {
     "hero_tag": "在 App Store 上线",
     "hero_h1": "真正学会意大利语。",
@@ -1805,15 +1830,11 @@
     "scr_iphone_count": "无论你在哪里",
     "scr_ipad": "iPad 上",
     "scr_ipad_count": "学习时更舒适",
-    "cap_percorso": "路径",
-    "cap_vista_percorso": "路径视图",
+    "cap_percorso": "学习路径",
     "cap_grammatica": "语法",
-    "cap_edicola": "书报亭",
-    "cap_romanzo": "小说",
+    "cap_edicola": "报刊亭",
     "cap_tanti_giochi": "多种游戏",
-    "cap_comprensione": "理解",
-    "cap_cruciverba": "填字",
-    "cap_tabella_verbi": "动词表",
+    "cap_cruciverba": "找单词",
     "cap_feedback": "反馈",
     "cap_percorso_a1c2": "路径 A1–C2",
     "cap_percorso_a1": "路径 A1",
@@ -1846,8 +1867,12 @@
     "foryou_1": "你想认真学习意大利语。",
     "foryou_2": "你在准备证书考试(CILS、CELI、PLIDA)。",
     "foryou_3": "你在意大利生活或工作。",
-    "foryou_4": "你热爱意大利文学与文化。"
-  },
+    "foryou_4": "你热爱意大利文学与文化。",
+    "cap_lettura": "阅读",
+    "cap_progressi": "学习进度",
+    "cap_come_giocare": "如何游玩",
+    "cap_dizionario": "词典"
+},
   "tl": {
     "hero_tag": "Available sa App Store",
     "hero_h1": "Talagang matuto ng Italyano.",
@@ -1869,15 +1894,11 @@
     "scr_iphone_count": "Saan ka man naroroon",
     "scr_ipad": "Sa iPad",
     "scr_ipad_count": "Kumportable sa pag-aaral",
-    "cap_percorso": "Daan",
-    "cap_vista_percorso": "Tanaw ng daan",
-    "cap_grammatica": "Grammar",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Nobela",
+    "cap_percorso": "Landas",
+    "cap_grammatica": "Gramatika",
+    "cap_edicola": "Kiosk",
     "cap_tanti_giochi": "Maraming laro",
-    "cap_comprensione": "Pag-unawa",
-    "cap_cruciverba": "Krosword",
-    "cap_tabella_verbi": "Talahanayan ng pandiwa",
+    "cap_cruciverba": "Hanapin ang mga salita",
     "cap_feedback": "Feedback",
     "cap_percorso_a1c2": "Daan A1–C2",
     "cap_percorso_a1": "Daan A1",
@@ -1910,8 +1931,12 @@
     "foryou_1": "Nakatira o nagtatrabaho ka sa Italya.",
     "foryou_2": "Naghahanda ka para sa isang sertipikasyon (CILS, CELI, PLIDA).",
     "foryou_3": "Gusto mong maintindihan kung paano talaga nagsasalita ang mga Italyano.",
-    "foryou_4": "Gusto mong matutunan ang pang-araw-araw na Italyano."
-  },
+    "foryou_4": "Gusto mong matutunan ang pang-araw-araw na Italyano.",
+    "cap_lettura": "Pagbabasa",
+    "cap_progressi": "Progreso",
+    "cap_come_giocare": "Paano laruin",
+    "cap_dizionario": "Diksyunaryo"
+},
   "ti": {
     "hero_tag": "ኣብ App Store ይርከብ",
     "hero_h1": "ብሓቂ ጣልያንኛ ተምሃር።",
@@ -1933,15 +1958,11 @@
     "scr_iphone_count": "ኣበይ እንተለኻ",
     "scr_ipad": "ኣብ iPad",
     "scr_ipad_count": "ንትምህርቲ ምችኡ",
-    "cap_percorso": "መገዲ",
-    "cap_vista_percorso": "ናይ መገዲ ትርኢት",
-    "cap_grammatica": "ግራመር",
-    "cap_edicola": "ኤዲኮላ",
-    "cap_romanzo": "ልብ-ወለድ",
+    "cap_percorso": "መንገዲ ትምህርቲ",
+    "cap_grammatica": "ሰዋሱው",
+    "cap_edicola": "ኪዮስክ",
     "cap_tanti_giochi": "ብዙሓት ጸወታታት",
-    "cap_comprensione": "ምርድዳእ",
-    "cap_cruciverba": "ቅርጻ ቃላት",
-    "cap_tabella_verbi": "ሰንጠረዥ ግሲታት",
+    "cap_cruciverba": "ቃላት ድለ",
     "cap_feedback": "ግብረ-መልሲ",
     "cap_percorso_a1c2": "መገዲ A1–C2",
     "cap_percorso_a1": "መገዲ A1",
@@ -1974,8 +1995,12 @@
     "foryou_1": "ኣብ ጣልያን ትነብር ወይ ትሰርሕ እንተኾንካ።",
     "foryou_2": "ንምስክር ወረቀት (CILS, CELI, PLIDA) ትዳሎ እንተሎካ።",
     "foryou_3": "ናይ ብሓቂ ጣልያንኛ ክትፈልጥ እንተደሌኻ።",
-    "foryou_4": "ጣልያውያን ብሓቂ ኸመይ ከም ዝዛረቡ ክትርዳእ እንተደሌኻ።"
-  },
+    "foryou_4": "ጣልያውያን ብሓቂ ኸመይ ከም ዝዛረቡ ክትርዳእ እንተደሌኻ።",
+    "cap_lettura": "ንባብ",
+    "cap_progressi": "ምዕባለ",
+    "cap_come_giocare": "ከመይ ትጻወት",
+    "cap_dizionario": "መዝገበ ቃላት"
+},
   "uk": {
     "hero_tag": "Доступно в App Store",
     "hero_h1": "По-справжньому вивчи італійську.",
@@ -1998,14 +2023,10 @@
     "scr_ipad": "На iPad",
     "scr_ipad_count": "Зручно для навчання",
     "cap_percorso": "Шлях",
-    "cap_vista_percorso": "Огляд шляху",
     "cap_grammatica": "Граматика",
-    "cap_edicola": "Edicola",
-    "cap_romanzo": "Роман",
+    "cap_edicola": "Кіоск",
     "cap_tanti_giochi": "Багато ігор",
-    "cap_comprensione": "Розуміння",
-    "cap_cruciverba": "Кросворд",
-    "cap_tabella_verbi": "Таблиця дієслів",
+    "cap_cruciverba": "Знайди слова",
     "cap_feedback": "Фідбек",
     "cap_percorso_a1c2": "Шлях A1–C2",
     "cap_percorso_a1": "Шлях A1",
@@ -2038,8 +2059,12 @@
     "foryou_1": "Ти живеш або працюєш в Італії.",
     "foryou_2": "Ти готуєшся до сертифікації (CILS, CELI, PLIDA).",
     "foryou_3": "Ти хочеш розуміти справжню італійську.",
-    "foryou_4": "Ти любиш італійську культуру та літературу."
-  }
+    "foryou_4": "Ти любиш італійську культуру та літературу.",
+    "cap_lettura": "Читання",
+    "cap_progressi": "Прогрес",
+    "cap_come_giocare": "Як грати",
+    "cap_dizionario": "Словник"
+}
 }
     </script>
 
@@ -2072,6 +2097,20 @@
       var buttons = document.querySelectorAll('.lang-switcher button');
       var RTL_LANGS = ['ar'];
 
+      // ── LINGUE PER CUI ABBIAMO SCREENSHOT LOCALIZZATI ────────────────
+      // Se la lingua corrente non è in questa lista, si usa "en" come
+      // fallback. Aggiornabile senza toccare l'HTML: basta creare la
+      // cartella assets/screenshots/iPhone/<lang>/ con 1.png ... 9.png.
+      var SCREENSHOTS_LANGS = ['it','en','fr','es','de','nl','ro','ar','zh','uk'];
+
+      function localizzaScreenshots(lang){
+        var target = SCREENSHOTS_LANGS.indexOf(lang) !== -1 ? lang : 'en';
+        document.querySelectorAll('[data-screenshot]').forEach(function(img){
+          var num = img.getAttribute('data-screenshot');
+          img.src = 'assets/screenshots/iPhone/' + target + '/' + num + '.png';
+        });
+      }
+
       function render(lang){
         var d = data[lang];
         if(!d) return;
@@ -2087,6 +2126,8 @@
         buttons.forEach(function(b){ b.classList.toggle('active', b.dataset.lang === lang); });
         // shared nav / footer strings
         if(window.applyAppNav) window.applyAppNav(lang);
+        // screenshots del carosello iPhone
+        localizzaScreenshots(lang);
         // persist
         try { localStorage.setItem('ti-lang', lang); } catch(e){}
       }
