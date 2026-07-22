@@ -60,25 +60,20 @@ h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(2rem,5vw,3.2rem);l
 .btn.pieno:hover{background:var(--laguna-scuro)}
 .btn.vuoto{border:1.5px solid var(--inchiostro);color:var(--inchiostro)}
 .btn.vuoto:hover{border-color:var(--laguna);color:var(--laguna)}
-.scaffale-sezione{padding:30px 0 10px}
-.scaffale-testa{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
 h2{font-family:Fraunces,serif;font-weight:600;font-size:1.6rem}
-.frecce button{font-family:Inter,sans-serif;background:none;border:1.5px solid var(--bordo);border-radius:999px;width:40px;height:40px;font-size:1.1rem;cursor:pointer;color:var(--inchiostro);margin-left:8px}
-.frecce button:hover{border-color:var(--laguna);color:var(--laguna)}
-.scaffale{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 4px 8px;scrollbar-width:none}
-.scaffale::-webkit-scrollbar{display:none}
-.scaffale-bordo{height:5px;background:var(--inchiostro);border-radius:3px;margin-top:-6px;box-shadow:0 8px 18px rgba(30,37,41,.18)}
-.libro{scroll-snap-align:start;flex:0 0 178px;text-decoration:none;color:inherit;outline-offset:6px}
-.copertina{position:relative;width:178px;aspect-ratio:1600/2560;border-radius:3px 8px 8px 3px;transform-origin:bottom center;transition:transform .25s ease}
-.copertina img{width:100%;height:100%;object-fit:cover;border-radius:inherit;box-shadow:var(--ombra);display:block;background:#fff}
-.copertina::after{content:"";position:absolute;top:2%;right:-5px;width:5px;height:96%;background:repeating-linear-gradient(to bottom,#fffdf6 0 2px,#e8e1cf 2px 3px);border-radius:0 2px 2px 0}
-.libro:hover .copertina,.libro:focus-visible .copertina{transform:rotate(-2deg) translateY(-8px)}
-.libro .titolo{font-family:Fraunces,serif;font-weight:600;font-size:.98rem;line-height:1.25;margin-top:14px}
-.libro .autore{font-family:Inter,sans-serif;font-size:.8rem;color:var(--nebbia);margin-top:3px}
-.badge-livello{position:absolute;top:10px;left:-6px;background:var(--cotto);color:#fff;font-family:Inter,sans-serif;font-weight:600;font-size:.72rem;padding:3px 10px 3px 8px;border-radius:0 4px 4px 0;box-shadow:0 2px 6px rgba(0,0,0,.25);z-index:1}
+.badge-livello{background:var(--cotto);color:#fff;font-family:Inter,sans-serif;font-weight:600;font-size:.72rem;padding:3px 10px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.25);z-index:1}
 .griglia-sezione{padding:56px 0 30px}
+.collana-testa{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px}
+.ku-nota{font-family:Inter,sans-serif;font-size:.85rem;color:var(--nebbia)}
+.ku-nota strong{color:var(--cotto)}
+.filtri{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.filtri button{font-family:Inter,sans-serif;font-size:.85rem;font-weight:600;border:1.5px solid var(--bordo);background:#fff;color:var(--inchiostro);border-radius:999px;padding:7px 16px;cursor:pointer}
+.filtri button:hover{border-color:var(--laguna);color:var(--laguna)}
+.filtri button.attivo{background:var(--laguna);border-color:var(--laguna);color:#fff}
 .griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:34px 26px;margin-top:30px}
-.scheda{background:#fff;border:1px solid var(--bordo);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.scheda{background:#fff;border:1px solid var(--bordo);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;position:relative;transition:transform .2s ease,box-shadow .2s ease}
+.scheda:hover{transform:translateY(-4px);box-shadow:var(--ombra)}
+.scheda .badge-livello{position:absolute;top:26px;left:12px}
 .scheda img{width:70%;height:auto;margin:0 auto;aspect-ratio:1600/2560;object-fit:cover;border-radius:4px;box-shadow:0 6px 16px rgba(30,37,41,.16);background:#f2ecdd}
 .scheda .titolo{font-family:Fraunces,serif;font-weight:600;font-size:1.02rem;line-height:1.25}
 .scheda .autore{font-family:Inter,sans-serif;font-size:.8rem;color:var(--nebbia)}
@@ -99,12 +94,10 @@ h2{font-family:Fraunces,serif;font-weight:600;font-size:1.6rem}
 footer.sito{border-top:1px solid var(--bordo);padding:26px 0;font-family:Inter,sans-serif;font-size:.8rem;color:var(--nebbia)}
 footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:640px){
-  .scaffale{gap:18px}
-  .libro{flex-basis:140px}
-  .copertina{width:140px}
-}
+      }
 @media(prefers-reduced-motion:reduce){
-  .copertina,html{transition:none;scroll-behavior:auto}
+  html{scroll-behavior:auto}
+  .scheda{transition:none}
 }
 </style>
 </head>
@@ -172,18 +165,6 @@ const LIBRI = [
   </div>
 </section>
 
-<section class="scaffale-sezione wrap" id="collana">
-  <div class="scaffale-testa">
-    <h2>Sullo scaffale</h2>
-    <div class="frecce">
-      <button type="button" aria-label="Scorri indietro" onclick="scorri(-1)">&larr;</button>
-      <button type="button" aria-label="Scorri avanti" onclick="scorri(1)">&rarr;</button>
-    </div>
-  </div>
-  <div class="scaffale" id="scaffale"></div>
-  <div class="scaffale-bordo" aria-hidden="true"></div>
-</section>
-
 <section class="perche">
   <div class="wrap">
     <h2>Come sono fatti i graded readers</h2>
@@ -196,8 +177,12 @@ const LIBRI = [
   </div>
 </section>
 
-<section class="griglia-sezione wrap">
-  <h2>Tutta la collana</h2>
+<section class="griglia-sezione wrap" id="collana">
+  <div class="collana-testa">
+    <h2>Scegli il tuo livello</h2>
+    <p class="ku-nota">Quasi tutti i titoli si leggono <strong>gratis con Kindle Unlimited</strong> &middot; ebook &euro;4,99 &middot; anche in cartaceo</p>
+  </div>
+  <div class="filtri" role="group" aria-label="Filtra per livello" id="filtri"></div>
   <div class="griglia" id="griglia"></div>
 </section>
 
@@ -236,22 +221,18 @@ const LIBRI = [
 const cover = l => `/assets/books/${l.file}`;
 const link  = l => l.asin ? `https://www.amazon.it/dp/${l.asin}` : AUTORE_AMAZON;
 
-const scaffale = document.getElementById("scaffale");
-const griglia  = document.getElementById("griglia");
-LIBRI.forEach((l, i) => {
-  const eager = i < 4 ? 'fetchpriority="high"' : 'loading="lazy"';
-  scaffale.insertAdjacentHTML("beforeend", `
-    <a class="libro" href="${link(l)}" target="_blank" rel="noopener">
-      <div class="copertina">
-        <span class="badge-livello">${l.livello}</span>
-        <img src="${cover(l)}" width="1600" height="2560" alt="Copertina: ${l.titolo} di ${l.autore}, italiano semplificato livello ${l.livello}" ${eager}>
-      </div>
-      <div class="titolo">${l.titolo}</div>
-      <div class="autore">${l.autore}</div>
-    </a>`);
-  griglia.insertAdjacentHTML("beforeend", `
+const griglia = document.getElementById("griglia");
+const filtri  = document.getElementById("filtri");
+const LIVELLI = ["tutti","A1","A2","B1","B2","C1"];
+
+function render(filtro){
+  griglia.innerHTML = "";
+  const lista = filtro === "tutti" ? LIBRI : LIBRI.filter(l => l.livello === filtro);
+  lista.forEach((l, i) => {
+    griglia.insertAdjacentHTML("beforeend", `
     <div class="scheda">
-      <img src="${cover(l)}" width="1600" height="2560" alt="Copertina di ${l.titolo}, graded reader livello ${l.livello}" loading="lazy">
+      <span class="badge-livello">${l.livello}</span>
+      <img src="${cover(l)}" width="1600" height="2560" alt="Copertina: ${l.titolo} di ${l.autore}, italiano semplificato livello ${l.livello}" loading="${i < 4 ? "eager" : "lazy"}">
       <div class="titolo">${l.titolo}</div>
       <div class="autore">${l.autore} &middot; adattamento di Alessio Insegnante</div>
       <div class="riga-fondo">
@@ -259,9 +240,18 @@ LIBRI.forEach((l, i) => {
         <a class="compra" href="${link(l)}" target="_blank" rel="noopener">Su Amazon</a>
       </div>
     </div>`);
+  });
+}
+LIVELLI.forEach(v => {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.textContent = v === "tutti" ? "Tutti" : v;
+  b.onclick = () => { render(v); filtri.querySelectorAll("button").forEach(x => x.classList.remove("attivo")); b.classList.add("attivo"); };
+  filtri.appendChild(b);
 });
+filtri.firstChild.classList.add("attivo");
+render("tutti");
 
-function scorri(dir){ scaffale.scrollBy({left: dir * 240, behavior: "smooth"}); }
 document.getElementById("anno").textContent = new Date().getFullYear();
 
 /* JSON-LD: CollectionPage + Book + Breadcrumb + FAQ */
