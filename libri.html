@@ -6,12 +6,11 @@
 <title>Libri per imparare l'italiano: classici semplificati A1–C2 | thuisitaliaans</title>
 <meta name="description" content="Italian Graded Readers: i classici della letteratura italiana (Manzoni, Pirandello, Deledda, D'Annunzio) adattati per studenti di italiano, con note, glossario e domande. Cartaceo ed ebook su Amazon.">
 <link rel="canonical" href="https://thuisitaliaans.com/libri.html">
-<link rel="alternate" hreflang="it" href="https://thuisitaliaans.com/libri.html">
-<link rel="alternate" hreflang="en" href="https://thuisitaliaans.com/books.html">
-<link rel="alternate" hreflang="x-default" href="https://thuisitaliaans.com/books.html">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Alessio Insegnante">
 <meta name="theme-color" content="#F7F2E7">
+
+
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="thuisitaliaans">
@@ -110,34 +109,6 @@ footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 </head>
 <body>
 
-<!-- ═══ DATI LIBRI: aggiungi qui titoli, autori e ASIN ═══ -->
-<script>
-/* ═══ AGGIUNGERE UN LIBRO = UNA RIGA + UN JPG ═══════════════════════
-   1. Carica la copertina ebook (1600×2560) in /assets/books/
-      con il nome della pipeline KDP:  NomeTitolo_cover.jpg
-      es. PromessiSposi_cover.jpg, IlMilione_cover.jpg
-   2. Aggiungi UNA riga qui sotto. "file" = nome del jpg senza "_cover.jpg".
-   3. "asin": dall'URL Amazon del libro → amazon.it/dp/XXXXXXXXXX
-      Se vuoto, il pulsante porta alla pagina autore (la pagina funziona comunque).
-   Fatto. Carosello, griglia e JSON-LD si aggiornano da soli.
-   ═══════════════════════════════════════════════════════════════════ */
-const AUTORE_AMAZON = "https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks";
-const LIBRI = [
-  {titolo:"I promessi sposi",               autore:"Alessandro Manzoni",  livello:"B1", file:"PromessiSposi",       asin:""},
-  {titolo:"Il fu Mattia Pascal",            autore:"Luigi Pirandello",    livello:"B1", file:"FuMattiaPascal",      asin:""},
-  {titolo:"Canne al vento",                 autore:"Grazia Deledda",      livello:"B1", file:"CanneAlVento",        asin:""},
-  {titolo:"Il piacere",                     autore:"Gabriele D'Annunzio", livello:"B2", file:"IlPiacere",           asin:""},
-  {titolo:"Piccolo mondo antico",           autore:"Antonio Fogazzaro",   livello:"B1", file:"PiccoloMondoAntico",  asin:""},
-  {titolo:"I Viceré",                       autore:"Federico De Roberto", livello:"B2", file:"IVicere",             asin:""},
-  {titolo:"Demetrio Pianelli",              autore:"Emilio De Marchi",    livello:"B1", file:"DemetrioPianelli",    asin:""},
-  {titolo:"Il giornalino di Gian Burrasca", autore:"Vamba",               livello:"A2", file:"GianBurrasca",        asin:""},
-  {titolo:"Il Milione",                     autore:"Marco Polo",          livello:"A2", file:"IlMilione",           asin:""},
-  {titolo:"Il servitore di due padroni",    autore:"Carlo Goldoni",       livello:"B1", file:"ServitoreDuePadroni", asin:""},
-  {titolo:"Il paese di Cuccagna",           autore:"Matilde Serao",       livello:"B2", file:"PaeseDiCuccagna",     asin:""},
-];
-</script>
-
-
 <header class="sito">
   <div class="wrap">
     <a class="logo" href="/">thuis<em>italiaans</em></a>
@@ -146,7 +117,6 @@ const LIBRI = [
       <a href="/blog/">Blog</a>
       <a href="/app-ti.html">App</a>
       <a href="/libri.html" style="color:var(--laguna)" aria-current="page">Libri</a>
-      <a href="/books.html" title="English version">EN</a>
     </nav>
   </div>
 </header>
@@ -206,7 +176,7 @@ const LIBRI = [
   </details>
   <details>
     <summary>Dove posso comprarli?</summary>
-    <p>Su Amazon, in edizione cartacea o ebook Kindle. Tutti i titoli sono raccolti nella pagina autore di Alessio Insegnante.</p>
+    <p>Su Amazon, in edizione cartacea o ebook Kindle. Tutti i titoli sono raccolti nella pagina autore di Alessio Are.</p>
   </details>
 </section>
 
@@ -225,6 +195,29 @@ const LIBRI = [
 </footer>
 
 <script>
+/* ═══ AGGIUNGERE UN LIBRO = UNA RIGA + UN JPG ═══════════════════════
+   1. Carica la copertina ebook (1600×2560) in /assets/books/
+      con il nome della pipeline KDP:  NomeTitolo_cover.jpg
+      es. PromessiSposi_cover.jpg, IlMilione_cover.jpg
+   2. Aggiungi UNA riga qui sotto. "file" = nome del jpg senza "_cover.jpg".
+   3. "asin": dall'URL Amazon del libro → amazon.it/dp/XXXXXXXXXX
+      Se vuoto, il pulsante porta alla pagina autore (la pagina funziona comunque).
+   Fatto. Carosello, griglia e JSON-LD si aggiornano da soli.
+   ═══════════════════════════════════════════════════════════════════ */
+const AUTORE_AMAZON = "https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks";
+const LIBRI = [
+  {titolo:"I promessi sposi",               autore:"Alessandro Manzoni",  livello:"B1", file:"PromessiSposi",       asin:""},
+  {titolo:"Il fu Mattia Pascal",            autore:"Luigi Pirandello",    livello:"B1", file:"FuMattiaPascal",      asin:""},
+  {titolo:"Canne al vento",                 autore:"Grazia Deledda",      livello:"B1", file:"CanneAlVento",        asin:""},
+  {titolo:"Il piacere",                     autore:"Gabriele D'Annunzio", livello:"B2", file:"IlPiacere",           asin:""},
+  {titolo:"Piccolo mondo antico",           autore:"Antonio Fogazzaro",   livello:"B1", file:"PiccoloMondoAntico",  asin:""},
+  {titolo:"I Viceré",                       autore:"Federico De Roberto", livello:"B2", file:"IVicere",             asin:""},
+  {titolo:"Demetrio Pianelli",              autore:"Emilio De Marchi",    livello:"B1", file:"DemetrioPianelli",    asin:""},
+  {titolo:"Il giornalino di Gian Burrasca", autore:"Vamba",               livello:"A2", file:"GianBurrasca",        asin:""},
+  {titolo:"Il Milione",                     autore:"Marco Polo",          livello:"A2", file:"IlMilione",           asin:""},
+  {titolo:"Il servitore di due padroni",    autore:"Carlo Goldoni",       livello:"B1", file:"ServitoreDuePadroni", asin:""},
+  {titolo:"Il paese di Cuccagna",           autore:"Matilde Serao",       livello:"B2", file:"PaeseDiCuccagna",     asin:""},
+];
 
 const cover = l => `/assets/books/${l.file}_cover.jpg`;
 const link  = l => l.asin ? `https://www.amazon.it/dp/${l.asin}` : AUTORE_AMAZON;
@@ -246,7 +239,7 @@ LIBRI.forEach((l, i) => {
     <div class="scheda">
       <img src="${cover(l)}" width="1600" height="2560" alt="Copertina di ${l.titolo}, graded reader livello ${l.livello}" loading="lazy">
       <div class="titolo">${l.titolo}</div>
-      <div class="autore">${l.autore} &middot; adattamento di Alessio Insegnante</div>
+      <div class="autore">${l.autore} &middot; adattamento di Alessio Are</div>
       <div class="riga-fondo">
         <span class="liv">Livello ${l.livello}</span>
         <a class="compra" href="${link(l)}" target="_blank" rel="noopener">Su Amazon</a>
@@ -268,7 +261,7 @@ const ld = [
   "hasPart": LIBRI.map(l => ({
     "@type":"Book","name":l.titolo,
     "author":{"@type":"Person","name":l.autore},
-    "contributor":{"@type":"Person","name":"Alessio Insegnante"},
+    "contributor":{"@type":"Person","name":"Alessio Are"},
     "inLanguage":"it",
     "image":`https://thuisitaliaans.com${cover(l)}`,
     "bookFormat":"https://schema.org/Paperback",
@@ -291,7 +284,7 @@ const ld = [
     {"@type":"Question","name":"Sono i testi originali o versioni semplificate?",
      "acceptedAnswer":{"@type":"Answer","text":"Sono adattamenti: la trama resta, ma lessico e sintassi sono riscritti per il livello indicato, con note e glossario."}},
     {"@type":"Question","name":"Dove posso comprare i graded readers?",
-     "acceptedAnswer":{"@type":"Answer","text":"Su Amazon, in edizione cartacea o ebook Kindle, nella pagina autore di Alessio Insegnante."}}
+     "acceptedAnswer":{"@type":"Answer","text":"Su Amazon, in edizione cartacea o ebook Kindle, nella pagina autore di Alessio Are."}}
   ]
 }
 ];
