@@ -52,8 +52,6 @@ nav.principale a:hover{color:var(--laguna)}
 .occhiello{font-family:Inter,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--laguna)}
 h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;margin:.4em 0 .5em;max-width:16ch}
 .hero p.sotto{max-width:56ch;font-size:1.08rem}
-.livelli{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
-.livelli span{font-family:Inter,sans-serif;font-size:.78rem;font-weight:600;border:1.5px solid var(--laguna);color:var(--laguna);border-radius:999px;padding:4px 12px}
 .cta-riga{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn{font-family:Inter,sans-serif;font-weight:600;font-size:.92rem;text-decoration:none;border-radius:10px;padding:13px 22px;display:inline-block}
 .btn.pieno{background:var(--laguna);color:#fff}
@@ -96,14 +94,19 @@ footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 @media(max-width:640px){
   body{font-size:16px}
   .wrap{padding:0 16px}
+  header.sito{position:static}
   header.sito .wrap{height:auto;flex-wrap:wrap;padding:10px 16px;gap:4px 0}
   nav.principale{width:100%;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
   nav.principale::-webkit-scrollbar{display:none}
   nav.principale a{margin-left:0;margin-right:18px}
-  .hero{padding:40px 0 28px}
+  .hero{padding:32px 0 24px}
+  h1{font-size:1.75rem}
+  .cta-riga{margin-top:20px;gap:10px}
   .hero p.sotto{font-size:1rem}
   .cta-riga .btn{width:100%;text-align:center}
   .griglia-sezione{padding:40px 0 20px}
+  .filtri{gap:6px;margin-top:16px}
+  .filtri button{padding:9px 15px;font-size:.88rem}
   .griglia{grid-template-columns:repeat(2,1fr);gap:20px 12px;margin-top:22px}
   .scheda{padding:12px;gap:8px}
   .scheda img{width:88%}
@@ -114,6 +117,8 @@ footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
   .scheda .liv{text-align:left}
   .scheda a.compra{text-align:center}
   .perche{padding:32px 0}
+  .perche .colonne{gap:20px}
+  .faq{padding:36px 0 6px}
   .fondo{padding:44px 0 50px}
   h2{font-size:1.35rem}
 }
@@ -122,41 +127,14 @@ footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
   .scheda{transition:none}
 }
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Libri per imparare l'italiano: classici semplificati A1–C1", "url": "https://thuisitaliaans.com/libri.html", "inLanguage": "it", "publisher": {"@type": "Organization", "name": "thuisitaliaans", "url": "https://thuisitaliaans.com"}, "hasPart": [{"@type": "Book", "name": "Cuore", "author": {"@type": "Person", "name": "Edmondo De Amicis"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/Cuore_cover.jpg", "educationalLevel": "A1", "url": "https://www.amazon.it/dp/B0H9PF662C", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9PF662C"}}, {"@type": "Book", "name": "Eva", "author": {"@type": "Person", "name": "Giovanni Verga"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/Eva_cover.jpg", "educationalLevel": "A1", "url": "https://www.amazon.it/dp/B0H9VN7SCB", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9VN7SCB"}}, {"@type": "Book", "name": "Giacinta", "author": {"@type": "Person", "name": "Luigi Capuana"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/Giacinta_cover.jpg", "educationalLevel": "A1", "url": "https://www.amazon.it/dp/B0H9V5FDS8", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9V5FDS8"}}, {"@type": "Book", "name": "Il giornalino di Gian Burrasca", "author": {"@type": "Person", "name": "Vamba"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/GianBurrasca_cover.jpg", "educationalLevel": "A1", "url": "https://www.amazon.it/dp/B0H9SRPWYT", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9SRPWYT"}}, {"@type": "Book", "name": "Le avventure di Pinocchio", "author": {"@type": "Person", "name": "Carlo Collodi"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/Pinocchio_cover.jpg", "educationalLevel": "A2", "url": "https://www.amazon.it/dp/B0H9P9P6G3", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9P9P6G3"}}, {"@type": "Book", "name": "La coscienza di Zeno", "author": {"@type": "Person", "name": "Italo Svevo"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/Zeno_cover.jpg", "educationalLevel": "A2", "url": "https://www.amazon.it/dp/B0H9SHPT52", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9SHPT52"}}, {"@type": "Book", "name": "Il corsaro nero", "author": {"@type": "Person", "name": "Emilio Salgari"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/CorsaroNero_cover.jpg", "educationalLevel": "A2", "url": "https://www.amazon.it/dp/B0H9TWQKX3", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9TWQKX3"}}, {"@type": "Book", "name": "Demetrio Pianelli", "author": {"@type": "Person", "name": "Emilio De Marchi"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/DemetrioPianelli_cover.jpg", "educationalLevel": "A2", "url": "https://www.amazon.it/dp/B0H9V12THS", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9V12THS"}}, {"@type": "Book", "name": "Il fu Mattia Pascal", "author": {"@type": "Person", "name": "Luigi Pirandello"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/MattiaPascal_cover.jpg", "educationalLevel": "B1", "url": "https://www.amazon.it/dp/B0H9P9NVRF", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9P9NVRF"}}, {"@type": "Book", "name": "Canne al vento", "author": {"@type": "Person", "name": "Grazia Deledda"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/CanneAlVento_Copertina_eBook.jpg", "educationalLevel": "B1", "url": "https://www.amazon.it/dp/B0H9P9L2JD", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9P9L2JD"}}, {"@type": "Book", "name": "Il paese di Cuccagna", "author": {"@type": "Person", "name": "Matilde Serao"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/PaeseDiCuccagna_cover.jpg", "educationalLevel": "B1", "url": "https://www.amazon.it/dp/B0H9RYH4MV", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9RYH4MV"}}, {"@type": "Book", "name": "Il servitore di due padroni", "author": {"@type": "Person", "name": "Carlo Goldoni"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/ServitoreDuePadroni_cover.jpg", "educationalLevel": "B1", "url": "https://www.amazon.it/dp/B0H9V6J95N", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9V6J95N"}}, {"@type": "Book", "name": "I promessi sposi", "author": {"@type": "Person", "name": "Alessandro Manzoni"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/PromessiSposi_cover.jpg", "educationalLevel": "B2", "url": "https://www.amazon.it/dp/B0H9P9QVSK", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9P9QVSK"}}, {"@type": "Book", "name": "Il Milione", "author": {"@type": "Person", "name": "Marco Polo"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/IlMilione_cover.jpg", "educationalLevel": "B2", "url": "https://www.amazon.it/dp/B0H9PL1W58", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9PL1W58"}}, {"@type": "Book", "name": "La giovinezza di Cesare", "author": {"@type": "Person", "name": "Giuseppe Rovani"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/GiovinezzaCesare_cover.jpg", "educationalLevel": "B2", "url": "https://www.amazon.it/dp/B0H9V1H4P8", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9V1H4P8"}}, {"@type": "Book", "name": "I Viceré", "author": {"@type": "Person", "name": "Federico De Roberto"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/Vicere_cover.jpg", "educationalLevel": "B2", "url": "https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks"}, {"@type": "Book", "name": "Piccolo mondo antico", "author": {"@type": "Person", "name": "Antonio Fogazzaro"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/PiccoloMondoAntico_cover.jpg", "educationalLevel": "C1", "url": "https://www.amazon.it/dp/B0H9S2X2WG", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9S2X2WG"}}, {"@type": "Book", "name": "Il piacere", "author": {"@type": "Person", "name": "Gabriele D'Annunzio"}, "contributor": {"@type": "Person", "name": "Alessio Insegnante"}, "inLanguage": "it", "image": "https://thuisitaliaans.com/assets/books/IlPiacere_cover.jpg", "educationalLevel": "C1", "url": "https://www.amazon.it/dp/B0H9RZPN2G", "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.it/dp/B0H9RZPN2G"}}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thuisitaliaans.com/"}, {"@type": "ListItem", "position": 2, "name": "Libri", "item": "https://thuisitaliaans.com/libri.html"}]}
+</script>
 </head>
 <body>
-
-<!-- ═══ DATI LIBRI: aggiungi qui titoli, autori e ASIN ═══ -->
-<script>
-/* ═══ AGGIUNGERE UN LIBRO = UNA RIGA + UN JPG ═══════════════════════
-   1. Carica la copertina ebook (1600×2560) in /assets/books/
-      es. PromessiSposi_cover.jpg, Zeno_cover.jpg
-   2. Aggiungi UNA riga qui sotto. "file" = nome completo del jpg.
-   3. "asin": dall'URL Amazon del libro → amazon.it/dp/XXXXXXXXXX
-      Se vuoto, il pulsante porta alla pagina autore (la pagina funziona comunque).
-   Fatto. Carosello, griglia e JSON-LD si aggiornano da soli.
-   ═══════════════════════════════════════════════════════════════════ */
-const AUTORE_AMAZON = "https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks";
-const LIBRI = [
-  {titolo:"Cuore",                           autore:"Edmondo De Amicis",    livello:"A1", file:"Cuore_cover.jpg",                  asin:"B0H9PF662C"},
-  {titolo:"Eva",                             autore:"Giovanni Verga",       livello:"A1", file:"Eva_cover.jpg",                    asin:"B0H9VN7SCB"},
-  {titolo:"Giacinta",                        autore:"Luigi Capuana",        livello:"A1", file:"Giacinta_cover.jpg",               asin:"B0H9V5FDS8"},
-  {titolo:"Il giornalino di Gian Burrasca",  autore:"Vamba",                livello:"A1", file:"GianBurrasca_cover.jpg",           asin:"B0H9SRPWYT"},
-  {titolo:"Le avventure di Pinocchio",       autore:"Carlo Collodi",        livello:"A2", file:"Pinocchio_cover.jpg",              asin:"B0H9P9P6G3"},
-  {titolo:"La coscienza di Zeno",            autore:"Italo Svevo",          livello:"A2", file:"Zeno_cover.jpg",                   asin:"B0H9SHPT52"},
-  {titolo:"Il corsaro nero",                 autore:"Emilio Salgari",       livello:"A2", file:"CorsaroNero_cover.jpg",            asin:"B0H9TWQKX3"},
-  {titolo:"Demetrio Pianelli",               autore:"Emilio De Marchi",     livello:"A2", file:"DemetrioPianelli_cover.jpg",       asin:"B0H9V12THS"},
-  {titolo:"Il fu Mattia Pascal",             autore:"Luigi Pirandello",     livello:"B1", file:"MattiaPascal_cover.jpg",           asin:"B0H9P9NVRF"},
-  {titolo:"Canne al vento",                  autore:"Grazia Deledda",       livello:"B1", file:"CanneAlVento_Copertina_eBook.jpg", asin:"B0H9P9L2JD"},
-  {titolo:"Il paese di Cuccagna",            autore:"Matilde Serao",        livello:"B1", file:"PaeseDiCuccagna_cover.jpg",        asin:"B0H9RYH4MV"},
-  {titolo:"Il servitore di due padroni",     autore:"Carlo Goldoni",        livello:"B1", file:"ServitoreDuePadroni_cover.jpg",    asin:"B0H9V6J95N"},
-  {titolo:"I promessi sposi",                autore:"Alessandro Manzoni",   livello:"B2", file:"PromessiSposi_cover.jpg",          asin:"B0H9P9QVSK"},
-  {titolo:"Il Milione",                      autore:"Marco Polo",           livello:"B2", file:"IlMilione_cover.jpg",              asin:"B0H9PL1W58"},
-  {titolo:"La giovinezza di Cesare",         autore:"Giuseppe Rovani",      livello:"B2", file:"GiovinezzaCesare_cover.jpg",       asin:"B0H9V1H4P8"},
-  {titolo:"I Viceré",                        autore:"Federico De Roberto",  livello:"B2", file:"Vicere_cover.jpg",                 asin:""},
-  {titolo:"Piccolo mondo antico",            autore:"Antonio Fogazzaro",    livello:"C1", file:"PiccoloMondoAntico_cover.jpg",     asin:"B0H9S2X2WG"},
-  {titolo:"Il piacere",                      autore:"Gabriele D'Annunzio",  livello:"C1", file:"IlPiacere_cover.jpg",              asin:"B0H9RZPN2G"},
-];
-</script>
 
 
 <header class="sito">
@@ -177,9 +155,6 @@ const LIBRI = [
   <span class="occhiello">thuisitaliaans · Italian Graded Readers</span>
   <h1>I classici italiani, riscritti per chi li studia.</h1>
   <p class="sotto">Manzoni, Pirandello, Deledda, D&rsquo;Annunzio e gli altri grandi della letteratura italiana, adattati livello per livello: frasi calibrate sul QCER, note a pi&egrave; di pagina, glossario e domande di comprensione. In cartaceo e in ebook, su Amazon.</p>
-  <div class="livelli" aria-label="Livelli disponibili">
-    <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
-  </div>
   <div class="cta-riga">
     <a class="btn pieno" href="https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks" target="_blank" rel="noopener">Tutti i libri su Amazon &rarr;</a>
     <a class="btn vuoto" href="#collana">Sfoglia la collana</a>
@@ -203,8 +178,198 @@ const LIBRI = [
     <h2>Scegli il tuo livello</h2>
     <p class="ku-nota">Quasi tutti i titoli si leggono <strong>gratis con Kindle Unlimited</strong> &middot; ebook &euro;4,99 &middot; anche in cartaceo</p>
   </div>
-  <div class="filtri" role="group" aria-label="Filtra per livello" id="filtri"></div>
-  <div class="griglia" id="griglia"></div>
+  <div class="filtri" role="group" aria-label="Filtra per livello" id="filtri">
+    <button type="button" class="attivo" data-filtro="tutti">Tutti</button>
+    <button type="button" data-filtro="A1">A1</button>
+    <button type="button" data-filtro="A2">A2</button>
+    <button type="button" data-filtro="B1">B1</button>
+    <button type="button" data-filtro="B2">B2</button>
+    <button type="button" data-filtro="C1">C1</button>
+  </div>
+  <!-- AGGIUNGERE UN LIBRO: copia una <div class="scheda"> qui sotto, cambia livello (data-livello e badge),
+     copertina, titolo, autore e ASIN. Poi aggiungi il Book nel JSON-LD nell'<head>. -->
+  <div class="griglia" id="griglia">
+    <div class="scheda" data-livello="A1">
+      <span class="badge-livello">A1</span>
+      <img src="/assets/books/Cuore_cover.jpg" width="1600" height="2560" alt="Copertina: Cuore di Edmondo De Amicis, italiano semplificato livello A1" fetchpriority="high">
+      <div class="titolo">Cuore</div>
+      <div class="autore">Edmondo De Amicis &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9PF662C" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A1">
+      <span class="badge-livello">A1</span>
+      <img src="/assets/books/Eva_cover.jpg" width="1600" height="2560" alt="Copertina: Eva di Giovanni Verga, italiano semplificato livello A1" fetchpriority="high">
+      <div class="titolo">Eva</div>
+      <div class="autore">Giovanni Verga &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9VN7SCB" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A1">
+      <span class="badge-livello">A1</span>
+      <img src="/assets/books/Giacinta_cover.jpg" width="1600" height="2560" alt="Copertina: Giacinta di Luigi Capuana, italiano semplificato livello A1" fetchpriority="high">
+      <div class="titolo">Giacinta</div>
+      <div class="autore">Luigi Capuana &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9V5FDS8" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A1">
+      <span class="badge-livello">A1</span>
+      <img src="/assets/books/GianBurrasca_cover.jpg" width="1600" height="2560" alt="Copertina: Il giornalino di Gian Burrasca di Vamba, italiano semplificato livello A1" fetchpriority="high">
+      <div class="titolo">Il giornalino di Gian Burrasca</div>
+      <div class="autore">Vamba &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9SRPWYT" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A2">
+      <span class="badge-livello">A2</span>
+      <img src="/assets/books/Pinocchio_cover.jpg" width="1600" height="2560" alt="Copertina: Le avventure di Pinocchio di Carlo Collodi, italiano semplificato livello A2" loading="lazy">
+      <div class="titolo">Le avventure di Pinocchio</div>
+      <div class="autore">Carlo Collodi &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9P9P6G3" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A2">
+      <span class="badge-livello">A2</span>
+      <img src="/assets/books/Zeno_cover.jpg" width="1600" height="2560" alt="Copertina: La coscienza di Zeno di Italo Svevo, italiano semplificato livello A2" loading="lazy">
+      <div class="titolo">La coscienza di Zeno</div>
+      <div class="autore">Italo Svevo &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9SHPT52" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A2">
+      <span class="badge-livello">A2</span>
+      <img src="/assets/books/CorsaroNero_cover.jpg" width="1600" height="2560" alt="Copertina: Il corsaro nero di Emilio Salgari, italiano semplificato livello A2" loading="lazy">
+      <div class="titolo">Il corsaro nero</div>
+      <div class="autore">Emilio Salgari &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9TWQKX3" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="A2">
+      <span class="badge-livello">A2</span>
+      <img src="/assets/books/DemetrioPianelli_cover.jpg" width="1600" height="2560" alt="Copertina: Demetrio Pianelli di Emilio De Marchi, italiano semplificato livello A2" loading="lazy">
+      <div class="titolo">Demetrio Pianelli</div>
+      <div class="autore">Emilio De Marchi &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello A2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9V12THS" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B1">
+      <span class="badge-livello">B1</span>
+      <img src="/assets/books/MattiaPascal_cover.jpg" width="1600" height="2560" alt="Copertina: Il fu Mattia Pascal di Luigi Pirandello, italiano semplificato livello B1" loading="lazy">
+      <div class="titolo">Il fu Mattia Pascal</div>
+      <div class="autore">Luigi Pirandello &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9P9NVRF" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B1">
+      <span class="badge-livello">B1</span>
+      <img src="/assets/books/CanneAlVento_Copertina_eBook.jpg" width="1600" height="2560" alt="Copertina: Canne al vento di Grazia Deledda, italiano semplificato livello B1" loading="lazy">
+      <div class="titolo">Canne al vento</div>
+      <div class="autore">Grazia Deledda &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9P9L2JD" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B1">
+      <span class="badge-livello">B1</span>
+      <img src="/assets/books/PaeseDiCuccagna_cover.jpg" width="1600" height="2560" alt="Copertina: Il paese di Cuccagna di Matilde Serao, italiano semplificato livello B1" loading="lazy">
+      <div class="titolo">Il paese di Cuccagna</div>
+      <div class="autore">Matilde Serao &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9RYH4MV" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B1">
+      <span class="badge-livello">B1</span>
+      <img src="/assets/books/ServitoreDuePadroni_cover.jpg" width="1600" height="2560" alt="Copertina: Il servitore di due padroni di Carlo Goldoni, italiano semplificato livello B1" loading="lazy">
+      <div class="titolo">Il servitore di due padroni</div>
+      <div class="autore">Carlo Goldoni &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9V6J95N" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B2">
+      <span class="badge-livello">B2</span>
+      <img src="/assets/books/PromessiSposi_cover.jpg" width="1600" height="2560" alt="Copertina: I promessi sposi di Alessandro Manzoni, italiano semplificato livello B2" loading="lazy">
+      <div class="titolo">I promessi sposi</div>
+      <div class="autore">Alessandro Manzoni &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9P9QVSK" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B2">
+      <span class="badge-livello">B2</span>
+      <img src="/assets/books/IlMilione_cover.jpg" width="1600" height="2560" alt="Copertina: Il Milione di Marco Polo, italiano semplificato livello B2" loading="lazy">
+      <div class="titolo">Il Milione</div>
+      <div class="autore">Marco Polo &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9PL1W58" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B2">
+      <span class="badge-livello">B2</span>
+      <img src="/assets/books/GiovinezzaCesare_cover.jpg" width="1600" height="2560" alt="Copertina: La giovinezza di Cesare di Giuseppe Rovani, italiano semplificato livello B2" loading="lazy">
+      <div class="titolo">La giovinezza di Cesare</div>
+      <div class="autore">Giuseppe Rovani &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B2</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9V1H4P8" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="B2">
+      <span class="badge-livello">B2</span>
+      <img src="/assets/books/Vicere_cover.jpg" width="1600" height="2560" alt="Copertina: I Viceré di Federico De Roberto, italiano semplificato livello B2" loading="lazy">
+      <div class="titolo">I Viceré</div>
+      <div class="autore">Federico De Roberto &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello B2</span>
+        <a class="compra" href="https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="C1">
+      <span class="badge-livello">C1</span>
+      <img src="/assets/books/PiccoloMondoAntico_cover.jpg" width="1600" height="2560" alt="Copertina: Piccolo mondo antico di Antonio Fogazzaro, italiano semplificato livello C1" loading="lazy">
+      <div class="titolo">Piccolo mondo antico</div>
+      <div class="autore">Antonio Fogazzaro &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello C1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9S2X2WG" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda" data-livello="C1">
+      <span class="badge-livello">C1</span>
+      <img src="/assets/books/IlPiacere_cover.jpg" width="1600" height="2560" alt="Copertina: Il piacere di Gabriele D'Annunzio, italiano semplificato livello C1" loading="lazy">
+      <div class="titolo">Il piacere</div>
+      <div class="autore">Gabriele D'Annunzio &middot; adattamento di Alessio Insegnante</div>
+      <div class="riga-fondo">
+        <span class="liv">Livello C1</span>
+        <a class="compra" href="https://www.amazon.it/dp/B0H9RZPN2G" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="faq wrap">
@@ -238,87 +403,17 @@ const LIBRI = [
 </footer>
 
 <script>
-
-const cover = l => `/assets/books/${l.file}`;
-const link  = l => l.asin ? `https://www.amazon.it/dp/${l.asin}` : AUTORE_AMAZON;
-
-const griglia = document.getElementById("griglia");
-const filtri  = document.getElementById("filtri");
-const LIVELLI = ["tutti","A1","A2","B1","B2","C1"];
-
-function render(filtro){
-  griglia.innerHTML = "";
-  const lista = filtro === "tutti" ? LIBRI : LIBRI.filter(l => l.livello === filtro);
-  lista.forEach((l, i) => {
-    griglia.insertAdjacentHTML("beforeend", `
-    <div class="scheda">
-      <span class="badge-livello">${l.livello}</span>
-      <img src="${cover(l)}" width="1600" height="2560" alt="Copertina: ${l.titolo} di ${l.autore}, italiano semplificato livello ${l.livello}" loading="${i < 4 ? "eager" : "lazy"}">
-      <div class="titolo">${l.titolo}</div>
-      <div class="autore">${l.autore} &middot; adattamento di Alessio Insegnante</div>
-      <div class="riga-fondo">
-        <span class="liv">Livello ${l.livello}</span>
-        <a class="compra" href="${link(l)}" target="_blank" rel="noopener">Su Amazon</a>
-      </div>
-    </div>`);
+/* Filtri: solo progressive enhancement — senza JS la pagina mostra tutti i libri. */
+const schede = document.querySelectorAll(".scheda");
+document.querySelectorAll(".filtri button").forEach(b => {
+  b.addEventListener("click", () => {
+    const f = b.dataset.filtro;
+    document.querySelectorAll(".filtri button").forEach(x => x.classList.remove("attivo"));
+    b.classList.add("attivo");
+    schede.forEach(c => { c.style.display = (f === "tutti" || c.dataset.livello === f) ? "" : "none"; });
   });
-}
-LIVELLI.forEach(v => {
-  const b = document.createElement("button");
-  b.type = "button";
-  b.textContent = v === "tutti" ? "Tutti" : v;
-  b.onclick = () => { render(v); filtri.querySelectorAll("button").forEach(x => x.classList.remove("attivo")); b.classList.add("attivo"); };
-  filtri.appendChild(b);
 });
-filtri.firstChild.classList.add("attivo");
-render("tutti");
-
 document.getElementById("anno").textContent = new Date().getFullYear();
-
-/* JSON-LD: CollectionPage + Book + Breadcrumb + FAQ */
-const ld = [
-{
-  "@context":"https://schema.org","@type":"CollectionPage",
-  "name":"Libri per imparare l'italiano: classici semplificati A1–C2",
-  "url":"https://thuisitaliaans.com/libri.html",
-  "inLanguage":"it",
-  "publisher":{"@type":"Organization","name":"thuisitaliaans","url":"https://thuisitaliaans.com"},
-  "hasPart": LIBRI.map(l => ({
-    "@type":"Book","name":l.titolo,
-    "author":{"@type":"Person","name":l.autore},
-    "contributor":{"@type":"Person","name":"Alessio Insegnante"},
-    "inLanguage":"it",
-    "image":`https://thuisitaliaans.com${cover(l)}`,
-    "bookFormat":"https://schema.org/Paperback",
-    "educationalLevel":l.livello,
-    "url":link(l)
-  }))
-},
-{
-  "@context":"https://schema.org","@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://thuisitaliaans.com/"},
-    {"@type":"ListItem","position":2,"name":"Libri","item":"https://thuisitaliaans.com/libri.html"}
-  ]
-},
-{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Per quale livello di italiano sono adatti questi libri?",
-     "acceptedAnswer":{"@type":"Answer","text":"Ogni libro indica il livello QCER: dall'A1 per le letture più semplici fino al C1 per i romanzi più complessi."}},
-    {"@type":"Question","name":"Sono i testi originali o versioni semplificate?",
-     "acceptedAnswer":{"@type":"Answer","text":"Sono adattamenti: la trama resta, ma lessico e sintassi sono riscritti per il livello indicato, con note e glossario."}},
-    {"@type":"Question","name":"Dove posso comprare i graded readers?",
-     "acceptedAnswer":{"@type":"Answer","text":"Su Amazon, in edizione cartacea o ebook Kindle, nella pagina autore di Alessio Insegnante."}}
-  ]
-}
-];
-for (const blocco of ld){
-  const s = document.createElement("script");
-  s.type = "application/ld+json";
-  s.textContent = JSON.stringify(blocco);
-  document.head.appendChild(s);
-}
 </script>
 </body>
 </html>
