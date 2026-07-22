@@ -94,7 +94,29 @@ h2{font-family:Fraunces,serif;font-weight:600;font-size:1.6rem}
 footer.sito{border-top:1px solid var(--bordo);padding:26px 0;font-family:Inter,sans-serif;font-size:.8rem;color:var(--nebbia)}
 footer.sito .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:640px){
-      }
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  header.sito .wrap{height:auto;flex-wrap:wrap;padding:10px 16px;gap:4px 0}
+  nav.principale{width:100%;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
+  nav.principale::-webkit-scrollbar{display:none}
+  nav.principale a{margin-left:0;margin-right:18px}
+  .hero{padding:40px 0 28px}
+  .hero p.sotto{font-size:1rem}
+  .cta-riga .btn{width:100%;text-align:center}
+  .griglia-sezione{padding:40px 0 20px}
+  .griglia{grid-template-columns:repeat(2,1fr);gap:20px 12px;margin-top:22px}
+  .scheda{padding:12px;gap:8px}
+  .scheda img{width:88%}
+  .scheda .badge-livello{top:18px;left:6px}
+  .scheda .titolo{font-size:.92rem}
+  .scheda .autore{font-size:.72rem}
+  .scheda .riga-fondo{flex-direction:column;align-items:stretch;gap:6px}
+  .scheda .liv{text-align:left}
+  .scheda a.compra{text-align:center}
+  .perche{padding:32px 0}
+  .fondo{padding:44px 0 50px}
+  h2{font-size:1.35rem}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .scheda{transition:none}
