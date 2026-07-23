@@ -12,7 +12,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Alessio Insegnante">
 <meta name="theme-color" content="#F7F2E7">
-<link rel="preload" as="image" href="/assets/books/MattiaPascal_cover.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/books/MattiaPascal_cover.webp" type="image/webp" fetchpriority="high">
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="thuisitaliaans">
 <meta property="og:locale" content="it_IT">
@@ -67,6 +67,7 @@ h2{font-family:Fraunces,serif;font-weight:600;font-size:1.55rem;margin-bottom:14
 .dentro .colonne{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px;margin-top:8px}
 .dentro h3{font-family:Fraunces,serif;font-size:1.05rem;margin-bottom:6px}
 .dentro p{font-size:.95rem}
+.glossario-scorri{overflow-x:auto}
 .glossario{width:100%;max-width:640px;border-collapse:collapse;margin-top:6px;font-size:.95rem}
 .glossario th{font-family:Inter,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--laguna);text-align:left;padding:8px 12px;border-bottom:2px solid var(--bordo)}
 .glossario td{padding:8px 12px;border-bottom:1px solid var(--bordo)}
@@ -103,6 +104,14 @@ footer.sito a{color:var(--nebbia)}
   .cta-riga .btn{width:100%;text-align:center}
   h1{font-size:1.7rem}
   h2{font-size:1.35rem}
+  .sezione,.faq{background:#fff;border:1px solid var(--bordo);border-radius:12px;padding:18px 16px;margin:14px 0}
+  .faq{padding-bottom:8px}
+  .faq details:last-child{border-bottom:none}
+  .sezione p{margin-bottom:10px}
+  .glossario{font-size:.88rem}
+  .glossario th,.glossario td{padding:7px 8px}
+  .hero-libro .copertina img{border:1px solid var(--bordo)}
+  .correlati{padding:30px 0 36px}
   .griglia{grid-template-columns:repeat(2,1fr);gap:20px 12px}
   .scheda{padding:12px;gap:8px}
   .scheda img{width:88%}
@@ -139,7 +148,10 @@ footer.sito a{color:var(--nebbia)}
 
   <section class="hero-libro">
     <div class="copertina">
-      <img src="/assets/books/MattiaPascal_cover.jpg" width="1600" height="2560" alt="Copertina del libro in italiano facile Il fu Mattia Pascal di Luigi Pirandello, livello B1, collana thuisitaliaans" fetchpriority="high" decoding="async">
+      <picture>
+        <source srcset="/assets/books/MattiaPascal_cover.webp" type="image/webp">
+        <img src="/assets/books/MattiaPascal_cover.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Il fu Mattia Pascal di Luigi Pirandello, livello B1, collana thuisitaliaans" fetchpriority="high" decoding="async">
+      </picture>
       <span class="badge-livello">B1</span>
     </div>
     <div>
@@ -178,7 +190,7 @@ footer.sito a{color:var(--nebbia)}
     <h2>Focus linguistico: che cosa eserciti</h2>
     <p>In questa edizione di livello B1 eserciti soprattutto congiuntivo presente, condizionale, periodo ipotetico della realtà e connettivi del discorso. Il lessico ruota attorno a l'identità e la vita quotidiana: le parole chiave, con traduzione, sono nel glossario qui sotto e tornano più volte nel testo, così le impari in contesto.</p>
     <h2 style="margin-top:26px">Glossario essenziale (italiano · inglese · olandese)</h2>
-    <table class="glossario"><thead><tr><th>Italiano</th><th>Inglese</th><th>Olandese</th></tr></thead><tbody><tr><td>l'identità</td><td>identity</td><td>de identiteit</td></tr><tr><td>la libertà</td><td>freedom</td><td>de vrijheid</td></tr><tr><td>il morto</td><td>dead man</td><td>de dode</td></tr><tr><td>la roulette</td><td>roulette</td><td>de roulette</td></tr><tr><td>la biblioteca</td><td>library</td><td>de bibliotheek</td></tr><tr><td>il nome</td><td>name</td><td>de naam</td></tr><tr><td>l'ombra</td><td>shadow</td><td>de schaduw</td></tr><tr><td>la suocera</td><td>mother-in-law</td><td>de schoonmoeder</td></tr></tbody></table>
+    <div class="glossario-scorri"><table class="glossario"><thead><tr><th>Italiano</th><th>Inglese</th><th>Olandese</th></tr></thead><tbody><tr><td>l'identità</td><td>identity</td><td>de identiteit</td></tr><tr><td>la libertà</td><td>freedom</td><td>de vrijheid</td></tr><tr><td>il morto</td><td>dead man</td><td>de dode</td></tr><tr><td>la roulette</td><td>roulette</td><td>de roulette</td></tr><tr><td>la biblioteca</td><td>library</td><td>de bibliotheek</td></tr><tr><td>il nome</td><td>name</td><td>de naam</td></tr><tr><td>l'ombra</td><td>shadow</td><td>de schaduw</td></tr><tr><td>la suocera</td><td>mother-in-law</td><td>de schoonmoeder</td></tr></tbody></table></div>
   </section>
 
   <section class="sezione">
@@ -213,7 +225,10 @@ footer.sito a{color:var(--nebbia)}
     <div class="scheda">
       <span class="badge-livello">B1</span>
       <a class="copri" href="/libri/canne-al-vento.html">
-        <img src="/assets/books/CanneAlVento_Copertina_eBook.jpg" width="1600" height="2560" alt="Copertina del libro in italiano facile Canne al vento – Grazia Deledda (B1)" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="/assets/books/CanneAlVento_Copertina_eBook.webp" type="image/webp">
+          <img src="/assets/books/CanneAlVento_Copertina_eBook.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Canne al vento – Grazia Deledda (B1)" loading="lazy" decoding="async">
+        </picture>
         <div class="titolo">Canne al vento</div>
         <div class="autore">Grazia Deledda · B1</div>
       </a>
@@ -221,7 +236,10 @@ footer.sito a{color:var(--nebbia)}
     <div class="scheda">
       <span class="badge-livello">B1</span>
       <a class="copri" href="/libri/il-paese-di-cuccagna.html">
-        <img src="/assets/books/PaeseDiCuccagna_cover.jpg" width="1600" height="2560" alt="Copertina del libro in italiano facile Il paese di Cuccagna – Matilde Serao (B1)" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="/assets/books/PaeseDiCuccagna_cover.webp" type="image/webp">
+          <img src="/assets/books/PaeseDiCuccagna_cover.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Il paese di Cuccagna – Matilde Serao (B1)" loading="lazy" decoding="async">
+        </picture>
         <div class="titolo">Il paese di Cuccagna</div>
         <div class="autore">Matilde Serao · B1</div>
       </a>
@@ -229,7 +247,10 @@ footer.sito a{color:var(--nebbia)}
     <div class="scheda">
       <span class="badge-livello">B1</span>
       <a class="copri" href="/libri/il-servitore-di-due-padroni.html">
-        <img src="/assets/books/ServitoreDuePadroni_cover.jpg" width="1600" height="2560" alt="Copertina del libro in italiano facile Il servitore di due padroni – Carlo Goldoni (B1)" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="/assets/books/ServitoreDuePadroni_cover.webp" type="image/webp">
+          <img src="/assets/books/ServitoreDuePadroni_cover.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Il servitore di due padroni – Carlo Goldoni (B1)" loading="lazy" decoding="async">
+        </picture>
         <div class="titolo">Il servitore di due padroni</div>
         <div class="autore">Carlo Goldoni · B1</div>
       </a>
@@ -237,7 +258,10 @@ footer.sito a{color:var(--nebbia)}
     <div class="scheda">
       <span class="badge-livello">A2</span>
       <a class="copri" href="/libri/pinocchio.html">
-        <img src="/assets/books/Pinocchio_cover.jpg" width="1600" height="2560" alt="Copertina del libro in italiano facile Le avventure di Pinocchio – Carlo Collodi (A2)" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="/assets/books/Pinocchio_cover.webp" type="image/webp">
+          <img src="/assets/books/Pinocchio_cover.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Le avventure di Pinocchio – Carlo Collodi (A2)" loading="lazy" decoding="async">
+        </picture>
         <div class="titolo">Le avventure di Pinocchio</div>
         <div class="autore">Carlo Collodi · A2</div>
       </a>
