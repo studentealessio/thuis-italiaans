@@ -78,15 +78,15 @@
 .nav-apri[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav-apri[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
 @media(max-width:900px){
-  .header .navbar{flex-wrap:wrap}
   .nav-apri{display:block}
   .header .navbar > .button{display:none}
-  .header nav#navPrincipale{display:none;width:100%}
+  /* pannello a tutta larghezza, agganciato sotto la barra (l'header sticky fa da ancora) */
+  .header nav#navPrincipale{display:none;position:absolute;top:100%;left:0;right:0;background:#ffffff;border-bottom:1px solid #e6eaf2;box-shadow:0 22px 34px rgba(49,57,77,.14);max-height:calc(100vh - 82px);overflow-y:auto;z-index:99}
   .header nav#navPrincipale.aperto{display:block}
-  /* style.css nasconde .nav-menu sotto i 900px: qui la riattiviamo dentro il pannello aperto */
-  .header nav#navPrincipale.aperto .nav-menu{display:flex !important;flex-direction:column;align-items:stretch;gap:0;width:100%;padding:8px 0 14px;margin:0}
+  /* style.css nasconde .nav-menu sotto i 900px: qui la riattiviamo dentro il pannello */
+  .header nav#navPrincipale.aperto .nav-menu{display:flex !important;flex-direction:column;align-items:stretch;gap:0;width:min(92%,1180px);margin:0 auto;padding:8px 0 16px}
   .header nav#navPrincipale .nav-menu li{list-style:none}
-  .header nav#navPrincipale .nav-menu a{display:block;padding:13px 6px;border-bottom:1px solid rgba(49,57,77,.08);text-decoration:none}
+  .header nav#navPrincipale .nav-menu a{display:block;padding:14px 6px;border-bottom:1px solid rgba(49,57,77,.08);text-decoration:none}
 }
 </style>
 <style>
