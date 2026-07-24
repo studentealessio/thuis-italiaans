@@ -90,14 +90,16 @@
 </style>
 <style>
 /* sottomenu "Zelf leren" — autonomo */
-.con-sotto{position:relative}
+.header,.header .navbar,.header nav{overflow:visible !important}
+.header{position:relative;z-index:100}
+.con-sotto{position:relative !important;list-style:none}
 .sotto-apri{background:none;border:0;cursor:pointer;font:inherit;color:inherit;padding:0;display:inline-flex;align-items:center;gap:5px}
 .sotto-apri .freccia{font-size:.7em;transition:transform .2s ease}
 .con-sotto.aperto .sotto-apri .freccia{transform:rotate(180deg)}
 @media(min-width:861px){
-  .sotto-menu{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(30,37,41,.12);border-radius:12px;box-shadow:0 12px 30px rgba(30,37,41,.14);padding:8px;min-width:190px;z-index:60;list-style:none;margin:0}
+  .sotto-menu{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(30,37,41,.12);border-radius:12px;box-shadow:0 12px 30px rgba(30,37,41,.14);padding:8px;min-width:190px;z-index:999;list-style:none;margin:0}
   .sotto-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
-  .con-sotto:hover .sotto-menu,.con-sotto:focus-within .sotto-menu,.con-sotto.aperto .sotto-menu{display:block}
+  .con-sotto:hover .sotto-menu,.con-sotto:focus-within .sotto-menu,.con-sotto.aperto .sotto-menu{display:block !important;visibility:visible !important;opacity:1 !important}
   .sotto-menu li{margin:0}
   .sotto-menu a{display:block;padding:10px 14px;border-radius:8px;white-space:nowrap;text-decoration:none}
   .sotto-menu a:hover{background:rgba(30,37,41,.06)}
@@ -1119,6 +1121,13 @@
     if(window.matchMedia('(min-width:861px)').matches){
       var aperto=g.classList.toggle('aperto');
       b.setAttribute('aria-expanded', aperto?'true':'false');
+      var m=g.querySelector('.sotto-menu');
+      if(aperto && m){
+        var vis=getComputedStyle(m);
+        if(vis.display==='none'||vis.visibility==='hidden'||parseFloat(vis.opacity)===0){
+          m.style.cssText='display:block;visibility:visible;opacity:1;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(30,37,41,.12);border-radius:12px;box-shadow:0 12px 30px rgba(30,37,41,.14);padding:8px;min-width:190px;z-index:999;list-style:none;margin:0';
+        }
+      } else if(m){ m.style.cssText=''; }
       e.stopPropagation();
     }
   });
