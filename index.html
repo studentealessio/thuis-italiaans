@@ -70,6 +70,45 @@
     }
     </script>
 
+<style>
+/* menu mobile — autonomo, non dipende da css/style.css */
+.nav-apri{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto}
+.nav-apri span{display:block;width:24px;height:2.5px;background:#1E2529;margin:5px 0;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.nav-apri[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav-apri[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-apri[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+@media(max-width:860px){
+  .header .navbar{flex-wrap:wrap}
+  .nav-apri{display:block}
+  .header .navbar > .button{display:none}
+  .header nav#navPrincipale{display:none;width:100%}
+  .header nav#navPrincipale.aperto{display:block}
+  .header nav#navPrincipale .nav-menu{flex-direction:column;align-items:stretch;gap:0;width:100%;padding:8px 0 14px;margin:0}
+  .header nav#navPrincipale .nav-menu li{list-style:none}
+  .header nav#navPrincipale .nav-menu a{display:block;padding:13px 6px;border-bottom:1px solid rgba(30,37,41,.08);text-decoration:none}
+}
+</style>
+<style>
+/* sottomenu "Zelf leren" — autonomo */
+.con-sotto{position:relative}
+.sotto-apri{background:none;border:0;cursor:pointer;font:inherit;color:inherit;padding:0;display:inline-flex;align-items:center;gap:5px}
+.sotto-apri .freccia{font-size:.7em;transition:transform .2s ease}
+.con-sotto.aperto .sotto-apri .freccia{transform:rotate(180deg)}
+@media(min-width:861px){
+  .sotto-menu{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(30,37,41,.12);border-radius:12px;box-shadow:0 12px 30px rgba(30,37,41,.14);padding:8px;min-width:190px;z-index:60;list-style:none;margin:0}
+  .sotto-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+  .con-sotto:hover .sotto-menu,.con-sotto:focus-within .sotto-menu,.con-sotto.aperto .sotto-menu{display:block}
+  .sotto-menu li{margin:0}
+  .sotto-menu a{display:block;padding:10px 14px;border-radius:8px;white-space:nowrap;text-decoration:none}
+  .sotto-menu a:hover{background:rgba(30,37,41,.06)}
+}
+@media(max-width:860px){
+  .sotto-apri{display:block;width:100%;text-align:left;padding:13px 6px;border-bottom:1px solid rgba(30,37,41,.08);cursor:default;font-weight:600}
+  .sotto-apri .freccia{display:none}
+  .sotto-menu{list-style:none;margin:0;padding:0}
+  .sotto-menu a{padding-left:22px !important}
+}
+</style>
 </head>
 
 <body>
@@ -88,7 +127,11 @@
 
             </a>
 
-            <nav>
+            <button class="nav-apri" id="navApri" aria-label="Menu openen" aria-expanded="false" aria-controls="navPrincipale">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav id="navPrincipale">
 
                 <ul class="nav-menu">
 
@@ -96,9 +139,19 @@
 
                     <li><a href="#lessons">Lessen</a></li>
 
-                    <li><a href="blog/index.html">Blog</a></li>
+                    <li class="con-sotto">
+                        <button type="button" class="sotto-apri" aria-expanded="false" aria-haspopup="true">Zelf leren <span class="freccia" aria-hidden="true">&#9662;</span></button>
+                        <ul class="sotto-menu">
+                            <li><a href="esercizi/index.html">Oefeningen</a></li>
+                            <li><a href="boeken.html">Boeken</a></li>
+                            <li><a href="app-ti.html">De ti-app</a></li>
+                            <li><a href="blog/index.html">Blog</a></li>
+                        </ul>
+                    </li>
 
-                    <li><a href="esercizi/index.html">Oefeningen</a></li>
+
+
+
 
                     <li><a href="#reviews">Reviews</a></li>
 
@@ -1020,6 +1073,10 @@
 
                 <li><a href="esercizi/index.html">Oefeningen</a></li>
 
+                <li><a href="boeken.html">Boeken</a></li>
+
+                <li><a href="app-ti.html">App</a></li>
+
                 <li><a href="#reviews">Reviews</a></li>
 
                 <li><a href="#contact">Contact</a></li>
@@ -1042,6 +1099,37 @@
 
     <script src="js/script.js"></script>
 
+<script>
+(function(){
+  var b=document.getElementById('navApri'), n=document.getElementById('navPrincipale');
+  if(!b||!n)return;
+  b.addEventListener('click',function(){
+    var aperto=n.classList.toggle('aperto');
+    b.setAttribute('aria-expanded', aperto?'true':'false');
+  });
+  n.addEventListener('click',function(e){ if(e.target.closest('a')){ n.classList.remove('aperto'); b.setAttribute('aria-expanded','false'); } });
+})();
+</script>
+<script>
+(function(){
+  var g=document.querySelector('.con-sotto');
+  if(!g)return;
+  var b=g.querySelector('.sotto-apri');
+  b.addEventListener('click',function(e){
+    if(window.matchMedia('(min-width:861px)').matches){
+      var aperto=g.classList.toggle('aperto');
+      b.setAttribute('aria-expanded', aperto?'true':'false');
+      e.stopPropagation();
+    }
+  });
+  document.addEventListener('click',function(e){
+    if(!g.contains(e.target)){ g.classList.remove('aperto'); b.setAttribute('aria-expanded','false'); }
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ g.classList.remove('aperto'); b.setAttribute('aria-expanded','false'); }
+  });
+})();
+</script>
 </body>
 
 </html>
