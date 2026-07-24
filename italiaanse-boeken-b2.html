@@ -51,6 +51,8 @@ h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(1.9rem,4.5vw,2.9re
 .cta-riga{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn{font-family:Inter,sans-serif;font-weight:600;font-size:.92rem;text-decoration:none;border-radius:10px;padding:13px 22px;display:inline-block}
 .btn.pieno{background:var(--laguna);color:#fff}
+.btn.presto{background:var(--nebbia);color:#fff;cursor:default}
+.presto-eti{color:var(--cotto);font-weight:600}
 .btn.pieno:hover{background:var(--laguna-scuro)}
 .btn.vuoto{border:1.5px solid var(--inchiostro);color:var(--inchiostro)}
 .btn.vuoto:hover{border-color:var(--laguna);color:var(--laguna)}
@@ -118,7 +120,7 @@ footer.sito a{color:var(--nebbia)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scheda{transition:none}}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Italiaanse boeken voor halfgevorderden plus (niveau B2)", "url": "https://thuisitaliaans.com/italiaanse-boeken-b2.html", "inLanguage": "nl", "publisher": {"@type": "Organization", "name": "thuisitaliaans", "url": "https://thuisitaliaans.com"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "I promessi sposi", "url": "https://thuisitaliaans.com/boeken/i-promessi-sposi.html"}, {"@type": "ListItem", "position": 2, "name": "Il Milione", "url": "https://thuisitaliaans.com/boeken/il-milione.html"}, {"@type": "ListItem", "position": 3, "name": "La giovinezza di Cesare", "url": "https://thuisitaliaans.com/boeken/la-giovinezza-di-cesare.html"}, {"@type": "ListItem", "position": 4, "name": "I Viceré", "url": "https://thuisitaliaans.com/boeken/i-vicere.html"}]}}
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Italiaanse boeken voor halfgevorderden plus (niveau B2)", "url": "https://thuisitaliaans.com/italiaanse-boeken-b2.html", "inLanguage": "nl", "publisher": {"@type": "Organization", "name": "thuisitaliaans", "url": "https://thuisitaliaans.com"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "I promessi sposi", "url": "https://thuisitaliaans.com/boeken/i-promessi-sposi.html"}, {"@type": "ListItem", "position": 2, "name": "Il Milione", "url": "https://thuisitaliaans.com/boeken/il-milione.html"}, {"@type": "ListItem", "position": 3, "name": "La giovinezza di Cesare", "url": "https://thuisitaliaans.com/boeken/la-giovinezza-di-cesare.html"}, {"@type": "ListItem", "position": 4, "name": "La città del Sole", "url": "https://thuisitaliaans.com/boeken/la-citta-del-sole.html"}, {"@type": "ListItem", "position": 5, "name": "Il Sidereus Nuncius", "url": "https://thuisitaliaans.com/boeken/sidereus-nuncius.html"}, {"@type": "ListItem", "position": 6, "name": "La Vita Nuova", "url": "https://thuisitaliaans.com/boeken/la-vita-nuova.html"}]}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thuisitaliaans.com/"}, {"@type": "ListItem", "position": 2, "name": "Boeken", "item": "https://thuisitaliaans.com/boeken.html"}, {"@type": "ListItem", "position": 3, "name": "B2", "item": "https://thuisitaliaans.com/italiaanse-boeken-b2.html"}]}
@@ -144,7 +146,7 @@ footer.sito a{color:var(--nebbia)}
     </div>
   </section>
   <section class="sezione" style="padding-top:10px">
-    <p>Op deze pagina: <a href="/boeken/i-promessi-sposi.html"><em>I promessi sposi</em></a> — de roman die elke Italiaan op school las; <a href="/boeken/il-milione.html"><em>Il Milione</em></a> — Marco Polo's reizen in korte hoofdstukken; <a href="/boeken/la-giovinezza-di-cesare.html"><em>La giovinezza di Cesare</em></a> — de jonge Caesar in het Rome van Sulla; <a href="/boeken/i-vicere.html"><em>I Viceré</em></a> — een genadeloze Siciliaanse familiesaga.</p>
+    <p>Op deze pagina: <a href="/boeken/i-promessi-sposi.html"><em>I promessi sposi</em></a> — de roman die elke Italiaan op school las; <a href="/boeken/il-milione.html"><em>Il Milione</em></a> — Marco Polo's reizen in korte hoofdstukken; <a href="/boeken/la-giovinezza-di-cesare.html"><em>La giovinezza di Cesare</em></a> — de jonge Caesar in het Rome van Sulla; <a href="/boeken/la-citta-del-sole.html"><em>La città del Sole</em></a> — een renaissance-utopie verteld in één nachtgesprek; <a href="/boeken/sidereus-nuncius.html"><em>Il Sidereus Nuncius</em></a> — Galileo die de eerste telescoop op de hemel richt; <a href="/boeken/la-vita-nuova.html"><em>La Vita Nuova</em></a> — Dantes liefde voor Beatrice, in proza en verzen.</p>
   </section>
   <section class="correlati" style="padding-top:10px">
     <h2>De boeken op niveau B2</h2>
@@ -187,14 +189,38 @@ footer.sito a{color:var(--nebbia)}
     </div>
     <div class="scheda">
       <span class="badge-livello">B2</span>
-      <a class="copri" href="/boeken/i-vicere.html">
-        <picture><source srcset="/assets/books/Vicere_cover.webp" type="image/webp">
-        <img src="/assets/books/Vicere_cover.jpg" width="800" height="1280" alt="Omslag van het Italiaanse leesboek I Viceré van Federico De Roberto (B2)" loading="lazy" decoding="async"></picture>
-        <div class="titolo">I Viceré</div>
-        <div class="autore">Federico De Roberto · bewerkt door Alessio Insegnante</div>
+      <a class="copri" href="/boeken/la-citta-del-sole.html">
+        <picture><source srcset="/assets/books/CittaDelSole_Copertina_eBook.webp" type="image/webp">
+        <img src="/assets/books/CittaDelSole_Copertina_eBook.jpg" width="800" height="1280" alt="Omslag van het Italiaanse leesboek La città del Sole van Tommaso Campanella (B2)" loading="lazy" decoding="async"></picture>
+        <div class="titolo">La città del Sole</div>
+        <div class="autore">Tommaso Campanella · bewerkt door Alessio Insegnante</div>
       </a>
       <div class="riga-fondo">
-        <a class="compra" href="https://www.amazon.it/stores/Alessio-Insegnante/author/B0H9R9CGNV/allbooks" target="_blank" rel="noopener">Op Amazon</a>
+        <span class="compra" style="background:transparent;border:1.5px solid var(--bordo);color:var(--nebbia)">Binnenkort</span>
+      </div>
+    </div>
+    <div class="scheda">
+      <span class="badge-livello">B2</span>
+      <a class="copri" href="/boeken/sidereus-nuncius.html">
+        <picture><source srcset="/assets/books/SidereusNuncius_Copertina_eBook.webp" type="image/webp">
+        <img src="/assets/books/SidereusNuncius_Copertina_eBook.jpg" width="800" height="1280" alt="Omslag van het Italiaanse leesboek Il Sidereus Nuncius van Galileo Galilei (B2)" loading="lazy" decoding="async"></picture>
+        <div class="titolo">Il Sidereus Nuncius</div>
+        <div class="autore">Galileo Galilei · bewerkt door Alessio Insegnante</div>
+      </a>
+      <div class="riga-fondo">
+        <span class="compra" style="background:transparent;border:1.5px solid var(--bordo);color:var(--nebbia)">Binnenkort</span>
+      </div>
+    </div>
+    <div class="scheda">
+      <span class="badge-livello">B2</span>
+      <a class="copri" href="/boeken/la-vita-nuova.html">
+        <picture><source srcset="/assets/books/VitaNuova_Copertina_eBook.webp" type="image/webp">
+        <img src="/assets/books/VitaNuova_Copertina_eBook.jpg" width="800" height="1280" alt="Omslag van het Italiaanse leesboek La Vita Nuova van Dante Alighieri (B2)" loading="lazy" decoding="async"></picture>
+        <div class="titolo">La Vita Nuova</div>
+        <div class="autore">Dante Alighieri · bewerkt door Alessio Insegnante</div>
+      </a>
+      <div class="riga-fondo">
+        <span class="compra" style="background:transparent;border:1.5px solid var(--bordo);color:var(--nebbia)">Binnenkort</span>
       </div>
     </div>
     </div>

@@ -51,6 +51,8 @@ h1{font-family:Fraunces,serif;font-weight:700;font-size:clamp(1.9rem,4.5vw,2.9re
 .cta-riga{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn{font-family:Inter,sans-serif;font-weight:600;font-size:.92rem;text-decoration:none;border-radius:10px;padding:13px 22px;display:inline-block}
 .btn.pieno{background:var(--laguna);color:#fff}
+.btn.presto{background:var(--nebbia);color:#fff;cursor:default}
+.presto-eti{color:var(--cotto);font-weight:600}
 .btn.pieno:hover{background:var(--laguna-scuro)}
 .btn.vuoto{border:1.5px solid var(--inchiostro);color:var(--inchiostro)}
 .btn.vuoto:hover{border-color:var(--laguna);color:var(--laguna)}
@@ -118,7 +120,7 @@ footer.sito a{color:var(--nebbia)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scheda{transition:none}}
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Libri in italiano facile (livello A2)", "url": "https://thuisitaliaans.com/libri-italiano-facile-a2.html", "inLanguage": "it", "publisher": {"@type": "Organization", "name": "thuisitaliaans", "url": "https://thuisitaliaans.com"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Le avventure di Pinocchio", "url": "https://thuisitaliaans.com/libri/pinocchio.html"}, {"@type": "ListItem", "position": 2, "name": "La coscienza di Zeno", "url": "https://thuisitaliaans.com/libri/la-coscienza-di-zeno.html"}, {"@type": "ListItem", "position": 3, "name": "Il corsaro nero", "url": "https://thuisitaliaans.com/libri/il-corsaro-nero.html"}, {"@type": "ListItem", "position": 4, "name": "Demetrio Pianelli", "url": "https://thuisitaliaans.com/libri/demetrio-pianelli.html"}]}}
+{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Libri in italiano facile (livello A2)", "url": "https://thuisitaliaans.com/libri-italiano-facile-a2.html", "inLanguage": "it", "publisher": {"@type": "Organization", "name": "thuisitaliaans", "url": "https://thuisitaliaans.com"}, "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Le avventure di Pinocchio", "url": "https://thuisitaliaans.com/libri/pinocchio.html"}, {"@type": "ListItem", "position": 2, "name": "La coscienza di Zeno", "url": "https://thuisitaliaans.com/libri/la-coscienza-di-zeno.html"}, {"@type": "ListItem", "position": 3, "name": "Il corsaro nero", "url": "https://thuisitaliaans.com/libri/il-corsaro-nero.html"}, {"@type": "ListItem", "position": 4, "name": "Demetrio Pianelli", "url": "https://thuisitaliaans.com/libri/demetrio-pianelli.html"}, {"@type": "ListItem", "position": 5, "name": "Lettere di viaggio", "url": "https://thuisitaliaans.com/libri/lettere-di-viaggio.html"}, {"@type": "ListItem", "position": 6, "name": "L'Orlando innamorato", "url": "https://thuisitaliaans.com/libri/orlando-innamorato.html"}, {"@type": "ListItem", "position": 7, "name": "Don Giovanni in Sicilia", "url": "https://thuisitaliaans.com/libri/don-giovanni-in-sicilia.html"}]}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thuisitaliaans.com/"}, {"@type": "ListItem", "position": 2, "name": "Libri", "item": "https://thuisitaliaans.com/libri.html"}, {"@type": "ListItem", "position": 3, "name": "A2", "item": "https://thuisitaliaans.com/libri-italiano-facile-a2.html"}]}
@@ -144,7 +146,7 @@ footer.sito a{color:var(--nebbia)}
     </div>
   </section>
   <section class="sezione" style="padding-top:10px">
-    <p>In questa pagina: <a href="/libri/pinocchio.html"><em>Le avventure di Pinocchio</em></a> — la storia che già conosci, in italiano facile; <a href="/libri/la-coscienza-di-zeno.html"><em>La coscienza di Zeno</em></a> — capitoli ironici su fumo, matrimonio e affari; <a href="/libri/il-corsaro-nero.html"><em>Il corsaro nero</em></a> — avventura di pirati a tutto ritmo nei Caraibi; <a href="/libri/demetrio-pianelli.html"><em>Demetrio Pianelli</em></a> — la Milano quotidiana tra casa, ufficio e stipendi.</p>
+    <p>In questa pagina: <a href="/libri/pinocchio.html"><em>Le avventure di Pinocchio</em></a> — la storia che già conosci, in italiano facile; <a href="/libri/la-coscienza-di-zeno.html"><em>La coscienza di Zeno</em></a> — capitoli ironici su fumo, matrimonio e affari; <a href="/libri/il-corsaro-nero.html"><em>Il corsaro nero</em></a> — avventura di pirati a tutto ritmo nei Caraibi; <a href="/libri/demetrio-pianelli.html"><em>Demetrio Pianelli</em></a> — la Milano quotidiana tra casa, ufficio e stipendi; <a href="/libri/lettere-di-viaggio.html"><em>Lettere di viaggio</em></a> — Colombo e Vespucci con le loro parole; <a href="/libri/orlando-innamorato.html"><em>L&#x27;Orlando innamorato</em></a> — cavalieri, incantesimi e la caccia ad Angelica; <a href="/libri/don-giovanni-in-sicilia.html"><em>Don Giovanni in Sicilia</em></a> — l'ironia di Brancati su uno scapolo siciliano.</p>
   </section>
   <section class="correlati" style="padding-top:10px">
     <h2>I libri di livello A2</h2>
@@ -195,6 +197,42 @@ footer.sito a{color:var(--nebbia)}
       </a>
       <div class="riga-fondo">
         <a class="compra" href="https://www.amazon.it/dp/B0H9V12THS" target="_blank" rel="noopener">Su Amazon</a>
+      </div>
+    </div>
+    <div class="scheda">
+      <span class="badge-livello">A2</span>
+      <a class="copri" href="/libri/lettere-di-viaggio.html">
+        <picture><source srcset="/assets/books/LettereDiViaggio_Copertina_eBook.webp" type="image/webp">
+        <img src="/assets/books/LettereDiViaggio_Copertina_eBook.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Lettere di viaggio di Colombo e Vespucci (A2)" loading="lazy" decoding="async"></picture>
+        <div class="titolo">Lettere di viaggio</div>
+        <div class="autore">Colombo e Vespucci · adattamento di Alessio Insegnante</div>
+      </a>
+      <div class="riga-fondo">
+        <span class="compra" style="background:transparent;border:1.5px solid var(--bordo);color:var(--nebbia)">Prossimamente</span>
+      </div>
+    </div>
+    <div class="scheda">
+      <span class="badge-livello">A2</span>
+      <a class="copri" href="/libri/orlando-innamorato.html">
+        <picture><source srcset="/assets/books/OrlandoInnamorato_Copertina_eBook.webp" type="image/webp">
+        <img src="/assets/books/OrlandoInnamorato_Copertina_eBook.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile L&#x27;Orlando innamorato di Matteo Maria Boiardo (A2)" loading="lazy" decoding="async"></picture>
+        <div class="titolo">L&#x27;Orlando innamorato</div>
+        <div class="autore">Matteo Maria Boiardo · adattamento di Alessio Insegnante</div>
+      </a>
+      <div class="riga-fondo">
+        <span class="compra" style="background:transparent;border:1.5px solid var(--bordo);color:var(--nebbia)">Prossimamente</span>
+      </div>
+    </div>
+    <div class="scheda">
+      <span class="badge-livello">A2</span>
+      <a class="copri" href="/libri/don-giovanni-in-sicilia.html">
+        <picture><source srcset="/assets/books/DonGiovanniInSicilia_cover.webp" type="image/webp">
+        <img src="/assets/books/DonGiovanniInSicilia_cover.jpg" width="800" height="1280" alt="Copertina del libro in italiano facile Don Giovanni in Sicilia di Vitaliano Brancati (A2)" loading="lazy" decoding="async"></picture>
+        <div class="titolo">Don Giovanni in Sicilia</div>
+        <div class="autore">Vitaliano Brancati · adattamento di Alessio Insegnante</div>
+      </a>
+      <div class="riga-fondo">
+        <span class="compra" style="background:transparent;border:1.5px solid var(--bordo);color:var(--nebbia)">Prossimamente</span>
       </div>
     </div>
     </div>
