@@ -71,43 +71,43 @@
     </script>
 
 <style>
-/* menu mobile — autonomo, non dipende da css/style.css */
+/* menu mobile — allineato al breakpoint 900px di style.css */
 .nav-apri{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto}
-.nav-apri span{display:block;width:24px;height:2.5px;background:#1E2529;margin:5px 0;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.nav-apri span{display:block;width:24px;height:2.5px;background:#31394d;margin:5px 0;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
 .nav-apri[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
 .nav-apri[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav-apri[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
-@media(max-width:860px){
+@media(max-width:900px){
   .header .navbar{flex-wrap:wrap}
   .nav-apri{display:block}
   .header .navbar > .button{display:none}
   .header nav#navPrincipale{display:none;width:100%}
   .header nav#navPrincipale.aperto{display:block}
-  .header nav#navPrincipale .nav-menu{flex-direction:column;align-items:stretch;gap:0;width:100%;padding:8px 0 14px;margin:0}
+  /* style.css nasconde .nav-menu sotto i 900px: qui la riattiviamo dentro il pannello aperto */
+  .header nav#navPrincipale.aperto .nav-menu{display:flex !important;flex-direction:column;align-items:stretch;gap:0;width:100%;padding:8px 0 14px;margin:0}
   .header nav#navPrincipale .nav-menu li{list-style:none}
-  .header nav#navPrincipale .nav-menu a{display:block;padding:13px 6px;border-bottom:1px solid rgba(30,37,41,.08);text-decoration:none}
+  .header nav#navPrincipale .nav-menu a{display:block;padding:13px 6px;border-bottom:1px solid rgba(49,57,77,.08);text-decoration:none}
 }
 </style>
 <style>
-/* sottomenu "Zelf leren" — autonomo */
-.header,.header .navbar,.header nav{overflow:visible !important}
-.header{position:relative;z-index:100}
-.con-sotto{position:relative !important;list-style:none}
-.sotto-apri{background:none;border:0;cursor:pointer;font:inherit;color:inherit;padding:0;display:inline-flex;align-items:center;gap:5px}
+/* sottomenu "Zelf leren" */
+.con-sotto{position:relative;list-style:none}
+.sotto-apri{background:none;border:0;cursor:pointer;font:inherit;font-weight:500;color:inherit;padding:0;display:inline-flex;align-items:center;gap:5px;transition:.35s ease}
+.sotto-apri:hover{color:black}
 .sotto-apri .freccia{font-size:.7em;transition:transform .2s ease}
 .con-sotto.aperto .sotto-apri .freccia{transform:rotate(180deg)}
-@media(min-width:861px){
-  .sotto-menu{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(30,37,41,.12);border-radius:12px;box-shadow:0 12px 30px rgba(30,37,41,.14);padding:8px;min-width:190px;z-index:999;list-style:none;margin:0}
-  .sotto-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
-  .con-sotto:hover .sotto-menu,.con-sotto:focus-within .sotto-menu,.con-sotto.aperto .sotto-menu{display:block !important;visibility:visible !important;opacity:1 !important}
+@media(min-width:901px){
+  .sotto-menu{display:none;position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid #e6eaf2;border-radius:16px;box-shadow:0 12px 35px rgba(49,57,77,.12);padding:8px;min-width:190px;z-index:999;list-style:none;margin:0}
+  .sotto-menu::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+  .con-sotto:hover .sotto-menu,.con-sotto:focus-within .sotto-menu,.con-sotto.aperto .sotto-menu{display:block}
   .sotto-menu li{margin:0}
-  .sotto-menu a{display:block;padding:10px 14px;border-radius:8px;white-space:nowrap;text-decoration:none}
-  .sotto-menu a:hover{background:rgba(30,37,41,.06)}
+  .sotto-menu a{display:block;padding:10px 14px;border-radius:10px;white-space:nowrap;text-decoration:none;font-weight:500}
+  .sotto-menu a:hover{background:#f7f8fb;color:black}
 }
-@media(max-width:860px){
-  .sotto-apri{display:block;width:100%;text-align:left;padding:13px 6px;border-bottom:1px solid rgba(30,37,41,.08);cursor:default;font-weight:600}
+@media(max-width:900px){
+  .sotto-apri{display:block;width:100%;text-align:left;padding:13px 6px;border-bottom:1px solid rgba(49,57,77,.08);cursor:default;font-weight:600}
   .sotto-apri .freccia{display:none}
-  .sotto-menu{list-style:none;margin:0;padding:0}
+  .sotto-menu{display:block;list-style:none;margin:0;padding:0}
   .sotto-menu a{padding-left:22px !important}
 }
 </style>
@@ -1118,16 +1118,9 @@
   if(!g)return;
   var b=g.querySelector('.sotto-apri');
   b.addEventListener('click',function(e){
-    if(window.matchMedia('(min-width:861px)').matches){
+    if(window.matchMedia('(min-width:901px)').matches){
       var aperto=g.classList.toggle('aperto');
       b.setAttribute('aria-expanded', aperto?'true':'false');
-      var m=g.querySelector('.sotto-menu');
-      if(aperto && m){
-        var vis=getComputedStyle(m);
-        if(vis.display==='none'||vis.visibility==='hidden'||parseFloat(vis.opacity)===0){
-          m.style.cssText='display:block;visibility:visible;opacity:1;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(30,37,41,.12);border-radius:12px;box-shadow:0 12px 30px rgba(30,37,41,.14);padding:8px;min-width:190px;z-index:999;list-style:none;margin:0';
-        }
-      } else if(m){ m.style.cssText=''; }
       e.stopPropagation();
     }
   });
